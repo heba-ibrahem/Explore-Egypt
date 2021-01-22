@@ -18,6 +18,9 @@ import { ProgramDetailsComponent } from './components/program-details/program-de
 import { HomeComponent } from './components/home/home.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
+import { ArticleComponent } from './components/article/article.component';
+import { TrendingComponent } from './components/trending/trending.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.
     ProgramDetailsComponent,
     HomeComponent,
     EditProfileComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    ActivitiesComponent,
+    ArticleComponent,
+    TrendingComponent
   ],
   imports: [
     BrowserModule,
