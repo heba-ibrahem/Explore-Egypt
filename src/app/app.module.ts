@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './componants/login/login.component';
-import { RegisterComponent } from './componants/register/register.component';
-import { PlanProgramComponent } from './componants/plan-program/plan-program.component';
-import { DesginProgramComponent } from './componants/desgin-program/desgin-program.component';
-import { ProgramDetailsComponent } from './componants/program-details/program-details.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { PlanProgramComponent } from './components/plan-program/plan-program.component';
+import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
+import { ProgramDetailsComponent } from './components/program-details/program-details.component';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProgramDetailsComponent } from './componants/program-details/program-de
     PlanProgramComponent,
     DesginProgramComponent,
     ProgramDetailsComponent
+  
   ],
   imports: [
     BrowserModule,
