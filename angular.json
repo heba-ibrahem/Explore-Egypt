@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ExploreEgypt"
+  "defaultProject": "ExploreEgypt",
+  "cli": {
+    "analytics": "b97283bf-fce8-4aa6-8b20-c2d055a4d4d7"
+  }
 }
