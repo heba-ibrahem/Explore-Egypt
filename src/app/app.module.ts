@@ -21,6 +21,7 @@ import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
 import { TrendingComponent } from './components/trending/trending.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TrendingComponent } from './components/trending/trending.component';
     AdminPanelComponent,
     ActivitiesComponent,
     ArticleComponent,
-    TrendingComponent
+    TrendingComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
