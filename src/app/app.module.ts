@@ -9,6 +9,9 @@ import { PlanProgramComponent } from './components/plan-program/plan-program.com
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 
+import { HomeComponent } from './components/home/home.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ProgramDetailsComponent } from './components/program-details/program-de
     RegisterComponent,
     PlanProgramComponent,
     DesginProgramComponent,
-    ProgramDetailsComponent
+    ProgramDetailsComponent,
+    HomeComponent,
+    EditProfileComponent,
+    AdminPanelComponent
   
   ],
   imports: [
