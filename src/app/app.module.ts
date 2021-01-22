@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './Component/home/home.component';
-import { EditProfileComponent } from './Component/edit-profile/edit-profile.component';
-import { AdminPanelComponent } from './Component/Admin/admin-panel/admin-panel.component';
+import { HomeComponent } from './components/home/home.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
