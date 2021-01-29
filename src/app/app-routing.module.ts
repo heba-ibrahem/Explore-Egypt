@@ -8,7 +8,7 @@ import { CultureComponent } from './components/culture/culture.component';
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { ExploreComponent } from './components/explore/explore.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/Home/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NeighbourhoodsComponent } from './components/neighbourhoods/neighbourhoods.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';

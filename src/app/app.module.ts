@@ -15,13 +15,18 @@ import { RegisterComponent } from './components/register/register.component';
 import { PlanProgramComponent } from './components/plan-program/plan-program.component';
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/Home/home/home.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
 import { TrendingComponent } from './components/trending/trending.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PlanTripHomeComponent } from './components/Home/plan-trip-home/plan-trip-home.component';
+import { ActivitiesHomeComponent } from './components/Home/activities-home/activities-home.component';
+import { ExplorEgyptHomeComponent } from './components/Home/explor-egypt-home/explor-egypt-home.component';
+
 
 @NgModule({
   declarations: [
@@ -44,11 +49,15 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ActivitiesComponent,
     ArticleComponent,
     TrendingComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PlanTripHomeComponent,
+    ActivitiesHomeComponent,
+    ExplorEgyptHomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

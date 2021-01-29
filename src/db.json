@@ -1,0 +1,25 @@
+{ 
+  "PageBanner":
+    {
+      "id":1,
+      "video":"https://mdbootstrap.com/img/video/Sail-Away.mp4",
+      "poster":"pyramids-2159286.webp"
+    }
+  ,
+  "trains": [
+    {
+      
+    }
+  ],
+  "hotels": [
+    {
+      
+    }
+  ],
+  "Users": [
+    {
+      
+    }
+  ]
+  
+}

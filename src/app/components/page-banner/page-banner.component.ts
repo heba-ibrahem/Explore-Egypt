@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { PageDetails } from 'src/app/viewmodels/page-details';
 
+
 @Component({
   selector: 'app-page-banner',
   templateUrl: './page-banner.component.html',
@@ -17,7 +18,9 @@ export class PageBannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  
   }
+  
 
   playVideo() {
     if (this.banner_video_container) {
