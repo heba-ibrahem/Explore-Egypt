@@ -1,1 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
+@import './scss/variables';
+@import './scss/mixins';
+
+/* Globals */
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.main-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none !important;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #757575;
+  padding: 12px 8px;
+  transition: all 0.3s;
+  &:hover {
+    color: $main-blue;
+  }
+}
+.scroll-up {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid $white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1001;
+  @include flexCenter();
+  font-size: 18px;
+  color: $main-blue;
+  transition: all 0.3s;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $main-blue;
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: $white
+  }
+  &:hover::after {
+    top: 0;
+  }
+  span {
+    position: relative;
+    z-index: 5;
+  }
+}
+.shadow {
+  box-shadow: 0 4px 10px 1px rgba(0,0,0,.1);
+}
+.half-grey-left {
+  background-image: linear-gradient(to left, #f9f9f9, #f9f9f9 70%, #fff 30%);
+}
+.half-grey-right {
+  background-image: linear-gradient(to right, #f9f9f9, #f9f9f9 70%, #fff 30%);
+}
+
+// 
+.links-pattern {
+  padding: 50px 0;
+  .desc {
+    margin-bottom: 5px;
+  }
+  .item {
+    border-radius: 3px;
+    overflow: hidden;
+    .img-container {
+      display: block;
+      overflow: hidden;
+      @media(min-width: 767px) {
+        height: 220px;
+      }
+      @media(min-width: 991px) {
+        height: 192px;
+      }
+      @media(min-width: 1200px) {
+        height: 232px;
+      }
+      @media(max-width: 768px) {
+        height: auto;
+        max-height: 360px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .caption {
+      padding: 20px;
+      background-color: $white;
+      .title-link {
+        display: block;
+        font-size: 24px;
+        color: $black;
+        text-decoration: none;
+        transition: all 0.2s;
+        &:hover {
+          color: $main-blue;
+        }
+      }
+      .item-desc {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .more-btn {
+    display: inline-block;
+    margin: 20px 0;
+    color: $main-blue;
+    transition: all 0.3s;
+  }
+}
+

@@ -1,0 +1,61 @@
+
+      <!-- section-5 -->
+      <section class="section-5" style="margin-top: 50px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-1 d-none d-xl-block"></div>
+            <div class=" col-sm-11 ">
+              <h2>Find things to do</h2>
+              <button type="button" class="btn">All</button>
+              <button type="button" class="btn">Adventure</button>
+              <button type="button" class="btn">Arts & Culture</button>
+              <button type="button" class="btn">Food & Drink</button>
+              <button type="button" class="btn">Spas & Wellness</button>
+              <button type="button" class="btn">Sights & Attractions</button>
+            </div>
+
+
+          </div>
+
+          <div class="row" style="margin-top: 35px;">
+            <div class="col-12 col-xl-9 offset-xl-1">
+              <div class="row">
+                <div class=" col-sm-6 col-md-4" *ngFor="let item of List; let count=index">
+                  <div class="div-image">
+                    <img class="card-img-top" [src]="item.img" alt="Card image" style="width:100%">
+                  </div>
+                  <div class="div-body">
+                    <div class="section-5-favorite">
+                      <div class="favorite-img">
+                        <a href="#"><i class="far fa-heart"></i></a>
+                      </div>
+                    </div>
+                    <p class="p1">{{item.Department}}</p>
+                    <p class="p2">{{item.title}}</p>
+                    <p class="p3">{{item.discription}}</p>
+                    <div class="tripAdvisor">
+                      <img src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/3.5-20760-5.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+           
+
+              </div>
+              <div class="col-xs-12">
+                <div class="see-more-article">
+                  <a aria-label="" class="readmore-a" [routerLink]="['/activities']">
+                    <span class="btn-link__text">See more things to do</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" class="btn-link__icon">
+                      <path fill="#0067B9" fill-rule="nonzero"
+                        d="M8.394 5.5L13 10l-4.606 4.5a1.904 1.904 0 0 1 0-2.724L10.212 10 8.394 8.224a1.904 1.904 0 0 1 0-2.724z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="d-none d-lg-block col-lg-2"></div>
+          </div>
+
+        </div>
+      </section>

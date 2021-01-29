@@ -1,1 +1,350 @@
-<p>header works!</p>
+
+
+<!-- Scroll up button -->
+<div #scrollUpBtn class="scroll-up">
+  <span><i class="fa fa-angle-up"></i></span>
+</div>
+
+<!-- Large screen Navbar -->
+<nav class="lg-nav">
+  <div class="top-bar">
+    <div class="container">
+      <ul class="top-bar-nav m-0 list-unstyled">
+        <li>
+          <a class="active main-link" href="#">Visit Egypt</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">Business in Egypt</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">Study Egypt</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">Corporate</a>
+        </li>
+        <li>
+          <a class="main-link" href="#">Egypt Shopping festival</a>
+        </li>
+      </ul>
+
+      <ul class="top-bar-right m-0 list-unstyled">
+        <li>
+          <a class="main-link" routerLink="/login" >
+            <span><i class="fa fa-user"></i></span>
+            Login
+          </a>
+        </li>
+        <li>
+          <a class="main-link" href="#">
+            <span><i class="fa fa-globe"></i></span>
+            Arabic
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div class="container">
+      <ul class="m-0 list-unstyled">
+        <a routerLink="/home" class="logo d-block">
+          <img src="assets/images/EXEG.png" alt="">
+        </a>
+        <li class="nav-bar-item has-drop-down" id="dropDown_1">
+          <a class="main-link" routerLink="/explore">
+            Explore Egypt
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+        <li class="nav-bar-item has-drop-down" id="dropDown_2">
+          <a class="main-link" routerLink="/activities">
+            Activities
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+        <li class="nav-bar-item has-drop-down" id="dropDown_3">
+          <a class="main-link" routerLink="/planProgram">
+            Plan your trip
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav-bar-icons m-0 list-unstyled">
+        <li class="search-field">
+          <input #searchInp type="text" name="search" class="form-control" placeholder="Search...">
+        </li>
+        <li>
+          <span (click)="searchInp.classList.toggle('show')" class="search"><i class="fa fa-search"></i></span>
+        </li>
+        <li>
+          <a href="#"><span><i class="fa fa-calendar"></i></span></a>
+        </li>
+        <li>
+          <a href="#"><span><i class="fa fa-heart"></i></span></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Dropdown menus -->
+
+    <!-- Explore -->
+    <ul class="drop-down-menu" id="drop-down_1">
+      <div class="container">
+        <div class="container-div">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/about">About Egypt
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/culture">Culture & Heritage
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/neighbourhoods">Neighbourhoods in Egypt
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/explore">Explore Egypt
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" href="#">Lorem ipsum.
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" href="#">Lorem ipsum.
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- Activities -->
+    <ul class="drop-down-menu" id="drop-down_2">
+      <div class="container">
+        <div class="container-div">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">New & trending
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Check out the latest hotspots and attractions to add to your next holiday.</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Sights & Attractions
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Discover Egypt's record-breaking attractions and iconic landmarks.</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Experiences
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">From pyramids to the sea, take in Egypt's unique experiences.</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Arts & Culture
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Discover Egypt's record-breaking attractions and iconic landmarks.</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Shopping
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted"> Indulge in ultimate retail therapy at high-end shopping malls and charming
+                  souks.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Food & Drink
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted"> Sample deliciously diverse food at fine dining spots and Instagram-worthy
+                  cafés.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Spas & Wellness
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted"> Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/trending">Itineraries
+
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">What do you travel for?
+                  Find inspiration with this variety of holiday itineraries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <!-- Plan your trip -->
+    <ul class="drop-down-menu" id="drop-down_3">
+      <div class="container">
+        <div class="container-div">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/planProgram">Plan your trip
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/designProgram">Design your Program
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="sub-link">
+                <a class="main-link" routerLink="/programDetails">Your program
+                  <span><i class="fa fa-angle-right"></i></span>
+                </a>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<!-- Small screen Navbar -->
+<nav class="sm-nav">
+  <div class="container">
+    <div class="left">
+      <div #toggler (click)="toggleMenu()" class="toggler">
+        <div class="toggler-btn"></div>
+      </div>
+      <div class="logo">
+        <img src="assets/images/EXEG.png" alt="">
+      </div>
+    </div>
+
+    <ul class="right m-0 list-unstyled">
+      <li>
+        <a href="#"><span><i class="fa fa-calendar"></i></span></a>
+      </li>
+      <li>
+        <a href="#"><span><i class="fa fa-heart"></i></span></a>
+      </li>
+    </ul>
+  </div>
+  <div #smMenu class="sm-menu">
+    <ul class="m-0 list-unstyled">
+      <li class="sm-nav-item">
+        <a href="#">Explore Egypt</a>
+        <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span>
+        <ul class="sub-menu m-0 list-unstyled">
+          <li>
+            <a routerLink="/explore">Explore Egypt</a>
+          </li>
+          <li>
+            <a routerLink="/about">About Egypt</a>
+          </li>
+          <li>
+            <a routerLink="/culture">Culture & Heritage</a>
+          </li>
+          <li>
+            <a routerLink="/neighbourhoods">Neighbourhoods in Egypt</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sm-nav-item">
+        <a routerLink="/Activities.html">Activities</a>
+        <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span>
+        <ul class="sub-menu m-0 list-unstyled">
+          <li>
+            <a routerLink="/trending">New & Trending </a>
+          </li>
+          <li>
+            <a routerLink="/trending">Sights & Attractions</a>
+          </li>
+          <li>
+            <a routerLink="/trending">Experiences</a>
+          </li>
+          <li>
+            <a routerLink="/trending">Arts & Culture</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sm-nav-item">
+        <a href="#">Plan your trip</a>
+        <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span>
+        <ul class="sub-menu m-0 list-unstyled">
+          <li>
+            <a routerLink="/planProgram">Plan your trip</a>
+          </li>
+          <li>
+            <a routerLink="/designProgram">Design your Program</a>
+          </li>
+          <li>
+            <a routerLink="/programDetails">Your program</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sm-nav-item">
+        <a routerLink="/login">
+          <span><span><i class="fa fa-user"></i></span></span>
+          Login
+        </a>
+      </li>
+      <li class="sm-nav-item">
+        <a href="#"><span><i class="fa fa-globe"></i></span>
+          Arabic</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,43 @@
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+.offer-banner {
+  position: relative;
+  padding: 50px 0;
+  .img-container {
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    @media(max-width: 992px) {
+      border-radius: 0;
+    }
+  }
+  .overlap-1 {
+    margin-left: 0;
+    @media(min-width: 991px) {
+      margin-left: -9%;
+    }
+  }
+  .curved-div {
+    @media(min-width: 991px) {
+      border-radius: 80px 4px 80px 4px;
+      padding: 70px 50px;
+    }
+    border-radius: 0 0 40px 0;
+    background-color: $purple;
+    color: $white;
+    padding: 40px 35px;
+    .title {
+      margin-bottom: 20px;
+    }
+    .desc {
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 20px 28px;
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+}

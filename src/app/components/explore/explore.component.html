@@ -1,1 +1,43 @@
-<p>explore works!</p>
+
+
+<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+
+<!-- Journey -->
+<section class="links-pattern half-grey-left">
+  <div class="container">
+    <h4 class="title">Your Journey starts here</h4>
+    <p class="desc">See how Egypt evolved into the modern destination it is today.</p>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pt-4" *ngFor="let J of journey">
+        <div class="item shadow">
+          <a [routerLink]="J.path" class="img-container">
+            <img class="img-fluid" [src]="J.img_url" alt="">
+          </a>
+          <div class="caption">
+            <a [routerLink]="J.path" class="title-link">{{J.title}}</a>
+            <p class="item-desc">{{J.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offer-banner">
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-center">
+      <div class="offset-lg-1 col-lg-5 col-md-8 col-sm-10">
+        <div class="img-container">
+          <img src="assets/images/4.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-8 overlap-1 col-sm-10">
+        <div class="curved-div">
+          <h3 class="title">Lorem ipsum dolor sit amet consectetur.</h3>
+          <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quidem veritatis officiis blanditiis repudiandae quasi magni doloremque, asperiores minus perferendis laboriosam cupiditate labore eveniet! Accusamus.</p>
+          <a href="#" class="btn">Buy now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

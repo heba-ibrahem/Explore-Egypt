@@ -1,0 +1,103 @@
+
+.section-7 .section-4-titel h4 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1;
+    flex: 1 1;
+    margin-left: 20px;
+  }
+  @media (max-width: 768px) {
+    .section-7 .section-4-titel h4 {
+      font-size: 2rem;
+      line-height: 0.8;
+    }
+  }
+  
+  .section-7 .card {
+    height: 100%;
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0 0 20px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #0067b9;
+  }
+  .section-7 .card .card-header {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+  }
+  @media (max-width: 768px) {
+    .section-7 .card .card-header {
+      height: 400px;
+    }
+  }
+  .section-7 .card-img-top {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transition: 1s;
+    overflow: hidden;
+  }
+  .section-7 .card-img-top:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+  }
+  
+  .section-7 .card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+    box-shadow: none;
+    padding: 21px 24px 5px;
+  }
+  
+  .section-7 .card-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #fff;
+    min-height: 27px;
+  }
+
+  .section-7 .card-text {
+    clear: both;
+    color: #fff;
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    letter-spacing: normal;
+  }
+  
+  .section-7 .see-more-article .card-link-a {
+    font-weight: 500;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: normal;
+    border-radius: 4px;
+    color: #fff;
+    padding: 24px 24px;
+  }
+  .section-7 .see-more-article .meet-link-a {
+    font-weight: 500;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.25rem;
+    letter-spacing: normal;
+    border-radius: 4px;
+    color: #0067b9;
+    padding: 24px 24px;
+  }
