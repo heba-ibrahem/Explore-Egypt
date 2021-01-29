@@ -1,17 +1,27 @@
 {
   "trains": [
-    {
-      
-    }
+    {}
   ],
   "hotels": [
-    {
-      
-    }
+    {}
   ],
   "Users": [
     {
-      
+      "firstName": "test",
+      "lastName": "asdasd",
+      "countery": "iti",
+      "email": "test@iti.com",
+      "password": "asdasd",
+      "id": 1
+    },
+    {
+      "firstName": "heba",
+      "lastName": "ibrahem",
+      "countery": "sdsdc",
+      "email": "heba@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdasd",
+      "id": 2
     }
   ]
 }

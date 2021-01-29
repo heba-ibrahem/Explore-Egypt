@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 import { ArticleComponent } from './components/article/article.component';
 import { TrendingComponent } from './components/trending/trending.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
