@@ -1,1 +1,110 @@
-<p>register works!</p>
+<div class="container col-md-10">
+  <div class="page-title ">
+    <div class="container ">
+      <h2 class="md">Create an account</h2>
+    </div>
+
+    <div id="buton" class="d-flex justify-content-center">
+      <a routerLink='/register' routerLinkActive="router-link-active" class="active">Register</a>
+      <a routerLink='/login' routerLinkActive="router-link-active">login</a>
+    </div>
+  </div>
+</div>
+<div class="container col-md-8 mt-3">
+
+  <div class="row">
+    <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">Connect via Facebook <i
+        class="fab fa-facebook-f"></i></button><br>
+    <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Google <i
+        class="fab fa-google"></i></button><br>
+    <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Twitter <i
+        class="fab fa-twitter"></i></button><br>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <hr class="col-4">
+      <span>OR</span>
+      <hr class="col-4">
+    </div>
+  </div>
+
+  <form [formGroup]="RegisterForm" (ngSubmit)="register()">
+    <div class="form-row">
+      <div class="form-group col-md-5 ">
+        <label class="control-label required" for="firstName">First Name</label>
+        <input type="text" class="form-control" name="firstName" required formControlName="firstName">
+        <div
+          *ngIf="RegisterForm.controls['firstName'].invalid && (RegisterForm.controls['firstName'].dirty || RegisterForm.controls['firstName'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="RegisterForm.controls['firstName']">Name is required.</div>
+        </div>
+
+
+      </div>
+      <div class="form-group col-md-5 ">
+        <label class="control-label required" for="lastName">Last Name</label>
+        <input type="text" class="form-control" name="lastName" required formControlName="lastName">
+        <div
+          *ngIf="RegisterForm.controls['lastName'].invalid && (RegisterForm.controls['lastName'].dirty || RegisterForm.controls['lastName'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="RegisterForm.controls['lastName']">Last Name is required.</div>
+        </div>
+
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-5 ">
+        <label class="control-label required" for="email">Email</label>
+        <input type="email" class="form-control" name="email" required formControlName="email">
+        <div
+          *ngIf="RegisterForm.controls['email'].invalid && (RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="RegisterForm.controls['email']">Email is required.</div>
+        </div>
+      </div>
+      <div class="form-group col-md-5 ">
+        <label class="control-label required" for="countery">Countery</label>
+        <input type="dropdown" class="form-control " name="countery" required formControlName="countery">
+        <div
+          *ngIf="RegisterForm.controls['countery'].invalid && (RegisterForm.controls['countery'].dirty || RegisterForm.controls['countery'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="RegisterForm.controls['countery']">Countery is required.</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-5 ">
+        <label class="control-label required" for="password">Password</label>
+        <input type="password" class="form-control" name="password" required formControlName="password">
+        <div
+          *ngIf="RegisterForm.controls['password'].invalid && (RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="RegisterForm.controls['password']">Password is required.</div>
+        </div>
+      </div>
+      <div class="form-group col-md-5 ">
+        <label class=" control-label required" for="confirmPassword">Password Password</label>
+        <input type="Password" class="form-control" name="confirmPassword" required formControlName="confirmPassword">
+        <div
+          *ngIf="RegisterForm.controls['confirmPassword'].invalid && (RegisterForm.controls['confirmPassword'].dirty || RegisterForm.controls['confirmPassword'].touched)"
+          class="alert alert-danger">
+          <div *ngIf="RegisterForm.controls['confirmPassword']">You Must confirm Password is required.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-control custom-checkbox ">
+      <input type="checkbox" class="custom-control-input checked" id="customCheck1" required>
+      <p class="custom-control-label" for="customCheck1">I would like to recive offers, updates and markiting
+        information from Egypt Torisum.</p>
+    </div><br>
+    <div>
+      <p>All information provided will be handeld in accordance with our <a href="#">Perivcy Notes</a></p>
+    </div><br>
+
+    <div class="row mb-5 ">
+      <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-primary p-3 col-md-5">Register</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,287 @@
+
+
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+nav.lg-nav {
+  @media(max-width: 992px) {
+    display: none;
+  }
+  position: relative;
+  z-index: 1000;
+  .top-bar {
+    border-bottom: 1px solid #c1c1c1;
+    .container {
+      @include flexBetween();
+      ul {
+        @include flexCenter();
+        li {
+          margin: 0 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            font-size: 12px;
+            padding: 8px;
+            &.active {
+              color: #000;
+            }
+          }
+        }
+      }
+      ul.top-bar-nav {
+        a {
+          &:hover {
+            color: $main-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-bar {
+    position: relative;
+    background-color: $white;
+    border-bottom: 1px solid #efefef;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    .container {
+      @include flexBetween();
+      ul {
+        @include flexCenter();
+        .logo {
+          margin-right: 15px;
+          padding: 5px 0;
+          img {
+            width: 50px;
+          }
+        } 
+        li {
+          margin: 0 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            .down-icon {
+              color: $main-blue;
+              display: inline-block;
+              transition: all 0.1s;
+            }
+          }
+        }
+        &.nav-bar-icons {
+          li {
+            margin: 0 10px;
+            color: #757575;
+            font-size: 20px;
+            input {
+              outline: none;
+              width: 0;
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.4s;
+              &.show {
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+              }
+              &:focus {
+                outline: none;
+                box-shadow: none;
+                border-color: #787878;
+              }
+            }
+            a {
+              font-size: 20px;
+            }
+            .search {
+              cursor: pointer;
+              padding: 5px;
+              color: #007bff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .drop-down-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 35px 0;
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.1),
+                0 5px 5px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s;
+    background-color: $white;
+    z-index: 999;
+    .container-div {
+      width: 85%;
+    }
+    .sub-link {
+      padding: 0 10px;
+      a {
+        color: #000;
+        margin-bottom: 5px;
+        padding: 0;
+        &:hover {
+          color: $main-blue;
+        }
+      }
+      p {
+        color: #757575;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+nav.sm-nav {
+  position: relative;
+  padding: 8px 0;
+  background-color: $white;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  @media(max-width: 992px) {
+    display: block;
+  }
+  .container {
+    @include flexBetween();
+    .left {
+      @include flexCenter();
+      .logo {
+        margin-left: 10px;
+        img {
+          width: 50px;
+        }
+      }
+      .toggler {
+        width: 40px;
+        height: 40px;
+        @include flexCenter();
+        cursor: pointer;
+        .toggler-btn {
+          position: relative;
+          width: 30px;
+          height: 2px;
+          background-color: $main-blue;
+          transition: all 0.3s;
+          &::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: $main-blue;
+            transition: all 0.3s;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: $main-blue;
+            transition: all 0.3s;
+          }
+        }
+        &.open {
+          .toggler-btn {
+            background-color: transparent;
+            &::before {
+              transform: rotate(-45deg);
+              top: 0;
+            }
+            &::after {
+              transform: rotate(45deg);
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      @include flexCenter();
+      li {
+        margin: 0 10px;
+        color: #757575;
+        font-size: 20px;
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .sm-menu {
+    position: absolute;
+    left: 0;
+    max-height: 500px;
+    overflow: auto;
+    top: 100%;
+    width: 100%;
+    background-color: $white;
+    padding: 15px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 999;
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
+    ul {
+      width: 100%;
+      .sm-nav-item {
+        padding: 12px 35px;
+        border-bottom: 1px solid #e1e1e1;
+        @include flexBetween();
+        flex-wrap: wrap;
+        a {
+          display: inline-block;
+          position: relative;
+          text-decoration: none !important;
+          color: $black;
+        }
+        .sm-item-toggler {
+          font-size: 20px;
+          color: $main-blue;
+          width: 40px;
+          text-align: center;
+          cursor: pointer;
+          &.rotate {
+            transform: rotate(-180deg);
+          }
+        }
+        .sub-menu {
+          display: none;
+          padding: 10px;
+          &.open {
+            display: block;
+          }
+          li {
+            margin-bottom: 10px;
+            a {
+              color: #505050;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}

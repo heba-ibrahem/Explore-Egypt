@@ -1,0 +1,143 @@
+
+
+
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+// Footer
+.subscription {
+  background-color: #f1f1f1;
+  padding: 50px 24px;
+  .subscribe {
+    h5 {
+      color: $black;
+    }
+    p {
+      color: #757575;
+    }
+    .form-control {
+      padding: 28px 12px;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: #787878;
+      }
+    }
+    .btn {
+      width: 100%;
+      padding: 16px 20px;
+      font-weight: 600;
+      transition: all 0.5s;
+    }
+    .btn-gray {
+      background-color: $disabled;
+      color: $white;
+    }
+  }
+  a {
+    color: #505050;
+    text-decoration: underline;
+    display: inline-block;
+  }
+  .get-app {
+    text-align: center;
+    @media (max-width:768px) {
+      text-align: start;
+    }
+    .logo {
+      margin: 15px 0;
+      img {
+        width: 80px;
+      }
+    }
+  }
+}
+
+footer {
+  @media(max-width: 768px) {
+    padding: 10px 0 0 0;
+  }
+  padding: 35px 0 0 0;
+  background-color: $main-blue;
+  color: $white;
+  a {
+    color: #f1f1f1;
+    font-weight: 300;
+    font-size: 14px;
+    &:hover {
+      color: $white;
+    }
+  }
+  .logo {
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+  .sm-icons {
+    margin-top: 15px !important;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    @media(max-width: 768px) {
+      margin-bottom: 15px !important;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #d1d1d1;
+    }
+    li {
+      margin: 6px 5px;
+      @each $icon, $color in 
+        (facebook, $fb-color),
+        (twitter, $twitter-color),
+        (youtube, #d00),
+        (tripadvisor, #34E0A1),
+        (instagram, radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)) {
+          .#{$icon}-icon {
+            &:hover {
+              background: $color;
+              box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
+      a {
+        @include flexCenter();
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: $white;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &.tripadvisor-icon:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+  h6 {
+    font-weight: 600;
+  }
+  .footer-links-list {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .foot {
+    padding: 16px 0;
+    border-top: 1px solid #d1d1d1;
+    .container {
+      @include flexBetween();
+      @media(max-width:768px) {
+        flex-wrap: wrap;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      ul {
+        display: flex;
+        li {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
