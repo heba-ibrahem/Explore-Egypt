@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { IUsers } from 'src/app/ViewModels/iusers';
+import { IUsers } from 'src/app/viewmodels/iusers';
 
 
 

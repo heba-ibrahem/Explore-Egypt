@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/Services/auth.service';
 
 
-import { IUsers } from 'src/app/ViewModels/iusers';
+import { IUsers } from 'src/app/viewmodels/iusers';
 
 @Component({
   selector: 'app-login',
