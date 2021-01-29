@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivitesHomeService } from 'src/app/Services/activites-home.service';
-import { IActivitesHome } from 'src/app/ViewModels/iactivites-home';
+import { IActivitesHome } from 'src/app/viewmodels/iactivites-home';
 
 @Component({
   selector: 'app-activities-home',

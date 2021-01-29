@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExplorEgyptHomeService } from 'src/app/Services/explor-egypt-home.service';
-import { IExpiorEgyptHome } from 'src/app/ViewModels/iexpior-egypt-home';
+import { IExpiorEgyptHome } from 'src/app/viewmodels/iexpior-egypt-home';
 
 @Component({
   selector: 'app-explor-egypt-home',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlanTripHomeService } from 'src/app/Services/plan-trip-home.service';
-import { PlanTripHome } from 'src/app/ViewModels/Iplan-trip-home';
+import { PlanTripHome } from 'src/app/viewmodels/Iplan-trip-home';
 
 @Component({
   selector: 'app-plan-trip-home',
