@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
   RegisterForm: FormGroup;
   user: IUsers;
   CityList: Icity[]=[];
+  registerd:boolean=false
   constructor(private fb: FormBuilder, private UserSevives: UsersServiceService, private city: CityService) {
     this.RegisterForm = this.fb.group({
       firstName: ['', [Validators.required]],
@@ -46,19 +47,21 @@ export class RegisterComponent implements OnInit {
       (response) =>{
         // console.log(this.CatagoryListApi)
       this.CityList= response;
-      console.log(this.CityList)},
+      // console.log(this.CityList)
+    },
       (err) =>{console.log(err)} 
     
     )
    
   }
 
-  register() {
+  register(){
     console.log(this.RegisterForm.value)
     this.UserSevives.addUser(this.RegisterForm.value).subscribe(
       (res) => {
-        console.log(res);
-        
+        // console.log(res);
+        this.RegisterForm.reset();
+        this.registerd= true
       },
       (err) => { console.log(err) }
     );

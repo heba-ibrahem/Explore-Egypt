@@ -152,6 +152,24 @@
       "password": "qweqwe",
       "confirmPassword": "qweqwe",
       "id": 5
+    },
+    {
+      "firstName": "Khaled",
+      "lastName": "Hassen",
+      "city": "cairo",
+      "email": "khaled@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdasd",
+      "id": 6
+    },
+    {
+      "firstName": "khaled",
+      "lastName": "hassen",
+      "city": "cairo",
+      "email": "khaled@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdada",
+      "id": 7
     }
   ]
 }
