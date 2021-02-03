@@ -247,15 +247,6 @@
       "password": "asdasd",
       "confirmPassword": "asdasd",
       "id": 6
-    },
-    {
-      "firstName": "khaled",
-      "lastName": "hassen",
-      "city": "cairo",
-      "email": "khaled@iti.com",
-      "password": "asdasd",
-      "confirmPassword": "asdada",
-      "id": 7
     }
   ],
   "Articles": [
@@ -417,7 +408,7 @@
     }
   ],
   "Pages": [
-    {
+     {
       "id": 1,
       "name": "Explore",
       "title": "Discover Egypt",
@@ -509,4 +500,7 @@
       "seconddescription": "20 amazing things to do in Egypt"
     }
   ]
+
+
+
 }

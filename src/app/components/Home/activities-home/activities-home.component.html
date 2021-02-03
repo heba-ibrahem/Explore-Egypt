@@ -20,9 +20,9 @@
           <div class="row" style="margin-top: 35px;">
             <div class="col-12 col-xl-9 offset-xl-1">
               <div class="row">
-                <div class=" col-sm-6 col-md-4" *ngFor="let item of List; let count=index">
+                <div class=" col-sm-6 col-md-4" *ngFor="let item of List| slice:0:3; let count=index">
                   <div class="div-image">
-                    <img class="card-img-top" [src]="item.img" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="assets/{{item.img}}" alt="Card image" style="width:100%">
                   </div>
                   <div class="div-body">
                     <div class="section-5-favorite">
@@ -30,9 +30,9 @@
                         <a href="#"><i class="far fa-heart"></i></a>
                       </div>
                     </div>
-                    <p class="p1">{{item.Department}}</p>
+                    <!-- <p class="p1">{{item.title}}</p> -->
                     <p class="p2">{{item.title}}</p>
-                    <p class="p3">{{item.discription}}</p>
+                    <p class="p3">{{item.description}}</p>
                     <div class="tripAdvisor">
                       <img src="https://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/3.5-20760-5.svg" alt="">
                     </div>

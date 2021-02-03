@@ -2,9 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { IExpiorEgyptHome } from '../viewmodels/iexpior-egypt-home';
 import { INewEventsHome } from '../viewmodels/iweek-events-home';
 import { IPage } from '../viewmodels/IPage';
+import { Article } from '../viewmodels/article';
+import { IactivitiesDep } from '../viewmodels/iactivities-dep';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,9 @@ export class HomeService {
   {
     return this.http.get<INewEventsHome[]>(`${environment.API_URL}/events`);
   }
-
+  
+  getAllArticles(): Observable <any>
+  {
+    return this.http.get<IactivitiesDep[]>(`${environment.API_URL}/explorDep`);
+  }
 }

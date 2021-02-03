@@ -14,7 +14,7 @@
                 <div class=" col-md-4" *ngFor="let item of List| slice:1:4; let count=index">
                   <div class="card">
                     <div class="card-header" style="padding: 0px;">
-                      <img class="card-img-top" src="assents/{{item.bannerImg}}">
+                      <img class="card-img-top" [src]="'assets/images/'+item.bannerImg">
                     </div>
                     <div class="card-block">
                       <h4 class="card-title">{{item.title}}</h4>

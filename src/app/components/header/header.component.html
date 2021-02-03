@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <div class="nav-bar">
+  <div #largeNavbar class="nav-bar">
     <div class="container">
       <ul class="m-0 list-unstyled">
         <a routerLink="/home" class="logo d-block">
@@ -152,7 +152,7 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">New & trending
+                <a class="main-link" routerLink="/explorDep/1">New & trending
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted">Check out the latest hotspots and attractions to add to your next holiday.</p>
@@ -160,7 +160,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Sights & Attractions
+                <a class="main-link" routerLink="/explorDep/1">Sights & Attractions
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted">Discover Egypt's record-breaking attractions and iconic landmarks.</p>
@@ -168,7 +168,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Experiences
+                <a class="main-link" routerLink="/explorDep/1">Experiences
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted">From pyramids to the sea, take in Egypt's unique experiences.</p>
@@ -176,7 +176,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Arts & Culture
+                <a class="main-link" routerLink="/explorDep/1">Arts & Culture
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted">Discover Egypt's record-breaking attractions and iconic landmarks.</p>
@@ -184,7 +184,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Shopping
+                <a class="main-link" routerLink="/explorDep/1">Shopping
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted"> Indulge in ultimate retail therapy at high-end shopping malls and charming
@@ -194,7 +194,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Food & Drink
+                <a class="main-link" routerLink="/explorDep/1">Food & Drink
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted"> Sample deliciously diverse food at fine dining spots and Instagram-worthy
@@ -204,7 +204,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Spas & Wellness
+                <a class="main-link" routerLink="/explorDep/1">Spas & Wellness
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted"> Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.
@@ -213,7 +213,7 @@
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/trending">Itineraries
+                <a class="main-link" routerLink="/explorDep/1">Itineraries
 
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
@@ -262,7 +262,7 @@
 </nav>
 
 <!-- Small screen Navbar -->
-<nav class="sm-nav">
+<nav #smallNavbar class="sm-nav">
   <div class="container">
     <div class="left">
       <div #toggler (click)="toggleMenu()" class="toggler">
@@ -285,8 +285,8 @@
   <div #smMenu class="sm-menu">
     <ul class="m-0 list-unstyled">
       <li class="sm-nav-item">
-        <a href="#">Explore Egypt</a>
-        <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span>
+        <a href="/explore">Explore Egypt</a>
+        <!-- <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span> -->
         <ul class="sub-menu m-0 list-unstyled">
           <li>
             <a routerLink="/explore">Explore Egypt</a>
@@ -303,26 +303,26 @@
         </ul>
       </li>
       <li class="sm-nav-item">
-        <a routerLink="/Activities.html">Activities</a>
-        <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span>
+        <a routerLink="/activities">Activities</a>
+        <!-- <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span> -->
         <ul class="sub-menu m-0 list-unstyled">
           <li>
-            <a routerLink="/trending">New & Trending </a>
+            <a routerLink="/explorDep/1">New & Trending </a>
           </li>
           <li>
-            <a routerLink="/trending">Sights & Attractions</a>
+            <a routerLink="/explorDep/1">Sights & Attractions</a>
           </li>
           <li>
-            <a routerLink="/trending">Experiences</a>
+            <a routerLink="/explorDep/1">Experiences</a>
           </li>
           <li>
-            <a routerLink="/trending">Arts & Culture</a>
+            <a routerLink="/explorDep/1">Arts & Culture</a>
           </li>
         </ul>
       </li>
       <li class="sm-nav-item">
-        <a href="#">Plan your trip</a>
-        <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span>
+        <a routerLink="/planProgram">Plan your trip</a>
+        <!-- <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span> -->
         <ul class="sub-menu m-0 list-unstyled">
           <li>
             <a routerLink="/planProgram">Plan your trip</a>
