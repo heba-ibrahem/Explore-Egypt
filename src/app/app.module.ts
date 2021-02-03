@@ -26,6 +26,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlanTripHomeComponent } from './components/home/plan-trip-home/plan-trip-home.component';
 import { ActivitiesHomeComponent } from './components/home/activities-home/activities-home.component';
 import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/explor-egypt-home.component';
+import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
+import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
+import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/ex
     NotFoundComponent,
     PlanTripHomeComponent,
     ActivitiesHomeComponent,
-    ExplorEgyptHomeComponent
+    ExplorEgyptHomeComponent,
+    NewEventsHomeComponent,
+    MoreNewEventHomeComponent,
+    StartPlanningYourTripComponent
   ],
   imports: [
     BrowserModule,
