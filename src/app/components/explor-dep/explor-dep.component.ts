@@ -25,7 +25,7 @@ export class ExplorDepComponent implements OnInit {
       title: 'New & Trending',
       bannerImg: 'assets/im2.jpg',
       bannerVideo: 'assets/v2',
-      description: "Check out the latest hotspots and attractions to add to your next holiday."
+      description: "Adventure, culture, shopping – name it and you'll find it here in Egypt. Browse all the unforgettable experiences for all kinds of explorers."
     }
 
   }

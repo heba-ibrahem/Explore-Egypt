@@ -121,61 +121,20 @@ attractions, there's much to explore.</pre>
 <br>
 <br>
 <div class="row myrow afterart">
-<div class="col-lg-3 col-6 a4">
-  <a href="ArticleExample.html">
-    <div class="card"><img class="card-img-top" src="assets/camel.jpg">
+  <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
+    <div  *ngIf="A.section==='Keep up with the new'">
+      <a [routerLink]="'/article/'+(A.id)">
+    <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
       <div class="card-body">
-        <h4 class="card-title">How Egypt is trying to encourage the return of tourism
+        <h4 class="card-title">{{A.title}}
         </h4>
-        <p class="card-text d-none d-md-block">Egypt is reopening its borders to international tourists on 1
-          July,
-          but many parts of the country will remain off-limits becuse of covid 19.</p>
-      </div>
-    </div>
-  </a>
-</div>
-<div class="col-lg-3 col-6 a4">
-  <a href="ArticleExample.html">
-    <div class=" card"><img class="card-img-top" src="assets/851da31305208a67c85d5f69cd777641.jpg">
-      <div class="card-body">
-        <h4 class="card-title">Grand Egyptian Museum</h4>
-        <p class="card-text d-none d-md-block">With a dazzling bounty of underwater attractions to explore and
-          improved access to key diving hubs, there has arguably never been a better time to strap…
-
-
+        <p class="card-text d-none d-md-block">{{A.description}}
         </p>
       </div>
     </div>
   </a>
 </div>
-<div class="col-lg-3 col-6 a4">
-  <a href="ArticleExample.html">
-    <div class=" card"><img class="card-img-top" src="assets/turtle-diving-oman-384a4494bf9b.jpg">
-      <div class="card-body">
-        <h4 class="card-title">Where to find the best diving sites</h4>
-        <p class="card-text d-none d-md-block">With a dazzling bounty of underwater attractions to explore and
-          improved access to key diving hubs, there has arguably never been a better time to strap…
-
-
-        </p>
-      </div>
-    </div>
-  </a>
 </div>
-<div class="col-lg-3 col-6 a4">
-  <a href="ArticleExample.html">
-    <div class=" card"><img class="card-img-top"
-        src="assets/step-pyramid-zoser-saqqara-egypt-892f2df6f898.jpg">
-      <div class="card-body">
-        <h4 class="card-title">Four of the best day trips from Cairo</h4>
-        <p class="card-text d-none d-md-block">While Egypt’s ancient capital  has more than enough dusty charms
-          to
-          fill a traveller’s playbook, the country’s top natural sites stretch far out from Cairo…
-
-        </p>
-      </div>
-    </div>
-  </a>
 </div>
 </div>
 

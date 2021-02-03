@@ -128,37 +128,37 @@
     "title": "Sights & Attractions",
     "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
     "img": "explorDep2.jpg"
-  }, 
+  },
   {
     "id": 3,
     "title": "Experiences",
     "description": "From pyramids to the sea, take in Egypt's unique experiences.",
     "img": "explorDep3.jpg"
-  }, 
+  },
   {
     "id": 4,
     "title": "Arts & Culture",
     "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
     "img": "explorDep4.jpg"
-  }, 
+  },
   {
     "id": 5,
     "title": "Shopping",
     "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
     "img": "explorDep5.jpg"
-  }, 
+  },
   {
     "id": 6,
     "title": "Food & Drink",
     "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
     "img": "explorDep6.jpg"
-  }, 
+  },
   {
     "id": 7,
     "title": "Spas & Wellness",
     "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
     "img": "explorDep7.jpg"
-  }, 
+  },
   {
     "id": 8,
     "title": "Itineraries",
@@ -452,7 +452,22 @@
       "bannerImg": "10.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
       "description": "Get started on your Egypt holiday with these helpful tips and tools."
+    },{
+      "id": 7,
+      "name": "New",
+      "title": "New & Trending",
+      "bannerImg": "im1.jpg",
+      "bannerVideo": "assets/v2",
+      "description": "Check out the latest hotspots and attractions to add to your next holiday."
+    },{
+      "id": 8,
+      "name": "activities",
+      "title": "Top activities in Egypt",
+      "bannerImg": "10.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Check out the latest hotspots and attractions to add to your next holiday."
     }
+
   ],
   "Subscriptions": [
     {
@@ -501,7 +516,7 @@
       "seconddescription": "20 amazing things to do in Egypt"
     }
   ],
-  
+
   "articles": [{
     "id": 1,
     "title": "How Egypt is trying to encourage the return of tourism",
