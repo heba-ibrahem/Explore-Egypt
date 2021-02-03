@@ -1,0 +1,29 @@
+
+#fb{background-color: #595dc0;}
+#gp{background-color: #4285f4;}
+#t{background-color: #1d9dec;}
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.sm-btns{
+	width: 100%;
+	color: white;
+	margin: 0.5% 1% 0.5% 1%;
+	padding: 1%;
+	float: left;
+}
+
+#buton a{
+	padding:2% 6%;
+}
+#buton a:hover{
+	text-decoration: none;
+
+}
+.active{
+	color: #0070ce;
+	border-bottom: 2px solid #0070ce;
+
+}

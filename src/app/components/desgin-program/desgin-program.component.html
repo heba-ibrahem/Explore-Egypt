@@ -1,1 +1,234 @@
-<p>desgin-program works!</p>
+<div class="container">
+    <h3 class="mt-4">Select your trip date </h3>
+    
+    <form method="post row ">
+        <div class="row">
+            <div class="form-group col-3"> 
+                <label class="control-label" for="date">From</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+            </div>
+            <div class="form-group col-3"> 
+                <label class="control-label" for="date">to</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="hotel">
+        <h3 class="mt-4">Select city to show recmoneded hotels </h3>
+        <div class="form-group col-3 ">
+          <label for="cCity" class=" form-label" id="">city</label>
+        <select class="form-control"  id="cCity"  >
+        </select>
+        <button class="btn btn-info" id="show" onclick="show2()"> show</button>
+
+      </div>
+        <div  id="">
+          <div id="cairo" class="tabels">
+              <table class="table table-dark rounded" id="datac">
+                    <thead>
+                      <tr>
+                        <th scope="col">select</th>
+                        <th scope="col">Hotel name</th>
+                        <th scope="col">city</th>
+                        <th scope="col">Hotel name</th>
+                        <th scope="col">Room price</th>
+                        <th scope="col">Contact Info</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="train">
+        <h3 class="mt-4">Select city to show Train time  </h3>
+      <div class="row"> 
+            <div class="form-group col-3 ">
+              <label for="feild" class=" form-label" id="">from</label>
+            <select class="form-control"  id="feild"  >
+            </select>
+          </div>
+
+          <div class="form-group col-3 ">
+            <label for="val" class=" form-label" id="">to</label>
+            <select class="form-control"  id="val"  >
+            </select>
+        </div>
+        <button class="btn btn-info" id="show" onclick="show()"> show</button>
+      </div>
+        <!-- <div id="Btntrain2" >
+           <button type="button" id="option" class="btn btn-primary mb-2" onclick="show()"></button>     
+      </div> -->
+        <div class="">
+            <div id="cairot" class="tablet">
+                <table id="data" class="table table-dark rounded">
+                    <thead>
+                      <tr>
+                        <th scope="col">select</th>
+                        <th scope="col">Train Number</th>
+                        <th scope="col">Distenation</th>
+                        <th scope="col">Depature time </th>
+                        <th scope="col">Arrival time </th>
+                        <th scope="col">Ticket price</th>
+                        <th scope="col">Reservation details</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <!-- <tr>
+                        <th scope="row"><input type="radio" name="cairo"></th>
+                        <td>2015</td>
+                        <td>Aswan</td>
+                        <td>9:00pm</td>
+                        <td>9:00am</td>
+                        <td>First Class: 300LE<br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><input type="radio" name="cairo"></th>
+                        <td>2015</td>
+                        <td>Sohag</td>
+                        <td>9:00pm</td>
+                        <td>4:00am</td>
+                        <td>First Class: 300LE <br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><input type="radio" name="cairo"></th>
+                        <td>999</td>
+                        <td>Alexandria</td>
+                        <td>9:00pm</td>
+                        <td>11:30pm</td>
+                        <td>First Class: 300LE<br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+
+        <!-- <div>
+            <div id="aswant" class="tablet">
+                <table class="table table-dark rounded">
+                    <thead>
+                      <tr>
+                        <th scope="col">select</th>
+                        <th scope="col">Train Number</th>
+                        <th scope="col">Distenation</th>
+                        <th scope="col">Depature time </th>
+                        <th scope="col">Arrival time </th>
+                        <th scope="col">Ticket price</th>
+                        <th scope="col">Reservation details</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><input type="radio" name="aswan"></th>
+                        <td>2009</td>
+                        <td>cairo</td>
+                        <td>11:00am</td>
+                        <td>11:00pmm</td>
+                        <td>First Class: 300LE<br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><input type="radio" name="aswan"></th>
+                        <td>2009</td>
+                        <td>Sohag</td>
+                        <td>11:00am</td>
+                        <td>3:30pm</td>
+                        <td>First Class: 300LE <br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><input type="radio" name="aswan"></th>
+                        <td>2015</td>
+                        <td>Alexandria</td>
+                        <td>11:00pm</td>
+                        <td>11:30am</td>
+                        <td>First Class: 300LE<br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <div>
+            <div id="alext" class="tablet">
+                <table class="table table-dark rounded">
+                    <thead>
+                      <tr>
+                        <th scope="col">select</th>
+                        <th scope="col">Train Number</th>
+                        <th scope="col">Distenation</th>
+                        <th scope="col">Depature time </th>
+                        <th scope="col">Arrival time </th>
+                        <th scope="col">Ticket price</th>
+                        <th scope="col">Reservation details</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><input type="radio" name="alex"></th>
+                        <td>2015</td>
+                        <td>Aswan</td>
+                        <td>9:00pm</td>
+                        <td>9:00am</td>
+                        <td>First Class: 300LE<br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><input type="radio" name="alex"></th>
+                        <td>2015</td>
+                        <td>Sohag</td>
+                        <td>9:00pm</td>
+                        <td>4:00am</td>
+                        <td>First Class: 300LE <br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><input type="radio" name="alex"></th>
+                        <td>999</td>
+                        <td>Alexandria</td>
+                        <td>9:00pm</td>
+                        <td>11:30am</td>
+                        <td>First Class: 300LE<br>
+                            Second Class:200LE
+                        </td>
+                        <td>Link</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div> -->
+        
+
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-success"> <a href="tripdetails.html" class="text-decoration-none text-white">Save your program </a></button>
+    </div>
+</div>

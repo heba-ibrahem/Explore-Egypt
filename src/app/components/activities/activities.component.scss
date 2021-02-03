@@ -1,0 +1,166 @@
+#startIm,
+#startImgDiv {
+    border-bottom-right-radius: 80px
+}
+
+#startImgDiv {
+    position: relative;
+}
+
+#playbtn {
+    position: absolute;
+    top: 10%;
+    left: 85%;
+    background-color: rgba(255, 255, 255, 0.692);
+    width: 50px;
+    height: 50px;
+    transform: translate(-20%, -20%);
+    -ms-transform: translate(-20%, -20%);
+    color: rgb(199, 183, 163);
+}
+
+#playbtn:hover {
+    background-color: rgb(199, 183, 163);
+    color: rgba(255, 255, 255, 0.69);
+    border: rgb(199, 183, 163) 1px solid;
+
+}
+
+#playbtn:active,
+#playbtn:focus {
+    border: rgb(199, 183, 163) 1px solid;
+}
+
+.afterimgtxt {
+    margin: auto;
+    padding-top: 15px;
+}
+
+#after1im {
+    font-size: 1.2em;
+    color: grey;
+}
+
+#toHide {
+    display: none;
+}
+
+.card {
+    margin-bottom: 1.4em;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.card img:hover {
+    transform: scale(1.1)
+}
+
+#h {
+    margin-bottom: .5em;
+}
+
+.back {
+    background-color: rgb(199, 183, 163);
+    border-top-left-radius: 80px;
+    height: 25em;
+
+
+}
+
+
+
+
+
+.inback {
+
+    font-size: 2em;}
+
+#lovebtn {
+    color: rgba(222, 184, 135, 0.527);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    background-color: rgba(255, 255, 255, 0.87);
+
+}
+#lovebtn:hover
+{
+    background-color: rgba(206, 181, 149, 0.87);
+    color: rgba(255, 255, 255,  0.87);
+
+}
+
+.atitle {
+    /* margin-top: -6em; */
+}
+
+
+
+
+.ap {
+    font-size: 1.3vw;
+}
+
+
+
+.afterart {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.afterart .card {
+    border: none;
+    box-shadow: none;
+
+}
+
+@media (max-width: 991.98px) {
+    /* .txt {
+        display: none;
+    } */
+
+    .inback {
+        font-size: 5vw;
+
+
+    }
+
+
+
+}
+
+a .card {
+    color: black;
+}
+
+a .card:hover {
+    color: rgb(192, 178, 178);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.social_icon span {
+    font-size: 3vw;
+    margin-left: 10px;
+    color: #b9b7ae;
+}

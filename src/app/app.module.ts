@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -23,10 +22,20 @@ import { ArticleComponent } from './components/article/article.component';
 import { TrendingComponent } from './components/trending/trending.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlanTripHomeComponent } from './components/home/plan-trip-home/plan-trip-home.component';
 import { ActivitiesHomeComponent } from './components/home/activities-home/activities-home.component';
 import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/explor-egypt-home.component';
+// Swiper.js
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 
+// Swiper.js default config
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto'
+};
 
 @NgModule({
   declarations: [
@@ -56,10 +65,18 @@ import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/ex
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    SwiperModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

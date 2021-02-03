@@ -1,0 +1,183 @@
+{
+  "trains": [
+    {}
+  ],
+  "hotels": [
+    {}
+  ],
+  "Users": [
+    {
+      "firstName": "test",
+      "lastName": "asdasd",
+      "countery": "iti",
+      "email": "test@iti.com",
+      "password": "asdasd",
+      "id": 1
+    },
+    {
+      "firstName": "heba",
+      "lastName": "ibrahem",
+      "countery": "sdsdc",
+      "email": "heba@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdasd",
+      "id": 2
+    }
+  ],
+  "Pages": [
+    {
+      "id": 1,
+      "name": "Explore",
+      "title": "Discover Egypt",
+      "bannerImg": "1.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities."
+    },
+    {
+      "id": 2,
+      "name": "Neighbourhoods",
+      "title": "Neighbourhoods in Egypt",
+      "bannerImg": "14.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Every district tells a story – get ready to explore all the highlights in the dynamic city of Egypt."
+    },
+    {
+      "id": 3,
+      "name": "Culture",
+      "title": "Local culture & heritage",
+      "bannerImg": "13.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Discover the warm hospitality, rich culinary heritage and proud traditions that make up Egypt's vibrant culture."
+    },
+    {
+      "id": 4,
+      "name": "About",
+      "title": "About Egypt",
+      "bannerImg": "10.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities."
+    }
+  ],
+  "Articles": [
+    {
+      "id": 1,
+      "page": "About",
+      "name": "History",
+      "title": "1958",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "3.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "page": "About",
+      "name": "History",
+      "title": "1962",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "15.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "page": "About",
+      "name": "History",
+      "title": "1981",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "8.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "page": "About",
+      "name": "History",
+      "title": "1997",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "10.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "page": "About",
+      "name": "Facts",
+      "title": "Ahlan wa Sahlan!",
+      "description": "This short greeting means 'welcome' in Arabic, the official language of the Egypt.",
+      "Images": [
+        "3.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "page": "About",
+      "name": "Facts",
+      "title": "Hello Sunshine!",
+      "description": "Our climate is warm and subtropical with 300+ days of sunshine a year.",
+      "Images": [
+        "1.jpg"
+      ]
+    },
+    {
+      "page": "About",
+      "name": "Facts",
+      "title": "The Great Pyramids",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis!",
+      "Images": [
+        "7.jpg"
+      ],
+      "id": 7
+    },
+    {
+      "id": 8,
+      "page": "Culture",
+      "name": "Clothing",
+      "title": "Typical Egyptian Clothing",
+      "description": "With around 200 nationalities represented in Egypt, how people dress is incredibly varied – yet the traditional attire of Egypt is bold and distinctive. You can see it all across the city. \n\n Egyptian national dress is a symbol of pride and identity that has been designed with the dual intent of providing comfort and adhering to religious beliefs. In Egypt, men wear an ankle-length, loose-fitting garment made of white cotton, known as a kandora or dishdasha. A ghutrah covers the head and is held in place by the agal, a type of black cord. This garment was originally used to protect the face from the harsh desert environment, \n\n Traditionally, women in Egypt wear an abaya – a long, flowing light coat over their clothing. This is worn over their Western clothes or a traditional long-sleeved full-length dress known as a jalabeya. A black scarf is often draped over the head. ",
+      "Images": [
+        "15.jpg",
+        "14.jpg",
+        "13.jpg",
+        "12.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "page": "Culture",
+      "name": "Food",
+      "title": "Typical Egyptian Food",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda sed minus at praesentium quidem harum dolore vel perferendis? Pariatur illum voluptatem architecto earum ratione, excepturi, deserunt tenetur placeat praesentium unde eum assumenda maiores fuga quam quibusdam similique blanditiis in.",
+      "Images": [
+        "11.jpg",
+        "10.jpg",
+        "9.jpg",
+        "8.jpg"
+      ],
+      "Items": [
+        {
+          "title": "Koshary",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error nobis!"
+        },
+        {
+          "title": "test02",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error nobis! sit amet consectetur"
+        },
+        {
+          "title": "test03",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error nobis! sit amet consectetur adipisicing elit."
+        },
+        {
+          "title": "test04",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla!"
+        }
+      ]
+    }
+  ],
+  "Subscriptions": [
+    {
+      "id": 1,
+      "email": "test@gmail.com"
+    }
+  ]
+}

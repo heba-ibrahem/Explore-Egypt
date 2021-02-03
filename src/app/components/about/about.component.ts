@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticlesService } from 'src/app/Services/articles.service';
+import { PageDetailsService } from 'src/app/Services/page-details.service';
+import { IArticle } from 'src/app/viewmodels/iarticle';
+import { IPage } from 'src/app/viewmodels/IPage';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +10,93 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  pageDetails: IPage;
+  historyArticles: IArticle[] = [];
+  factsArticles: IArticle[] = [];
+  swiper_config_1: any = {};
+  swiper_config_2: any = {};
+  constructor(
+    private pageDetailsService: PageDetailsService,
+    private articlesService: ArticlesService
+  ) { 
+    this.pageDetails = {id: 0, name: '', title: '', bannerImg: '', bannerVideo: "", description: ''}
+  }
 
   ngOnInit(): void {
+    this.getPageDetails();
+    this.getHistoryArticles();
+    this.getFactsArticles();
+    this.initHistorySwiperConfig();
+    this.initFactsSwiperConfig();
+  }
+
+  // Get page details
+  getPageDetails() {
+    this.pageDetailsService.getPageDetails("About").subscribe(
+      (res)=> {
+        this.pageDetails = res[0];
+        this.pageDetails.name = `${this.pageDetails.name} Egypt`;
+      },
+      (err)=> {console.log(err)}
+    )
+  }
+
+  // Get History Articles
+  getHistoryArticles() {
+    this.articlesService.getArticlesByPageAndName("About", "History").subscribe(
+      res => {this.historyArticles = res},
+      err => {console.log(err)}
+    )
+  }
+
+  // Get Facts Articles
+  getFactsArticles() {
+    this.articlesService.getArticlesByPageAndName("About", "Facts").subscribe(
+      res => {this.factsArticles = res},
+      err => {console.log(err)}
+    )
+  }
+
+  initHistorySwiperConfig() {
+    this.swiper_config_1 = {
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: '.swiper-pagination_1',
+        clickable:true,
+        renderBullet: (index: number, className: string) => {
+          return '<span class="' + className + '">' + this.historyArticles[index]?.title + '</span>';
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        }
+      }
+    }
+  }
+
+  initFactsSwiperConfig() {
+    this.swiper_config_2 = {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination_2',
+        clickable:true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    }
   }
 
 }

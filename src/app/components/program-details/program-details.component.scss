@@ -1,0 +1,30 @@
+.rdiv{
+    
+    border-radius:  23% 2% 23% 2%;
+}
+.rdiv h2 , .rdiv p , .rdiv button{
+    padding: 3%;
+    z-index: 1;
+}
+.vd{
+    width: 100%;
+    height: auto;
+    border-bottom-right-radius: 10%;
+}
+@media (max-width :768px){
+    .rdiv{
+        margin-left: 0;
+        border-radius:  0% 0% 23% 2%;
+    } 
+}
+.overlap{
+    margin-left:-200px ;
+}
+
+/* ******************************************** */
+/* .tabels,  .tablet {
+    display: none;
+} */
+.overlap {
+    margin-left: -9%;
+}

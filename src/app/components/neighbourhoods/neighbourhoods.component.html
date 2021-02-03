@@ -1,1 +1,58 @@
-<p>neighbourhoods works!</p>
+
+
+<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+
+<!-- Featured Neighbourhoods -->
+<section class="links-pattern half-grey-right">
+  <div class="container">
+    <h4 class="title">Featured Neighbourhoods</h4>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pt-4" *ngFor="let n of neighbourhoods">
+        <div class="item shadow">
+          <a href="#" class="img-container">
+            <img class="img-fluid" [src]="'assets/images/' + n.img_url" alt="">
+          </a>
+          <div class="caption">
+            <a href="#" class="title-link">{{n.title}}</a>
+            <p class="item-desc">{{n.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="more-btn" routerLink="/explore">Discover More <span><i class="fa fa-angle-right"></i></span></a>
+  </div>
+</section>
+
+<!-- Explore -->
+<section class="links-pattern half-grey-left">
+  <div class="container">
+    <h4 class="title">Keep exploring</h4>
+    <p class="desc">If seeing is believing, why not take a closer look?</p>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pt-4">
+        <div class="item shadow">
+          <a routerLink="/about" class="img-container">
+            <img class="img-fluid" src="assets/images/2.jpg" alt="">
+          </a>
+          <div class="caption">
+            <a routerLink="/about" class="title-link">About Egypt</a>
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pt-4">
+        <div class="item shadow">
+          <a routerLink="/explore" class="img-container">
+            <img class="img-fluid" src="assets/images/8.jpg" alt="">
+          </a>
+          <div class="caption">
+            <a routerLink="/explore" class="title-link">Explore Egypt</a>
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="more-btn" routerLink="/explore">Discover More <span><i class="fa fa-angle-right"></i></span></a>
+  </div>
+</section>
+

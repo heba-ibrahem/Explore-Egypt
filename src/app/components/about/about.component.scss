@@ -1,0 +1,117 @@
+
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+
+
+.brief-info {
+  padding: 50px 0;
+}
+
+.history-slider {
+  padding: 25px 0;
+  .title {
+    margin-bottom: 40px;
+  }
+  .caption {
+    padding: 30px 0 0 0;
+    .year {
+      font-size: 56px;
+    }
+    p {
+      color: $text-muted;
+      font-size: 14px;
+      @media(min-width: 991px) {
+        font-size: 16px;
+      }
+    }
+  }
+  .swiper-container {
+    padding-bottom: 70px;
+    .img-container {
+      max-height: 390px;
+      overflow: hidden;
+      border-radius: 5px;
+      @media(max-width:992px) {
+        max-height: 250px;
+      }
+      @media(max-width:767px) {
+        max-height: 370px;
+      }
+      @media(max-width:640px) {
+        max-height: 330px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .swiper-pagination {
+      bottom: -10px;
+      ::ng-deep .swiper-pagination-bullet {
+        width: 65px;
+        height: 35px;
+        display: inline-block;
+        border-radius: 0;
+        opacity: 1;
+        background-color: #fff;
+        color: #757575;
+        margin-bottom: 10px;
+        &.swiper-pagination-bullet-active {
+          color: $main-blue;
+          border-bottom: 2px solid $main-blue;
+        }
+      }
+    }
+  }
+  .note {
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    color: #cacaca;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.facts {
+  padding: 25px 0;
+  .number {
+    position: relative;
+    .num-pic {
+      font-size: 220px;
+      font-weight: 900;
+      text-align: center;
+      max-width: 320px;
+      margin: auto;
+      background-size: cover;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @media(max-width: 992px) {
+        font-size: 150px;
+      }
+      @media(max-width: 767px) {
+        font-size: 200px;
+      }
+    }
+  }
+  .caption {
+    h4 {
+      color: $text-muted;
+    }
+    h2 {
+      font-size: 46px;
+    }
+    h4, h2, p {
+      margin-bottom: 20px;
+    }
+  }
+  .swiper-button-next, .swiper-button-prev {
+    top: 0;
+    transform: translateY(50%);
+  }
+  .swiper-button-prev {
+    right: 10px !important;
+    left: auto;
+    top: 65px;
+  }
+}
