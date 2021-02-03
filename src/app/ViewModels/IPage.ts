@@ -1,4 +1,4 @@
-export interface PageDetails {
+export interface IPage {
   id: number;
   name: string;
   title: string;

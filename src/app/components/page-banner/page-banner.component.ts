@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { PageDetails } from 'src/app/viewmodels/page-details';
+import { IPage } from 'src/app/viewmodels/IPage';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class PageBannerComponent implements OnInit {
   @ViewChild('banner_video') banner_video: ElementRef|undefined;
   @ViewChild('play_btn') play_btn: ElementRef|undefined;
   @ViewChild('pause_btn') pause_btn: ElementRef|undefined;
-  @Input() pageDetails = {id:0, name:'', title:'', bannerImg:'', bannerVideo:'', description:''}
+  @Input() pageDetails: IPage = {id:0, name:'', title:'', bannerImg:'', bannerVideo:'', description:''}
   
   constructor() { }
 

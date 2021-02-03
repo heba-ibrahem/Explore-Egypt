@@ -2,20 +2,20 @@
 
 <app-page-banner [pageDetails]="pageDetails"></app-page-banner>
 
-<!-- Journey -->
+<!-- courney -->
 <section class="links-pattern half-grey-left">
   <div class="container">
-    <h4 class="title">Your Journey starts here</h4>
+    <h4 class="title">Your courney starts here</h4>
     <p class="desc">See how Egypt evolved into the modern destination it is today.</p>
     <div class="row">
-      <div class="col-lg-4 col-md-6 pt-4" *ngFor="let J of journey">
+      <div class="col-lg-4 col-md-6 pt-4" *ngFor="let c of cards">
         <div class="item shadow">
-          <a [routerLink]="J.path" class="img-container">
-            <img class="img-fluid" [src]="J.img_url" alt="">
+          <a [routerLink]="c.path" class="img-container">
+            <img class="img-fluid" [src]="'assets/images/' + c.img_url" alt="">
           </a>
           <div class="caption">
-            <a [routerLink]="J.path" class="title-link">{{J.title}}</a>
-            <p class="item-desc">{{J.description}}</p>
+            <a [routerLink]="c.path" class="title-link">{{c.title}}</a>
+            <p class="item-desc">{{c.description}}</p>
           </div>
         </div>
       </div>

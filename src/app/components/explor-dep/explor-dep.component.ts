@@ -7,13 +7,13 @@ import { IPage} from 'src/app/viewmodels/IPage';
 import { Article } from 'src/app/viewmodels/article';
 import { Router } from '@angular/router';
 import { ArticlesService } from 'src/app/Services/articles.service';
-
 @Component({
-  selector: 'app-activities',
-  templateUrl: './activities.component.html',
-  styleUrls: ['./activities.component.scss']
+  selector: 'app-explor-dep',
+  templateUrl: './explor-dep.component.html',
+  styleUrls: ['./explor-dep.component.scss']
 })
-export class ActivitiesComponent implements OnInit {
+export class ExplorDepComponent implements OnInit {
+
   pageDetails: IPage;
   departments: IactivitiesDep[]=[];
   curatorsList:Curators[]=[]
@@ -21,11 +21,11 @@ export class ActivitiesComponent implements OnInit {
   constructor(private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
     this.pageDetails = {
       id: 2,
-      name: 'activities',
-      title: 'Top activities in Egypt',
-      bannerImg: 'assets/im1.jpg',
+      name: 'New & Trending',
+      title: 'New & Trending',
+      bannerImg: 'assets/im2.jpg',
       bannerVideo: 'assets/v2',
-      description: "Adventure, culture, shopping – name it and you'll find it here in Egypt. Browse all the unforgettable experiences for all kinds of explorers."
+      description: "Check out the latest hotspots and attractions to add to your next holiday."
     }
 
   }

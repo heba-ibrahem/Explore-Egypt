@@ -2,9 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { IExpiorEgyptHome } from '../viewmodels/iexpior-egypt-home';
 import { INewEventsHome } from '../viewmodels/iweek-events-home';
-import { PageDetails } from '../viewmodels/page-details';
+import { IPage } from '../viewmodels/IPage';
+import { Article } from '../viewmodels/article';
+import { IactivitiesDep } from '../viewmodels/iactivities-dep';
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +16,19 @@ export class HomeService {
   constructor(private http: HttpClient) { }
    getAllpages(): Observable <any>
   {
-    return this.http.get<PageDetails[]>(`${environment.API_URL}/Pages`);
+    return this.http.get<IPage[]>(`${environment.API_URL}/Pages`);
   }
-  getPageByName(pagename:string):Observable <PageDetails> 
+  getPageByName(pagename:string):Observable <IPage> 
   {
-    return this.http.get<PageDetails>(`${environment.API_URL}/Pages?name/${pagename}`);
+    return this.http.get<IPage>(`${environment.API_URL}/Pages?name/${pagename}`);
   }
   getAllEvents(): Observable <any>
   {
     return this.http.get<INewEventsHome[]>(`${environment.API_URL}/events`);
   }
-
+  
+  getAllArticles(): Observable <any>
+  {
+    return this.http.get<IactivitiesDep[]>(`${environment.API_URL}/explorDep`);
+  }
 }

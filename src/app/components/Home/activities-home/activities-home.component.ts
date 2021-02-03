@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivitesHomeService } from 'src/app/Services/activites-home.service';
-import { IActivitesHome } from 'src/app/viewmodels/iactivites-home';
+import { Subscription } from 'rxjs';
+import { HomeService } from 'src/app/Services/home.service';
+import { IactivitiesDep } from 'src/app/viewmodels/iactivities-dep';
 
 @Component({
   selector: 'app-activities-home',
@@ -8,13 +9,18 @@ import { IActivitesHome } from 'src/app/viewmodels/iactivites-home';
   styleUrls: ['./activities-home.component.scss']
 })
 export class ActivitiesHomeComponent implements OnInit {
-   List:IActivitesHome[];
-  constructor(private servies:ActivitesHomeService) { 
-    this.List=servies.ActivitesList;
-    console.log(this.List)
+  List:IactivitiesDep[]|null=null;
+  subscribtion: Subscription[]=[];
+  constructor(private servies:HomeService) { 
   }
 
   ngOnInit(): void {
+    this.subscribtion[0]= this.servies.getAllArticles().subscribe(
+      (response)=>{
+        this.List=response;
+      },
+      (err)=>{console.log(err)}
+    );
   }
 
 }

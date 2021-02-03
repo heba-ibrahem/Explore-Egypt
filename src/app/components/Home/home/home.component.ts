@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { PageDetails } from 'src/app/viewmodels/page-details';
+import { IPage} from 'src/app/viewmodels/IPage';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('banner_video') banner_video: ElementRef|undefined;
   @ViewChild('play_btn') play_btn: ElementRef|undefined;
   @ViewChild('pause_btn') pause_btn: ElementRef|undefined;
-  pageDetails: PageDetails;
+  pageDetails: IPage;
   subscribtion: Subscription[]=[];
   constructor() {
     this.pageDetails = {

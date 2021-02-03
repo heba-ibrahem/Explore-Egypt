@@ -1,1 +1,46 @@
-<p>culture works!</p>
+
+
+<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+
+<!-- Section clothing -->
+<section class="article-pattern half-grey-right" *ngFor="let art of articles">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 py-3">
+        <div class="article-content">
+          <h3>{{art.title}}</h3>
+          <p>{{art.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="slider">
+          <!-- Slider main container -->
+          <div class="swiper-container culture_swiper_1" [swiper]="swiper_config">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide" *ngFor="let img of art.Images">
+                <div class="img-container">
+                  <img class="img-fluid" [src]="'assets/images/' + img" alt="">
+                </div>
+                <h6 class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum.</h6>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination_1"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
