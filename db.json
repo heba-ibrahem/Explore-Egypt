@@ -80,28 +80,6 @@
       "contactInfo": ",hdbbbdlkdhfnkjl"
     }
   ],
-<<<<<<< HEAD
-  "city": [
-    {
-      "id": 1,
-      "name": "cairo"
-    },
-    {
-      "id": 2,
-      "name": "Alexandria"
-    },
-    {
-      "id": 3,
-      "name": "Aswan"
-    },
-    {
-      "id": 4,
-      "name": "Sohag"
-    },
-    {
-      "id": 5,
-      "name": "Suez"
-=======
   "programs": [
     {
       "id": 1,
@@ -138,7 +116,6 @@
         "destination": "Aswan"
       },
       "id": 4
->>>>>>> 37899e8a8b6a01002eab5f0084486592a47f3179
     }
   ],
   "Users": [
@@ -167,8 +144,6 @@
       "password": "asdasd",
       "confirmPassword": "asdasd",
       "id": 4
-<<<<<<< HEAD
-=======
     },
     {
       "firstName": "amsaa",
@@ -178,7 +153,6 @@
       "password": "qweqwe",
       "confirmPassword": "qweqwe",
       "id": 5
->>>>>>> 37899e8a8b6a01002eab5f0084486592a47f3179
     }
   ],
   "Pages": [
@@ -262,27 +236,6 @@
     }
   ],
   
-  "programs": [
-    {
-      "id": 1,
-      "userID": 1,
-      "from": "Monday 30-2-2020",
-      "to": "Monday 30-2-2020",
-      "hotelName": "Hilton",
-      "trainNumber": "999",
-      "destination": "Aswan"
-    },
-    {
-      "from": "",
-      "to": "",
-      "destination": "dfc",
-      "trainNumber": 12,
-      "selHotel": "hotel",
-      "selTrain": "train",
-      "hotelName": "zf",
-      "id": 2
-    }
-  ],
   "events":[
     {
     "id":1,
