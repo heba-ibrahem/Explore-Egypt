@@ -11,7 +11,7 @@ import { INewEventsHome } from 'src/app/viewmodels/iweek-events-home';
 export class MoreNewEventHomeComponent implements OnInit {
   List:INewEventsHome[]=[]
    subscribtion: Subscription[]=[];
-  constructor(private service:HomeService) { }
+  constructor(private service:HomeService) {}
 
   ngOnInit(): void {
     this.subscribtion[0]= this.service.getAllEvents().subscribe(

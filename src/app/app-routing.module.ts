@@ -16,6 +16,7 @@ import { PlanProgramComponent } from './components/plan-program/plan-program.com
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TrendingComponent } from './components/trending/trending.component';
+import { AuthGuard } from './gurds/auth.guard';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -29,7 +30,7 @@ const routes: Routes = [
   {path: 'article', component: ArticleComponent},
   {path: 'trending', component: TrendingComponent},
   {path: 'planProgram', component: PlanProgramComponent},
-  {path: 'designProgram', component: DesginProgramComponent},
+  {path: 'designProgram', component: DesginProgramComponent , canActivate:[AuthGuard]},
   {path: 'programDetails', component: ProgramDetailsComponent},
   {path: 'editProfile', component: EditProfileComponent},
   {path: 'adminPanel', component: AdminPanelComponent},

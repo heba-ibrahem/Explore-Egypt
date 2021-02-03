@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Guid } from 'guid-typescript';
 import { AuthService } from 'src/app/Services/auth.service';
+import { UsersServiceService } from 'src/app/Services/users-service.service';
 
 
 import { IUsers } from 'src/app/viewmodels/iusers';
@@ -13,36 +15,65 @@ import { IUsers } from 'src/app/viewmodels/iusers';
 export class LoginComponent implements OnInit {
 
   LoginForm: FormGroup;
-  user: IUsers;
+  users: IUsers[] = [];
+  // loggedUser: IUsers;
+  token: Guid |any;
   
-  constructor(private fb: FormBuilder,private authService: AuthService ) { 
+  constructor(private fb: FormBuilder, private authService: AuthService, private userService: UsersServiceService) {
     this.LoginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     })
-    this.user = {
-      email: "",
-      password: "",
-    }
+    // this.loggedUser = {
+    //   email: "",
+    //   password: "",
+    // }
   }
 
   ngOnInit(): void {
+    this.userService.getUserDetails().subscribe(
+      res => this.users = res,
+      err => console.log(err),
+      
+    ) 
   }
 
-   login() {
-    console.log(this.LoginForm.value)
-  //   const val= this.LoginForm.value
-  //   if (val.email && val.password) {
-  //     this.authService.login(val.email, val.password)
-  //         .subscribe(
-  //             () => {
-  //                 console.log("User is logged in");
-  //                 // this.router.navigateByUrl('/');
-  //             }
-  //         );
-          
-  // }
-   }
-  
+  login(): boolean {
+    console.log("enterede value",this.LoginForm.value)
+    // console.log("inside login")
+    //  this.authService.login('test Token')
+
+    let loggedUser = this.LoginForm.value
+    // console.log(this.loggedUser)
+    console.log("inside login")
+    let correct: boolean = false
+    this.users.forEach((userr) => {
+      console.log("test")
+      if (this.LoginForm.value.email === userr.email && this.LoginForm.value.password === userr.password) {
+        
+        console.log("test2")
+        correct = true
+        console.log("you are ")
+      }
+      
+    })
+    if (correct) {
+      this.accessToken()
+      return correct
+    } else {
+      return correct
+    }
+
+
+  }
+  logout() {
+    console.log("looged out")
+    this.authService.logout()
+  }
+  accessToken() {
+    this.token = Guid.create()
+    console.log(this.token)
+    localStorage.setItem("Access token", this.token.toString())
+  }
 
 }
