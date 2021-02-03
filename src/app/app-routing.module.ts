@@ -15,7 +15,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PlanProgramComponent } from './components/plan-program/plan-program.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 import { RegisterComponent } from './components/register/register.component';
-import { TrendingComponent } from './components/trending/trending.component';
+import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
+import { AuthGuard } from './gurds/auth.guard';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -26,8 +27,8 @@ const routes: Routes = [
   {path: 'culture', component: CultureComponent},
   {path: 'neighbourhoods', component: NeighbourhoodsComponent},
   {path: 'activities', component: ActivitiesComponent},
-  {path: 'article', component: ArticleComponent},
-  {path: 'trending', component: TrendingComponent},
+  {path: 'article/:ID', component: ArticleComponent},
+  {path: 'explorDep/:ID', component: ExplorDepComponent},
   {path: 'planProgram', component: PlanProgramComponent},
   {path: 'designProgram', component: DesginProgramComponent},
   {path: 'programDetails', component: ProgramDetailsComponent},

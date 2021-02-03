@@ -19,7 +19,6 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
-import { TrendingComponent } from './components/trending/trending.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,6 +29,10 @@ import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/ex
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
+import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
+import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
+import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -57,11 +60,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AdminPanelComponent,
     ActivitiesComponent,
     ArticleComponent,
-    TrendingComponent,
     NotFoundComponent,
     PlanTripHomeComponent,
     ActivitiesHomeComponent,
-    ExplorEgyptHomeComponent
+    ExplorEgyptHomeComponent,
+    ExplorDepComponent,
+    NewEventsHomeComponent,
+    MoreNewEventHomeComponent,
+    StartPlanningYourTripComponent
   ],
   imports: [
     BrowserModule,

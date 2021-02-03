@@ -2,6 +2,7 @@ import { HttpClient, HttpHandler, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Article } from '../viewmodels/article';
 import { IArticle } from '../viewmodels/iarticle';
 
 @Injectable({
@@ -10,6 +11,12 @@ import { IArticle } from '../viewmodels/iarticle';
 export class ArticlesService {
 
   constructor(private http: HttpClient) { }
+
+  // Get all articles
+  getAll(): Observable <Article[]> {
+  {
+    return this.http.get<Article[]>(`${environment.API_URL}/articles`);
+  }}
 
   // Get articles by page
   getArticlesByPage(page: string) :Observable<IArticle[]> {

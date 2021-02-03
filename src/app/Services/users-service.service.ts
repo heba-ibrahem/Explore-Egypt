@@ -10,24 +10,32 @@ import { IUsers } from '../viewmodels/iusers';
 export class UsersServiceService {
 
   constructor(private httpclient: HttpClient) { }
-  addUser(user: IUsers) : Observable<any[]> {
-    const httpOptions = {headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-      //,'Accept':' */*'
-      //,'Authorization': 'my-auth-token'
-        })};
-      
-    return this.httpclient.post<any>(`${environment.API_URL}/Users`,user, httpOptions);
+
+  addUser(user: IUsers): Observable<any[]> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+        //,'Accept':' */*'
+        //,'Authorization': 'my-auth-token'
+      })
+    };
+
+    return this.httpclient.post<any>(`${environment.API_URL}/Users`, user, httpOptions);
   }
 
-  // signIn(user: IUsers) {
-  //   return this.httpclient.post<any>(`${environment.API_URL}/Users`, user)
-  //     .subscribe((res: any) => {
-  //       localStorage.setItem('access_token', res.token)
-  //       this.getUserProfile(res._id).subscribe((res) => {
-  //         this.currentUser = res;
-  //         this.router.navigate(['user-profile/' + res.msg._id]);
-  //       })
-  //     })
-  // }
+  getUserDetails(): Observable<IUsers[]> {
+    const httpOptions = {
+      
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+        //,'Accept':' */*'
+        //,'Authorization': 'my-auth-token'
+      })
+    };
+    console.log("getuser")
+    return this.httpclient.get<IUsers[]>(`${environment.API_URL}/Users`,httpOptions);
+
+  }
+  
+ 
 }

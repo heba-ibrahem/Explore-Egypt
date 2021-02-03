@@ -1,4 +1,6 @@
-     <!-- section-4 -->
+  
+  
+  <!-- section-4 -->
      <section class="section-4" style="margin-top:50px">
         <div class="container">
           <div class="row">
@@ -9,25 +11,25 @@
             </div>
             <div class="col-md-12 " style=" padding-right: 2rem;">
               <div class="row">
-                <div class=" col-md-4" *ngFor="let item of List; let count=index">
+                <div class=" col-md-4" *ngFor="let item of List| slice:1:4; let count=index">
                   <div class="card">
                     <div class="card-header" style="padding: 0px;">
-                      <img class="card-img-top" [src]="item.img">
+                      <img class="card-img-top" src="assents/{{item.bannerImg}}">
                     </div>
                     <div class="card-block">
-                      <h4 class="card-title">{{item.Department}}</h4>
-                      <div class="card-text">{{item.discription}}</div>
-                      <!-- <div class="see-more-article">
-                        <a aria-label="" class="card-link-a" href="#">
-                          <span class="btn-link__text"></span>
+                      <h4 class="card-title">{{item.title}}</h4>
+                      <div class="card-text">{{item.description}}</div>
+                      <div class="see-more-article">
+                        <button aria-label="" class="card-link-a" (click)="PagesDetilies(item.id)">
+                          <span class="btn-link__text">Read more</span>
                           <svg width="20" height="20" viewBox="0 0 20 20" class="btn-link__icon">
                             <path fill="#0067B9" fill-rule="nonzero"
                               d="M8.394 5.5L13 10l-4.606 4.5a1.904 1.904 0 0 1 0-2.724L10.212 10 8.394 8.224a1.904 1.904 0 0 1 0-2.724z">
                             </path>
                           </svg>
-                        </a>
+                        </button>
 
-                      </div> -->
+                      </div>
                     </div>
                   </div>
                 </div>
