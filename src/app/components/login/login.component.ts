@@ -41,19 +41,22 @@ export class LoginComponent implements OnInit {
   login(): boolean {
     console.log("enterede value",this.LoginForm.value)
     // console.log("inside login")
+    ///for allow login user to access
     //  this.authService.login('test Token')
 
     let loggedUser = this.LoginForm.value
     // console.log(this.loggedUser)
-    console.log("inside login")
+    // console.log("inside login")
     let correct: boolean = false
     this.users.forEach((userr) => {
-      console.log("test")
+      console.log("You are not Registered!!")
+      // alert("You are not Registered!!")
       if (this.LoginForm.value.email === userr.email && this.LoginForm.value.password === userr.password) {
         
-        console.log("test2")
+        this.LoginForm.reset();
         correct = true
-        console.log("you are ")
+        console.log("you are loggied in ")
+        alert("you are logged in")
       }
       
     })

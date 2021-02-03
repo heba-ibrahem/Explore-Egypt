@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('toggler') toggler: ElementRef | undefined;
   @ViewChild('smMenu') smMenu: ElementRef | undefined;
   @ViewChild('scrollUpBtn') scrollUpBtn: ElementRef | undefined;
+  @ViewChild('largeNavbar') largeNavbar: ElementRef | undefined;
+  @ViewChild('smallNavbar') smallNavbar: ElementRef | undefined;
 
   constructor() { 
 
@@ -23,6 +25,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.toggleScrollUpBtn()
     this.handleNavSubMenus();
     this.scrollUp();
+    this.fixNavbar();
   }
 
   // Show/Hide small navbar menu
@@ -66,12 +69,25 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   scrollUp() {
-    // this.scrollUpBtn?.nativeElement.addEventListener('click', function() {
-    //   $('body, html').animate({
-    //     scrollTop: 0
-    //   }, 1000)
-    // })
+    this.scrollUpBtn?.nativeElement.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
   }
+
+
+  // Make navbar fixed
+  fixNavbar() {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 75) {
+        this.largeNavbar?.nativeElement.classList.add('fixed');
+        this.smallNavbar?.nativeElement.classList.add('fixed');
+      } else {
+        this.largeNavbar?.nativeElement.classList.remove('fixed');
+        this.smallNavbar?.nativeElement.classList.remove('fixed');
+      }
+    })
+  }
+
 
 
 
