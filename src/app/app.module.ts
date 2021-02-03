@@ -20,12 +20,12 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
-import { TrendingComponent } from './components/trending/trending.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PlanTripHomeComponent } from './components/home/plan-trip-home/plan-trip-home.component';
 import { ActivitiesHomeComponent } from './components/home/activities-home/activities-home.component';
 import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/explor-egypt-home.component';
+import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
 
 
 @NgModule({
@@ -48,11 +48,11 @@ import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/ex
     AdminPanelComponent,
     ActivitiesComponent,
     ArticleComponent,
-    TrendingComponent,
     NotFoundComponent,
     PlanTripHomeComponent,
     ActivitiesHomeComponent,
-    ExplorEgyptHomeComponent
+    ExplorEgyptHomeComponent,
+    ExplorDepComponent
   ],
   imports: [
     BrowserModule,

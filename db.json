@@ -1,12 +1,117 @@
 {
-  "trains": [
-    {}
-  ],
-  "hotels": [
-    {}
-  ],
-  "Users": [
+  "articles": [{
+      "id": 1,
+      "title": "How Egypt is trying to encourage the return of tourism",
+      "img": "Explore top attractions1.jpg",
+      "description": "Egypt is reopening its borders to international tourists on 1 July,but many parts of the country will remain off-limits.",
+      "section": "Explore top attractions"
+    },
     {
+      "id": 2,
+      "title": "Where to find the best scuba diving sites",
+      "img": "Explore top attractions2.jpg",
+      "description": "With a dazzling bounty of underwater attractions to explore and improved access to key diving hubs, there has arguably never been a better time to strap…",
+      "section": "Explore top attractions"
+    },
+    {
+      "id": 3,
+      "title": "Four of the best day trips from Cairo",
+      "img": "Explore top attractions3.jpg",
+      "description": "While Egypt’s ancient capital has more than enough dusty charms to fill a traveller’s playbook, the country’s top natural sites stretch far out from Cairo…",
+      "section": "Explore top attractions"
+    },
+     {
+      "id": 4,
+      "title": "Hot Air Ballooning in Luxor",
+      "img": "keepNew1.jpg",
+      "description": "It’s an incredibly peaceful time in the air. The balloon is literally floating, you don’t feel a thing, and it’s so silent. All the while you fly over one of the most amazing sceneries worldwide.",
+      "section": "Keep up with the new"
+    },{
+      "id": 5,
+      "title": "Al-Qataneyah Dunes for Sandboarding & Barbecuing",
+      "img": "keepNew2.jpg",
+      "description": "It’s the best getaway from trafficy noisy Cairo, located 80km southwest of the city so in less than an hour you can enjoy the emptiness of the desert",
+      "section": "Keep up with the new"
+    },
+    {
+      "id": 6,
+      "title": "Cleopatra’s Bath in Siwa",
+      "img": "keepNew3.jpg",
+      "description": "Located in Siwa Oasis, and is one of its landmarks. It’s basically a pool that is fed with water from natural hot springs, it’s the best way to cool off the heat of a hot summer day.",
+      "section": "Keep up with the new"
+    }
+  ],
+  "explorDep": [{
+    "id": 1,
+    "title": "New & Trending",
+    "description": "Check out the latest hotspots and attractions to add to your next holiday.",
+    "img": "explorDep1.jpg"
+  }, {
+    "id": 2,
+    "title": "Sights & Attractions",
+    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+    "img": "explorDep2.jpg"
+  }, {
+    "id": 3,
+    "title": "Experiences",
+    "description": "From pyramids to the sea, take in Egypt's unique experiences.",
+    "img": "explorDep3.jpg"
+  }, {
+    "id": 4,
+    "title": "Arts & Culture",
+    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+    "img": "explorDep4.jpg"
+  }, {
+    "id": 5,
+    "title": "Shopping",
+    "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
+    "img": "explorDep5.jpg"
+  }, {
+    "id": 6,
+    "title": "Food & Drink",
+    "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
+    "img": "explorDep6.jpg"
+  }, {
+    "id": 7,
+    "title": "Spas & Wellness",
+    "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
+    "img": "explorDep7.jpg"
+  }, {
+    "id": 8,
+    "title": "Itineraries",
+    "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
+    "img": "explorDep8.jpg"
+  }],
+  "curators": [{
+      "id": 1,
+      "name": "Salma Ibrahim",
+      "description": "Writer, presenter and fashion consultant Salma is in the know when it comes to gems in Egypt.",
+      "img": "curators1.png"
+    },
+    {
+      "id": 2,
+      "name": "Asmaa Salah",
+      "description": "Entrepreneur, mother and branding expert Asmaa loves Egypt for its bustling urban vibe and calm.",
+      "img": "curators2.png"
+    }, {
+      "id": 3,
+      "name": "Heba Ibrahim",
+      "description": "Film enthusiast and producer Heba has an eye for Egypt's thriving arts and cultural scene.",
+      "img": "curators3.png"
+    },
+    {
+      "id": 4,
+      "name": "Khaled Hassan",
+      "description": "Blogger and father of three, ،Khaled enjoys discovering Egypt with her little ones."
+
+        ,
+      "img": "curators4.png"
+    }
+
+  ],
+  "trains": [{}],
+  "hotels": [{}],
+  "Users": [{
       "firstName": "test",
       "lastName": "asdasd",
       "countery": "iti",
