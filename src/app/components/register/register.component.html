@@ -29,6 +29,10 @@
     </div>
   </div>
 
+  <div class="alert alert-success" *ngIf="registerd">
+    You have been registerd successfuly
+  </div>
+
   <form [formGroup]="RegisterForm" (ngSubmit)="register()">
     <div class="form-row">
       <div class="form-group col-md-5 ">
