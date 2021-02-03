@@ -5,11 +5,11 @@
     <div class="row">
       <div class="form-group col-3">
         <label class="control-label" for="date">From</label>
-        <input class="form-control" formControlName="from" id="date" name="from" placeholder="MM/DD/YYY" type="text" />
+        <input type="date" class="form-control" formControlName="from" id="date" name="from" placeholder="MM/DD/YYY" type="text" />
       </div>
       <div class="form-group col-3">
         <label class="control-label" for="date">to</label>
-        <input class="form-control" formControlName="to" id="date" name="to" placeholder="MM/DD/YYY" type="text" />
+        <input type="date" class="form-control" formControlName="to" id="date" name="to" placeholder="MM/DD/YYY" type="text" />
       </div>
 
     </div>
@@ -220,7 +220,7 @@
             </div>
         </div> -->
         <div>
-          <button type="submit" class="btn btn-success"> Save your program </button>
+          <button type="submit" [disabled]="PorgramForm.invalid"  class="btn btn-success"> Save your program </button>
         </div>
 
     </div>
