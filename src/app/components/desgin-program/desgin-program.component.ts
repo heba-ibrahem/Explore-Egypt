@@ -21,13 +21,11 @@ export class DesginProgramComponent implements OnInit{
   selectedHotel: any[]=[];
   constructor(private fb: FormBuilder, private UserSevives: UsersServiceService, private city: CityService) {
     this.PorgramForm = this.fb.group({
-      from: ['', [Validators.required]],
+      from: ['', [Validators.required ]],
       to: ['', [Validators.required]],
-      // destination: ['dfc'],
-      // trainNumber: [12],
-      selHotel:['hotel'],
-      selTrain:[{trainNumber:0, destination:"value"}],
-      // hotelName: ['zf'],
+      selHotel:['', [Validators.required]],
+      selTrain:[{trainNumber:0, destination:"value"}, [Validators.required]],
+
     })
   }
   selectHotel(hotel:any){
