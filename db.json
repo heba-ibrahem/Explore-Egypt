@@ -500,51 +500,6 @@
       "Firstdescription": "It's time for incredible retail deals and raffles, fireworks, live entertainment and more at the Dubai Shopping Festival, which returns from 17 December 2020 to 30 January 2021.",
       "seconddescription": "20 amazing things to do in Egypt"
     }
-  ],
-  
-  "articles": [{
-    "id": 1,
-    "title": "How Egypt is trying to encourage the return of tourism",
-    "img": "Explore top attractions1.jpg",
-    "description": "Egypt is reopening its borders to international tourists on 1 July,but many parts of the country will remain off-limits.",
-    "section": "Explore top attractions"
-  },
-  {
-    "id": 2,
-    "title": "Where to find the best scuba diving sites",
-    "img": "Explore top attractions2.jpg",
-    "description": "With a dazzling bounty of underwater attractions to explore and improved access to key diving hubs, there has arguably never been a better time to strap…",
-    "section": "Explore top attractions"
-  },
-  {
-    "id": 3,
-    "title": "Four of the best day trips from Cairo",
-    "img": "Explore top attractions3.jpg",
-    "description": "While Egypt’s ancient capital has more than enough dusty charms to fill a traveller’s playbook, the country’s top natural sites stretch far out from Cairo…",
-    "section": "Explore top attractions"
-  },
-   {
-    "id": 4,
-    "title": "Hot Air Ballooning in Luxor",
-    "img": "keepNew1.jpg",
-    "description": "It’s an incredibly peaceful time in the air. The balloon is literally floating, you don’t feel a thing, and it’s so silent. All the while you fly over one of the most amazing sceneries worldwide.",
-    "section": "Keep up with the new"
-  },{
-    "id": 5,
-    "title": "Al-Qataneyah Dunes for Sandboarding & Barbecuing",
-    "img": "keepNew2.jpg",
-    "description": "It’s the best getaway from trafficy noisy Cairo, located 80km southwest of the city so in less than an hour you can enjoy the emptiness of the desert",
-    "section": "Keep up with the new"
-  },
-  {
-    "id": 6,
-    "title": "Cleopatra’s Bath in Siwa",
-    "img": "keepNew3.jpg",
-    "description": "Located in Siwa Oasis, and is one of its landmarks. It’s basically a pool that is fed with water from natural hot springs, it’s the best way to cool off the heat of a hot summer day.",
-    "section": "Keep up with the new"
-  }
-]
-
-
+  ]
 
 }
