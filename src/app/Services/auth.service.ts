@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { IUsers } from '../viewmodels/iusers';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { Guid } from 'guid-typescript';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +14,29 @@ export class AuthService {
   // token;
   constructor(private httpclient: HttpClient,private router: Router) { }
 
-  // getUserDetails(user: IUsers): Observable<any[]>{
-  //   const httpOptions = {headers: new HttpHeaders({
-  //     'Content-Type': 'application/json'
-  //     //,'Accept':' */*'
-  //     //,'Authorization': 'my-auth-token'
-  //       })};
+  login(Token: string){
+    localStorage.setItem('userToken', Token)
+
+    
+  }
+  logout(){
+    localStorage.removeItem('userToken');
+  }
+  isLogged(): boolean{
+    if(localStorage.getItem('userToken')){
+      return true;
+    }else{
+      return false;
+    }
+
+  }
+
+  // accessToken() {
+  //   this.token = Guid.create()
+  //   console.log(this.token)
+  //   localStorage.setItem("Access token", this.token.toString())
+  // }
+ 
       
   //       return this.httpclient.post<any>(`${environment.API_URL}/Users`,user, httpOptions);
   // }

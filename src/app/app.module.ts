@@ -26,6 +26,9 @@ import { PlanTripHomeComponent } from './components/home/plan-trip-home/plan-tri
 import { ActivitiesHomeComponent } from './components/home/activities-home/activities-home.component';
 import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/explor-egypt-home.component';
 import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
+import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
+import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
+import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
 
 
 @NgModule({
@@ -52,7 +55,10 @@ import { ExplorDepComponent } from './components/explor-dep/explor-dep.component
     PlanTripHomeComponent,
     ActivitiesHomeComponent,
     ExplorEgyptHomeComponent,
-    ExplorDepComponent
+    ExplorDepComponent,
+    NewEventsHomeComponent,
+    MoreNewEventHomeComponent,
+    StartPlanningYourTripComponent
   ],
   imports: [
     BrowserModule,
