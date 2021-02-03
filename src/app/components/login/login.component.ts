@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
       // alert("You are not Registered!!")
       if (this.LoginForm.value.email === userr.email && this.LoginForm.value.password === userr.password) {
         
-        
+        this.LoginForm.reset();
         correct = true
         console.log("you are loggied in ")
         alert("you are logged in")
