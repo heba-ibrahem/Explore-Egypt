@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PageDetails } from 'src/app/viewmodels/page-details';
+import { PageDetailsService } from 'src/app/Services/page-details.service';
+import { IPage } from 'src/app/viewmodels/IPage';
 
 @Component({
   selector: 'app-explore',
@@ -7,41 +8,53 @@ import { PageDetails } from 'src/app/viewmodels/page-details';
   styleUrls: ['./explore.component.scss']
 })
 export class ExploreComponent implements OnInit {
-  pageDetails: PageDetails;
-  journey: any;
-  constructor() { 
+  pageDetails: IPage;
+  cards: any;
+  constructor(private pageDetailsService: PageDetailsService) { 
     this.pageDetails = {
-      id: 1,
-      name: 'Explore Egypt',
-      title: 'Discover Egypt',
-      bannerImg: 'assets/images/1.jpg',
-      bannerVideo: "assets/video/Let's-Go-Egypt",
-      description: 'Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities.'
+      id: 0,
+      name: '',
+      title: '',
+      bannerImg: '',
+      bannerVideo: "",
+      description: ''
     }
 
-    this.journey = [
+    this.cards = [
       {
         title: 'About Egypt',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!',
-        img_url: 'assets/images/11.jpg',
+        img_url: '11.jpg',
         path: '/about'
       },
       {
         title: 'Heritage & Culture',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!',
-        img_url: 'assets/images/3.jpg',
+        img_url: '3.jpg',
         path: '/culture'
       },
       {
         title: 'Neighbourhoods in Egypt',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!',
-        img_url: 'assets/images/6.jpg',
+        img_url: '6.jpg',
         path: '/neighbourhoods'
       }
     ]
   }
 
   ngOnInit(): void {
+    this.getPageDetails();
+  }
+
+  // Get page details
+  getPageDetails() {
+    this.pageDetailsService.getPageDetails("Explore").subscribe(
+      (res)=> {
+        this.pageDetails = res[0];
+        this.pageDetails.name = `${this.pageDetails.name} Egypt`;
+      },
+      (err)=> {console.log(err)}
+    )
   }
 
 }

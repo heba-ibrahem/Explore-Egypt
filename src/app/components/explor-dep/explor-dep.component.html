@@ -1,0 +1,91 @@
+<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+
+<div class="page-title">
+  <div class="container">
+  </div>
+<div class="container-fluid" id="rows">
+    <br>
+    <br>
+
+        <h2 class="inback">Keep up with the new
+        </h2>
+
+      <div class="row myrow afterart">
+          <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
+            <div  *ngIf="A.section==='Keep up with the new'">
+              <a [routerLink]="'/article/'+(A.id)">
+            <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
+              <div class="card-body">
+                <h4 class="card-title">{{A.title}}
+                </h4>
+                <p class="card-text d-none d-md-block">{{A.description}}
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+      <br>
+      <br>
+      <h2>Lastest Opening</h2>
+
+      <br>
+      <div class="row myrow afterart">
+        <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
+          <div  *ngIf="A.section==='Explore top attractions'">
+                  <a [routerLink]="'/article/'+(A.id)">
+                    <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
+                      <div class="card-body">
+                        <h4 class="card-title">{{A.title}}
+                        </h4>
+                        <p class="card-text d-none d-md-block">{{A.description}}</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+      </div>
+      <h2>Meet our curators
+      </h2>
+      <br>
+      <div class="row  afterart">
+        <div class="col-lg-3  col-6 a3" *ngFor="let c of curatorsList">
+          <a href="#">
+            <div class="card"><img class="card-img-top" src="assets/{{c.img}}">
+              <div class="card-body">
+                <h4 class="card-title">{{c.name}}
+                </h4>
+                <p class="card-text d-none d-md-block">{{c.description}}</p>
+                <br>
+                <hr>
+                <div class="d-flex justify-content-end social_icon">
+                  <span><i class="fa fa-facebook-square"></i></span>
+                  <span><i class="fa fa-google-plus-square"></i></span>
+                  <span><i class="fa fa-twitter-square"></i></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+        <br>
+        <h2 >Keep exploring
+        </h2>
+        <br>
+        <div class="row">
+          <div class="col-lg-3 col-6" *ngFor='let dep of departments;let i =index '>
+            <div [hidden]="dep.id===1">
+            <a [routerLink]="'/explorDep/1'">
+                    <div class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
+                      <div class="card-body">
+                        <h4 class="card-title">{{dep.title}}
+                        </h4>
+                        <p class="card-text d-none d-md-block">{{dep.description}}
+                        </p>
+                      </div>
+                    </div></a>
+                  </div>
+                  </div>
+        </div>
+      </div>

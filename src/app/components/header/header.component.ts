@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+// declare var $:JQueryStatic
 
 @Component({
   selector: 'app-header',
@@ -16,11 +17,12 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    
   }
-
+  
   ngAfterViewInit(): void {
     this.toggleScrollUpBtn()
+    this.handleNavSubMenus();
+    this.scrollUp();
   }
 
   // Show/Hide small navbar menu
@@ -38,5 +40,40 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       }
     })
   }
+
+  handleNavSubMenus() {
+    let navBarLinks = document.querySelectorAll('.nav-bar .has-drop-down');
+
+
+    // Show/Hide large navbar submenus
+    navBarLinks.forEach((link, i) => {
+      link.addEventListener('mouseover', function() {
+        if (document.querySelector('.nav-bar .drop-down-menu.show')) {
+          document.querySelector('.nav-bar .drop-down-menu.show')?.classList.remove('show')
+        }
+        document.querySelector(`#drop-down_${i+1}`)?.classList.add('show');
+        // document.querySelectorAll('.nav-bar .down-icon').forEach((el)=>el.style.transform = "rotate(0deg)");
+        // document.querySelectorAll('.nav-bar .down-icon')[i].style.transform = "rotate(-180deg)";
+      })
+
+      document.querySelector(`#drop-down_${i+1}`)?.addEventListener('mouseleave', function() {
+        if (document.querySelector('.nav-bar .drop-down-menu.show')) {
+          document.querySelector('.nav-bar .drop-down-menu.show')?.classList.remove('show');
+        }
+        // document.querySelectorAll('.nav-bar .down-icon')[i].style.transform = "rotate(0deg)";
+      })
+    })
+  }
+
+  scrollUp() {
+    // this.scrollUpBtn?.nativeElement.addEventListener('click', function() {
+    //   $('body, html').animate({
+    //     scrollTop: 0
+    //   }, 1000)
+    // })
+  }
+
+
+
 
 }

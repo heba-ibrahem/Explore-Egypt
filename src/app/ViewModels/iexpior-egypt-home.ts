@@ -1,5 +1,7 @@
 export interface IExpiorEgyptHome {
-    img:string,
-    Department:string,
-    discription:string
+    id:number,
+    title:string,
+    bannerImg:string,
+    description:string,
+
 }

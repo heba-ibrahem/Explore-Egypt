@@ -1,1 +1,133 @@
-<p>about works!</p>
+
+
+<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+
+
+<!-- Welcome -->
+<section class="brief-info half-grey-left">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-1 col-lg-7">
+        <h3>Welcome to Egypt - where anything is possible.</h3>
+        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur hic est alias nobis possimus quod, reprehenderit ut, delectus suscipit assumenda? Sequi molestias sapiente, impedit, laborum unde maxime praesentium porro odio minus placeat sunt error soluta! Aut ratione quis alias?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brief History -->
+<section class="history-slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-lg-1">
+        <h3 class="title">A brief history of Egypt</h3>
+      </div>
+    </div>
+
+    <!-- Slider main container -->
+    <div class="swiper-container swiper_1" [swiper]="swiper_config_1">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="row ml-0 swiper-slide" *ngFor="let art of historyArticles">
+          <div class="col-md-6 offset-lg-1">
+            <div class="img-container">
+              <img class="img-fluid" [src]="'assets/images/' + art.Images[0]" alt="">
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="caption">
+              <h3 class="year">{{art.title}}</h3>
+              <p>{{art.description}}</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination swiper-pagination_1"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev">
+        <span><i class="fa fa-angle-left"></i></span>
+      </div>
+      <div class="swiper-button-next">
+        <span><i class="fa fa-angle-right"></i></span>
+      </div>
+    </div>
+    <h6 class="note">Select a year to discover the story of Egypt</h6>
+  </div>
+</section>
+
+
+<!-- Facts -->
+<section class="facts">
+  <div class="container">
+    <!-- Slider main container -->
+    <div class="swiper-container swiper_2" [swiper]="swiper_config_2">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="row swiper-slide ml-0 align-items-center" *ngFor="let fact of factsArticles; let i = index">
+          <div class="col-lg-4 col-md-4 offset-lg-1">
+            <div class="number">
+              <h3 class="d-block d-md-none text-center">Quick facts</h3>
+              <h4 class="num-pic" style="background-image: url(assets/images/{{fact.Images[0]}});">0{{i+1}}</h4>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-8">
+            <div class="caption">
+              <h4 class="d-none d-md-block">Quick facts</h4>
+              <h2>{{fact.title}}</h2>
+              <p class="text-muted">{{fact.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination swiper-pagination_2"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev">
+        <span><i class="fa fa-angle-left"></i></span>
+      </div>
+      <div class="swiper-button-next">
+        <span><i class="fa fa-angle-right"></i></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Explore -->
+<section class="links-pattern half-grey-right">
+  <div class="container">
+    <h4 class="title">Keep exploring</h4>
+    <p class="desc">If seeing is believing, why not take a closer look?</p>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 pt-4">
+        <div class="item shadow">
+          <a routerLink="/neighbourhoods" class="img-container">
+            <img class="img-fluid" src="assets/images/7.jpg" alt="">
+          </a>
+          <div class="caption">
+            <a routerLink="/neighbourhoods" class="title-link">Neighbourhoods in Egypt</a>
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 pt-4">
+        <div class="item shadow">
+          <a routerLink="/culture" class="img-container">
+            <img class="img-fluid" src="assets/images/12.jpg" alt="">
+          </a>
+          <div class="caption">
+            <a routerLink="/culture" class="title-link">Culture and Heritage</a>
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel nulla dignissimos, quia iure nisi beatae!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="more-btn" routerLink="/explore">Discover More <span><i class="fa fa-angle-right"></i></span></a>
+  </div>
+</section>
