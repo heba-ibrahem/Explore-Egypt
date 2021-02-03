@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CityService } from 'src/app/Services/city.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
+import { Icity } from 'src/app/viewmodels/icity';
 import { IUsers } from 'src/app/viewmodels/iusers';
 
 
@@ -16,11 +18,12 @@ export class RegisterComponent implements OnInit {
 
   RegisterForm: FormGroup;
   user: IUsers;
-  constructor(private fb: FormBuilder, private UserSevives: UsersServiceService ) {
+  CityList: Icity[]=[];
+  constructor(private fb: FormBuilder, private UserSevives: UsersServiceService, private city: CityService) {
     this.RegisterForm = this.fb.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
-      countery: ['', [Validators.required]],
+      city: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(6)]]
@@ -28,7 +31,7 @@ export class RegisterComponent implements OnInit {
     this.user = {
       firstName: "",
       lastName: "",
-      countery: "",
+      city: "",
       email: "",
       password: "",
       confirmPassword: ""
@@ -39,6 +42,15 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.city.getCity().subscribe(
+      (response) =>{
+        // console.log(this.CatagoryListApi)
+      this.CityList= response;
+      console.log(this.CityList)},
+      (err) =>{console.log(err)} 
+    
+    )
+   
   }
 
   register() {

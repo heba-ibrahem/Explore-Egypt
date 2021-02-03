@@ -14,11 +14,11 @@
 
   <div class="row">
     <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">Connect via Facebook <i
-        class="fab fa-facebook-f"></i></button><br>
+        class="fa fa-facebook-f"></i></button><br>
     <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Google <i
-        class="fab fa-google"></i></button><br>
+        class="fa fa-google"></i></button><br>
     <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Twitter <i
-        class="fab fa-twitter"></i></button><br>
+        class="fa fa-twitter"></i></button><br>
   </div>
 
   <div class="container">
@@ -64,12 +64,15 @@
         </div>
       </div>
       <div class="form-group col-md-5 ">
-        <label class="control-label required" for="countery">Countery</label>
-        <input type="dropdown" class="form-control " name="countery" required formControlName="countery">
+        <label class="control-label required" for="city">city</label>
+        <!-- <input type="dropdown" class="form-control " name="city" required formControlName="city"> -->
+        <select  class="form-control"  formControlName="city">
+          <option *ngFor="let ciity of CityList" [value]='ciity.name'>{{ciity.name}}</option>
+        </select>
         <div
-          *ngIf="RegisterForm.controls['countery'].invalid && (RegisterForm.controls['countery'].dirty || RegisterForm.controls['countery'].touched)"
+          *ngIf="RegisterForm.controls['city'].invalid && (RegisterForm.controls['city'].dirty || RegisterForm.controls['city'].touched)"
           class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['countery']">Countery is required.</div>
+          <div *ngIf="RegisterForm.controls['city']">Countery is required.</div>
         </div>
       </div>
     </div>
