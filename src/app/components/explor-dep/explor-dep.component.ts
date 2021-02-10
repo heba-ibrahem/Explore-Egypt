@@ -7,6 +7,7 @@ import { IPage} from 'src/app/viewmodels/IPage';
 import { Article } from 'src/app/viewmodels/article';
 import { Router } from '@angular/router';
 import { ArticlesService } from 'src/app/Services/articles.service';
+import { PageDetailsService } from 'src/app/Services/page-details.service';
 @Component({
   selector: 'app-explor-dep',
   templateUrl: './explor-dep.component.html',
@@ -18,20 +19,27 @@ export class ExplorDepComponent implements OnInit {
   departments: IactivitiesDep[]=[];
   curatorsList:Curators[]=[]
   ArticleList:Article[]=[]
-  constructor(private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
+  constructor(private pageDetailsService: PageDetailsService,private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
     this.pageDetails = {
-      id: 2,
-      name: 'New & Trending',
-      title: 'New & Trending',
-      bannerImg: 'assets/im2.jpg',
-      bannerVideo: 'assets/v2',
-      description: "Check out the latest hotspots and attractions to add to your next holiday."
+      id: 0,
+      name: '',
+      title: '',
+      bannerImg: '',
+      bannerVideo: "",
+      description: ''
     }
 
   }
-  justRoute():void{
-    this.router.navigate(['/explorDep/1'])
 
+
+  getPageDetails() {
+    this.pageDetailsService.getPageDetails("New").subscribe(
+      (res)=> {
+        this.pageDetails = res[0];
+        this.pageDetails.name = `${this.pageDetails.name} `;
+      },
+      (err)=> {console.log(err)}
+    )
   }
   ngOnInit(): void {
     let sup1= this.ActivitiesDepService.getAll().subscribe(
@@ -55,6 +63,8 @@ export class ExplorDepComponent implements OnInit {
       },
       (err) => { console.log(err) }
     );
+    this.getPageDetails()
+
   }
 
 }

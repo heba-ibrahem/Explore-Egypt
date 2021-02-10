@@ -7,6 +7,7 @@ import { IPage} from 'src/app/viewmodels/IPage';
 import { Article } from 'src/app/viewmodels/article';
 import { Router } from '@angular/router';
 import { ArticlesService } from 'src/app/Services/articles.service';
+import { PageDetailsService } from 'src/app/Services/page-details.service';
 
 @Component({
   selector: 'app-activities',
@@ -18,21 +19,27 @@ export class ActivitiesComponent implements OnInit {
   departments: IactivitiesDep[]=[];
   curatorsList:Curators[]=[]
   ArticleList:Article[]=[]
-  constructor(private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
+  constructor(private pageDetailsService: PageDetailsService,private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
     this.pageDetails = {
-      id: 2,
-      name: 'activities',
-      title: 'Top activities in Egypt',
-      bannerImg: 'assets/im1.jpg',
-      bannerVideo: 'assets/v2',
-      description: "Adventure, culture, shopping – name it and you'll find it here in Egypt. Browse all the unforgettable experiences for all kinds of explorers."
+      id: 0,
+      name: '',
+      title: '',
+      bannerImg: '',
+      bannerVideo: "",
+      description: '' }
+
+  }
+
+    getPageDetails() {
+      this.pageDetailsService.getPageDetails("activities").subscribe(
+        (res)=> {
+          this.pageDetails = res[0];
+          this.pageDetails.name = `${this.pageDetails.name} `;
+        },
+        (err)=> {console.log(err)}
+      )
     }
 
-  }
-  justRoute():void{
-    this.router.navigate(['/explorDep/1'])
-
-  }
   ngOnInit(): void {
     let sup1= this.ActivitiesDepService.getAll().subscribe(
       (response) => {
@@ -55,6 +62,8 @@ export class ActivitiesComponent implements OnInit {
       },
       (err) => { console.log(err) }
     );
+    this.getPageDetails()
   }
 
 }
+

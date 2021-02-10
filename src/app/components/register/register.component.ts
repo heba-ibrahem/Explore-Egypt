@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
     console.log(this.RegisterForm.value)
     this.UserSevives.addUser(this.RegisterForm.value).subscribe(
       (res) => {
-        // console.log(res);
+        console.log(res);
         this.RegisterForm.reset();
         this.registerd= true
       },
