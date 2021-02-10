@@ -81,102 +81,76 @@
   ],
   "programs": [
     {
-      "id": 1,
-      "userID": 1,
-      "from": "Monday 30-2-2020",
-      "to": "Monday 30-2-2020",
-      "hotelName": "Hilton",
-      "trainNumber": "999",
-      "destination": "Aswan"
-    },
-    {
-      "from": "",
-      "to": "",
-      "selHotel": "hotel",
-      "selTrain": {
-        "trainNumber": 1,
-        "destination": ""
-      },
-      "id": 2
-    },
-    {
-      "from": "123",
-      "to": "123",
-      "selHotel": "Helton",
-      "selTrain": "[object Object]",
-      "id": 3
-    },
-    {
-      "from": "123",
-      "to": "2323",
-      "selHotel": "Green Blaza",
+      "from": "111111",
+      "to": "11111111111",
+      "selHotel": "Fermont",
       "selTrain": {
         "trainNumber": 999,
         "destination": "Aswan"
       },
-      "id": 4
+      "id": 1
     },
     {
-      "from": "1/5/2021",
-      "to": "5/5/2021",
-      "selHotel": "",
+      "from": "23123",
+      "to": "23123",
+      "selHotel": "Fermont",
       "selTrain": {
-        "trainNumber": 0,
-        "destination": "value"
+        "trainNumber": 999,
+        "destination": "Aswan"
       },
-      "id": 5
+      "id": 2
     }
   ],
   "explorDep": [
     {
-    "id": 1,
-    "title": "New & Trending",
-    "description": "Check out the latest hotspots and attractions to add to your next holiday.",
-    "img": "explorDep1.jpg"
+      "id": 1,
+      "title": "New & Trending",
+      "description": "Check out the latest hotspots and attractions to add to your next holiday.",
+      "img": "explorDep1.jpg"
     },
-   {
-    "id": 2,
-    "title": "Sights & Attractions",
-    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
-    "img": "explorDep2.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Experiences",
-    "description": "From pyramids to the sea, take in Egypt's unique experiences.",
-    "img": "explorDep3.jpg"
-  },
-  {
-    "id": 4,
-    "title": "Arts & Culture",
-    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
-    "img": "explorDep4.jpg"
-  },
-  {
-    "id": 5,
-    "title": "Shopping",
-    "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
-    "img": "explorDep5.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Food & Drink",
-    "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
-    "img": "explorDep6.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Spas & Wellness",
-    "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
-    "img": "explorDep7.jpg"
-  },
-  {
-    "id": 8,
-    "title": "Itineraries",
-    "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
-    "img": "explorDep8.jpg"
-  }],
-
+    {
+      "id": 2,
+      "title": "Sights & Attractions",
+      "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+      "img": "explorDep2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Experiences",
+      "description": "From pyramids to the sea, take in Egypt's unique experiences.",
+      "img": "explorDep3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Arts & Culture",
+      "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+      "img": "explorDep4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Shopping",
+      "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
+      "img": "explorDep5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Food & Drink",
+      "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
+      "img": "explorDep6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spas & Wellness",
+      "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
+      "img": "explorDep7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Itineraries",
+      "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
+      "img": "explorDep8.jpg"
+    }
+  ],
   "curators": [
     {
       "id": 1,
@@ -408,7 +382,7 @@
     }
   ],
   "Pages": [
-     {
+    {
       "id": 1,
       "name": "Explore",
       "title": "Discover Egypt",
@@ -455,14 +429,16 @@
       "bannerImg": "10.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
       "description": "Get started on your Egypt holiday with these helpful tips and tools."
-    },{
+    },
+    {
       "id": 7,
       "name": "New",
       "title": "New & Trending",
       "bannerImg": "im1.jpg",
       "bannerVideo": "assets/v2",
       "description": "Check out the latest hotspots and attractions to add to your next holiday."
-    },{
+    },
+    {
       "id": 8,
       "name": "activities",
       "title": "Top activities in Egypt",
@@ -470,7 +446,6 @@
       "bannerVideo": "assets/v2",
       "description": "Check out the latest hotspots and attractions to add to your next holiday."
     }
-
   ],
   "Subscriptions": [
     {
@@ -515,6 +490,4 @@
       "seconddescription": "20 amazing things to do in Egypt"
     }
   ]
-
-
 }

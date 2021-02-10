@@ -2,11 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
-import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 import { ArticleComponent } from './components/article/article.component';
 import { CultureComponent } from './components/culture/culture.component';
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
-import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -17,6 +15,7 @@ import { ProgramDetailsComponent } from './components/program-details/program-de
 import { RegisterComponent } from './components/register/register.component';
 import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
 import { AuthGuard } from './gurds/auth.guard';
+import { EditProgramComponent } from './edit-program/edit-program.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -31,9 +30,8 @@ const routes: Routes = [
   {path: 'explorDep/:ID', component: ExplorDepComponent},
   {path: 'planProgram', component: PlanProgramComponent},
   {path: 'designProgram', component: DesginProgramComponent},
-  {path: 'programDetails', component: ProgramDetailsComponent},
-  {path: 'editProfile', component: EditProfileComponent},
-  {path: 'adminPanel', component: AdminPanelComponent},
+  {path: 'editProgram/:id', component: EditProgramComponent},
+  {path: 'programDetails/:pID', component: ProgramDetailsComponent},
   {path: '', redirectTo:'home', pathMatch:'full'},
   {path: '**', component: NotFoundComponent}
 ];

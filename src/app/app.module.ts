@@ -15,8 +15,6 @@ import { PlanProgramComponent } from './components/plan-program/plan-program.com
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 import { HomeComponent } from './components/home/home/home.component';
-import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
-import { AdminPanelComponent } from './components/Admin/admin-panel/admin-panel.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -33,6 +31,8 @@ import { ExplorDepComponent } from './components/explor-dep/explor-dep.component
 import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
 import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
 import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
+import { EditProgramComponent } from './edit-program/edit-program.component';
+
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -56,8 +56,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     DesginProgramComponent,
     ProgramDetailsComponent,
     HomeComponent,
-    EditProfileComponent,
-    AdminPanelComponent,
     ActivitiesComponent,
     ArticleComponent,
     NotFoundComponent,
@@ -67,7 +65,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ExplorDepComponent,
     NewEventsHomeComponent,
     MoreNewEventHomeComponent,
-    StartPlanningYourTripComponent
+    StartPlanningYourTripComponent,
+    EditProgramComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,13 @@ export interface IProgram {
     userID: number;
     from: string;
     to: string;
-    hotelName: string;
-    trainNumber: number;
-    destination: string;
+    selHotel:{
+        hotelName: string,
+        roomPrice:string
+    }
+    selTrain: {
+        trainNumber: number,
+        destination: string,
+        ticketPrice:string
+      }
 }
