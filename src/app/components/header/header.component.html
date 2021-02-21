@@ -11,19 +11,19 @@
     <div class="container">
       <ul class="top-bar-nav m-0 list-unstyled">
         <li>
-          <a class="active main-link" href="#">Visit Egypt</a>
+          <a class="active main-link" href="#">{{"VISIT" | translate}}</a>
         </li>
         <li>
-          <a class="main-link" href="#">Business in Egypt</a>
+          <a class="main-link" href="#">{{"TOPBAR.BUSINESS" | translate}}</a>
         </li>
         <li>
-          <a class="main-link" href="#">Study Egypt</a>
+          <a class="main-link" href="#">{{"TOPBAR.STUDY" | translate}}</a>
         </li>
         <li>
-          <a class="main-link" href="#">Corporate</a>
+          <a class="main-link" href="#">{{"TOPBAR.CORPORATE" | translate}}</a>
         </li>
         <li>
-          <a class="main-link" href="#">Egypt Shopping festival</a>
+          <a class="main-link" href="#">{{"TOPBAR.FESTIVAL" | translate}}</a>
         </li>
       </ul>
 
@@ -31,13 +31,17 @@
         <li>
           <a class="main-link" routerLink="/login" >
             <span><i class="fa fa-user"></i></span>
-            Login
+            {{"LOGIN" | translate}}
           </a>
         </li>
         <li>
-          <a class="main-link" href="#">
+          <a style="cursor: pointer;" *ngIf=" currentLang != 'ar' " (click)="changeCurrentLang('ar')" class="main-link">
             <span><i class="fa fa-globe"></i></span>
-            Arabic
+            العربية
+          </a>
+          <a style="cursor: pointer;" *ngIf=" currentLang != 'en' " (click)="changeCurrentLang('en')" class="main-link">
+            <span><i class="fa fa-globe"></i></span>
+            English
           </a>
         </li>
       </ul>
@@ -52,19 +56,19 @@
         </a>
         <li class="nav-bar-item has-drop-down" id="dropDown_1">
           <a class="main-link" routerLink="/explore">
-            Explore Egypt
+            {{ "NAVBAR.EXPLORE" | translate}}
             <span class="down-icon"><i class="fa fa-angle-down"></i></span>
           </a>
         </li>
         <li class="nav-bar-item has-drop-down" id="dropDown_2">
           <a class="main-link" routerLink="/activities">
-            Activities
+            {{"NAVBAR.ACTIVITIES" | translate}}
             <span class="down-icon"><i class="fa fa-angle-down"></i></span>
           </a>
         </li>
         <li class="nav-bar-item has-drop-down" id="dropDown_3">
           <a class="main-link" routerLink="/planProgram">
-            Plan your trip
+            {{"NAVBAR.PLAN" | translate}}
             <span class="down-icon"><i class="fa fa-angle-down"></i></span>
           </a>
         </li>
@@ -95,50 +99,26 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/about">About Egypt
+                <a class="main-link" routerLink="/about">{{"NAVBAR.ABOUT.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+                <p class="text-muted">{{"NAVBAR.ABOUT.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/culture">Culture & Heritage
+                <a class="main-link" routerLink="/culture">{{"NAVBAR.CULTURE.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+                <p class="text-muted">{{"NAVBAR.CULTURE.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/neighbourhoods">Neighbourhoods in Egypt
+                <a class="main-link" routerLink="/neighbourhoods">{{"NAVBAR.NEIGHBOURHOODS.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="sub-link">
-                <a class="main-link" routerLink="/explore">Explore Egypt
-                  <span><i class="fa fa-angle-right"></i></span>
-                </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="sub-link">
-                <a class="main-link" href="#">Lorem ipsum.
-                  <span><i class="fa fa-angle-right"></i></span>
-                </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="sub-link">
-                <a class="main-link" href="#">Lorem ipsum.
-                  <span><i class="fa fa-angle-right"></i></span>
-                </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+                <p class="text-muted">{{"NAVBAR.NEIGHBOURHOODS.DESC" | translate}}</p>
               </div>
             </div>
           </div>
@@ -152,73 +132,67 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">New & trending
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.NEW.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Check out the latest hotspots and attractions to add to your next holiday.</p>
+                <p class="text-muted">{{"NAVBAR.NEW.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Sights & Attractions
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.SIGHTS.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Discover Egypt's record-breaking attractions and iconic landmarks.</p>
+                <p class="text-muted">{{"NAVBAR.SIGHTS.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Experiences
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.EXPERIENCES.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">From pyramids to the sea, take in Egypt's unique experiences.</p>
+                <p class="text-muted">{{"NAVBAR.EXPERIENCES.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Arts & Culture
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.ARTS.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Discover Egypt's record-breaking attractions and iconic landmarks.</p>
+                <p class="text-muted">{{"NAVBAR.ARTS.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Shopping
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.SHOPPING.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted"> Indulge in ultimate retail therapy at high-end shopping malls and charming
-                  souks.
-                </p>
+                <p class="text-muted">{{"NAVBAR.SHOPPING.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Food & Drink
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.FOOD.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted"> Sample deliciously diverse food at fine dining spots and Instagram-worthy
-                  cafés.
-                </p>
+                <p class="text-muted">{{"NAVBAR.FOOD.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Spas & Wellness
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.SPAS.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted"> Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.
-                </p>
+                <p class="text-muted">{{"NAVBAR.SPAS.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/explorDep/1">Itineraries
+                <a class="main-link" routerLink="/explorDep/1">{{"NAVBAR.ITENERARIES.TITLE" | translate}}
 
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">What do you travel for?
-                  Find inspiration with this variety of holiday itineraries.</p>
+                <p class="text-muted">{{"NAVBAR.ITENERARIES.DESC" | translate}}</p>
               </div>
             </div>
           </div>
@@ -232,26 +206,26 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/planProgram">Plan your trip
+                <a class="main-link" routerLink="/planProgram">{{"NAVBAR.PLAN" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+                <p class="text-muted">{{"NAVBAR.PLAN_TRIP.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/designProgram">Design your Program
+                <a class="main-link" routerLink="/designProgram">{{"NAVBAR.DESIGN_TRIP.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+                <p class="text-muted">{{"NAVBAR.DESIGN_TRIP.DESC" | translate}}</p>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="sub-link">
-                <a class="main-link" routerLink="/programDetails">Your program
+                <a class="main-link" routerLink="/programDetails">{{"NAVBAR.PROGRAM.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
-                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic?</p>
+                <p class="text-muted">{{"NAVBAR.PROGRAM.DESC" | translate}}</p>
               </div>
             </div>
           </div>
@@ -285,65 +259,27 @@
   <div #smMenu class="sm-menu">
     <ul class="m-0 list-unstyled">
       <li class="sm-nav-item">
-        <a href="/explore">Explore Egypt</a>
-        <!-- <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span> -->
-        <ul class="sub-menu m-0 list-unstyled">
-          <li>
-            <a routerLink="/explore">Explore Egypt</a>
-          </li>
-          <li>
-            <a routerLink="/about">About Egypt</a>
-          </li>
-          <li>
-            <a routerLink="/culture">Culture & Heritage</a>
-          </li>
-          <li>
-            <a routerLink="/neighbourhoods">Neighbourhoods in Egypt</a>
-          </li>
-        </ul>
+        <a href="/explore">{{"NAVBAR.EXPLORE" | translate}}</a>
       </li>
       <li class="sm-nav-item">
-        <a routerLink="/activities">Activities</a>
-        <!-- <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span> -->
-        <ul class="sub-menu m-0 list-unstyled">
-          <li>
-            <a routerLink="/explorDep/1">New & Trending </a>
-          </li>
-          <li>
-            <a routerLink="/explorDep/1">Sights & Attractions</a>
-          </li>
-          <li>
-            <a routerLink="/explorDep/1">Experiences</a>
-          </li>
-          <li>
-            <a routerLink="/explorDep/1">Arts & Culture</a>
-          </li>
-        </ul>
+        <a routerLink="/activities">{{"NAVBAR.ACTIVITIES" | translate}}</a>
       </li>
       <li class="sm-nav-item">
-        <a routerLink="/planProgram">Plan your trip</a>
-        <!-- <span class="sm-item-toggler"><i class="fa fa-angle-down"></i></span> -->
-        <ul class="sub-menu m-0 list-unstyled">
-          <li>
-            <a routerLink="/planProgram">Plan your trip</a>
-          </li>
-          <li>
-            <a routerLink="/designProgram">Design your Program</a>
-          </li>
-          <li>
-            <a routerLink="/programDetails">Your program</a>
-          </li>
-        </ul>
+        <a routerLink="/planProgram">{{"NAVBAR.PLAN" | translate}}</a>
       </li>
       <li class="sm-nav-item">
         <a routerLink="/login">
           <span><span><i class="fa fa-user"></i></span></span>
-          Login
+          {{"LOGIN" | translate}}
         </a>
       </li>
-      <li class="sm-nav-item">
-        <a href="#"><span><i class="fa fa-globe"></i></span>
-          Arabic</a>
+      <li *ngIf=" currentLang != 'ar' " class="sm-nav-item">
+        <a (click)="changeCurrentLang('ar')"><span><i class="fa fa-globe"></i></span>
+          العربية</a>
+      </li>
+      <li *ngIf=" currentLang != 'en' " class="sm-nav-item">
+        <a (click)="changeCurrentLang('en')"><span><i class="fa fa-globe"></i></span>
+          English</a>
       </li>
     </ul>
   </div>

@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { LocalizationService } from 'src/app/Services/localization.service';
 // declare var $:JQueryStatic
 
 @Component({
@@ -13,14 +15,35 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollUpBtn') scrollUpBtn: ElementRef | undefined;
   @ViewChild('largeNavbar') largeNavbar: ElementRef | undefined;
   @ViewChild('smallNavbar') smallNavbar: ElementRef | undefined;
+  currentLang: string;
 
-  constructor() { 
-
+  constructor(public translate: TranslateService,  localizationService: LocalizationService) {
+    this.currentLang = localizationService.getCurrentLang();
+    this.translate.use(this.currentLang);
   }
+
+  changeCurrentLang(lang: string) {
+    this.translate.use(lang);
+    localStorage.setItem('current_lang', lang )
+    window.location.reload();
+    // document.documentElement.setAttribute('lang', lang);
+  }
+
+  // getCurrentLang() :string {
+  //   if (
+  //     !localStorage.getItem('current_lang') ||
+  //     (localStorage.getItem('current_lang') === 'en')
+  //   )
+  //     return 'en';
+  //   else if ((localStorage.getItem('current_lang') === 'ar'))
+  //     return 'ar';
+  //   else
+  //     return 'en';
+  // }
 
   ngOnInit(): void {
   }
-  
+
   ngAfterViewInit(): void {
     this.toggleScrollUpBtn()
     this.handleNavSubMenus();
