@@ -1,0 +1,519 @@
+{
+  "trains": [
+    {
+      "id": 1,
+      "cityID": 1,
+      "city": "cairo",
+      "trainNumber": 999,
+      "destination": "Aswan",
+      "departureTime": "12:00am",
+      "arrivalTime": "10:00am",
+      "ticketPrice": "300LE",
+      "details": "VIP"
+    },
+    {
+      "id": 2,
+      "cityID": 1,
+      "city": "cairo",
+      "trainNumber": 999,
+      "destination": "Sohag",
+      "departureTime": "12:00am",
+      "arrivalTime": "5:00am",
+      "ticketPrice": "150LE",
+      "details": "VIP"
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "hotelName": "Helton",
+      "cityID": 1,
+      "city": "cairo",
+      "roomPrice": "1500LE",
+      "contactInfo": ",hdbbbdlkdhfnkjl"
+    },
+    {
+      "id": 2,
+      "hotelName": "Fermont",
+      "cityID": 1,
+      "city": "cairo",
+      "roomPrice": "1500LE",
+      "contactInfo": ",hdbbbdlkdhfnkjl"
+    },
+    {
+      "id": 3,
+      "hotelName": "Green Blaza",
+      "cityID": 2,
+      "city": "Alexandria",
+      "roomPrice": "1500LE",
+      "contactInfo": ",hdbbbdlkdhfnkjl"
+    },
+    {
+      "id": 4,
+      "hotelName": "Azure",
+      "cityID": 2,
+      "city": "Alexandria",
+      "roomPrice": "1500LE",
+      "contactInfo": ",hdbbbdlkdhfnkjl"
+    }
+  ],
+  "city": [
+    {
+      "id": 1,
+      "name": "cairo"
+    },
+    {
+      "id": 2,
+      "name": "Alexandria"
+    },
+    {
+      "id": 3,
+      "name": "Aswan"
+    },
+    {
+      "id": 4,
+      "name": "Sohag"
+    },
+    {
+      "id": 5,
+      "name": "Suez"
+    }
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "userID": 1,
+      "from": "Monday 30-2-2020",
+      "to": "Monday 30-2-2020",
+      "hotelName": "Hilton",
+      "trainNumber": "999",
+      "destination": "Aswan"
+    },
+    {
+      "from": "",
+      "to": "",
+      "selHotel": "hotel",
+      "selTrain": {
+        "trainNumber": 1,
+        "destination": ""
+      },
+      "id": 2
+    },
+    {
+      "from": "123",
+      "to": "123",
+      "selHotel": "Helton",
+      "selTrain": "[object Object]",
+      "id": 3
+    },
+    {
+      "from": "123",
+      "to": "2323",
+      "selHotel": "Green Blaza",
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Aswan"
+      },
+      "id": 4
+    },
+    {
+      "from": "1/5/2021",
+      "to": "5/5/2021",
+      "selHotel": "",
+      "selTrain": {
+        "trainNumber": 0,
+        "destination": "value"
+      },
+      "id": 5
+    }
+  ],
+  "explorDep": [
+    {
+    "id": 1,
+    "title": "New & Trending",
+    "description": "Check out the latest hotspots and attractions to add to your next holiday.",
+    "img": "explorDep1.jpg"
+    },
+   {
+    "id": 2,
+    "title": "Sights & Attractions",
+    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+    "img": "explorDep2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Experiences",
+    "description": "From pyramids to the sea, take in Egypt's unique experiences.",
+    "img": "explorDep3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Arts & Culture",
+    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+    "img": "explorDep4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Shopping",
+    "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
+    "img": "explorDep5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Food & Drink",
+    "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
+    "img": "explorDep6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Spas & Wellness",
+    "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
+    "img": "explorDep7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Itineraries",
+    "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
+    "img": "explorDep8.jpg"
+  }],
+  "curators": [
+    {
+      "id": 1,
+      "name": "Salma Ibrahim",
+      "description": "Writer, presenter and fashion consultant Salma is in the know when it comes to gems in Egypt.",
+      "img": "curators1.png"
+    },
+    {
+      "id": 2,
+      "name": "Asmaa Salah",
+      "description": "Entrepreneur, mother and branding expert Asmaa loves Egypt for its bustling urban vibe and calm.",
+      "img": "curators2.png"
+    },
+    {
+      "id": 3,
+      "name": "Heba Ibrahim",
+      "description": "Film enthusiast and producer Heba has an eye for Egypt's thriving arts and cultural scene.",
+      "img": "curators3.png"
+    },
+    {
+      "id": 4,
+      "name": "Khaled Hassan",
+      "description": "Blogger and father of three, ،Khaled enjoys discovering Egypt with her little ones.",
+      "img": "curators4.png"
+    }
+  ],
+  "Users": [
+    {
+      "firstName": "test",
+      "lastName": "asdasd",
+      "city": "iti",
+      "email": "test@iti.com",
+      "password": "asdasd",
+      "id": 1
+    },
+    {
+      "firstName": "heba",
+      "lastName": "ibrahem",
+      "city": "sdsdc",
+      "email": "heba@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdasd",
+      "id": 2
+    },
+    {
+      "firstName": "salma",
+      "lastName": "ibrahme",
+      "city": "Alexandria",
+      "email": "salma@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdasd",
+      "id": 4
+    },
+    {
+      "firstName": "amsaa",
+      "lastName": "salah",
+      "city": "cairo",
+      "email": "asmaa@iti.com",
+      "password": "qweqwe",
+      "confirmPassword": "qweqwe",
+      "id": 5
+    },
+    {
+      "firstName": "Khaled",
+      "lastName": "Hassen",
+      "city": "cairo",
+      "email": "khaled@iti.com",
+      "password": "asdasd",
+      "confirmPassword": "asdasd",
+      "id": 6
+    }
+  ],
+  "Articles": [
+    {
+      "id": 1,
+      "title": "How Egypt is trying to encourage the return of tourism",
+      "img": "Explore top attractions1.jpg",
+      "description": "Egypt is reopening its borders to international tourists on 1 July,but many parts of the country will remain off-limits.",
+      "section": "Explore top attractions"
+    },
+    {
+      "id": 2,
+      "title": "Where to find the best scuba diving sites",
+      "img": "Explore top attractions2.jpg",
+      "description": "With a dazzling bounty of underwater attractions to explore and improved access to key diving hubs, there has arguably never been a better time to strap…",
+      "section": "Explore top attractions"
+    },
+    {
+      "id": 3,
+      "title": "Four of the best day trips from Cairo",
+      "img": "Explore top attractions3.jpg",
+      "description": "While Egypt’s ancient capital has more than enough dusty charms to fill a traveller’s playbook, the country’s top natural sites stretch far out from Cairo…",
+      "section": "Explore top attractions"
+    },
+    {
+      "id": 4,
+      "title": "Hot Air Ballooning in Luxor",
+      "img": "keepNew1.jpg",
+      "description": "It’s an incredibly peaceful time in the air. The balloon is literally floating, you don’t feel a thing, and it’s so silent. All the while you fly over one of the most amazing sceneries worldwide.",
+      "section": "Keep up with the new"
+    },
+    {
+      "id": 5,
+      "title": "Al-Qataneyah Dunes for Sandboarding & Barbecuing",
+      "img": "keepNew2.jpg",
+      "description": "It’s the best getaway from trafficy noisy Cairo, located 80km southwest of the city so in less than an hour you can enjoy the emptiness of the desert",
+      "section": "Keep up with the new"
+    },
+    {
+      "id": 6,
+      "title": "Cleopatra’s Bath in Siwa",
+      "img": "keepNew3.jpg",
+      "description": "Located in Siwa Oasis, and is one of its landmarks. It’s basically a pool that is fed with water from natural hot springs, it’s the best way to cool off the heat of a hot summer day.",
+      "section": "Keep up with the new"
+    },
+    {
+      "id": 7,
+      "page": "About",
+      "name": "History",
+      "title": "1958",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "3.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "page": "About",
+      "name": "History",
+      "title": "1962",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "15.jpg"
+      ]
+    },
+    {
+      "id": 9,
+      "page": "About",
+      "name": "History",
+      "title": "1981",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "8.jpg"
+      ]
+    },
+    {
+      "id": 10,
+      "page": "About",
+      "name": "History",
+      "title": "1997",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "Images": [
+        "10.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "page": "About",
+      "name": "Facts",
+      "title": "Ahlan wa Sahlan!",
+      "description": "This short greeting means 'welcome' in Arabic, the official language of the Egypt.",
+      "Images": [
+        "3.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "page": "About",
+      "name": "Facts",
+      "title": "Hello Sunshine!",
+      "description": "Our climate is warm and subtropical with 300+ days of sunshine a year.",
+      "Images": [
+        "1.jpg"
+      ]
+    },
+    {
+      "page": "About",
+      "name": "Facts",
+      "title": "The Great Pyramids",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis!",
+      "Images": [
+        "7.jpg"
+      ],
+      "id": 13
+    },
+    {
+      "id": 14,
+      "page": "Culture",
+      "name": "Clothing",
+      "title": "Typical Egyptian Clothing",
+      "description": "With around 200 nationalities represented in Egypt, how people dress is incredibly varied – yet the traditional attire of Egypt is bold and distinctive. You can see it all across the city. \n\n Egyptian national dress is a symbol of pride and identity that has been designed with the dual intent of providing comfort and adhering to religious beliefs. In Egypt, men wear an ankle-length, loose-fitting garment made of white cotton, known as a kandora or dishdasha. A ghutrah covers the head and is held in place by the agal, a type of black cord. This garment was originally used to protect the face from the harsh desert environment, \n\n Traditionally, women in Egypt wear an abaya – a long, flowing light coat over their clothing. This is worn over their Western clothes or a traditional long-sleeved full-length dress known as a jalabeya. A black scarf is often draped over the head. ",
+      "Images": [
+        "15.jpg",
+        "14.jpg",
+        "13.jpg",
+        "12.jpg"
+      ]
+    },
+    {
+      "id": 15,
+      "page": "Culture",
+      "name": "Food",
+      "title": "Typical Egyptian Food",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda sed minus at praesentium quidem harum dolore vel perferendis? Pariatur illum voluptatem architecto earum ratione, excepturi, deserunt tenetur placeat praesentium unde eum assumenda maiores fuga quam quibusdam similique blanditiis in.",
+      "Images": [
+        "11.jpg",
+        "10.jpg",
+        "9.jpg",
+        "8.jpg"
+      ],
+      "Items": [
+        {
+          "title": "Koshary",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error nobis!"
+        },
+        {
+          "title": "test02",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error nobis! sit amet consectetur"
+        },
+        {
+          "title": "test03",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error nobis! sit amet consectetur adipisicing elit."
+        },
+        {
+          "title": "test04",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla!"
+        }
+      ]
+    }
+  ],
+  "Pages": [
+     {
+      "id": 1,
+      "name": "Explore",
+      "title": "Discover Egypt",
+      "bannerImg": "1.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities."
+    },
+    {
+      "id": 2,
+      "name": "Neighbourhoods",
+      "title": "Neighbourhoods in Egypt",
+      "bannerImg": "14.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Every district tells a story – get ready to explore all the highlights in the dynamic city of Egypt."
+    },
+    {
+      "id": 3,
+      "name": "Culture",
+      "title": "Local culture & heritage",
+      "bannerImg": "13.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Discover the warm hospitality, rich culinary heritage and proud traditions that make up Egypt's vibrant culture."
+    },
+    {
+      "id": 4,
+      "name": "About",
+      "title": "About Egypt",
+      "bannerImg": "10.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Every district tells a story – get ready to explore all the highlights in the dynamic city of Egypt."
+    },
+    {
+      "id": 5,
+      "name": "home",
+      "title": "Home",
+      "bannerImg": "pyramids-2159286.webp",
+      "bannerVideo": "https://mdbootstrap.com/img/video/Sail-Away.mp4",
+      "description": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities."
+    },
+    {
+      "id": 6,
+      "name": "Plan",
+      "title": "Plan your program",
+      "bannerImg": "10.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Get started on your Egypt holiday with these helpful tips and tools."
+    },{
+      "id": 7,
+      "name": "New",
+      "title": "New & Trending",
+      "bannerImg": "im1.jpg",
+      "bannerVideo": "assets/v2",
+      "description": "Check out the latest hotspots and attractions to add to your next holiday."
+    },{
+      "id": 8,
+      "name": "activities",
+      "title": "Top activities in Egypt",
+      "bannerImg": "10.jpg",
+      "bannerVideo": "assets/video/Let's-Go-Egypt",
+      "description": "Check out the latest hotspots and attractions to add to your next holiday."
+    }
+
+  ],
+  "Subscriptions": [
+    {
+      "id": 1,
+      "email": "test@gmail.com"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "img": "../assets/maxresdefault.jpg",
+      "title": "EGYPT SHOPPING FESTIVAL",
+      "Firstdescription": "What not to miss this week in DSF",
+      "seconddescription": "Hop your way through outdoor DSF Markets, sprint through malls on a half-day shopping spree and sink your teeth into all kinds of family fun exclusively with DSF this week"
+    },
+    {
+      "id": 2,
+      "img": "../assets/1.jpg",
+      "title": "SHOPPING",
+      "Firstdescription": "What not to miss this week in DSF",
+      "seconddescription": "Shop, play and dine at Egypt's best malls"
+    },
+    {
+      "id": 3,
+      "img": "../assets/3.jpg",
+      "title": "BEACHES",
+      "Firstdescription": "What not to miss this week in DSF",
+      "seconddescription": "Hop your way through outdoor DSF Markets, sprint through malls on a half-day shopping spree and sink your teeth into all kinds of family fun exclusively with DSF this week"
+    },
+    {
+      "id": 4,
+      "img": "../assets/6.jpg",
+      "title": "EGYPT SHOPPING FESTIVAL",
+      "Firstdescription": "20 amazing things to do in Egypt",
+      "seconddescription": "20 amazing things to do in Egypt"
+    },
+    {
+      "id": 5,
+      "img": "../assets/1.jpg",
+      "title": "Egypt Shopping Festival",
+      "Firstdescription": "It's time for incredible retail deals and raffles, fireworks, live entertainment and more at the Dubai Shopping Festival, which returns from 17 December 2020 to 30 January 2021.",
+      "seconddescription": "20 amazing things to do in Egypt"
+    }
+  ]
+
+
+}
