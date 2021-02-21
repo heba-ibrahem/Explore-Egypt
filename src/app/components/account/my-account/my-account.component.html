@@ -1,0 +1,54 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div class="history">
+      <div class="container">
+        <ul class="m-0 list-unstyled">
+          <li>
+            <a class="main-link" href="#">Visit Egypt</a>
+          </li>
+          <li class="point"><i class="fa fa-angle-right"></i></li>
+          <li>My account</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="safety-post">
+      <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
+    </div>
+  </div>
+
+<!-- page content -->
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+            <div class="content">
+                    <div class="col-12 offset-xl-1 userName">Hey <span class="span" >{{CurrentUser.firstName}}{{CurrentUser.lastName}}</span> !</div>
+                    <div class="col-12 col-md-8 offset-xl-1 welcome">Welcome to your account. You can edit your information and view your purchased tickets from Egypt Calendar here.</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12 offset-xl-1">
+            <nav class="nav nav-pills">
+                <a [routerLink]="['/account/dashboard']" routerLinkActive="active"  class="nav-item nav-link">
+                    <i class="fa fa-home pr-1"></i> My Account
+                </a>
+                <a [routerLink]="['/account/editProfile']" routerLinkActive="active"  class="nav-item nav-link">
+                    <i class="fa fa-user pr-1"></i> Edit Profile
+                </a>
+                <a [routerLink]="['/account/dashboard']" routerLinkActive="active"  class="nav-item nav-link">
+                    <i class="fa fa-line-chart pr-1"></i> Messages
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    my account
+</div>
+
+
+

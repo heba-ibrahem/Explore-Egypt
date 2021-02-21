@@ -1,6 +1,6 @@
 export interface IProgram {
-    id: number;
-    userID: number;
+    id?: number;
+    userID?: number;
     from: string;
     to: string;
     selHotel:{

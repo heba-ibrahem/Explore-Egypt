@@ -4,6 +4,7 @@ import { CityService } from 'src/app/Services/city.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { IProgram } from 'src/app/viewmodels/iprogram';
 import { Location } from '@angular/common';
+import { IUsers } from 'src/app/viewmodels/iusers';
 
 @Component({
   selector: 'app-program-details',
@@ -15,8 +16,10 @@ export class ProgramDetailsComponent implements OnInit {
   prog: IProgram| null = null;
   // program: any;
   programID: number = 0;
-  currentproduct = null
+  CurrentUser: IUsers;
   constructor( private activatedRout: ActivatedRoute,private UserSevives: UsersServiceService, private city: CityService, private route: Router,  private location: Location) {
+    this.CurrentUser = this.UserSevives.userValue;
+    console.log(this.CurrentUser)
     
    }
 
@@ -76,8 +79,8 @@ export class ProgramDetailsComponent implements OnInit {
     //   (err) => { console.log(err) }
     // );
   }
-  edit(ID:number){
-    this.route.navigate(['/editProgram', ID]);
-  }
+  // edit(ID:number){
+  //   this.route.navigate(['/editProgram', ID]);
+  // }
 
 }

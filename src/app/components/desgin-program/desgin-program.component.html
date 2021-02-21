@@ -4,15 +4,16 @@
   <form [formGroup]="PorgramForm" (ngSubmit)="save()">
     <div class="row">
       <div class="form-group col-3">
-        <label class="control-label" for="date">From</label>
-        <input type="date" class="form-control" formControlName="from" id="date" name="from" placeholder="MM/DD/YYY" type="text" />
+        <label class="control-label" for="from">From</label>
+        <input type="date"  class="form-control" formControlName="from" id="from" name="from" placeholder="MM/DD/YYY" />
       </div>
       <div class="form-group col-3">
-        <label class="control-label" for="date">to</label>
-        <input type="date" class="form-control" formControlName="to" id="date" name="to" placeholder="MM/DD/YYY" type="text" />
+        <label class="control-label" for="to">to</label>
+        <input type="date" class="form-control" formControlName="to" id="to" name="to" placeholder="DD/DD/YYY"/>
       </div>
 
     </div>
+    
 
 
     <div class="hotel">
@@ -30,7 +31,7 @@
 
       </div>
 
-      <div id="">
+      <!-- <div id="">
         <div id="cairo" class="tabels">
           <table class="table table-dark rounded" id="datac">
             <thead>
@@ -56,6 +57,19 @@
             </tbody>
           </table>
         </div>
+      </div> -->
+      <div class="card bg-dark text-light my-3" *ngFor="let hotel of  hotelByCityID; let SN=index">
+        <div class="card-body" >
+          <h5 class="card-title row">
+            <input type="radio" formControlName="selHotel"  [value]="{hotelName:hotel.hotelName,roomPrice:hotel.roomPrice}" name="selHotel" (change)="selectHotel($event)">
+            <p class="mx-2">Hotel name: {{hotel.hotelName}}</p>
+          </h5>
+          <div class="card-text row ">
+            <p class="mx-4">City: {{hotel.city}}</p>
+            <p class="mx-4">Room Price: {{hotel.roomPrice}}</p>
+            <p class="mx-4">Contact Info: {{hotel.contactInfo}}</p>
+          </div   >
+        </div>
       </div>
 
 
@@ -74,14 +88,16 @@
 
         <div class="form-group col-3 ">
           <label for="val" class=" form-label" id="">to</label>
-          <select class="form-control" id="val">
+          <select class="form-control" id="val" (change)="chooseTrain($event)">
+            <option>choose City</option>
+            <option *ngFor="let selectedDestenation of CityList" [value]='selectedDestenation.id'>{{selectedDestenation.name}}</option>
           </select>
         </div>
 
       </div>
       <br> <br>
 
-      <div class="">
+      <!-- <div >
         <div id="cairot" class="tablet">
           <table id="data" class="table table-dark rounded">
             <thead>
@@ -111,114 +127,23 @@
             </tbody>
           </table>
         </div>
+      </div> -->
+
+      <div class="card bg-dark text-light my-3" *ngFor="let train of  trainByCityID; let destination of  trainToDest; let SN=index">
+        <div class="card-body" >
+          <h5 class="card-title row">
+            <input type="radio" formControlName="selTrain"  [value]="{trainNumber:train.trainNumber,destination:train.destination}" name="selTrain" (change)="selectTrain($event)">
+            <p class="mx-2">Train Number: {{train.trainNumber}}</p>
+          </h5>
+          <div class="card-text row ">
+            <p class="mx-4">departureTime: {{train.departureTime}}</p>
+            <p class="mx-4">arrivalTime: {{train.arrivalTime}}</p>
+            <p class="mx-4">ticketPrice: {{train.ticketPrice}}</p>
+          </div   >
+        </div>
       </div>
 
-      <!-- <div>
-            <div id="aswant" class="tablet">
-                <table class="table table-dark rounded">
-                    <thead>
-                      <tr>
-                        <th scope="col">select</th>
-                        <th scope="col">Train Number</th>
-                        <th scope="col">Distenation</th>
-                        <th scope="col">Depature time </th>
-                        <th scope="col">Arrival time </th>
-                        <th scope="col">Ticket price</th>
-                        <th scope="col">Reservation details</th>
 
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><input type="radio" name="aswan"></th>
-                        <td>2009</td>
-                        <td>cairo</td>
-                        <td>11:00am</td>
-                        <td>11:00pmm</td>
-                        <td>First Class: 300LE<br>
-                            Second Class:200LE
-                        </td>
-                        <td>Link</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="radio" name="aswan"></th>
-                        <td>2009</td>
-                        <td>Sohag</td>
-                        <td>11:00am</td>
-                        <td>3:30pm</td>
-                        <td>First Class: 300LE <br>
-                            Second Class:200LE
-                        </td>
-                        <td>Link</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="radio" name="aswan"></th>
-                        <td>2015</td>
-                        <td>Alexandria</td>
-                        <td>11:00pm</td>
-                        <td>11:30am</td>
-                        <td>First Class: 300LE<br>
-                            Second Class:200LE
-                        </td>
-                        <td>Link</td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
-        </div>
-        <div>
-            <div id="alext" class="tablet">
-                <table class="table table-dark rounded">
-                    <thead>
-                      <tr>
-                        <th scope="col">select</th>
-                        <th scope="col">Train Number</th>
-                        <th scope="col">Distenation</th>
-                        <th scope="col">Depature time </th>
-                        <th scope="col">Arrival time </th>
-                        <th scope="col">Ticket price</th>
-                        <th scope="col">Reservation details</th>
-
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><input type="radio" name="alex"></th>
-                        <td>2015</td>
-                        <td>Aswan</td>
-                        <td>9:00pm</td>
-                        <td>9:00am</td>
-                        <td>First Class: 300LE<br>
-                            Second Class:200LE
-                        </td>
-                        <td>Link</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="radio" name="alex"></th>
-                        <td>2015</td>
-                        <td>Sohag</td>
-                        <td>9:00pm</td>
-                        <td>4:00am</td>
-                        <td>First Class: 300LE <br>
-                            Second Class:200LE
-                        </td>
-                        <td>Link</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><input type="radio" name="alex"></th>
-                        <td>999</td>
-                        <td>Alexandria</td>
-                        <td>9:00pm</td>
-                        <td>11:30am</td>
-                        <td>First Class: 300LE<br>
-                            Second Class:200LE
-                        </td>
-                        <td>Link</td>
-                      </tr>
-                    </tbody>
-                  </table>
-            </div>
-        </div> -->
         <div>
           <button type="submit" [disabled]="PorgramForm.invalid"  class="btn btn-success"> Save your program </button>
         </div>

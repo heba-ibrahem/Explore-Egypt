@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CityService } from '../Services/city.service';
+import { UsersServiceService } from '../Services/users-service.service';
 import { IHotel } from '../viewmodels/ihotel';
 import { IProgram } from '../viewmodels/iprogram';
 import { ITrain } from '../viewmodels/itrain';
+import { IUsers } from '../viewmodels/iusers';
 
 @Component({
   selector: 'app-edit-program',
@@ -21,14 +23,18 @@ export class EditProgramComponent implements OnInit {
   hotelByCityID: IHotel[] = [];
   trainByCityID: ITrain[] = [];
   selectedHotel: any[]=[];
-  constructor(private fb: FormBuilder,private activatedRout: ActivatedRoute, private city: CityService, private route: Router) {
+  CurrentUser: IUsers;
+  list: IProgram |null=null 
+  constructor(private fb: FormBuilder ,private UserSevives: UsersServiceService,private activatedRout: ActivatedRoute, private city: CityService, private route: Router) {
     this.PorgramForm = this.fb.group({
-      from: [this.prog?.from, [Validators.required ]],
-      to: [this.prog?.to, [Validators.required]],
-      selHotel:[{hotelName:this.prog?.selHotel.hotelName, roomPrice:this.prog?.selHotel.roomPrice}, [Validators.required]],
-      selTrain:[{trainNumber:this.prog?.selTrain.trainNumber, destination:this.prog?.selTrain.destination, ticketPrice:this.prog?.selTrain.ticketPrice}, [Validators.required]],
+      from: ['', [Validators.required ]],
+      to: ['', [Validators.required]],
+      selHotel:[{hotelName:"value", roomPrice:"value"}, [Validators.required]],
+      selTrain:[{trainNumber:0, destination:"value", ticketPrice:"value"}, [Validators.required]],
 
     })
+    this.CurrentUser = this.UserSevives.userValue;
+    console.log(this.CurrentUser)
   
   }
   selectHotel(hotel:any){
@@ -81,25 +87,38 @@ export class EditProgramComponent implements OnInit {
     )
     this.activatedRout.params.subscribe(data =>{
       this.programID = data.id;
-      console.log(this.programID)
       this.city.viewProgram(this.programID).subscribe(programData =>{
         this.prog = programData
       })
-      console.log(this.prog)
+
     })
   }
 
   edit() {
     console.log("update")
     console.log(this.PorgramForm.value)
-    this.city.editProgram(this.programID, this.PorgramForm.value).subscribe(
+    this.list = {
+      // "id": this.PorgramForm.value.id,
+      userID: this.CurrentUser.id,
+      from: this.PorgramForm.value.from,
+      to: this.PorgramForm.value.to,
+      selHotel: {
+        hotelName: this.PorgramForm.value.selHotel.hotelName,
+        roomPrice: this.PorgramForm.value.selHotel.roomPrice,
+      },
+      selTrain: {
+        trainNumber: this.PorgramForm.value.selTrain.trainNumber,
+        destination: this.PorgramForm.value.selTrain.destination,
+        ticketPrice: this.PorgramForm.value.selTrain.ticketPrice,
+      }}
+    this.city.editProgram(this.programID, this.list).subscribe(
       (res) => {
         console.log(res);
         this.route.navigate(['/editProgram',this.programID ]);
         
       },
       (err) => { console.log(err) }
-    );
-  }
+    )
+    }
 
 }

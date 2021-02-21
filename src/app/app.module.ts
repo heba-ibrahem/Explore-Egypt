@@ -15,6 +15,7 @@ import { PlanProgramComponent } from './components/plan-program/plan-program.com
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { EditProfileComponent } from './components/account/edit-profile/edit-profile.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -33,6 +34,17 @@ import { MoreNewEventHomeComponent } from './components/home/more-new-event-home
 import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
 import { EditProgramComponent } from './edit-program/edit-program.component';
 
+
+
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { DatepickerModule } from 'ngx-bootstrap/datepicker';
+
+
+
+
+
+
+import { MyAccountComponent } from './components/account/my-account/my-account.component';
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -56,6 +68,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     DesginProgramComponent,
     ProgramDetailsComponent,
     HomeComponent,
+    EditProfileComponent,
     ActivitiesComponent,
     ArticleComponent,
     NotFoundComponent,
@@ -66,13 +79,16 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NewEventsHomeComponent,
     MoreNewEventHomeComponent,
     StartPlanningYourTripComponent,
-    EditProgramComponent
+    EditProgramComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    // BrowserAnimationsModule,
+    // DatepickerModule.forRoot(),  
     AppRoutingModule,
     SwiperModule
   ],

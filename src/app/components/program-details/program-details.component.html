@@ -14,7 +14,7 @@
 
     <div class="mt-2 card  ">
       <div class="m-4">
-        <h2>Hi UserName</h2>
+        <h2>Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}}</h2>
         <h4>Thanks for using our service to plan your trip </h4>
         <h1 class="text-info">Your trip details</h1>
         <h2>You will reserve accoumdation at</h2>
@@ -32,7 +32,7 @@
         <!-- <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{prog.id}" routerLinkActive="router-link-active"  > Edit</button> -->
         <!-- <button class="btn-lg btn-info col-3 m-1" (click)="prog?.id" > Edit</button> -->
 
-        <button *ngIf="deleteProgram" class="btn-lg btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">Delete</button>
+        <button  class="btn-lg btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">Delete</button>
         <!-- <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" *ngIf="deleteProgram">
           <div class="modal-dialog" role="document">
             <div class="modal-content">

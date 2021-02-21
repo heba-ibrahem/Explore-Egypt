@@ -5,6 +5,7 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
+      "destinationId":3 ,
       "destination": "Aswan",
       "departureTime": "12:00am",
       "arrivalTime": "10:00am",
@@ -16,6 +17,7 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
+      "destinationId":4 ,
       "destination": "Sohag",
       "departureTime": "12:00am",
       "arrivalTime": "5:00am",
@@ -81,12 +83,13 @@
   ],
   "programs": [
     {
-      "from": "111111",
-      "to": "11111111111",
-      "selHotel": "Fermont",
+      "userID": 4,
+      "from": "2/5/2021",
+      "to": "6/5/2021",
+      "selHotel": {},
       "selTrain": {
         "trainNumber": 999,
-        "destination": "Aswan"
+        "destination": "Sohag"
       },
       "id": 1
     },
@@ -99,6 +102,74 @@
         "destination": "Aswan"
       },
       "id": 2
+    },
+    {
+      "userID": 5,
+      "from": "343245",
+      "to": "3435454",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "2515"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Sohag",
+        "ticketPrice": "150LE"
+      },
+      "id": 3
+    },
+    {
+      "from": "333333333333",
+      "to": "3333333333",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "2515"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Sohag",
+        "ticketPrice": "150LE"
+      },
+      "id": 4
+    },
+    {
+      "userID": 2,
+      "from": "5/5/5555",
+      "to": "11111111111",
+      "selHotel": {},
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Aswan"
+      },
+      "id": 5
+    },
+    {
+      "userID": 2,
+      "from": "5/5/5555",
+      "to": "11111111111",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "1500LE"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Aswan"
+      },
+      "id": 6
+    },
+    {
+      "userID": 2,
+      "from": "2021-02-10",
+      "to": "2021-02-23",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "1500LE"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Aswan"
+      },
+      "id": 7
     }
   ],
   "explorDep": [

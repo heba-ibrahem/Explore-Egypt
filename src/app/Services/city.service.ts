@@ -26,6 +26,11 @@ export class CityService {
   getTrainsByCityID(cityID: number): Observable<ITrain[]> {
     return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?cityID=${cityID}`);
   }
+
+  getTrainsBydest(destinationId:number): Observable<ITrain[]> {
+    return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?destinationId=${destinationId}`);
+  }
+
   getProgramByID(pID:number): Observable<IProgram> {
     console.log(pID)
     return this.httpclient.get<IProgram>(`${environment.API_URL}/programs/${pID}`);
@@ -59,7 +64,7 @@ export class CityService {
       //,'Authorization': 'my-auth-token'
         })};
       
-    return this.httpclient.put<any>(`${environment.API_URL}/programs//${programID}` ,programBody, httpOptions);
+    return this.httpclient.put<any>(`${environment.API_URL}/programs/${programID}` ,programBody, httpOptions);
   }
 
   deleteProgram(id:any) : Observable<any[]> {
