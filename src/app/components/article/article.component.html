@@ -2,7 +2,7 @@
 <div class="page-title border-bottom-0">
   <div class="container">
       <h3>
-          Shop, play and dine at Egyp's best malls
+{{this.anArticle[0].title}}
       </h3>
   </div>
 </div>
@@ -14,93 +14,43 @@
 
           <br>
       </div>
-      <pre class="text-left  startp d-inline">
-Egypt is a shopper's dream and with a multitude of malls boasting fun
-attractions, there's much to explore.</pre>
+<div class="container"><p class="text-left  startp d-inline">
+  {{this.anArticle[0].description}}</p></div>
+<br>
           <button class="btn float-right" id="lovebtn">
               <i class="fa fa-heart"></i>
      </button>
+<br> <!-- Slider main container -->
+<div class="swiper-container swiper_1" [swiper]="swiper_config_1">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="row ml-0 swiper-slide" *ngFor="let im of anArticle[0].Images">
+      <div class="col-md-12 ">
+        <div class="img-container">
+          <img class="img-fluid imm mx-auto d-block" [src]="'assets/' + im" alt="">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination swiper-pagination_1"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev">
+    <span><i class="fa fa-angle-left"></i></span>
+  </div>
+  <div class="swiper-button-next">
+    <span><i class="fa fa-angle-right"></i></span>
+  </div>
+</div>
+</div>
 <br>
-      <img src="assets/Mall1.jpeg" class="mx-auto d-block img-fluid">
-      <div class="num text-center">1</div>
-      <h2 class="mallName">Mall of Egypt.</h2>
-      <img src="assets/mall2.png" class="mx-auto d-block img-fluid w-75">
-      <button class="btn float-right loveMall" id="lovebtn">
-          <i class="fa fa-heart"></i>
- </button>
-  <br>
-  <p class="malldes text-center mt-3">Luxury beckons at the Mall of the Egypt, where a wide range of couture and street-style
-      fashion awaits.
-      Highlights include the tech-focused Apple boutique, department stores like Harvey Nichols, Marks & Spencer,
-      and Debenhams, as well as the exclusive edit of designers at the ultra-chic Fashion Dome. After a long day
-      of shopping, savour a bowl of Cairo's favourite dumplings at Din Tai Fung, or sip on a warm cup of coffee at
-      hip café, Common Grounds. Alternatively, enjoy sloping down the ice-clad hills at Ski Dubai, Dubai's indoor
-      skiing arena, or let the kids loose at Magic Planet.</p>
-  <hr>
+  <p class="malldes text-center mt-3 ">{{this.anArticle[0].content}}</p>
 
-<div class="num text-center">2</div>
-      <h2 class="mallName">Cairo Festival City Mall.</h2>
-      <img src="assets/mall3.jpeg" class="mx-auto d-block img-fluid w-75">
-      <button class="btn float-right loveMall" id="lovebtn">
-          <i class="fa fa-heart"></i>
-  </button>
-  <br>
-  <p class="malldes text-center mt-3">Luxury beckons at the Mall of the Egypt, where a wide range of couture and street-style
-      fashion awaits.
-      Highlights include the tech-focused Apple boutique, department stores like Harvey Nichols, Marks & Spencer,
-      and Debenhams, as well as the exclusive edit of designers at the ultra-chic Fashion Dome. After a long day
-      of shopping, savour a bowl of Cairo's favourite dumplings at Din Tai Fung, or sip on a warm cup of coffee at
-      hip café, Common Grounds. Alternatively, enjoy sloping down the ice-clad hills at Ski Dubai, Dubai's indoor
-      skiing arena, or let the kids loose at Magic Planet.</p>
-  <hr>
-
-<div class="num text-center">3</div>
-      <h2 class="mallName">The Waterway.</h2>
-      <img src="assets/Mall4.jpg" class="mx-auto d-block img-fluid w-75">
-      <button class="btn float-right loveMall" id="lovebtn">
-          <i class="fa fa-heart"></i>
-  </button>
-  <br>
-  <p class="malldes text-center mt-3">Luxury beckons at the Mall of the Egypt, where a wide range of couture and street-style
-      fashion awaits.
-      Highlights include the tech-focused Apple boutique, department stores like Harvey Nichols, Marks & Spencer,
-      and Debenhams, as well as the exclusive edit of designers at the ultra-chic Fashion Dome. After a long day
-      of shopping, savour a bowl of Cairo's favourite dumplings at Din Tai Fung, or sip on a warm cup of coffee at
-      hip café, Common Grounds. Alternatively, enjoy sloping down the ice-clad hills at Ski Dubai, Dubai's indoor
-      skiing arena, or let the kids loose at Magic Planet.</p>
-  <hr>
-
-<div class="num text-center">4</div>
-      <h2 class="mallName">Mall of Arabia.</h2>
-      <img src="assets/mall-of-arabia-best-malls-in-cairo-768x432.jpg" class="mx-auto d-block img-fluid w-75">
-      <button class="btn float-right loveMall" id="lovebtn">
-          <i class="fa fa-heart"></i>
-  </button>
-  <br>
-  <p class="malldes text-center mt-3">Luxury beckons at the Mall of the Egypt, where a wide range of couture and street-style
-      fashion awaits.
-      Highlights include the tech-focused Apple boutique, department stores like Harvey Nichols, Marks & Spencer,
-      and Debenhams, as well as the exclusive edit of designers at the ultra-chic Fashion Dome. After a long day
-      of shopping, savour a bowl of Cairo's favourite dumplings at Din Tai Fung, or sip on a warm cup of coffee at
-      hip café, Common Grounds. Alternatively, enjoy sloping down the ice-clad hills at Ski Dubai, Dubai's indoor
-      skiing arena, or let the kids loose at Magic Planet.</p>
-  <hr>
-
-<div class="num text-center">5</div>
-      <h2 class="mallName">City Centre Almaza.</h2>
-      <img src="assets/City-Centre-Almaza-Top-Malls-in-Cairo-768x432.jpg" class="mx-auto d-block img-fluid w-75">
-      <button class="btn float-right loveMall" id="lovebtn">
-          <i class="fa fa-heart"></i>
-  </button>
-  <br>
-  <p class="malldes text-center mt-3">Luxury beckons at the Mall of the Egypt, where a wide range of couture and street-style
-      fashion awaits.
-      Highlights include the tech-focused Apple boutique, department stores like Harvey Nichols, Marks & Spencer,
-      and Debenhams, as well as the exclusive edit of designers at the ultra-chic Fashion Dome. After a long day
-      of shopping, savour a bowl of Cairo's favourite dumplings at Din Tai Fung, or sip on a warm cup of coffee at
-      hip café, Common Grounds. Alternatively, enjoy sloping down the ice-clad hills at Ski Dubai, Dubai's indoor
-      skiing arena, or let the kids loose at Magic Planet.</p>
-  <hr>
+   <hr>
 
 <br>
 <br>

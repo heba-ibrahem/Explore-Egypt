@@ -17,6 +17,7 @@ import { ProgramDetailsComponent } from './components/program-details/program-de
 import { RegisterComponent } from './components/register/register.component';
 import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
 import { AuthGuard } from './gurds/auth.guard';
+import { HotelsComponent } from './components/hotels/hotels.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'programDetails', component: ProgramDetailsComponent},
   {path: 'editProfile', component: EditProfileComponent},
   {path: 'adminPanel', component: AdminPanelComponent},
+  {path: 'hotels', component: HotelsComponent},
   {path: '', redirectTo:'home', pathMatch:'full'},
   {path: '**', component: NotFoundComponent}
 ];

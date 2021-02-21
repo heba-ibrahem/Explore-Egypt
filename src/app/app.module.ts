@@ -33,6 +33,7 @@ import { ExplorDepComponent } from './components/explor-dep/explor-dep.component
 import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
 import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
 import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -75,7 +76,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
