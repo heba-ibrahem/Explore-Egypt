@@ -5,7 +5,6 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
-      "destinationId":3 ,
       "destination": "Aswan",
       "departureTime": "12:00am",
       "arrivalTime": "10:00am",
@@ -17,7 +16,6 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
-      "destinationId":4 ,
       "destination": "Sohag",
       "departureTime": "12:00am",
       "arrivalTime": "5:00am",
@@ -83,93 +81,50 @@
   ],
   "programs": [
     {
-      "userID": 4,
-      "from": "2/5/2021",
-      "to": "6/5/2021",
-      "selHotel": {},
-      "selTrain": {
-        "trainNumber": 999,
-        "destination": "Sohag"
-      },
-      "id": 1
+      "id": 1,
+      "userID": 1,
+      "from": "Monday 30-2-2020",
+      "to": "Monday 30-2-2020",
+      "hotelName": "Hilton",
+      "trainNumber": "999",
+      "destination": "Aswan"
     },
     {
-      "from": "23123",
-      "to": "23123",
-      "selHotel": "Fermont",
+      "from": "",
+      "to": "",
+      "selHotel": "hotel",
       "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
+        "trainNumber": 1,
+        "destination": ""
       },
       "id": 2
     },
     {
-      "userID": 5,
-      "from": "343245",
-      "to": "3435454",
-      "selHotel": {
-        "hotelName": "Helton",
-        "roomPrice": "2515"
-      },
-      "selTrain": {
-        "trainNumber": 999,
-        "destination": "Sohag",
-        "ticketPrice": "150LE"
-      },
+      "from": "123",
+      "to": "123",
+      "selHotel": "Helton",
+      "selTrain": "[object Object]",
       "id": 3
     },
     {
-      "from": "333333333333",
-      "to": "3333333333",
-      "selHotel": {
-        "hotelName": "Helton",
-        "roomPrice": "2515"
-      },
+      "from": "123",
+      "to": "2323",
+      "selHotel": "Green Blaza",
       "selTrain": {
         "trainNumber": 999,
-        "destination": "Sohag",
-        "ticketPrice": "150LE"
+        "destination": "Aswan"
       },
       "id": 4
     },
     {
-      "userID": 2,
-      "from": "5/5/5555",
-      "to": "11111111111",
-      "selHotel": {},
+      "from": "1/5/2021",
+      "to": "5/5/2021",
+      "selHotel": "",
       "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
+        "trainNumber": 0,
+        "destination": "value"
       },
       "id": 5
-    },
-    {
-      "userID": 2,
-      "from": "5/5/5555",
-      "to": "11111111111",
-      "selHotel": {
-        "hotelName": "Helton",
-        "roomPrice": "1500LE"
-      },
-      "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
-      },
-      "id": 6
-    },
-    {
-      "userID": 2,
-      "from": "2021-02-10",
-      "to": "2021-02-23",
-      "selHotel": {
-        "hotelName": "Helton",
-        "roomPrice": "1500LE"
-      },
-      "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
-      },
-      "id": 7
     }
   ],
   "explorDep": [
@@ -179,48 +134,49 @@
     "description": "Check out the latest hotspots and attractions to add to your next holiday.",
     "img": "explorDep1.jpg"
     },
-   {
-    "id": 2,
-    "title": "Sights & Attractions",
-    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
-    "img": "explorDep2.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Experiences",
-    "description": "From pyramids to the sea, take in Egypt's unique experiences.",
-    "img": "explorDep3.jpg"
-  },
-  {
-    "id": 4,
-    "title": "Arts & Culture",
-    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
-    "img": "explorDep4.jpg"
-  },
-  {
-    "id": 5,
-    "title": "Shopping",
-    "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
-    "img": "explorDep5.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Food & Drink",
-    "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
-    "img": "explorDep6.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Spas & Wellness",
-    "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
-    "img": "explorDep7.jpg"
-  },
-  {
-    "id": 8,
-    "title": "Itineraries",
-    "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
-    "img": "explorDep8.jpg"
-  }],
+    {
+      "id": 2,
+      "title": "Sights & Attractions",
+      "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+      "img": "explorDep2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Experiences",
+      "description": "From pyramids to the sea, take in Egypt's unique experiences.",
+      "img": "explorDep3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Arts & Culture",
+      "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+      "img": "explorDep4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Shopping",
+      "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
+      "img": "explorDep5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Food & Drink",
+      "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
+      "img": "explorDep6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spas & Wellness",
+      "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
+      "img": "explorDep7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Itineraries",
+      "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
+      "img": "explorDep8.jpg"
+    }
+  ],
   "curators": [
     {
       "id": 1,
@@ -455,50 +411,50 @@
      {
       "id": 1,
       "name": "Explore",
-      "title": "Discover Egypt",
+      "title": "اكتشف مصر",
       "bannerImg": "1.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
-      "description": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities."
+      "description": "مصر المدينة التي لا بدّ من زيارتها! اكتشف كل ما تحتاج إلى معرفته حول هذه المدينة وما تضمّه من معالم وتجارب استثنائية."
     },
     {
       "id": 2,
       "name": "Neighbourhoods",
-      "title": "Neighbourhoods in Egypt",
+      "title": "الأحياء في مصر",
       "bannerImg": "14.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
-      "description": "Every district tells a story – get ready to explore all the highlights in the dynamic city of Egypt."
+      "description": "كل حيّ في مصر يروي قصّة مميّزة. استعدّ للتعرّف على كافة المعالم السياحية في مدينة مصر المفعمة بالحياة."
     },
     {
       "id": 3,
       "name": "Culture",
-      "title": "Local culture & heritage",
+      "title": "الثقافة المحلية والتراث",
       "bannerImg": "13.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
-      "description": "Discover the warm hospitality, rich culinary heritage and proud traditions that make up Egypt's vibrant culture."
+      "description": "اختبر حسن الضيافة وفن الطهي والتقاليد العريقة التي تشكّل ثقافة مصر النابضة بالحياة."
     },
     {
       "id": 4,
       "name": "About",
-      "title": "About Egypt",
+      "title": "عن مصر",
       "bannerImg": "10.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
-      "description": "Every district tells a story – get ready to explore all the highlights in the dynamic city of Egypt."
+      "description": "اكتشف كيف تحوّلت مصر إلى مدينة عصرية عالمية يقطنها ملايين الأشخاص."
     },
     {
       "id": 5,
       "name": "home",
-      "title": "Home",
+      "title": "الرئيسية",
       "bannerImg": "pyramids-2159286.webp",
       "bannerVideo": "https://mdbootstrap.com/img/video/Sail-Away.mp4",
-      "description": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities."
+      "description": "مصر المدينة التي لا بدّ من زيارتها! اكتشف كل ما تحتاج إلى معرفته حول هذه المدينة وما تضمّه من معالم وتجارب استثنائية."
     },
     {
       "id": 6,
       "name": "Plan",
-      "title": "Plan your program",
+      "title": "خطّط لرحلتك",
       "bannerImg": "10.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
-      "description": "Get started on your Egypt holiday with these helpful tips and tools."
+      "description": "استمتع بعطلة مميزة في دبي مع هذه النصائح المفيدة."
     },{
       "id": 7,
       "name": "New",
@@ -559,6 +515,4 @@
       "seconddescription": "20 amazing things to do in Egypt"
     }
   ]
-
-
 }

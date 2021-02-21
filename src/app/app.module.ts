@@ -45,6 +45,9 @@ import { EditProgramComponent } from './edit-program/edit-program.component';
 
 
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -90,7 +93,15 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     // BrowserAnimationsModule,
     // DatepickerModule.forRoot(),  
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     {
@@ -101,3 +112,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

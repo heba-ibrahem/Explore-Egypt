@@ -2,9 +2,22 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const getCurrentLang = () :string => {
+  if (
+    !localStorage.getItem('current_lang') ||
+    (localStorage.getItem('current_lang') === 'en')
+  )
+    return 'http://localhost:3000';
+  else if ((localStorage.getItem('current_lang') === 'ar'))
+    return 'http://localhost:4000';
+  else 
+    return 'http://localhost:3000';
+}
+  
+
 export const environment = {
   production: false,
-  API_URL:'http://localhost:3000'
+  API_URL: getCurrentLang()
 };
 
 /*
