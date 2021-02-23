@@ -1,4 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef,  OnInit, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UsersServiceService } from 'src/app/Services/users-service.service';
+import { IUsers } from 'src/app/viewmodels/iusers';
 // declare var $:JQueryStatic
 
 @Component({
@@ -13,11 +16,31 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollUpBtn') scrollUpBtn: ElementRef | undefined;
   @ViewChild('largeNavbar') largeNavbar: ElementRef | undefined;
   @ViewChild('smallNavbar') smallNavbar: ElementRef | undefined;
+  islogged:boolean=false;
+  CurrentUser: IUsers={};
+  user_id :number =0;
+  currentUserSubscription: Subscription|null = null;
+  constructor(private userService: UsersServiceService) { 
 
-  constructor() { 
-
+      if(localStorage.getItem('user')){
+        this.islogged=true;
+        this.user_id = this.userService.getUserID();
+        this.loadAccount();
+      }
+      else{
+        this.CurrentUser = {};
+        this.islogged=false;
+      }
+  
   }
-
+  async loadAccount(){
+      this.currentUserSubscription = (await this.userService.getUserById(this.user_id))
+        .subscribe(user=>{
+          this.CurrentUser = user;
+          console.log(this.CurrentUser)
+        });
+      }
+  
   ngOnInit(): void {
   }
   
@@ -89,6 +112,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
 
+  logout() {
+    this.userService.logout()
+    console.log("logged out")
+  }
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.currentUserSubscription?.unsubscribe();
+  }
 
 
 

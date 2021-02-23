@@ -28,11 +28,34 @@
       </ul>
 
       <ul class="top-bar-right m-0 list-unstyled">
-        <li>
+        <li *ngIf="!islogged">
           <a class="main-link" routerLink="/login" >
             <span><i class="fa fa-user"></i></span>
             Login
           </a>
+        </li>
+        <li *ngIf="islogged">
+          <a class="dropdown dropdown-toggle main-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i>
+            {{CurrentUser.firstName}} {{CurrentUser.lastName}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+              <a class="dropdown-item item" routerLink="/account/wishlist" style="margin-left: 3opx">
+                <span><i class="fa fa-heart"></i></span>
+                Top picks
+              </a>
+              <a class="dropdown-item item" routerLink="/account/dashboard">
+                <span><i class="fa fa-user"></i></span>
+                My Account
+              </a>
+              <a class="dropdown-item item" [routerLink]="['/account/editProfile']">
+                <span><i class="fa fa-user"></i></span>
+                Edit Profile
+              </a>
+              <a class="dropdown-item item" (click)="logout()">
+                Logout
+              </a>
+            </div>
         </li>
         <li>
           <a class="main-link" href="#">
@@ -81,7 +104,7 @@
           <a href="#"><span><i class="fa fa-calendar"></i></span></a>
         </li>
         <li>
-          <a href="#"><span><i class="fa fa-heart"></i></span></a>
+          <a routerLink="/account/wishlist"><span><i class="fa fa-heart"></i></span></a>
         </li>
       </ul>
     </div>
@@ -335,10 +358,33 @@
           </li>
         </ul>
       </li>
-      <li class="sm-nav-item">
+      <li class="sm-nav-item" *ngIf="!islogged">
         <a routerLink="/login">
           <span><span><i class="fa fa-user"></i></span></span>
           Login
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a routerLink="/account/wishlist">
+          <span><span><i class="fa fa-heart"></i></span></span>
+          Top picks
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a routerLink="/account/dashboard">
+          <span><span><i class="fa fa-user"></i></span></span>
+          My Account
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a [routerLink]="['/account/editProfile']">
+          <span><span><i class="fa fa-user"></i></span></span>
+          Edit Profile
+        </a>
+      </li>
+      <li class="sm-nav-item" *ngIf="islogged">
+        <a (click)="logout()">
+          Logout
         </a>
       </li>
       <li class="sm-nav-item">

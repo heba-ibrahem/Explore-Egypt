@@ -9,48 +9,53 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UsersServiceService {
-  private userSubject: BehaviorSubject<IUsers>;
-  public user:IUsers;
+  // private userSubject: BehaviorSubject<number>;
   public localstorage:string|null=null;
   constructor(private httpclient: HttpClient) { 
-    // get data of current user
-    this.userSubject = new BehaviorSubject<IUsers>(JSON.parse(localStorage.getItem('user')|| '{}'));
-    this.user = this.userSubject.asObservable;
+
+    // this.userSubject = new BehaviorSubject<number>(JSON.parse(localStorage.getItem('user')||''));
+    // this.user = JSON.parse(this.userSubject.asObservable);
   }
 
-  public get userValue(): IUsers {
-    return this.userSubject.value;
+  public getUserID():number {
+    // return this.userSubject.value;
+    return (JSON.parse(localStorage.getItem('user') || ''));
 }
 
-login(email:string, password:string) {
+ login(email:string, password:string) {
   const httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   };
-  return this.httpclient.get<IUsers[]>(`${environment.API_URL}/Users/?email=${email}&&password=${password}`)
+ return this.httpclient.get<IUsers>(`${environment.API_URL}/Users/?email=${email}&&password=${password}`)
       .subscribe(((res) => {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('user', JSON.stringify(res[0]));
-          console.log(res[0])
-          this.userSubject.next(res[0]);
+          // [{}]
+          if(res[0]){
+            localStorage.setItem('user', JSON.stringify(res[0].id));
+            console.log(res.join())
+            // this.userSubject.next(res[0].id);
+            return res[0];
+          }
+        return null; 
          
-          return res;
       }));
 }
 
 logout() {
   // remove user from local storage and set current user to null
   localStorage.removeItem('user');
-  this.userSubject.next({});
+  // this.userSubject.next(0);
 }
 
 getAll() {
   return this.httpclient.get<IUsers[]>(`${environment.API_URL}/Users`);
 }
 
-getById(id: number) {
-  return this.httpclient.get<IUsers>(`${environment.API_URL}/Users/${id}`);
+async getUserById(id: number) {
+  const res = await this.httpclient.get<IUsers>(`${environment.API_URL}/Users/${id}`);
+  return await res
 }
 update(id:number, user:IUsers) {
   const newuser = {firstName:user.firstName,
@@ -64,7 +69,7 @@ update(id:number, user:IUsers) {
               // update local storage
               localStorage.setItem('user', JSON.stringify(res));
               // publish updated user to subscribers
-              this.userSubject.next(res);
+              // this.userSubject.next(res);
           return res;
       }));
 }
@@ -77,6 +82,7 @@ isLogged(): boolean{
 
 }
 
+
   addUser(user: IUsers): Observable<any[]> {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -87,23 +93,6 @@ isLogged(): boolean{
     };
 
     return this.httpclient.post<any>(`${environment.API_URL}/Users`, user, httpOptions);
-  }
-
-  // getUserDetails(): Observable<IUsers[]> {
-  //   const httpOptions = {
-      
-  //     headers: new HttpHeaders({
-  //       'Content-Type': 'application/json'
-  //       //,'Accept':' */*'
-  //       //,'Authorization': 'my-auth-token'
-  //     })
-  //   };
-  //   console.log("getuser")
-  //   return this.httpclient.get<IUsers[]>(`${environment.API_URL}/Users`,httpOptions);
-
-  // }
-
- 
-  
- 
+  } 
 }
+

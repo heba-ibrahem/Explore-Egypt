@@ -33,6 +33,7 @@ import { NewEventsHomeComponent } from './components/home/week-events-home/week-
 import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
 import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
+import { WishListComponent } from './components/account/wish-list/wish-list.component';
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -67,7 +68,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NewEventsHomeComponent,
     MoreNewEventHomeComponent,
     StartPlanningYourTripComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    WishListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,67 @@
+<!-- Page Header -->
+<div class="page-header">
+    <div class="history">
+      <div class="container pl-5">
+        <ul class="m-0 ml-2 list-unstyled  pl-5">
+          <li>
+            <a class="main-link" href="#">Visit Egypt</a>
+          </li>
+          <li class="point"><i class="fa fa-angle-right"></i></li>
+          <li>Your Top Picks</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="safety-post">
+      <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
+    </div>
+  </div>
+  
+  <!-- page content -->
+  <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col-md-8 col-sm-12 offset-xl-1">
+              <div class="page-titel">
+               <h2>Your Top Picks</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <section class="section-5" style="margin-top: 30px;">
+                  <div class="row" style="margin-top: 10px;">
+                    <div class="col-12 col-xl-9 ">
+                      <div class="row">
+                        <div class=" col-sm-6 col-md-4" *ngFor="let item of wishlist ;let count=index">
+                          <div class="div-image">
+                            <img class="card-img-top" src="assets/{{item?.img}}" alt="Card image" style="width:100%">
+                          </div>
+                          <div class="div-body">
+                            <div class="section-5-favorite">
+                              <!-- <div class="favorite-img" *ngIf="addedtoWishList && hasAccount()">
+                                <a style="color:'#0067b9'" (click)="deletewishlist(List)" ><i class="fa fa-heart"></i></a>
+                              </div>
+                              <div class="favorite-img" *ngIf="!addedtoWishList || !hasAccount()">
+                                <a style="color:'black'" (click)="addwishlist(List)"><i class="fa fa-heart"></i></a>
+                              </div> -->
+                            </div>
+                            <p class="p2">{{item?.title}}</p>
+                            <p class="p3">{{item?.description}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-2"></div>
+                  </div>
+                  </section>
+            </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  
+  
+  
+  

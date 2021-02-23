@@ -280,6 +280,7 @@
   background-position: 0 100%;
   transition: background-position 300ms, color 300ms ease;
 }
+
 @media (max-width: 768px) {
   .section-3 .section-3-favorite a {
     position: absolute;
@@ -302,4 +303,9 @@
 .section-3 .card {
   border: none;
 }
-  
+.favorite{
+  color:orange
+}
+.notfavorite{
+  color:black;
+}
