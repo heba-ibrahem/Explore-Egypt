@@ -26,8 +26,14 @@ export class CityService {
   getTrainsByCityID(cityID: number): Observable<ITrain[]> {
     return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?cityID=${cityID}`);
   }
-  getProgramByID(): Observable<IProgram[]> {
-    return this.httpclient.get<IProgram[]>(`${environment.API_URL}/programs`);
+
+  getTrainsBydest(destinationId:number): Observable<ITrain[]> {
+    return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?destinationId=${destinationId}`);
+  }
+
+  getProgramByID(pID:number): Observable<IProgram> {
+    console.log(pID)
+    return this.httpclient.get<IProgram>(`${environment.API_URL}/programs/${pID}`);
   }
 
   saveProgram(program: IProgram): Observable<any[]> {
@@ -40,5 +46,34 @@ export class CityService {
     };
 
     return this.httpclient.post<any>(`${environment.API_URL}/programs`, program, httpOptions);
+  }
+  viewProgram(programID:any) : Observable<any>{
+    const httpOptions = {headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+      //,'Accept':' */*'
+      //,'Authorization': 'my-auth-token'
+        })};
+      
+    return this.httpclient.get<any>(`${environment.API_URL}/programs/${programID}`);
+
+  }
+  editProgram(programID:any, programBody:any) : Observable<any[]> {
+    const httpOptions = {headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+      //,'Accept':' */*'
+      //,'Authorization': 'my-auth-token'
+        })};
+      
+    return this.httpclient.put<any>(`${environment.API_URL}/programs/${programID}` ,programBody, httpOptions);
+  }
+
+  deleteProgram(id:any) : Observable<any[]> {
+    const httpOptions = {headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+      //,'Accept':' */*'
+      //,'Authorization': 'my-auth-token'
+        })};
+      
+    return this.httpclient.delete<any>(`${environment.API_URL}/programs/${id}`, httpOptions);
   }
 }

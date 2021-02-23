@@ -29,7 +29,7 @@
       <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
 <div  *ngIf="A.section==='Explore top attractions'">
         <a [routerLink]="'/article/'+(A.id)">
-          <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
+          <div class="card"><img class="card-img-top" id="imgcard" src="assets/{{A.img}}">
             <div class="card-body">
               <h4 class="card-title">{{A.title}}
               </h4>

@@ -7,5 +7,6 @@ export interface ITrain {
     details:string;
     cityID: number;
     city:string;
+    destinationId: number;
 
 }

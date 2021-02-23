@@ -32,8 +32,24 @@ import { ExplorDepComponent } from './components/explor-dep/explor-dep.component
 import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
 import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
 import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditProgramComponent } from './edit-program/edit-program.component';
+
+
+
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { DatepickerModule } from 'ngx-bootstrap/datepicker';
+
+
+
+
+
+
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
 import { WishListComponent } from './components/account/wish-list/wish-list.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -68,6 +84,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     NewEventsHomeComponent,
     MoreNewEventHomeComponent,
     StartPlanningYourTripComponent,
+    EditProgramComponent,
     MyAccountComponent,
     WishListComponent
   ],
@@ -76,8 +93,19 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    // BrowserAnimationsModule,
+    // DatepickerModule.forRoot(),
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    BrowserAnimationsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     {
@@ -88,3 +116,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}

@@ -135,7 +135,7 @@ nav.lg-nav {
       }
       p {
         color: #757575;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 300;
       }
     }
@@ -235,7 +235,7 @@ nav.sm-nav {
     top: 100%;
     width: 100%;
     background-color: $white;
-    padding: 15px 0;
+    border-top: 1px solid #efefef;
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s;
