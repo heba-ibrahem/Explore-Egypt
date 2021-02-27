@@ -17,28 +17,28 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('smallNavbar') smallNavbar: ElementRef | undefined;
   currentLang: string;
 
-  constructor(public translate: TranslateService,  localizationService: LocalizationService) {
-    this.currentLang = localizationService.getCurrentLang();
+  constructor(public translate: TranslateService, private localizationService: LocalizationService) {
+    this.currentLang = this.localizationService.getCurrentLang();
     this.translate.use(this.currentLang);
+    // this.loadStyles();
   }
 
   changeCurrentLang(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('current_lang', lang )
     window.location.reload();
-    // document.documentElement.setAttribute('lang', lang);
+    
   }
 
-  // getCurrentLang() :string {
-  //   if (
-  //     !localStorage.getItem('current_lang') ||
-  //     (localStorage.getItem('current_lang') === 'en')
-  //   )
-  //     return 'en';
-  //   else if ((localStorage.getItem('current_lang') === 'ar'))
-  //     return 'ar';
-  //   else
-  //     return 'en';
+  // loadStyles() {
+  //   document.documentElement.setAttribute('lang', this.currentLang);
+  //   if (this.currentLang === 'ar') {
+  //     document.body.classList.add('rtl');
+  //     require("style-loader!../../src/assets/css/bootstrap-rtl.min.css");
+  //     // require("style-loader!../../src/assets/css/style-ltr.css");
+  //   } else {
+  //     require("style-loader!../../src/assets/css/bootstrap.min.css")
+  //   }
   // }
 
   ngOnInit(): void {

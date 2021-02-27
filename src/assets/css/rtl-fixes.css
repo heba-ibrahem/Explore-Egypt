@@ -1,0 +1,96 @@
+
+
+/* Register component */
+.sm-btns{
+	float: right !important;
+}
+
+/* Program details component */
+@media (max-width :768px){
+  .rdiv{
+    margin-right: 0;
+  } 
+}
+.overlap{
+  margin-right:-200px ;
+}
+.overlap {
+  margin-right: -9%;
+}
+.vd{
+  border-bottom-left-radius: 10%;
+}
+
+/* Explore-dep component */
+.back {
+  border-top-right-radius: 80px;
+}
+#lovebtn {
+  right: 0em;
+}
+.social_icon span {
+  font-size: 3vw;
+  margin-right: 10px;
+  color: #b9b7ae;
+}
+
+/* Article component */
+.effect.jaques a {
+  transition: border-top-right-radius 0.1s linear 0s, border-top-left-radius 0.1s linear 0.1s, border-bottom-left-radius 0.1s linear 0.2s, border-bottom-right-radius 0.1s linear 0.3s;
+}
+.loveMall{
+  position: relative;
+  left: 13%;
+  margin-bottom: 180px;
+}
+.effect a:last-child {
+  margin-left: 0px;
+}
+.effect a {
+  margin-left: 20px;
+}
+
+/* My-account component */
+.welcome{
+  padding-right: 10px;
+}
+.nav a{
+  padding-right: 70px;
+  padding-left: 70px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+@media (max-width: 768px){
+  .nav a{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.curved-img {
+  border-bottom-left-radius: 100px;
+}
+.curved-img img {
+  border-bottom-left-radius: 100px;
+}
+.page-header .history ul li {
+  margin-left: 10px;
+}
+
+/* Home > activities component */
+.section-5 button {
+  background: linear-gradient(to left, #333 50%, #f5f5f5 50%);
+  background-position: left bottom;
+}
+.section-5 button:hover {
+  background-position: right bottom;
+}
+.section-5 .div-body .p2 {
+  padding-left: 32px;
+}
+.section-5 .section-5-favorite a {
+  left: 0;
+  margin-left: 30px;
+}

@@ -46,6 +46,13 @@ $ExploreEgypt-theme: mat-light-theme((
   margin: 0px;
   box-sizing: border-box;
 }
+body { 
+  direction: ltr;
+}
+[lang="ar"] body {
+  direction: rtl !important;
+  text-align: start !important;
+}
 .show {
   visibility: visible !important;
   opacity: 1 !important;
