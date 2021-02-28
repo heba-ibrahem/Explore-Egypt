@@ -26,17 +26,12 @@ export class EditProgramComponent implements OnInit {
   hotelByCityID: IHotel[] = [];
   trainByCityID: ITrain[] = [];
   selectedHotel: any[]=[];
-<<<<<<< HEAD
   selectedTrain: any[] = [];
-  CurrentUser: IUsers;
+  CurrentUser: IUsers={};
+  user_id :number =0;
   program: IProgram ;
   id!: number;
   constructor(private fb: FormBuilder ,private UserSevives: UsersServiceService, private city: CityService, private router: Router,private route: ActivatedRoute,) {
-=======
-  CurrentUser: IUsers={};
-  user_id :number =0;
-  list: IProgram |null=null 
-  constructor(private fb: FormBuilder ,private UserSevives: UsersServiceService,private activatedRout: ActivatedRoute, private city: CityService, private route: Router) {
     if(localStorage.getItem('user')){
       this.user_id = this.UserSevives.getUserID();
       this.loadAccount();
@@ -44,7 +39,6 @@ export class EditProgramComponent implements OnInit {
     else{
       this.CurrentUser = {};
     }
->>>>>>> 02183fee38105289cab0442750251d8a34ca0840
     this.PorgramForm = this.fb.group({
       programName: ['', [Validators.required]],
       from: ['', [Validators.required ]],
@@ -54,9 +48,8 @@ export class EditProgramComponent implements OnInit {
       selTrain:[{trainNumber:0, destination:"", ticketPrice:""}, [Validators.required]],
 
     })
-<<<<<<< HEAD
     
-    this.CurrentUser = this.UserSevives.userValue;
+    // this.CurrentUser = this.UserSevives.userValue;
     // console.log(this.CurrentUser)
     this.program = {
       // "id": this.PorgramForm.value.id,
@@ -74,10 +67,6 @@ export class EditProgramComponent implements OnInit {
         destination: this.PorgramForm.value.selTrain.destination,
         ticketPrice: this.PorgramForm.value.selTrain.ticketPrice,
       }}
-=======
-    // this.CurrentUser = this.UserSevives.userValue;
-    // console.log(this.CurrentUser)
->>>>>>> 02183fee38105289cab0442750251d8a34ca0840
   
   }
   selectHotel(hotel:any){
