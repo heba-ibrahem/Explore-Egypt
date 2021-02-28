@@ -13,11 +13,14 @@ export class ArticlesService {
   constructor(private http: HttpClient) { }
 
   // Get all articles
-  getAll(): Observable <Article[]> {
+  getAll(): Observable <Article[]>
   {
     return this.http.get<Article[]>(`${environment.API_URL}/articles`);
-  }}
+  }
+  getArticleByID(aID: number): Observable <Article>{
 
+    return this.http.get<Article>(`${environment.API_URL}/articles/${aID}`);
+  }
   // Get articles by page
   getArticlesByPage(page: string) :Observable<IArticle[]> {
     return this.http.get<IArticle[]>(`${environment.API_URL}/Articles?page=${page}`);

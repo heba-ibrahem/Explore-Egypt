@@ -10,17 +10,20 @@ import { INewEventsHome } from 'src/app/viewmodels/iweek-events-home';
 })
 export class MoreNewEventHomeComponent implements OnInit {
   List:INewEventsHome[]=[]
-   subscribtion: Subscription[]=[];
+  Subscription: Subscription|null=null;
   constructor(private service:HomeService) {}
 
   ngOnInit(): void {
-    this.subscribtion[0]= this.service.getAllEvents().subscribe(
+    this.Subscription= this.service.getAllEvents().subscribe(
       (response)=>{
         this.List=response;
-        console.log(this.List)
       },
       (err)=>{console.log(err)}
     );
+  }
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.Subscription?.unsubscribe();
   }
 
 }

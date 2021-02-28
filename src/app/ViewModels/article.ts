@@ -5,4 +5,8 @@ export interface Article {
   img: string;
   section: string;
   content?: string;
+  Images?: string[];
+dep?:number[];
+city?:string;
+
 }

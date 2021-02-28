@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate:TranslateService) { }
 
   ngOnInit(): void {
   }

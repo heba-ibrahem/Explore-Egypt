@@ -16,10 +16,19 @@ export class ProgramDetailsComponent implements OnInit {
   prog: IProgram| null = null;
   // program: any;
   programID: number = 0;
-  CurrentUser: IUsers;
+  user_id :number =0;
+  CurrentUser: IUsers={};
   constructor( private activatedRout: ActivatedRoute,private UserSevives: UsersServiceService, private city: CityService, private route: Router,  private location: Location) {
-    this.CurrentUser = this.UserSevives.userValue;
-    console.log(this.CurrentUser)
+    if(localStorage.getItem('user')){
+      this.user_id = this.UserSevives.getUserID();
+      this.loadAccount();
+    }
+    else{
+      this.CurrentUser = {};
+    }
+   
+    // this.CurrentUser = this.UserSevives.userValue;
+    // console.log(this.CurrentUser)
     
    }
 
@@ -60,4 +69,15 @@ export class ProgramDetailsComponent implements OnInit {
       )
     }
   }
+  // edit(ID:number){
+  //   this.route.navigate(['/editProgram', ID]);
+  // }
+  async loadAccount(){
+     (await this.UserSevives.getUserById(this.user_id))
+      .subscribe(user=>{
+        this.CurrentUser = user;
+        console.log(this.CurrentUser)
+      });
+    }
+
 }

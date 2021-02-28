@@ -26,11 +26,25 @@ export class EditProgramComponent implements OnInit {
   hotelByCityID: IHotel[] = [];
   trainByCityID: ITrain[] = [];
   selectedHotel: any[]=[];
+<<<<<<< HEAD
   selectedTrain: any[] = [];
   CurrentUser: IUsers;
   program: IProgram ;
   id!: number;
   constructor(private fb: FormBuilder ,private UserSevives: UsersServiceService, private city: CityService, private router: Router,private route: ActivatedRoute,) {
+=======
+  CurrentUser: IUsers={};
+  user_id :number =0;
+  list: IProgram |null=null 
+  constructor(private fb: FormBuilder ,private UserSevives: UsersServiceService,private activatedRout: ActivatedRoute, private city: CityService, private route: Router) {
+    if(localStorage.getItem('user')){
+      this.user_id = this.UserSevives.getUserID();
+      this.loadAccount();
+    }
+    else{
+      this.CurrentUser = {};
+    }
+>>>>>>> 02183fee38105289cab0442750251d8a34ca0840
     this.PorgramForm = this.fb.group({
       programName: ['', [Validators.required]],
       from: ['', [Validators.required ]],
@@ -40,6 +54,7 @@ export class EditProgramComponent implements OnInit {
       selTrain:[{trainNumber:0, destination:"", ticketPrice:""}, [Validators.required]],
 
     })
+<<<<<<< HEAD
     
     this.CurrentUser = this.UserSevives.userValue;
     // console.log(this.CurrentUser)
@@ -59,6 +74,10 @@ export class EditProgramComponent implements OnInit {
         destination: this.PorgramForm.value.selTrain.destination,
         ticketPrice: this.PorgramForm.value.selTrain.ticketPrice,
       }}
+=======
+    // this.CurrentUser = this.UserSevives.userValue;
+    // console.log(this.CurrentUser)
+>>>>>>> 02183fee38105289cab0442750251d8a34ca0840
   
   }
   selectHotel(hotel:any){
@@ -130,5 +149,12 @@ export class EditProgramComponent implements OnInit {
       (err) => { console.log(err) }
     )
     }
+    async loadAccount(){
+     (await this.UserSevives.getUserById(this.user_id))
+        .subscribe(user=>{
+          this.CurrentUser = user;
+          console.log(this.CurrentUser)
+        });
+      }
 
 }

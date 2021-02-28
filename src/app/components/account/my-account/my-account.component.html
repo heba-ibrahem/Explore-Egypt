@@ -24,12 +24,15 @@
       <div class="col">
         <div class="row">
             <div class="content">
-                    <div class="col-12 offset-xl-1 userName">Hey <span class="span" >{{CurrentUser.firstName}}{{CurrentUser.lastName}}</span> !</div>
+                    <div class="col-12 offset-xl-1 userName">Hey <span class="span" >{{CurrentUser.firstName}} {{CurrentUser.lastName}}</span> !</div>
                     <div class="col-12 col-md-8 offset-xl-1 welcome">Welcome to your account. You can edit your information and view your purchased tickets from Egypt Calendar here.</div>
             </div>
         </div>
       </div>
     </div>
+     <!-- section-5 -->
+   <section class="section-5" style="margin-top: 50px;">
+    <!-- <div class="container">
     <div class="row">
         <div class="col-12 offset-xl-1">
             <nav class="nav nav-pills">
@@ -45,10 +48,32 @@
             </nav>
         </div>
     </div>
-</div>
+</div> -->
 <div class="container">
-    my account
+  <div class="row" style="margin-top: 35px;">
+    <div class="col-12 col-xl-9 offset-xl-1">
+      <div class="row">
+        <div class=" col-sm-6 col-md-4" *ngFor="let item of wishlist ;let count=index">
+          <div class="div-image">
+            <img class="card-img-top" src="assets/{{item?.img}}" alt="Card image" style="width:100%">
+          </div>
+          <div class="div-body">
+            <div class="section-5-favorite">
+              <!-- <div class="favorite-img" *ngIf="addedtoWishList && hasAccount()">
+                <a style="color:'#0067b9'" (click)="deletewishlist(List)" ><i class="fa fa-heart"></i></a>
+              </div>
+              <div class="favorite-img" *ngIf="!addedtoWishList || !hasAccount()">
+                <a style="color:'black'" (click)="addwishlist(List)"><i class="fa fa-heart"></i></a>
+              </div> -->
+            </div>
+            <p class="p2">{{item?.title}}</p>
+            <p class="p3">{{item?.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2"></div>
+  </div>
+  </div>
+  </section>
 </div>
-
-
-

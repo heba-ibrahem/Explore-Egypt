@@ -1,4 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef,  OnInit, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UsersServiceService } from 'src/app/Services/users-service.service';
+import { IUsers } from 'src/app/viewmodels/iusers';
 import { TranslateService } from '@ngx-translate/core';
 import { LocalizationService } from 'src/app/Services/localization.service';
 // declare var $:JQueryStatic
@@ -15,11 +18,24 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('scrollUpBtn') scrollUpBtn: ElementRef | undefined;
   @ViewChild('largeNavbar') largeNavbar: ElementRef | undefined;
   @ViewChild('smallNavbar') smallNavbar: ElementRef | undefined;
+  islogged:boolean=false;
+  CurrentUser: IUsers={};
+  user_id :number =0;
   currentLang: string;
-
-  constructor(public translate: TranslateService, localizationService: LocalizationService) { 
+  currentUserSubscription: Subscription|null = null;
+  constructor(private userService: UsersServiceService,public translate: TranslateService,  localizationService: LocalizationService) { 
     this.currentLang = localizationService.getCurrentLang();
     this.translate.use(this.currentLang);
+    if(localStorage.getItem('user')){
+        this.islogged=true;
+        this.user_id = this.userService.getUserID();
+        this.loadAccount();
+      }
+      else{
+        this.CurrentUser = {};
+        this.islogged=false;
+      }
+   
   }
 
   changeCurrentLang(lang: string) {
@@ -37,13 +53,13 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   //     return 'en';
   //   else if ((localStorage.getItem('current_lang') === 'ar'))
   //     return 'ar';
-  //   else 
+  //   else
   //     return 'en';
   // }
 
   ngOnInit(): void {
   }
-  
+
   ngAfterViewInit(): void {
     this.toggleScrollUpBtn()
     this.handleNavSubMenus();
@@ -111,6 +127,22 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     })
   }
 
+
+  logout() {
+    this.userService.logout()
+    console.log("logged out")
+  }
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.currentUserSubscription?.unsubscribe();
+  }
+  async loadAccount(){
+    this.currentUserSubscription = (await this.userService.getUserById(this.user_id))
+      .subscribe(user=>{
+        this.CurrentUser = user;
+        console.log(this.CurrentUser)
+      });
+    }
 
 
 
