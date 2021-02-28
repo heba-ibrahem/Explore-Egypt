@@ -23,9 +23,17 @@ export class EditProgramComponent implements OnInit {
   hotelByCityID: IHotel[] = [];
   trainByCityID: ITrain[] = [];
   selectedHotel: any[]=[];
-  CurrentUser: IUsers;
+  CurrentUser: IUsers={};
+  user_id :number =0;
   list: IProgram |null=null 
   constructor(private fb: FormBuilder ,private UserSevives: UsersServiceService,private activatedRout: ActivatedRoute, private city: CityService, private route: Router) {
+    if(localStorage.getItem('user')){
+      this.user_id = this.UserSevives.getUserID();
+      this.loadAccount();
+    }
+    else{
+      this.CurrentUser = {};
+    }
     this.PorgramForm = this.fb.group({
       from: ['', [Validators.required ]],
       to: ['', [Validators.required]],
@@ -33,8 +41,8 @@ export class EditProgramComponent implements OnInit {
       selTrain:[{trainNumber:0, destination:"value", ticketPrice:"value"}, [Validators.required]],
 
     })
-    this.CurrentUser = this.UserSevives.userValue;
-    console.log(this.CurrentUser)
+    // this.CurrentUser = this.UserSevives.userValue;
+    // console.log(this.CurrentUser)
   
   }
   selectHotel(hotel:any){
@@ -120,5 +128,12 @@ export class EditProgramComponent implements OnInit {
       (err) => { console.log(err) }
     )
     }
+    async loadAccount(){
+     (await this.UserSevives.getUserById(this.user_id))
+        .subscribe(user=>{
+          this.CurrentUser = user;
+          console.log(this.CurrentUser)
+        });
+      }
 
 }

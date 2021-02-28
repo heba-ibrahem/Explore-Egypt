@@ -25,9 +25,17 @@ export class DesginProgramComponent implements OnInit {
   trainToDest: ITrain[]=[];
   selectedHotel: any[] = [];
   selectedTrain: any[] = [];
-  CurrentUser: IUsers;
+  CurrentUser: IUsers={};
+  user_id :number =0;
   list: IProgram |null=null;
   constructor(private fb: FormBuilder, private UserSevives: UsersServiceService, private city: CityService) {
+    if(localStorage.getItem('user')){
+      this.user_id = this.UserSevives.getUserID();
+      this.loadAccount();
+    }
+    else{
+      this.CurrentUser = {};
+    }
     this.PorgramForm = this.fb.group({
       from: ['', [Validators.required]],
       to: ['', [Validators.required]],
@@ -35,8 +43,8 @@ export class DesginProgramComponent implements OnInit {
       selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" }, [Validators.required]],
 
     })
-    this.CurrentUser = this.UserSevives.userValue;
-    console.log(this.CurrentUser)
+    // this.CurrentUser = this.UserSevives.userValue;
+    // console.log(this.CurrentUser)
   }
   selectHotel(hotel: any) {
 
@@ -124,7 +132,13 @@ export class DesginProgramComponent implements OnInit {
       (err) => { console.log(err) }
     );
   }
-
+  async loadAccount(){
+    (await this.UserSevives.getUserById(this.user_id))
+      .subscribe(user=>{
+        this.CurrentUser = user;
+        console.log(this.CurrentUser)
+      });
+    }
 
 
 }

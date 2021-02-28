@@ -109,7 +109,7 @@
       "to": "3435454",
       "selHotel": {
         "hotelName": "Helton",
-        "roomPrice": "2515"
+        "roomPrice": "2515LE"
       },
       "selTrain": {
         "trainNumber": 999,
@@ -170,6 +170,20 @@
         "destination": "Aswan"
       },
       "id": 7
+    },
+    {
+      "userID": 1,
+      "from": "2021-03-01",
+      "to": "2021-03-03",
+      "selHotel": {
+        "hotelName": "Azure",
+        "roomPrice": "1500LE"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Sohag"
+      },
+      "id": 8
     }
   ],
   "explorDep": [
@@ -262,8 +276,8 @@
       "lastName": "ibrahem",
       "city": "sdsdc",
       "email": "heba@iti.com",
-      "password": "asdasd",
-      "confirmPassword": "asdasd",
+      "password": "123456",
+      "confirmPassword": "123456",
       "id": 2
     },
     {
@@ -292,6 +306,24 @@
       "password": "asdasd",
       "confirmPassword": "asdasd",
       "id": 6
+    },
+    {
+      "firstName": "asmaa123",
+      "lastName": "salah sadek",
+      "city": "Aswan",
+      "email": "asmaa@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 7
+    },
+    {
+      "firstName": "asmaa",
+      "lastName": "salah sadek",
+      "city": "Aswan",
+      "email": "asmaa2@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 8
     }
   ],
   "Articles": [
@@ -498,17 +530,25 @@
     },
     {
       "page": "Culture",
-      "name": "test article",
-      "title": "Egyptian test article",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe eveniet quos, iusto molestias optio illum deserunt nisi vitae vel tempore doloremque quo fugit fugiat rem culpa, amet rerum earum beatae.",
+      "name": "test",
+      "title": "yet another test",
+      "description": "safks afk ashfk asfk asjflsajf lasjl safjiasjlfew",
+      "Images": [
+        "12.jpg",
+        "train.jpg"
+      ],
+      "id": 19
+    },
+    {
+      "id": 20,
+      "page": "Culture",
+      "name": "test",
+      "title": "tttttteeeeessssssttttt updated",
+      "description": "losafjilsa lijsfal ijfas lij lasf",
       "Images": [
         "6.jpg",
-        "7.jpg",
-        "10.jpg",
-        "im1.jpg",
-        "im2.jpg"
-      ],
-      "id": 16
+        "9.jpg"
+      ]
     }
   ],
   "Pages": [
@@ -618,6 +658,82 @@
       "title": "Egypt Shopping Festival",
       "Firstdescription": "It's time for incredible retail deals and raffles, fireworks, live entertainment and more at the Dubai Shopping Festival, which returns from 17 December 2020 to 30 January 2021.",
       "seconddescription": "20 amazing things to do in Egypt"
+    }
+  ],
+  "wishlist": [
+    {
+      "uID": 7,
+      "ArID": 3,
+      "AricalTitle": "weekevents",
+      "id": 1
+    },
+    {
+      "uID": 7,
+      "ArID": 7,
+      "AricalTitle": "explorDep",
+      "id": 3
+    },
+    {
+      "uID": 7,
+      "ArID": 6,
+      "AricalTitle": "explorDep",
+      "id": 4
+    },
+    {
+      "uID": 5,
+      "ArID": 6,
+      "AricalTitle": "explorDep",
+      "id": 4
+    },
+    {
+      "uID": 8,
+      "ArID": 7,
+      "AricalTitle": "explorDep",
+      "id": 5
+    },
+    {
+      "uID": 8,
+      "ArID": 3,
+      "AricalTitle": "weekevents",
+      "id": 6
+    },
+    {
+      "uID": 8,
+      "ArID": 8,
+      "AricalTitle": "explorDep",
+      "id": 7
+    },
+    {
+      "uID": 8,
+      "ArID": 6,
+      "AricalTitle": "explorDep",
+      "id": 8
+    }
+  ],
+  "weekevents": [
+    {
+      "id": 1,
+      "date": "2021-02-1 10:00:00",
+      "img": "../assets/maxresdefault.jpg",
+      "title": "EGYPT SHOPPING FESTIVAL",
+      "description": "What not to miss this week in Egypt",
+      "seconddescription": "Hop your way through outdoor Egypt Markets, sprint through malls on a half-day shopping spree and sink your teeth into all kinds of family fun exclusively with DSF this week"
+    },
+    {
+      "id": 2,
+      "date": "2021-02-18 10:00:00",
+      "img": "../assets/maxresdefault.jpg",
+      "title": "EGYPT SHOPPING FESTIVAL",
+      "description": "What not to miss this week in DSF",
+      "seconddescription": "Hop your way through outdoor DSF Markets, sprint through malls on a half-day shopping spree and sink your teeth into all kinds of family fun exclusively with DSF this week"
+    },
+    {
+      "id": 3,
+      "date": "2021-02-19T08:00:00.000Z",
+      "img": "../assets/maxresdefault.jpg",
+      "title": "EGYPT SHOPPING FESTIVAL",
+      "description": "What not to miss this week in Egypt",
+      "seconddescription": "Hop your way through outdoor Egypt Markets, sprint through malls on a half-day shopping spree and sink your teeth into all kinds of family fun exclusively with DSF this week"
     }
   ]
 }

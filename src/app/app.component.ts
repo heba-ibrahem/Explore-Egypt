@@ -21,7 +21,7 @@ export class AppComponent {
     if (this.currentLang === 'ar') {
       document.body.classList.add('rtl');
       // require("style-loader!../assets/css/bootstrap-rtl.min.css");
-      // require("style-loader!../../src/assets/css/style-ltr.css");
+      // require("style-loader!../../src/assets/css/rtl-fixes.css");
     } else {
       // require("style-loader!../assets/css/bootstrap.min.css")
     }

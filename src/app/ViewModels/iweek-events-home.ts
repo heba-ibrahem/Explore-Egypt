@@ -1,7 +1,10 @@
 export interface INewEventsHome {
+    id?:number,
     img: string,
+    date?:Date,
+    isFavorite?:boolean,
     title: string,
-    Firstdescription: string,
+    description: string,
     seconddescription: string,
 
 }

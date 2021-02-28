@@ -59,6 +59,10 @@
   "KEEP_EXPLORING": "Keep Exploring",
   "KEEP_EXPLORING_P": "If seeing is believing, why not take a closer look?",
   "DISCOVER_MORE": "Discover More",
-  "LOREM": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum.",
-  "FEATURED_N_HOODS": "Featured Neighbourhoods"
+  "LOREM": "Lorem ipsum dolor sit amet, adipisicing elit.",
+  "LOREM_LONG": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quidem veritatis officiis blanditiis repudiandae quasi magni doloremque, asperiores minus perferendis laboriosam cupiditate labore eveniet! Accusamus.",
+  "FEATURED_N_HOODS": "Featured Neighbourhoods",
+  "JOURNEY_TITLE": "Your journey starts here.",
+  "JOURNEY_DESC": "See how Egypt evolved into the modern destination it is today.",
+  "BUY_NOW": "Buy Now"
 }

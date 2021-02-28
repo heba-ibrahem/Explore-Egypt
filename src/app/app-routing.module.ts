@@ -19,10 +19,12 @@ import { AuthGuard } from './gurds/auth.guard';
 import { HotelsComponent } from './components/hotels/hotels.component';
 import { EditProgramComponent } from './edit-program/edit-program.component';
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
+import { IsSignedInGuardGuard } from './gurds/is-signed-in-guard.guard';
+import { WishListComponent } from './components/account/wish-list/wish-list.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent , canActivate:[IsSignedInGuardGuard]},
   {path: 'register', component: RegisterComponent},
   {path: 'explore', component: ExploreComponent},
   {path: 'about', component: AboutComponent},
@@ -37,6 +39,7 @@ const routes: Routes = [
   {path: 'programDetails/:pID', component: ProgramDetailsComponent },
   {path: 'account/editProfile', component: EditProfileComponent, canActivate:[AuthGuard]},
   {path:'account/dashboard',component:MyAccountComponent, canActivate:[AuthGuard]},
+  {path:'account/wishlist',component:WishListComponent, canActivate:[AuthGuard]},
   {path: '', redirectTo:'home', pathMatch:'full'},
   {path: '**', component: NotFoundComponent}
 ];

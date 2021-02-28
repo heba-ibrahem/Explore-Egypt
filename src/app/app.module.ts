@@ -46,6 +46,7 @@ import { EditProgramComponent } from './edit-program/edit-program.component';
 
 
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
+import { WishListComponent } from './components/account/wish-list/wish-list.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -84,7 +85,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MoreNewEventHomeComponent,
     StartPlanningYourTripComponent,
     EditProgramComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    WishListComponent
   ],
   imports: [
     BrowserModule,

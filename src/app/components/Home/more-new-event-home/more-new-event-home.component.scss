@@ -52,7 +52,7 @@
     border-radius: 70px 0 70px 0;
     background-color: #a6192e;
     padding: 60px 80px;
-    text-align: left;
+    text-align: start;
     box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
@@ -91,7 +91,7 @@
     line-height: 1.5rem;
     font-weight: 300;
     letter-spacing: 0;
-    text-align: left;
+    text-align: start;
   }
   @media (max-width: 768px) {
     .section-8 .content-3 p {
