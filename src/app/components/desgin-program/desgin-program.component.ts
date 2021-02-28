@@ -26,12 +26,6 @@ export class DesginProgramComponent implements OnInit {
   trainToDest: ITrain[]=[];
   selectedHotel: any[] = [];
   selectedTrain: any[] = [];
-<<<<<<< HEAD
-  CurrentUser: IUsers;
-  program: IProgram ;
-  id!: number;
-  constructor(private fb: FormBuilder,private route: Router, private UserSevives: UsersServiceService, private city: CityService) {
-=======
   CurrentUser: IUsers={};
   user_id :number =0;
   list: IProgram |null=null;
@@ -43,7 +37,6 @@ export class DesginProgramComponent implements OnInit {
     else{
       this.CurrentUser = {};
     }
->>>>>>> 02183fee38105289cab0442750251d8a34ca0840
     this.PorgramForm = this.fb.group({
       programName: ['', [Validators.required]],
       from: ['', [Validators.required]],
@@ -53,31 +46,8 @@ export class DesginProgramComponent implements OnInit {
       selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" }, [Validators.required]],
 
     })
-<<<<<<< HEAD
-    this.CurrentUser = this.UserSevives.userValue;
-    console.log(this.CurrentUser)
-    this.program = {
-      // "id": this.PorgramForm.value.id,
-      userID: this.CurrentUser.id,
-      programName: this.PorgramForm.value.programName,
-      from: this.PorgramForm.value.from,
-      to: this.PorgramForm.value.to,
-      city:this.PorgramForm.value.city,
-      selHotel: {
-        hotelName: this.PorgramForm.value.selHotel.hotelName,
-        roomPrice: this.PorgramForm.value.selHotel.roomPrice,
-      },
-      selTrain: {
-        trainNumber: this.PorgramForm.value.selTrain.trainNumber,
-        destination: this.PorgramForm.value.selTrain.destination,
-        ticketPrice: this.PorgramForm.value.selTrain.ticketPrice,
-      }
-
-    }
-=======
     // this.CurrentUser = this.UserSevives.userValue;
     // console.log(this.CurrentUser)
->>>>>>> 02183fee38105289cab0442750251d8a34ca0840
   }
   selectHotel(hotel: any) {
     this.selectedHotel = hotel.target.value
