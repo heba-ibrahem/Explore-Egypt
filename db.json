@@ -5,7 +5,7 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
-      "destinationId":3 ,
+      "destinationId": 3,
       "destination": "Aswan",
       "departureTime": "12:00am",
       "arrivalTime": "10:00am",
@@ -17,46 +17,62 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
-      "destinationId":4 ,
+      "destinationId": 4,
       "destination": "Sohag",
       "departureTime": "12:00am",
       "arrivalTime": "5:00am",
       "ticketPrice": "150LE",
       "details": "VIP"
+    },
+    {
+      "trainNumber": "2016",
+      "city": "Alexandria",
+      "cityID": "2",
+      "ticketPrice": "400",
+      "destination": "Aswan",
+      "destinationId": "3",
+      "departureTime": "8:00 pm",
+      "arrivalTime": "1:00pm",
+      "details": "fbfncf",
+      "id": 3
     }
   ],
   "hotels": [
     {
-      "id": 1,
-      "hotelName": "Helton",
-      "cityID": 1,
-      "city": "cairo",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
-    },
-    {
       "id": 2,
-      "hotelName": "Fermont",
-      "cityID": 1,
+      "hotelName": "Helton",
       "city": "cairo",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "roomPrice": "1200",
+      "contactInfo": "0125643684",
+      "adress": "El Korensh",
+      "cityID": 1
     },
     {
       "id": 3,
-      "hotelName": "Green Blaza",
-      "cityID": 2,
+      "hotelName": "Azure",
       "city": "Alexandria",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "roomPrice": "1234",
+      "contactInfo": "123243",
+      "adress": "asdfcd",
+      "cityID": "2"
     },
     {
       "id": 4,
-      "hotelName": "Azure",
-      "cityID": 2,
-      "city": "Alexandria",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "hotelName": "dxbgbh",
+      "city": "Aswan",
+      "roomPrice": "xthb",
+      "contactInfo": "xdtfgbgt",
+      "adress": "xtgb",
+      "cityID": "3"
+    },
+    {
+      "hotelName": "ghgngvng",
+      "city": "cairo",
+      "roomPrice": "675",
+      "contactInfo": "hgnhmn",
+      "adress": "nghnbhg",
+      "cityID": "1",
+      "id": 8
     }
   ],
   "city": [
@@ -83,23 +99,33 @@
   ],
   "programs": [
     {
-      "userID": 4,
-      "from": "2/5/2021",
-      "to": "6/5/2021",
-      "selHotel": {},
+      "programName": "first ",
+      "from": "2021-03-08",
+      "to": "2021-03-12",
+      "city": "1",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "1200"
+      },
       "selTrain": {
         "trainNumber": 999,
-        "destination": "Sohag"
+        "destination": "Aswan",
+        "ticketPrice": "300LE"
       },
       "id": 1
     },
     {
-      "from": "23123",
-      "to": "23123",
-      "selHotel": "Fermont",
+      "userID": 2,
+      "from": "",
+      "to": "",
+      "selHotel": {
+        "hotelName": "",
+        "roomPrice": ""
+      },
       "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
+        "trainNumber": 0,
+        "destination": "",
+        "ticketPrice": ""
       },
       "id": 2
     },
@@ -170,57 +196,72 @@
         "destination": "Aswan"
       },
       "id": 7
+    },
+    {
+      "userID": 2,
+      "from": "2021-02-24",
+      "to": "2021-02-26",
+      "selHotel": {
+        "hotelName": "Fermont",
+        "roomPrice": "1500LE"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Aswan"
+      },
+      "id": 8
     }
   ],
   "explorDep": [
     {
-    "id": 1,
-    "title": "New & Trending",
-    "description": "Check out the latest hotspots and attractions to add to your next holiday.",
-    "img": "explorDep1.jpg"
+      "id": 1,
+      "title": "New & Trending",
+      "description": "Check out the latest hotspots and attractions to add to your next holiday.",
+      "img": "explorDep1.jpg"
     },
-   {
-    "id": 2,
-    "title": "Sights & Attractions",
-    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
-    "img": "explorDep2.jpg"
-  },
-  {
-    "id": 3,
-    "title": "Experiences",
-    "description": "From pyramids to the sea, take in Egypt's unique experiences.",
-    "img": "explorDep3.jpg"
-  },
-  {
-    "id": 4,
-    "title": "Arts & Culture",
-    "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
-    "img": "explorDep4.jpg"
-  },
-  {
-    "id": 5,
-    "title": "Shopping",
-    "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
-    "img": "explorDep5.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Food & Drink",
-    "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
-    "img": "explorDep6.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Spas & Wellness",
-    "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
-    "img": "explorDep7.jpg"
-  },
-  {
-    "id": 8,
-    "title": "Itineraries",
-    "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
-    "img": "explorDep8.jpg"
-  }],
+    {
+      "id": 2,
+      "title": "Sights & Attractions",
+      "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+      "img": "explorDep2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Experiences",
+      "description": "From pyramids to the sea, take in Egypt's unique experiences.",
+      "img": "explorDep3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Arts & Culture",
+      "description": "Discover Egypt's record-breaking attractions and iconic landmarks.",
+      "img": "explorDep4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Shopping",
+      "description": "Indulge in ultimate retail therapy at high-end shopping malls and charming souks.",
+      "img": "explorDep5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Food & Drink",
+      "description": "Sample deliciously diverse food at fine dining spots and Instagram-worthy cafés.",
+      "img": "explorDep6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spas & Wellness",
+      "description": "Unwind and relax in style at Egypt's breathtaking luxury spas and hammams.",
+      "img": "explorDep7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Itineraries",
+      "description": "What do you travel for? Find inspiration with this variety of holiday itineraries.",
+      "img": "explorDep8.jpg"
+    }
+  ],
   "curators": [
     {
       "id": 1,
@@ -452,7 +493,7 @@
     }
   ],
   "Pages": [
-     {
+    {
       "id": 1,
       "name": "Explore",
       "title": "Discover Egypt",
@@ -499,14 +540,16 @@
       "bannerImg": "10.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
       "description": "Get started on your Egypt holiday with these helpful tips and tools."
-    },{
+    },
+    {
       "id": 7,
       "name": "New",
       "title": "New & Trending",
       "bannerImg": "im1.jpg",
       "bannerVideo": "assets/v2",
       "description": "Check out the latest hotspots and attractions to add to your next holiday."
-    },{
+    },
+    {
       "id": 8,
       "name": "activities",
       "title": "Top activities in Egypt",
@@ -514,7 +557,6 @@
       "bannerVideo": "assets/video/Let's-Go-Egypt",
       "description": "Check out the latest hotspots and attractions to add to your next holiday."
     }
-
   ],
   "Subscriptions": [
     {
@@ -559,6 +601,4 @@
       "seconddescription": "20 amazing things to do in Egypt"
     }
   ]
-
-
 }
