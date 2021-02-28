@@ -23,40 +23,56 @@
       "arrivalTime": "5:00am",
       "ticketPrice": "150LE",
       "details": "VIP"
+    },
+    {
+      "trainNumber": "2016",
+      "city": "Alexandria",
+      "cityID": "2",
+      "ticketPrice": "400",
+      "destination": "Aswan",
+      "destinationId": "3",
+      "departureTime": "8:00 pm",
+      "arrivalTime": "1:00pm",
+      "details": "fbfncf",
+      "id": 3
     }
   ],
   "hotels": [
     {
-      "id": 1,
-      "hotelName": "Helton",
-      "cityID": 1,
-      "city": "cairo",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
-    },
-    {
       "id": 2,
-      "hotelName": "Fermont",
-      "cityID": 1,
+      "hotelName": "Helton",
       "city": "cairo",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "roomPrice": "1200",
+      "contactInfo": "0125643684",
+      "adress": "El Korensh",
+      "cityID": 1
     },
     {
       "id": 3,
-      "hotelName": "Green Blaza",
-      "cityID": 2,
+      "hotelName": "Azure",
       "city": "Alexandria",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "roomPrice": "1234",
+      "contactInfo": "123243",
+      "adress": "asdfcd",
+      "cityID": "2"
     },
     {
       "id": 4,
-      "hotelName": "Azure",
-      "cityID": 2,
-      "city": "Alexandria",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "hotelName": "dxbgbh",
+      "city": "Aswan",
+      "roomPrice": "xthb",
+      "contactInfo": "xdtfgbgt",
+      "adress": "xtgb",
+      "cityID": "3"
+    },
+    {
+      "hotelName": "ghgngvng",
+      "city": "cairo",
+      "roomPrice": "675",
+      "contactInfo": "hgnhmn",
+      "adress": "nghnbhg",
+      "cityID": "1",
+      "id": 8
     }
   ],
   "city": [
@@ -83,23 +99,33 @@
   ],
   "programs": [
     {
-      "userID": 4,
-      "from": "2/5/2021",
-      "to": "6/5/2021",
-      "selHotel": {},
+      "programName": "first ",
+      "from": "2021-03-08",
+      "to": "2021-03-12",
+      "city": "1",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "1200"
+      },
       "selTrain": {
         "trainNumber": 999,
-        "destination": "Sohag"
+        "destination": "Aswan",
+        "ticketPrice": "300LE"
       },
       "id": 1
     },
     {
-      "from": "23123",
-      "to": "23123",
-      "selHotel": "Fermont",
+      "userID": 2,
+      "from": "",
+      "to": "",
+      "selHotel": {
+        "hotelName": "",
+        "roomPrice": ""
+      },
       "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
+        "trainNumber": 0,
+        "destination": "",
+        "ticketPrice": ""
       },
       "id": 2
     },
@@ -172,16 +198,16 @@
       "id": 7
     },
     {
-      "userID": 1,
-      "from": "2021-03-01",
-      "to": "2021-03-03",
+      "userID": 2,
+      "from": "2021-02-24",
+      "to": "2021-02-26",
       "selHotel": {
-        "hotelName": "Azure",
+        "hotelName": "Fermont",
         "roomPrice": "1500LE"
       },
       "selTrain": {
         "trainNumber": 999,
-        "destination": "Sohag"
+        "destination": "Aswan"
       },
       "id": 8
     }

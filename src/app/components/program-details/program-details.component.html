@@ -33,35 +33,59 @@
   <div class="container  mt-4">
     <div class="mt-5 card center">
       <h1><i class="fa fa-check-circle text-success mt-4"></i></h1>
-      <h3 class="m-2 ">You're program is saved</h3>
+      <!-- <h3 class="m-2 ">You're program is saved</h3> -->
+      <h2 class="center text-capitalize">Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}},</h2>
+      <h6 class="center">Thanks for using our service to plan your trip </h6>
+
       <hr class="hr col-3">
+
+      <h2>This is your <span class="font-weight-bold ">{{prog?.programName}}</span> trip</h2>
       <h3>You will travel to </h3>
       <h2>{{prog?.selTrain?.destination}}</h2>
       <h3>on {{prog?.from}}</h3>
     </div>
 
-    <div class="mt-2 card  ">
+    <div class="mt-2 card">
       <div class="m-4">
-        <h2>Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}}</h2>
-        <h4>Thanks for using our service to plan your trip </h4>
-        <h1 class="text-info">Your trip details</h1>
-        <h2>You will reserve accoumdation at</h2>
-        <h3>Hotel: {{prog?.selHotel?.hotelName}} </h3>
-        <h3>Room price:{{prog?.selHotel?.roomPrice}} </h3>
+        <h2 class="text-light bg-info center">Your Transportion details</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <td class="font-weight-bold">Train Nmber</td>
+              <td class="font-weight-bold">Ticket Price</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{prog?.selTrain?.trainNumber}}</td>
+              <td>{{prog?.selTrain?.ticketPrice}}</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <h2>You will reserve train </h2>
-        <h3>Train Nmber: {{prog?.selTrain?.trainNumber}}</h3>
-        <h3>Ticket Price: {{prog?.selTrain?.ticketPrice}}</h3>
+        <h2 class="text-light bg-info center">Your Hotel details</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <td class="font-weight-bold">Hotel</td>
+              <td class="font-weight-bold">Room price</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{prog?.selHotel?.hotelName}}</td>
+              <td>{{prog?.selHotel?.roomPrice}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      
+
     </div>
     <div class="mt-2 center ">
-        <button class="btn-lg btn-info col-3 m-1" ><a href="/editProgram/{{prog?.id}}">Edit</a></button>
-        <!-- <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{prog.id}" routerLinkActive="router-link-active"  > Edit</button> -->
-        <!-- <button class="btn-lg btn-info col-3 m-1" (click)="prog?.id" > Edit</button> -->
+      <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{{prog?.id}}"> Edit</button>
 
-        <button  class="btn-lg btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">Delete</button>
-        <!-- <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" *ngIf="deleteProgram">
+      <button class="btn-lg btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">Delete</button>
+      <!-- <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" *ngIf="deleteProgram">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-body">
@@ -71,8 +95,8 @@
               </div>
             </div>
           </div>
-        </div> -->
-      </div>
+      </div> -->
+    </div>
 
   </div>
   <br>

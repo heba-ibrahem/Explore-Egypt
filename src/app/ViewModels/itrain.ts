@@ -8,5 +8,6 @@ export interface ITrain {
     cityID: number;
     city:string;
     destinationId: number;
+    id?:number;
 
 }

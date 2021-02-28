@@ -34,7 +34,6 @@ export class ProgramDetailsComponent implements OnInit {
 
   ngOnInit(): void {
 
-  
     console.log('program details')
     this.activatedRout.paramMap.subscribe((params) => {
       let programIDParam: string | null = params.get('pID');
@@ -45,15 +44,6 @@ export class ProgramDetailsComponent implements OnInit {
       (err) => console.log(err)
     );
 
-    // this.activatedRout.params.subscribe(data =>{
-    //   this.programID = data.id;
-    //   this.city.deleteProgram(this.programID).subscribe(data =>{
-    //     console.log("deleted sucessfully")
-    //   })
-
-    // })
-    
-    
   }
 
   private getProgramByID(pID: number){
@@ -78,15 +68,6 @@ export class ProgramDetailsComponent implements OnInit {
           
       )
     }
-    // console.log(this.PorgramForm.value)
-    // this.city.deleteProgram(this.programID).subscribe(
-    //   (res) => {
-    //     console.log(res);
-    //     confirm("Are you want to delete")
-        
-    //   },
-    //   (err) => { console.log(err) }
-    // );
   }
   // edit(ID:number){
   //   this.route.navigate(['/editProgram', ID]);
