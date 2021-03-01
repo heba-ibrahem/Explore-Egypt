@@ -31,7 +31,10 @@ export class HomeService {
   getAllArticles(): Observable<any> {
     return this.http.get<IactivitiesDep[]>(`${environment.API_URL}/explorDep`);
   }
-  getAllPrograms(id: number): Observable<any> {
+  getAllPlaneYourTrip(): Observable<any> {
+    return this.http.get<IactivitiesDep[]>(`${environment.API_URL}/PlanYourtrip`);
+  }
+  getAllProgramsOfCurrentser(id: number): Observable<any> {
     return this.http.get<IactivitiesDep[]>(`${environment.API_URL}/programs?userID=${id}`);
   }
   getWeeksEvents(): Observable<any> {
@@ -59,5 +62,6 @@ export class HomeService {
     const diff = Math.floor((Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()) - Date.UTC(item.date.getFullYear(), item.date.getMonth(), item.date.getDate())) / (1000 * 60 * 60 * 24));
     return diff <= 7;
   }
+
 
 }

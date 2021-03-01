@@ -67,9 +67,9 @@ export class NewEventsHomeComponent implements OnInit {
   }
   deletewishlist(list:any){
       if(localStorage.getItem('user')){
-        this.wishlistservice.removeWishList(list.id);
-      this.addedtoWishList=false;
-      console.log("remove");
+      this.wishlistservice.removeWishList(this.user_id,list.id,"weekevents");
+      this.addedtoWishList = false;
+     
       }else{
         this.router.navigateByUrl('/login');
       }

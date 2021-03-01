@@ -18,7 +18,7 @@
     <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Twitter <i
         class="fa fa-twitter"></i></button><br>
   </div>
-  <div class="alert alert-danger" *ngIf="islogged">
+  <div class="alert alert-danger" **ngIf="islogged">
     Your password is incorrect. Please try again.
   </div>
   <div class="seperate row" style="margin: 30px 0;">
@@ -49,6 +49,5 @@
     <div class="row mb-5">
       <button type="submit" [disabled]="LoginForm.invalid" class="btn  btn-primary p-3 col-md-4">Log in</button>
     </div>
-
   </form>
 </div>

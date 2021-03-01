@@ -35,6 +35,9 @@ export class CityService {
     console.log(pID)
     return this.httpclient.get<IProgram>(`${environment.API_URL}/programs/${pID}`);
   }
+  getAllProgram(): Observable<IProgram[]> {
+    return this.httpclient.get<IProgram[]>(`${environment.API_URL}/programs`);
+  }
 
   saveProgram(program: IProgram): Observable<any[]> {
     const httpOptions = {

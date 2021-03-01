@@ -46,12 +46,11 @@ export class ActivitiesHomeComponent implements OnInit {
     }
     deletewishlist(list:any){
         if(localStorage.getItem('user')){
-        this.wishlistservice.removeWishList(list.id);
-        this.addedtoWishList=false;
-        console.log("remove");
-        }else{
-          this.router.navigateByUrl('/login');
-        }
+          this.wishlistservice.removeWishList(this.CurrentUser_id,list.id,"explorDep");
+          this.addedtoWishList = false;
+          }else{
+            this.router.navigateByUrl('/login');
+          }
       }
 hasAccount(){
         return (localStorage.getItem('user'))

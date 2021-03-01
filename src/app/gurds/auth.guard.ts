@@ -22,17 +22,7 @@ export class AuthGuard implements CanActivate {
       alert("you need to log in !!")
       this.router.navigateByUrl('/login')
       return false
-    }
-  //   if(localStorage.getItem('user')){
-  //     return true;
-  //   }else{
-  //     this.CurrentUser = {};
-  //   }
-  //   console.log(this.CurrentUser)
-  //  }
-
-    
-      
+    }      
   }
   
 }

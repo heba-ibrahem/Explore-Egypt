@@ -30,50 +30,54 @@
         </div>
       </div>
     </div>
-     <!-- section-5 -->
-   <section class="section-5" style="margin-top: 50px;">
-    <!-- <div class="container">
-    <div class="row">
-        <div class="col-12 offset-xl-1">
-            <nav class="nav nav-pills">
-                <a [routerLink]="['/account/dashboard']" routerLinkActive="active"  class="nav-item nav-link">
-                    <i class="fa fa-home pr-1"></i> My Account
-                </a>
-                <a [routerLink]="['/account/editProfile']" routerLinkActive="active"  class="nav-item nav-link">
-                    <i class="fa fa-user pr-1"></i> Edit Profile
-                </a>
-                <a [routerLink]="['/account/dashboard']" routerLinkActive="active"  class="nav-item nav-link">
-                    <i class="fa fa-line-chart pr-1"></i> Messages
-                </a>
-            </nav>
-        </div>
-    </div>
-</div> -->
-<div class="container">
-  <div class="row" style="margin-top: 35px;">
-    <div class="col-12 col-xl-9 offset-xl-1">
-      <div class="row">
-        <div class=" col-sm-6 col-md-4" *ngFor="let item of wishlist ;let count=index">
-          <div class="div-image">
-            <img class="card-img-top" src="assets/{{item?.img}}" alt="Card image" style="width:100%">
-          </div>
-          <div class="div-body">
-            <div class="section-5-favorite">
-              <!-- <div class="favorite-img" *ngIf="addedtoWishList && hasAccount()">
-                <a style="color:'#0067b9'" (click)="deletewishlist(List)" ><i class="fa fa-heart"></i></a>
+      <!-- Tabs -->
+      <section id="tabs">
+        <div class="container">
+          <h6 class="section-title h1">Tabs</h6>
+          <div class="row">
+            <div class="col-xs-12">
+              <nav>
+                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Active</a>
+                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Done</a>
+                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                  <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">About</a> 
+                </div>
+              </nav>
+              <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="row">
+                    <div class="col-md-4" *ngFor="let item of Myprograms ;let count=index" (click)="GoToDetials(item?.id)">
+                    <div class="wrimagecard card-header" >
+                            <a>
+                              <div class="card-header_header" style="background-color:  #3369e81a">
+                              <div style="padding-right: 5px;  color:#3369e8;" class="fa fa-table">
+                                <div class="pull-right">{{calculateDiffDate(item?.from,item?.to)}} days in {{item?.selTrain?.destination}}</div>
+                              </div>
+                             </div>
+                            <div class="card-header_content">
+                              <h5 class="card-header_title">Your trip will be :-</h5>
+                              <h5 class="date">{{item?.from}}  -  {{item?.to}}</h5>
+                            </div>
+                          </a>
+                        </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                  Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                </div>
+                <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                  Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                </div>
               </div>
-              <div class="favorite-img" *ngIf="!addedtoWishList || !hasAccount()">
-                <a style="color:'black'" (click)="addwishlist(List)"><i class="fa fa-heart"></i></a>
-              </div> -->
+            
             </div>
-            <p class="p2">{{item?.title}}</p>
-            <p class="p3">{{item?.description}}</p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="d-none d-lg-block col-lg-2"></div>
-  </div>
-  </div>
-  </section>
+      </section>
 </div>
+

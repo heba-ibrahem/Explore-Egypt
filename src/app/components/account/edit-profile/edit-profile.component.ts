@@ -32,24 +32,17 @@ export class EditProfileComponent implements OnInit, OnChanges {
     this.currentUserSubscription = (await this.userService.getUserById(this.user_id))
       .subscribe(user => {
         this.CurrentUser = user;
-        console.log(this.CurrentUser)
+        this.loadPage();
+        console.log(this.CurrentUser);
       });
   }
 
   ngOnInit(): void {
-    this.profileFrm = this.fb.group({
-      firstName: [this.CurrentUser.firstName, [Validators.required, Validators.minLength(3)]],
-      lastName: [this.CurrentUser.lastName, [Validators.required, Validators.minLength(3)]],
-      password: [this.CurrentUser.password, [Validators.required, Validators.minLength(4)]],
-      email: [this.CurrentUser.email, [Validators.required]],
-      city: [this.CurrentUser.city, [Validators.required]]
-    });
-
+    this.loadPage();
     /// get all city
     this.city.getCity().subscribe(
       (response) => {
         this.CityList = response;
-
       },
       (err) => { console.log(err) }
 
@@ -59,6 +52,15 @@ export class EditProfileComponent implements OnInit, OnChanges {
     this.userService.update(this.CurrentUser.id || 0, this.profileFrm.value)
     console.log("update")
     console.log(this.CurrentUser)
+  }
+  loadPage(){
+    this.profileFrm = this.fb.group({
+      firstName: [this.CurrentUser.firstName, [Validators.required, Validators.minLength(3)]],
+      lastName: [this.CurrentUser.lastName, [Validators.required, Validators.minLength(3)]],
+      password: [this.CurrentUser.password, [Validators.required, Validators.minLength(4)]],
+      email: [this.CurrentUser.email, [Validators.required]],
+      city: [this.CurrentUser.city, [Validators.required]]
+    });
   }
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks

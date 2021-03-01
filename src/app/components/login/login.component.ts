@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Guid } from 'guid-typescript';
-import { AuthService } from 'src/app/Services/auth.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { map } from 'rxjs/operators';
 import { IUsers } from 'src/app/viewmodels/iusers';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -36,10 +34,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  async LoadAccounte() {
-    this.currentUserSubscription = (await this.userService.getUserById(this.user_id))
+  async LoadAccounte(id:number) {
+    this.currentUserSubscription = (await this.userService.getUserById(id))
       .subscribe(user => {
         this.CurrentUser = user;
+
       });
   }
   async login() {
@@ -48,8 +47,8 @@ export class LoginComponent implements OnInit {
       this.islogged = false;
       this.user_id = this.userService.getUserID();
       this.router.navigateByUrl('/home');
-      this.LoadAccounte();
-    } else {
+      this.LoadAccounte(this.user_id);
+    } else if (!(localStorage.getItem('user'))){
       this.user_id = 0;
       this.islogged = true;
       this.router.navigateByUrl('/login');
