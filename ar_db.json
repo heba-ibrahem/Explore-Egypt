@@ -297,7 +297,7 @@
       "page": "About",
       "name": "History",
       "title": "1958",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد",
       "Images": [
         "3.jpg"
       ]
@@ -307,7 +307,7 @@
       "page": "About",
       "name": "History",
       "title": "1962",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد",
       "Images": [
         "15.jpg"
       ]
@@ -317,7 +317,7 @@
       "page": "About",
       "name": "History",
       "title": "1981",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد",
       "Images": [
         "8.jpg"
       ]
@@ -327,7 +327,7 @@
       "page": "About",
       "name": "History",
       "title": "1997",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد",
       "Images": [
         "10.jpg"
       ]
@@ -336,8 +336,8 @@
       "id": 11,
       "page": "About",
       "name": "Facts",
-      "title": "Ahlan wa Sahlan!",
-      "description": "This short greeting means 'welcome' in Arabic, the official language of the Egypt.",
+      "title": "أهلاً وسهلاً",
+      "description": "أهلاً بكم",
       "Images": [
         "3.jpg"
       ]
@@ -346,8 +346,8 @@
       "id": 12,
       "page": "About",
       "name": "Facts",
-      "title": "Hello Sunshine!",
-      "description": "Our climate is warm and subtropical with 300+ days of sunshine a year.",
+      "title": "مناخ صيفي مميز",
+      "description": "تتمتع مصر بمناخ دافيْ وشبه استوائي طوال العام",
       "Images": [
         "1.jpg"
       ]
@@ -355,8 +355,8 @@
     {
       "page": "About",
       "name": "Facts",
-      "title": "The Great Pyramids",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis!",
+      "title": "أهرامات الجيزة",
+      "description": "أهرام الجيزة تقع على هضبة الجيزة في محافظة الجيزة على الضفة الغربية لنهر النيل",
       "Images": [
         "7.jpg"
       ],
@@ -366,8 +366,8 @@
       "id": 14,
       "page": "Culture",
       "name": "Clothing",
-      "title": "Typical Egyptian Clothing",
-      "description": "With around 200 nationalities represented in Egypt, how people dress is incredibly varied – yet the traditional attire of Egypt is bold and distinctive. You can see it all across the city. \n\n Egyptian national dress is a symbol of pride and identity that has been designed with the dual intent of providing comfort and adhering to religious beliefs. In Egypt, men wear an ankle-length, loose-fitting garment made of white cotton, known as a kandora or dishdasha. A ghutrah covers the head and is held in place by the agal, a type of black cord. This garment was originally used to protect the face from the harsh desert environment, \n\n Traditionally, women in Egypt wear an abaya – a long, flowing light coat over their clothing. This is worn over their Western clothes or a traditional long-sleeved full-length dress known as a jalabeya. A black scarf is often draped over the head. ",
+      "title": "الزي المصري التقليدي",
+      "description": "تعيش في مصر جنسيات عديدة مختلفة ولذلك من الطبيعي أن تكون الملابس التي يرتديها الناس مختلفة في أنحاء المدينة. يرتدي المواطنون الزي المصري التقليدي وهو مصمّم بشكل يوفّر الراحة في الحركة.",
       "Images": [
         "15.jpg",
         "14.jpg",
@@ -379,8 +379,8 @@
       "id": 15,
       "page": "Culture",
       "name": "Food",
-      "title": "Typical Egyptian Food",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda sed minus at praesentium quidem harum dolore vel perferendis? Pariatur illum voluptatem architecto earum ratione, excepturi, deserunt tenetur placeat praesentium unde eum assumenda maiores fuga quam quibusdam similique blanditiis in.",
+      "title": "مأكولات مصرية تقليدية",
+      "description": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد",
       "Images": [
         "11.jpg",
         "10.jpg",
@@ -454,7 +454,7 @@
       "title": "خطّط لرحلتك",
       "bannerImg": "10.jpg",
       "bannerVideo": "assets/video/Let's-Go-Egypt",
-      "description": "استمتع بعطلة مميزة في دبي مع هذه النصائح المفيدة."
+      "description": "استمتع بعطلة مميزة في مصر مع هذه النصائح المفيدة."
     },{
       "id": 7,
       "name": "New",

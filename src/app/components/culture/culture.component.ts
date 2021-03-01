@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from 'src/app/Services/articles.service';
+import { LocalizationService } from 'src/app/Services/localization.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';
 import { IArticle } from 'src/app/viewmodels/iarticle';
 import { IPage } from 'src/app/viewmodels/IPage';
@@ -13,11 +14,14 @@ export class CultureComponent implements OnInit {
   pageDetails: IPage;
   articles: IArticle[] = [];
   swiper_config: any = {};
+  currentLang: string;
   constructor(
     private pageDetailsService: PageDetailsService,
-    private articlesService: ArticlesService
+    private articlesService: ArticlesService,
+    private localizationService: LocalizationService
   ) { 
     this.pageDetails = {id: 0, name: '', title: '', bannerImg: '', bannerVideo: "", description: ''}
+    this.currentLang = this.localizationService.getCurrentLang();
   }
 
   ngOnInit(): void {
@@ -52,6 +56,7 @@ export class CultureComponent implements OnInit {
       slidesPerView: 2,
       spaceBetween: 25,
       centeredSlides: true,
+      invert: true,
       pagination: {
         el: '.swiper-pagination_1',
         clickable: true,

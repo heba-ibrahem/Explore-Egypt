@@ -3,48 +3,50 @@
 <app-page-banner [pageDetails]="pageDetails"></app-page-banner>
 
 <!-- Section clothing -->
-<section class="article-pattern half-grey-right" *ngFor="let art of articles">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9 py-3">
-        <div class="article-content">
-          <h3>{{art.title}}</h3>
-          <p>{{art.description}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="slider">
-          <!-- Slider main container -->
-          <div class="swiper-container culture_swiper_1" [swiper]="swiper_config">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide" *ngFor="let img of art.Images">
-                <div class="img-container">
-                  <img class="img-fluid" [src]="'assets/images/' + img" alt="">
-                </div>
-                <h6 class="caption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum.</h6>
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination swiper-pagination_1"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev">
-              <span><i class="fa fa-angle-left"></i></span>
-            </div>
-            <div class="swiper-button-next">
-              <span><i class="fa fa-angle-right"></i></span>
-            </div>
-
+<section *ngFor="let art of articles let i = index">
+  <section [ngClass]="{'half-grey-right': i % 2 === 0, 'half-grey-left': i % 2 === 1}" class="article-pattern" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 py-3">
+          <div class="article-content">
+            <h3>{{art.title}}</h3>
+            <p>{{art.description}}</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="slider">
+            <!-- Slider main container -->
+            <div class="swiper-container culture_swiper_1" [dir]="currentLang === 'ar' ? 'rtl' : 'ltr' " [swiper]="swiper_config">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" *ngFor="let img of art.Images">
+                  <div class="img-container">
+                    <img class="img-fluid" [src]="'assets/images/' + img" alt="">
+                  </div>
+                  <h6 class="caption">{{"LOREM" | translate}}</h6>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination swiper-pagination_1"></div>
+  
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev">
+                <span><i class="fa fa-angle-left"></i></span>
+              </div>
+              <div class="swiper-button-next">
+                <span><i class="fa fa-angle-right"></i></span>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>

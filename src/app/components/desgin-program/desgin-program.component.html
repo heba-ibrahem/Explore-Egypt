@@ -3,153 +3,104 @@
 
   <form [formGroup]="PorgramForm" (ngSubmit)="save()">
     <div class="row">
-      <div class="form-group col-3">
-        <label class="control-label" for="from">From</label>
-        <input type="date"  class="form-control" formControlName="from" id="from" name="from" placeholder="MM/DD/YYY" />
-      </div>
-      <div class="form-group col-3">
-        <label class="control-label" for="to">to</label>
-        <input type="date" class="form-control" formControlName="to" id="to" name="to" placeholder="DD/DD/YYY"/>
-      </div>
-
+      <label class="control-label col-3">Program Name:</label>
+      <input type="text" class="form-control col-3" formControlName="programName" placeholder="Program Name">
     </div>
-    
+    <br>
+    <div>
+      <div class="form-group row">
+        <label class="control-label col-3" for="from">From:</label>
+        <input type="date" class="form-control col-3" formControlName="from" placeholder="MM/DD/YYY" />
+      </div>
 
+      <div class="form-group row">
+        <label class="control-label col-3" for="to">To:</label>
+        <input type="date" class="form-control col-3" formControlName="to" placeholder="MM/DD/YYY" />
+      </div>
+    </div>
 
     <div class="hotel">
       <h3 class="mt-4">Select city to show recmoneded hotels </h3>
-      <div class="form-group col-3 ">
-        <label for="cCity" class=" form-label" id="">city</label>
-        <select class="form-control"  (change)="chooseCity($event)">
+      <div class="form-group row ">
+        <label class=" form-label col-3">city</label>
+        <select class="form-control col-3" (change)="chooseCity($event)">
           <option>choose City</option>
           <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}</option>
         </select>
-
-        <br>
-        <br>
-
-
+        <br><br>
       </div>
 
-      <!-- <div id="">
-        <div id="cairo" class="tabels">
-          <table class="table table-dark rounded" id="datac">
-            <thead>
-              <tr>
-                <th scope="col">select</th>
-                <th scope="col">No.</th>
-                <th scope="col">Hotel name</th>
-                <th scope="col">city</th>
-                <th scope="col">Room price</th>
-                <th scope="col">Contact Info</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let hotel of  hotelByCityID; let SN=index" >
-
-                <td><input type="radio" formControlName="selHotel"  [value]="hotel.hotelName" name="selHotel" (change)="selectHotel($event)"></td>
-                <td>{{SN+1}}</td>
-                <td >{{hotel.hotelName}}</td>
-                <td>{{hotel.city}}</td>
-                <td>{{hotel.roomPrice}}</td>
-                <td>{{hotel.contactInfo}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> -->
       <div class="card bg-dark text-light my-3" *ngFor="let hotel of  hotelByCityID; let SN=index">
-        <div class="card-body" >
+        <div class="card-body">
           <h5 class="card-title row">
-            <input type="radio" formControlName="selHotel"  [value]="{hotelName:hotel.hotelName,roomPrice:hotel.roomPrice}" name="selHotel" (change)="selectHotel($event)">
+            <input type="radio" formControlName="selHotel"
+              [value]="{hotelName:hotel.hotelName,roomPrice:hotel.roomPrice}" name="selHotel"
+              (change)="selectHotel($event)">
             <p class="mx-2">Hotel name: {{hotel.hotelName}}</p>
           </h5>
           <div class="card-text row ">
             <p class="mx-4">City: {{hotel.city}}</p>
             <p class="mx-4">Room Price: {{hotel.roomPrice}}</p>
             <p class="mx-4">Contact Info: {{hotel.contactInfo}}</p>
-          </div   >
+          </div>
         </div>
       </div>
-
-
     </div>
+
 
     <div class="train">
       <h3 class="mt-4">Select city to show Train time </h3>
       <div class="row">
-        <div class="form-group col-3 ">
-          <label for="feild" class=" form-label" id="">from</label>
-          <select class="form-control"  (change)="chooseTrain($event)" >
-            <option>choose City</option>
-            <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}</option>
-          </select>
+        <div class="form-group col-6">
+          <div class="row">
+            <label class="form-label col-3">from</label>
+            <select class="form-control col-9" (change)="chooseTrain($event)">
+              <option>choose City</option>
+              <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}</option>
+            </select>
+          </div>
         </div>
-
-        <div class="form-group col-3 ">
-          <label for="val" class=" form-label" id="">to</label>
-          <select class="form-control" id="val" (change)="chooseTrain($event)">
-            <option>choose City</option>
-            <option *ngFor="let selectedDestenation of CityList" [value]='selectedDestenation.id'>{{selectedDestenation.name}}</option>
-          </select>
+        <br>
+        <div class="form-group col-6 ">
+          <div class="row">
+            <label class="form-label col-3">to</label>
+            <select class="form-control col-9" (change)="chooseTrain($event)">
+              <option>choose City</option>
+              <option *ngFor="let selectedDestenation of CityList" [value]='selectedDestenation.id'>
+                {{selectedDestenation.name}}</option>
+            </select>
+          </div>
         </div>
 
       </div>
       <br> <br>
 
-      <!-- <div >
-        <div id="cairot" class="tablet">
-          <table id="data" class="table table-dark rounded">
-            <thead>
-              <tr>
-                <th scope="col">select</th>
-                <th scope="col">Train Number</th>
-                <th scope="col">Distenation</th>
-                <th scope="col">Depature time </th>
-                <th scope="col">Arrival time </th>
-                <th scope="col">Ticket price</th>
-                <th scope="col">Reservation details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let train of  trainByCityID; let SN=index">
-
-                <td><input type="radio" formControlName="selTrain"  [value]="{trainNumber:train.trainNumber,destination:train.destination}" name="selTrain" (change)="selectTrain($event)"></td>
-
-                <td  >{{train.trainNumber}}</td>
-                <td >{{train.destination}}</td>
-                <td>{{train.departureTime}}</td>
-                <td>{{train.arrivalTime}}</td>
-                <td>{{train.ticketPrice}}</td>
-                <td>{{train.details}}</td>
-
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> -->
-
-      <div class="card bg-dark text-light my-3" *ngFor="let train of  trainByCityID; let destination of  trainToDest; let SN=index">
-        <div class="card-body" >
+      <div class="card bg-dark text-light my-3"
+        *ngFor="let train of  trainByCityID; let destination of  trainToDest; let SN=index">
+        <div class="card-body">
           <h5 class="card-title row">
-            <input type="radio" formControlName="selTrain"  [value]="{trainNumber:train.trainNumber,destination:train.destination}" name="selTrain" (change)="selectTrain($event)">
+            <input type="radio" formControlName="selTrain"
+              [value]="{trainNumber:train.trainNumber,destination:train.destination,ticketPrice:train.ticketPrice}"
+              name="selTrain" (change)="selectTrain($event)">
             <p class="mx-2">Train Number: {{train.trainNumber}}</p>
           </h5>
           <div class="card-text row ">
             <p class="mx-4">departureTime: {{train.departureTime}}</p>
             <p class="mx-4">arrivalTime: {{train.arrivalTime}}</p>
             <p class="mx-4">ticketPrice: {{train.ticketPrice}}</p>
-          </div   >
+            <p class="mx-4">ticketPrice: {{train.ticketPrice}}</p>
+          </div>
         </div>
       </div>
 
 
-        <div>
-          <button type="submit" [disabled]="PorgramForm.invalid"  class="btn btn-success"> Save your program </button>
-        </div>
+      <div>
+        <button type="submit" [disabled]="PorgramForm.invalid" class="btn btn-success btn-block"> Save your program
+        </button>
+      </div>
 
     </div>
   </form>
-  
+
 
 </div>

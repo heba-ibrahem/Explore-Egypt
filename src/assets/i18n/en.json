@@ -7,6 +7,7 @@
   },
   "NAVBAR": {
     "EXPLORE": "Explore Egypt",
+    "EXPLORE_DESC": "Egypt is a city that needs to be seen to be believed. Find out all you need to know about the place of endless possibilities.",
     "ACTIVITIES": "Activities",
     "PLAN": "Plan Your Trip",
 
@@ -49,6 +50,19 @@
   "COPYRIGHT": "Copyright © 2020. All rights reserved",
   "TERMS": "Terms of use",
   "COOKIES": "Cookies policy",
-  "TODO": "Things to do"
-
+  "TODO": "Things to do",
+  "ABOUT_PAGE_WELCOME": "Welcome to Egypt - where anything is possible.",
+  "ABOUT_PAGE_P": "Egypt is today one of the most cosmopolitan cities in the world. Egypt is home to many nationalities and offers a truly memorable experience to all visitors. Whether it is by the Giza Pyramids, or at the top of the Burj alQahera, Egypt lives and breathes a sense of possibility and innovation. And with an unparalleled coastline, beautiful desert and magnificent cityscapes, memories are just waiting to be made here.",
+  "BRIEF_HISTORY": "A brief history of Egypt",
+  "SELECT_YEAR": "Select a year to discover the story of Egypt",
+  "FACTS": "Quick Facts",
+  "KEEP_EXPLORING": "Keep Exploring",
+  "KEEP_EXPLORING_P": "If seeing is believing, why not take a closer look?",
+  "DISCOVER_MORE": "Discover More",
+  "LOREM": "Lorem ipsum dolor sit amet, adipisicing elit.",
+  "LOREM_LONG": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quidem veritatis officiis blanditiis repudiandae quasi magni doloremque, asperiores minus perferendis laboriosam cupiditate labore eveniet! Accusamus.",
+  "FEATURED_N_HOODS": "Featured Neighbourhoods",
+  "JOURNEY_TITLE": "Your journey starts here.",
+  "JOURNEY_DESC": "See how Egypt evolved into the modern destination it is today.",
+  "BUY_NOW": "Buy Now"
 }

@@ -5,7 +5,7 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
-      "destinationId":3 ,
+      "destinationId": 3,
       "destination": "Aswan",
       "departureTime": "12:00am",
       "arrivalTime": "10:00am",
@@ -17,46 +17,62 @@
       "cityID": 1,
       "city": "cairo",
       "trainNumber": 999,
-      "destinationId":4 ,
+      "destinationId": 4,
       "destination": "Sohag",
       "departureTime": "12:00am",
       "arrivalTime": "5:00am",
       "ticketPrice": "150LE",
       "details": "VIP"
+    },
+    {
+      "trainNumber": "2016",
+      "city": "Alexandria",
+      "cityID": "2",
+      "ticketPrice": "400",
+      "destination": "Aswan",
+      "destinationId": "3",
+      "departureTime": "8:00 pm",
+      "arrivalTime": "1:00pm",
+      "details": "fbfncf",
+      "id": 3
     }
   ],
   "hotels": [
     {
-      "id": 1,
-      "hotelName": "Helton",
-      "cityID": 1,
-      "city": "cairo",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
-    },
-    {
       "id": 2,
-      "hotelName": "Fermont",
-      "cityID": 1,
+      "hotelName": "Helton",
       "city": "cairo",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "roomPrice": "1200",
+      "contactInfo": "0125643684",
+      "adress": "El Korensh",
+      "cityID": 1
     },
     {
       "id": 3,
-      "hotelName": "Green Blaza",
-      "cityID": 2,
+      "hotelName": "Azure",
       "city": "Alexandria",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "roomPrice": "1234",
+      "contactInfo": "123243",
+      "adress": "asdfcd",
+      "cityID": "2"
     },
     {
       "id": 4,
-      "hotelName": "Azure",
-      "cityID": 2,
-      "city": "Alexandria",
-      "roomPrice": "1500LE",
-      "contactInfo": ",hdbbbdlkdhfnkjl"
+      "hotelName": "dxbgbh",
+      "city": "Aswan",
+      "roomPrice": "xthb",
+      "contactInfo": "xdtfgbgt",
+      "adress": "xtgb",
+      "cityID": "3"
+    },
+    {
+      "hotelName": "ghgngvng",
+      "city": "cairo",
+      "roomPrice": "675",
+      "contactInfo": "hgnhmn",
+      "adress": "nghnbhg",
+      "cityID": "1",
+      "id": 8
     }
   ],
   "city": [
@@ -83,23 +99,33 @@
   ],
   "programs": [
     {
-      "userID": 4,
-      "from": "2/5/2021",
-      "to": "6/5/2021",
-      "selHotel": {},
+      "programName": "first ",
+      "from": "2021-03-08",
+      "to": "2021-03-12",
+      "city": "1",
+      "selHotel": {
+        "hotelName": "Helton",
+        "roomPrice": "1200"
+      },
       "selTrain": {
         "trainNumber": 999,
-        "destination": "Sohag"
+        "destination": "Aswan",
+        "ticketPrice": "300LE"
       },
       "id": 1
     },
     {
-      "from": "23123",
-      "to": "23123",
-      "selHotel": "Fermont",
+      "userID": 2,
+      "from": "",
+      "to": "",
+      "selHotel": {
+        "hotelName": "",
+        "roomPrice": ""
+      },
       "selTrain": {
-        "trainNumber": 999,
-        "destination": "Aswan"
+        "trainNumber": 0,
+        "destination": "",
+        "ticketPrice": ""
       },
       "id": 2
     },
@@ -109,7 +135,7 @@
       "to": "3435454",
       "selHotel": {
         "hotelName": "Helton",
-        "roomPrice": "2515"
+        "roomPrice": "2515LE"
       },
       "selTrain": {
         "trainNumber": 999,
@@ -170,6 +196,20 @@
         "destination": "Aswan"
       },
       "id": 7
+    },
+    {
+      "userID": 2,
+      "from": "2021-02-24",
+      "to": "2021-02-26",
+      "selHotel": {
+        "hotelName": "Fermont",
+        "roomPrice": "1500LE"
+      },
+      "selTrain": {
+        "trainNumber": 999,
+        "destination": "Aswan"
+      },
+      "id": 8
     }
   ],
   "explorDep": [
@@ -222,7 +262,6 @@
       "img": "explorDep8.jpg"
     }
   ],
-
   "curators": [
     {
       "id": 1,
@@ -249,7 +288,7 @@
       "img": "curators4.png"
     }
   ],
-   "Users": [
+  "Users": [
     {
       "firstName": "test",
       "lastName": "asdasd",
@@ -320,9 +359,15 @@
       "img": "Explore top attractions1.jpg",
       "description": "Egypt is reopening its borders to international tourists on 1 July,but many parts of the country will remain off-limits.",
       "section": "Explore top attractions",
-      "dep": [1],
+      "dep": [
+        1
+      ],
       "content": "The year 2020 was set to be a blockbuster one for tourism in Egypt. The Grand Egyptian Museum was slated to open this year after nearly two decades in the making, prompting Lonely Planet to name Cairo one of the top cities to visit in 2020. It’s easier than ever to travel around the country, with the recent introduction of e-visas, the opening of a new airport in Giza and new domestic flight routes between Sharm El Sheikh and Luxor, two of the country’s main tourist hubs.Egyptian government tries new tactics to lure tourists Mortuary temple of Queen Hatshepsut at Deir el-Bahri, Luxor, Egypt © Michelle McMahon/Getty Images But even as the coronavirus pandemic continues to stifle international travel, Egypt is trying new tactics to lure visitors to the country. In June, the government eliminated the need for tourist visas for visitors to the country’s ‘touristic governorates’ – South Sinai, Red Sea, Luxor and Aswan – and the country’s cabinet has just decided to extend the incentive until the end of April 2021 to encompass the winter season, which is usually when Egypt receives the highest number of visitors. Travelers who fly with EgyptAir or Air Cairo also get a 20% discount on tickets to museums and archaeological sites.The frontage of Coptic Museum in Cairo, Egypt. The frontage of the central entrance of Coptic Museum © efesenko / Getty Images The country reopened to tourists in July, and it’s yet to be seen whether these offers will entice more visitors. When arriving in Egypt, all passengers are required to present a negative PCR test certificate, with the test conducted no more than 72 hours before departure.Egypt had expected to receive some 15 million tourists in 2020, matching the number of visitors in 2010, a year before the Arab Spring revolutions brought turmoil and uncertainty to the region, but as with all other countries, the numbers will fall far below the target. Tourism is an important industry in the country and makes up more than 10% of Egypt’s economy.",
-      "Images": ["Explore top attractions1.jpg", "art1_1.jpg", "art1_2.jpg"]
+      "Images": [
+        "Explore top attractions1.jpg",
+        "art1_1.jpg",
+        "art1_2.jpg"
+      ]
     },
     {
       "id": 2,
@@ -330,20 +375,38 @@
       "img": "art2_1.jpg",
       "description": "Alexandria has been selected as one of the world’s most popular tourist destinations in 2021, according to a list published by well known travel website TripAdvisor.",
       "section": "Explore top attractions",
-      "dep": [1, 2, 3],
+      "dep": [
+        1,
+        2,
+        3
+      ],
       "city": "Alexandria",
-"content":"Among a list of 25 destinations worldwide, Alexandria came in sport 23, according to comments and ratings from travelers published on the website.Previously, Cairo and Hurghada were selected for their 2020 list, as Cairo ranked in the 12th place and Hurghada in the 24th place.“The Pearl of the Mediterranean has an ambiance more in keeping with its neighbors to the north than with those in the Middle East,” it says on the website, “Alexandria offers fascinating insights into its proud Greek past, as well as interesting mosques, the casino strip of the Corniche, some lovely gardens and both modern and traditional hotels.”According to the Egyptian Junior Business Association (EJB), 300,000 tourists have visited Egypt since July at a rate of 6,000 tourists a day until the end of August.Over 150 million travel and tourism jobs have been lost globally since the onset of COVID-19 outbreak. To support Egypt’s tourism sector amid the COVID-19 pandemic, Egypt’s Ministry of Tourism and Antiquities, Ministry of International Cooperation, the European Bank for Reconstruction and Development (EBRD), and the UN’s World Trade Organization (UNWTO) recently signed a COVID-19 tourism recovery technical assistance cooperation package to promote resilience, sustainability, and inclusive growth."
-,"Images":["art2_1.jpg","art2-2.jpg","art2_3.jpg"]
-},   {
+      "content": "Among a list of 25 destinations worldwide, Alexandria came in sport 23, according to comments and ratings from travelers published on the website.Previously, Cairo and Hurghada were selected for their 2020 list, as Cairo ranked in the 12th place and Hurghada in the 24th place.“The Pearl of the Mediterranean has an ambiance more in keeping with its neighbors to the north than with those in the Middle East,” it says on the website, “Alexandria offers fascinating insights into its proud Greek past, as well as interesting mosques, the casino strip of the Corniche, some lovely gardens and both modern and traditional hotels.”According to the Egyptian Junior Business Association (EJB), 300,000 tourists have visited Egypt since July at a rate of 6,000 tourists a day until the end of August.Over 150 million travel and tourism jobs have been lost globally since the onset of COVID-19 outbreak. To support Egypt’s tourism sector amid the COVID-19 pandemic, Egypt’s Ministry of Tourism and Antiquities, Ministry of International Cooperation, the European Bank for Reconstruction and Development (EBRD), and the UN’s World Trade Organization (UNWTO) recently signed a COVID-19 tourism recovery technical assistance cooperation package to promote resilience, sustainability, and inclusive growth.",
+      "Images": [
+        "art2_1.jpg",
+        "art2-2.jpg",
+        "art2_3.jpg"
+      ]
+    },
+    {
       "id": 3,
       "title": "Young Egyptian promotes tourism with selfies",
       "img": "art3_3.jpg",
       "description": "Mostafa Khater is an Egyptian young man who started an initiative called “Selfie with Egypt” to promote all the beautiful places in Egypt, through taking selfies in important tourist attraction sites and natural surroundings.",
       "section": "Explore top attractions",
-      "content":"Aiming to promote tourism in Egypt both locally and internationally, Mostafa Khater, who studies Pharmacy at Helwan University, decided to try a new way.The 21-year-old student said that he hasn’t received any help from the state for his promotional work and only shares his photos on Facebook and Instagram.He called on government officials to use his photography to promote tourism in Egypt and added that he is currently seeking to show his initiative off during the upcoming state-sponsored international Youth Conference that is planned to take place on November at Sharm El-Sheikh.“I will also do my best to open communication channels with foreigners who are interested in visiting Egypt through promoting photos on foreign travel agencies websites,” Khater concluded.The 21-year-old student said that he hasn’t received any help from the state for his promotional work and only shares his photos on Facebook and Instagram."
-    ,"Images":["art3_1.jpg","art3_2.jpg","art3_3.jpg","art3_4.jpg"],
-"dep":[1,2,3]
-  },
+      "content": "Aiming to promote tourism in Egypt both locally and internationally, Mostafa Khater, who studies Pharmacy at Helwan University, decided to try a new way.The 21-year-old student said that he hasn’t received any help from the state for his promotional work and only shares his photos on Facebook and Instagram.He called on government officials to use his photography to promote tourism in Egypt and added that he is currently seeking to show his initiative off during the upcoming state-sponsored international Youth Conference that is planned to take place on November at Sharm El-Sheikh.“I will also do my best to open communication channels with foreigners who are interested in visiting Egypt through promoting photos on foreign travel agencies websites,” Khater concluded.The 21-year-old student said that he hasn’t received any help from the state for his promotional work and only shares his photos on Facebook and Instagram.",
+      "Images": [
+        "art3_1.jpg",
+        "art3_2.jpg",
+        "art3_3.jpg",
+        "art3_4.jpg"
+      ],
+      "dep": [
+        1,
+        2,
+        3
+      ]
+    },
     {
       "id": 4,
       "title": "Hot Air Ballooning in Luxor",
@@ -351,10 +414,14 @@
       "description": "It’s an incredibly peaceful time in the air. The balloon is literally floating, you don’t feel a thing, and it’s so silent. All the while you fly over one of the most amazing sceneries worldwide.",
       "section": "Keep up with the new",
       "city": "Luxor",
-      "dep": [2, 3],
-      "Images": ["keepNew1.jpg"],
+      "dep": [
+        2,
+        3
+      ],
+      "Images": [
+        "keepNew1.jpg"
+      ],
       "content": "One of Luxor’s most beloved tourist attractions, the hot air balloon, has made a comeback to the antiquities-laden city with its first trip in 80 days set to resume operating today.The activity, which gives Luxor its familiar and colorfully punctuated skyline, was suspended in July due to raised security concerns, following an incident in which a balloon drifted off course west of the city.According to state-owned news outlet Al Ahram, the city’s aviation authorities lifted the 80-day suspension of hot air balloon flights as a result of better safety measures being adopted by local operators.Despite the attempts at improving security, Egypt’s hot air balloons have a minor reputation for unsafety. This is due to the death of a South African tourist in January 2018 when a hot air balloon crashed; the incident also left many tourists injured and was attributed to poor weather conditions.Moreover, Egypt holds the record for the deadliest balloon accident in history. In 2013, a hot air balloon crash incident ensued when a balloon caught fire in mid-air. The tragic incident claimed the lives of 19 more tourists.Prior, crashes in Egypt are known to have occurred in 2008, 2009 and 2011.Giving tourists a unique view to cities with iconic buildings and landscapes, hot air balloons are popular in touristic countries such as Turkey, Kenya and the US among many others.In Egypt, they are also popular among archaeologists and Egyptologists who seek to capture an ‘overview’ angle of various archaeological sites. This is due to the fact that the use of drones—commonly used in the field of archaeology—by non-military personnel is illegal in Egypt."
-
     },
     {
       "id": 5,
@@ -362,7 +429,9 @@
       "img": "keepNew2.jpg",
       "description": "It’s the best getaway from trafficy noisy Cairo, located 80km southwest of the city so in less than an hour you can enjoy the emptiness of the desert",
       "section": "Keep up with the new",
-"Images":["keepNew2.jpg"]
+      "Images": [
+        "keepNew2.jpg"
+      ]
     },
     {
       "id": 6,
@@ -377,7 +446,9 @@
       "name": "History",
       "title": "1958",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
-      "Images": ["3.jpg"]
+      "Images": [
+        "3.jpg"
+      ]
     },
     {
       "id": 8,
@@ -385,7 +456,9 @@
       "name": "History",
       "title": "1962",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
-      "Images": ["15.jpg"]
+      "Images": [
+        "15.jpg"
+      ]
     },
     {
       "id": 9,
@@ -393,7 +466,9 @@
       "name": "History",
       "title": "1981",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
-      "Images": ["8.jpg"]
+      "Images": [
+        "8.jpg"
+      ]
     },
     {
       "id": 10,
@@ -401,7 +476,9 @@
       "name": "History",
       "title": "1997",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis, voluptas delectus eveniet exercitationem!",
-      "Images": ["10.jpg"]
+      "Images": [
+        "10.jpg"
+      ]
     },
     {
       "id": 11,
@@ -409,7 +486,9 @@
       "name": "Facts",
       "title": "Ahlan wa Sahlan!",
       "description": "This short greeting means 'welcome' in Arabic, the official language of the Egypt.",
-      "Images": ["3.jpg"]
+      "Images": [
+        "3.jpg"
+      ]
     },
     {
       "id": 12,
@@ -417,14 +496,18 @@
       "name": "Facts",
       "title": "Hello Sunshine!",
       "description": "Our climate is warm and subtropical with 300+ days of sunshine a year.",
-      "Images": ["1.jpg"]
+      "Images": [
+        "1.jpg"
+      ]
     },
     {
       "page": "About",
       "name": "Facts",
       "title": "The Great Pyramids",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero accusantium, deserunt iure enim similique, nostrum assumenda rem corporis omnis!",
-      "Images": ["7.jpg"],
+      "Images": [
+        "7.jpg"
+      ],
       "id": 13
     },
     {
@@ -433,7 +516,12 @@
       "name": "Clothing",
       "title": "Typical Egyptian Clothing",
       "description": "With around 200 nationalities represented in Egypt, how people dress is incredibly varied – yet the traditional attire of Egypt is bold and distinctive. You can see it all across the city. \n\n Egyptian national dress is a symbol of pride and identity that has been designed with the dual intent of providing comfort and adhering to religious beliefs. In Egypt, men wear an ankle-length, loose-fitting garment made of white cotton, known as a kandora or dishdasha. A ghutrah covers the head and is held in place by the agal, a type of black cord. This garment was originally used to protect the face from the harsh desert environment, \n\n Traditionally, women in Egypt wear an abaya – a long, flowing light coat over their clothing. This is worn over their Western clothes or a traditional long-sleeved full-length dress known as a jalabeya. A black scarf is often draped over the head. ",
-      "Images": ["15.jpg", "14.jpg", "13.jpg", "12.jpg"]
+      "Images": [
+        "15.jpg",
+        "14.jpg",
+        "13.jpg",
+        "12.jpg"
+      ]
     },
     {
       "id": 15,
@@ -441,7 +529,12 @@
       "name": "Food",
       "title": "Typical Egyptian Food",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam assumenda sed minus at praesentium quidem harum dolore vel perferendis? Pariatur illum voluptatem architecto earum ratione, excepturi, deserunt tenetur placeat praesentium unde eum assumenda maiores fuga quam quibusdam similique blanditiis in.",
-      "Images": ["11.jpg", "10.jpg", "9.jpg", "8.jpg"],
+      "Images": [
+        "11.jpg",
+        "10.jpg",
+        "9.jpg",
+        "8.jpg"
+      ],
       "Items": [
         {
           "title": "Koshary",
@@ -459,6 +552,28 @@
           "title": "test04",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla!"
         }
+      ]
+    },
+    {
+      "page": "Culture",
+      "name": "test",
+      "title": "yet another test",
+      "description": "safks afk ashfk asfk asjflsajf lasjl safjiasjlfew",
+      "Images": [
+        "12.jpg",
+        "train.jpg"
+      ],
+      "id": 19
+    },
+    {
+      "id": 20,
+      "page": "Culture",
+      "name": "test",
+      "title": "tttttteeeeessssssttttt updated",
+      "description": "losafjilsa lijsfal ijfas lij lasf",
+      "Images": [
+        "6.jpg",
+        "9.jpg"
       ]
     }
   ],
@@ -620,8 +735,7 @@
       "AricalTitle": "explorDep",
       "id": 8
     }
-  ]
-  ,
+  ],
   "weekevents": [
     {
       "id": 1,
@@ -646,5 +760,6 @@
       "title": "EGYPT SHOPPING FESTIVAL",
       "description": "What not to miss this week in Egypt",
       "seconddescription": "Hop your way through outdoor Egypt Markets, sprint through malls on a half-day shopping spree and sink your teeth into all kinds of family fun exclusively with DSF this week"
-    }]
+    }
+  ]
 }

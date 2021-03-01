@@ -60,14 +60,17 @@ export class CityService {
     return this.httpclient.get<any>(`${environment.API_URL}/programs/${programID}`);
 
   }
-  editProgram(programID:any, programBody:any) : Observable<any[]> {
+  getprogramByID(id:number): Observable<IHotel[]> {
+    return this.httpclient.get<IHotel[]>(`${environment.API_URL}/programs/${id}`);
+  }
+  editProgram(id:number, program:IProgram) : Observable<any[]> {
     const httpOptions = {headers: new HttpHeaders({
       'Content-Type': 'application/json'
       //,'Accept':' */*'
       //,'Authorization': 'my-auth-token'
         })};
       
-    return this.httpclient.put<any>(`${environment.API_URL}/programs/${programID}` ,programBody, httpOptions);
+    return this.httpclient.put<any>(`${environment.API_URL}/programs/${id}` ,program, httpOptions);
   }
 
   deleteProgram(id:any) : Observable<any[]> {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalizationService } from 'src/app/Services/localization.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';
 import { IPage } from 'src/app/viewmodels/IPage';
 
@@ -10,7 +11,8 @@ import { IPage } from 'src/app/viewmodels/IPage';
 export class ExploreComponent implements OnInit {
   pageDetails: IPage;
   cards: any;
-  constructor(private pageDetailsService: PageDetailsService) { 
+  currentLang: string = 'en';
+  constructor(private pageDetailsService: PageDetailsService, private localizationService: LocalizationService) { 
     this.pageDetails = {
       id: 0,
       name: '',
@@ -19,6 +21,8 @@ export class ExploreComponent implements OnInit {
       bannerVideo: "",
       description: ''
     }
+
+    this.currentLang = this.localizationService.getCurrentLang();
 
     this.cards = [
       {
@@ -40,6 +44,7 @@ export class ExploreComponent implements OnInit {
         path: '/neighbourhoods'
       }
     ]
+    this.switchCards();
   }
 
   ngOnInit(): void {
@@ -55,6 +60,31 @@ export class ExploreComponent implements OnInit {
       },
       (err)=> {console.log(err)}
     )
+  }
+
+  switchCards() {
+    if (this.currentLang === 'ar') {
+      this.cards = [
+        {
+          title: 'عن مصر',
+          description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون.',
+          img_url: '11.jpg',
+          path: '/about'
+        },
+        {
+          title: 'التاريخ والتراث',
+          description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون.',
+          img_url: '3.jpg',
+          path: '/culture'
+        },
+        {
+          title: 'الأحياء في مصر',
+          description: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون.',
+          img_url: '6.jpg',
+          path: '/neighbourhoods'
+        }
+      ]
+    }
   }
 
 }
