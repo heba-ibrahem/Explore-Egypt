@@ -41,7 +41,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
               <a class="dropdown-item item" routerLink="/account/wishlist" style="margin-left: 3opx">
-                <span><i class="fa fa-heart"></i></span>
+                <span><i style="color: #007bff;" class="fa fa-heart"></i></span>
                 Top picks
               </a>
               <a class="dropdown-item item" routerLink="/account/dashboard">
@@ -108,7 +108,7 @@
           <a href="#"><span><i class="fa fa-calendar"></i></span></a>
         </li>
         <li>
-          <a routerLink="/account/wishlist"><span><i class="fa fa-heart"></i></span></a>
+          <a [routerLink]="['//account/wishlist']" ><span><i class="fa fa-heart"></i></span></a>
         </li>
       </ul>
     </div>

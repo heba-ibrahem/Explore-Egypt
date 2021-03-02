@@ -4,10 +4,10 @@
 <div class="div-body">
   <div class="section-5-favorite">
     <div class="favorite-img" *ngIf="addedtoWishList && hasAccount()">
-      <a style="color:'#0067b9'" (click)="deletewishlist(List)"><i class="fa fa-heart"></i></a>
+      <a style="color:'#0067b9';font-size: 20px;" (click)="deletewishlist(List)"><i class="fa fa-heart"></i></a>
     </div>
     <div class="favorite-img" *ngIf="!addedtoWishList || !hasAccount()">
-      <a style="color:'black'" (click)="addwishlist(List)"><i class="fa fa-heart"></i></a>
+      <a style="color:'black';font-size: 20px;" (click)="addwishlist(List)"><i class="fa fa-heart"></i></a>
     </div>
   </div>
   <p class="p2">{{List?.title}}</p>

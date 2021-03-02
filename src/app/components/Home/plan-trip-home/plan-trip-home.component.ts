@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { HomeService } from 'src/app/Services/home.service';
 import { PlanTripHomeService } from 'src/app/Services/plan-trip-home.service';
 import { PlanTripHome } from 'src/app/viewmodels/Iplan-trip-home';
 
@@ -8,14 +10,22 @@ import { PlanTripHome } from 'src/app/viewmodels/Iplan-trip-home';
   styleUrls: ['./plan-trip-home.component.scss']
 })
 export class PlanTripHomeComponent implements OnInit {
-  List:PlanTripHome[];
-  constructor(private service:PlanTripHomeService) { 
-    this.List=service.PlanList;
+  List:PlanTripHome[]=[];
+  currentUserSubscription: Subscription|null = null;
+  constructor(private homeService:HomeService) { 
+    this.currentUserSubscription =this.homeService.getAllPlaneYourTrip()
+    .subscribe(response=>{
+     this.List = response;
+    })
     console.log(this.List);
   }
 
   ngOnInit(): void {
 
+  }
+  ngOnDestroy() {
+    // unsubscribe to ensure no memory leaks
+    this.currentUserSubscription?.unsubscribe();
   }
 
 }

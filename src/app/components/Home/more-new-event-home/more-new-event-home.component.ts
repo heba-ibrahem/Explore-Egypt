@@ -9,14 +9,15 @@ import { INewEventsHome } from 'src/app/viewmodels/iweek-events-home';
   styleUrls: ['./more-new-event-home.component.scss']
 })
 export class MoreNewEventHomeComponent implements OnInit {
-  List:INewEventsHome[]=[]
+  List:INewEventsHome|null=null
   Subscription: Subscription|null=null;
   constructor(private service:HomeService) {}
 
   ngOnInit(): void {
     this.Subscription= this.service.getAllEvents().subscribe(
       (response)=>{
-        this.List=response;
+        this.List=response.pop();
+        console.log(this.List)
       },
       (err)=>{console.log(err)}
     );

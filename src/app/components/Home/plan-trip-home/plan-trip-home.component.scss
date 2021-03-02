@@ -60,19 +60,17 @@
   }
   
   .section-7 .card-title {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
     font-weight: 400;
     letter-spacing: 0;
     color: #fff;
-    min-height: 27px;
-  }
 
+  }
   .section-7 .card-text {
-    clear: both;
     color: #fff;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: .9rem;
     line-height: 1.5rem;
     font-weight: 300;
     letter-spacing: 0;
@@ -91,13 +89,18 @@
     padding: 24px 24px;
   }
   .section-7 .see-more-article .meet-link-a {
-    font-weight: 500;
+    font-weight: 600;
     border: none;
+<<<<<<< HEAD
+    text-align: left;
+    font-size: 1.2rem;
+=======
     text-align: start;
     font-size: 1.1rem;
+>>>>>>> 7ab1602b82a7d972699d6a45d633f48b32283fc4
     line-height: 1.25rem;
     letter-spacing: normal;
     border-radius: 4px;
     color: #0067b9;
-    padding: 24px 24px;
+    padding: 26px 26px;
   }

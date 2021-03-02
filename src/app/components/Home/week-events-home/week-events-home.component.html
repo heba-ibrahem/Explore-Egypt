@@ -44,12 +44,12 @@
                       </div>
                       <div class="favorite" *ngIf="addedtoWishList && hasAccount()">
                         <div class="favorite-img">
-                          <a style="color:'#0067b9'" (click)="deletewishlist(WeekEvents)"><i class="fa fa-heart"></i></a>
+                          <a style="color:'#0067b9';font-size: 21px;" (click)="deletewishlist(WeekEvents)"><i class="fa fa-heart"></i></a>
                         </div>
                       </div>
                       <div class="favorite" *ngIf="!addedtoWishList || !hasAccount()">
                         <div class="favorite-img">
-                          <a style="color:'black'" (click)="addwishlist(WeekEvents)"><i class="fa fa-heart"></i></a>
+                          <a style="color:'black';font-size: 21px;" (click)="addwishlist(WeekEvents)"><i class="fa fa-heart"></i></a>
                         </div>
                       </div>
                     </div>
