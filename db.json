@@ -485,7 +485,7 @@
       "page": "About",
       "name": "Facts",
       "title": "Ahlan wa Sahlan!",
-      "description": "This short greeting means 'welcome' in Arabic, the official language of the Egypt.",
+      "description": "This short greeting means 'welcome' in Arabic, the official language of Egypt.",
       "Images": [
         "3.jpg"
       ]
@@ -555,25 +555,15 @@
       ]
     },
     {
-      "page": "Culture",
-      "name": "test",
-      "title": "yet another test",
-      "description": "safks afk ashfk asfk asjflsajf lasjl safjiasjlfew",
-      "Images": [
-        "12.jpg",
-        "train.jpg"
-      ],
-      "id": 19
-    },
-    {
       "id": 20,
       "page": "Culture",
       "name": "test",
-      "title": "tttttteeeeessssssttttt updated",
-      "description": "losafjilsa lijsfal ijfas lij lasf",
+      "title": "test title updated",
+      "description": "lorem ipsum",
       "Images": [
         "6.jpg",
-        "9.jpg"
+        "7.jpg",
+        "11.jpg"
       ]
     }
   ],
