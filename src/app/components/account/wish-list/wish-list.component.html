@@ -28,7 +28,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" *ngIf="ShowWishList; else WishListClosed">
             <div class="col-xl-10 offset-xl-1">
                 <section class="section-5" style="margin-top: 30px;">
                   <div class="row" style="margin-top: 10px;">
@@ -61,7 +61,17 @@
           </div>
         </div>
   </div>
-  
+  <ng-template #WishListClosed>
+    <div class="row">
+      <div class="col-md-8 col-sm-12 offset-xl-1">
+    <p class="top-picks__desc">
+      Add items to your Top Picks by clicking content with the  
+      <img class="icon" alt="icon" title="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCiAgICA8cGF0aCBmaWxsPSIjMDA5MEQ3IiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik0xNi4wOTIgOS4yMDZMMTAgMTUuMTk2bC02LjA5MS01Ljk5YTIuOTk3IDIuOTk3IDAgMCAxLS4wMDEtNC4yOTlBMy4xNjggMy4xNjggMCAwIDEgNi4xNDMgNGMuODQ2IDAgMS42NC4zMjIgMi4yMzMuOTA1bC4yMi4yMTdMMTAgNi41MDdsMS40MDUtMS4zODUuMjE3LS4yMTVBMy4xNjYgMy4xNjYgMCAwIDEgMTMuODU3IDRjLjg0NiAwIDEuNjQuMzIyIDIuMjM1LjkwNmEzLjAwMiAzLjAwMiAwIDAgMSAwIDQuM20xLjQwMi01LjcyNkE1LjE3OCA1LjE3OCAwIDAgMCAxMy44NTcgMmE1LjE4IDUuMTggMCAwIDAtMy42MzcgMS40OGwtLjIyLjIxOC0uMjItLjIxOEE1LjE3OCA1LjE3OCAwIDAgMCA2LjE0MyAyYTUuMTc1IDUuMTc1IDAgMCAwLTMuNjM2IDEuNDggNC45OTcgNC45OTcgMCAwIDAgMCA3LjE1MkwxMCAxOGw3LjQ5NC03LjM2OGE0Ljk5OSA0Ljk5OSAwIDAgMCAwLTcuMTUyIi8+DQo8L3N2Zz4NCg==">
+        as you navigate through the website</p>
+        </div>
+        </div>
+        
+  </ng-template>
   
   
   

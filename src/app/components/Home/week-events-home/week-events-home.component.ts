@@ -41,20 +41,7 @@ export class NewEventsHomeComponent implements OnInit {
     //       (err)=>{console.log(err)}
     //     );  
   }
-  // calculateDiff(item:any){
-  //   let currentDate = new Date();
-  //   item.date = new Date(item.date);
-  //   const diff = Math.floor((Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()) - Date.UTC(item.date.getFullYear(),item.date.getMonth(), item.date.getDate()) ) /(1000 * 60 * 60 * 24));
-  //   return diff <= 7 ;
-  //  }
-  //  toggleFavorite(list:any) {
-  //   list.isFavorite = !list.isFavorite;
-  //   this.update(list.id,list);
-  // }
-  // update(id:number,list:any){
-  //   this.wishlistservice.updateWeeksFav(id,list);
-  //   console.log("update");
-  // }
+ 
   addwishlist(list:any){
     if(localStorage.getItem('user')){
       const list2={uID:this.user_id,ArID:list.id,AricalTitle:"weekevents"};

@@ -11,6 +11,7 @@ import { WishListService } from 'src/app/Services/wish-list.service';
 export class WishListComponent implements OnInit {
   wishlist:any[]=[]
   user_id :number =0;
+  ShowWishList:boolean= false;
   constructor(private userService: UsersServiceService,
     private homeservice:HomeService
     ,private wishlistservice:WishListService) {
@@ -25,6 +26,9 @@ export class WishListComponent implements OnInit {
        this.wishlistservice.ShowWishList(item.AricalTitle,item.ArID)
           .subscribe(response=>{
             this.wishlist.push(response);
+            if(this.wishlist.length > 1){
+              this.ShowWishList = true;
+            }
           });
         })
         console.log(this.wishlist);

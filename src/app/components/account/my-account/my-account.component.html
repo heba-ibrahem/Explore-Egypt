@@ -1,54 +1,83 @@
 <!-- Page Header -->
 <div class="page-header">
-    <div class="history">
-      <div class="container">
-        <ul class="m-0 list-unstyled">
-          <li>
-            <a class="main-link" href="#">Visit Egypt</a>
-          </li>
-          <li class="point"><i class="fa fa-angle-right"></i></li>
-          <li>My account</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="safety-post">
-      <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
+  <div class="history">
+    <div class="container">
+      <ul class="m-0 list-unstyled">
+        <li>
+          <a class="main-link" href="#">Visit Egypt</a>
+        </li>
+        <li class="point"><i class="fa fa-angle-right"></i></li>
+        <li>My account</li>
+      </ul>
     </div>
   </div>
+
+  <div class="safety-post">
+    <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
+  </div>
+</div>
 
 <!-- page content -->
 
 <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="row">
-            <div class="content">
-                    <div class="col-12 offset-xl-1 userName">Hey <span class="span" >{{CurrentUser.firstName}} {{CurrentUser.lastName}}</span> !</div>
-                    <div class="col-12 col-md-8 offset-xl-1 welcome">Welcome to your account. You can edit your information and view your purchased tickets from Egypt Calendar here.</div>
-            </div>
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="content">
+          <div class="col-12 offset-xl-1 userName">Hey <span class="span">{{CurrentUser.firstName}}
+              {{CurrentUser.lastName}}</span> !</div>
+          <div class="col-12 col-md-8 offset-xl-1 welcome">Welcome to your account. You can edit your information and
+            view your purchased tickets from Egypt Calendar here.</div>
         </div>
       </div>
     </div>
-      <!-- Tabs -->
-      <section id="tabs">
-        <div class="container">
-          <h6 class="section-title h1">Tabs</h6>
-          <div class="row">
-            <div class="col-xs-12">
-              <nav>
-                <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Active</a>
-                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Done</a>
-                  <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
-                  <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">About</a> 
+  </div>
+  <!-- Tabs -->
+  <section id="tabs">
+    <div class="container">
+      <h6 class="section-title h1">Your Ticket Purchases</h6>
+      <div class="row" *ngIf="ShowMyTrip; else MyTripClosed">
+        <div class="col-md-10 ml-4">
+          <nav>
+            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                aria-controls="nav-home" aria-selected="true">Active</a>
+              <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                aria-controls="nav-profile" aria-selected="false">Done</a>
+              <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                  <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">About</a>  -->
+            </div>
+          </nav>
+          <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="row">
+                <div class="col-md-4" *ngFor="let item of Myprograms ;let count=index" (click)="GoToDetials(item?.id)">
+                  <div class="trip">
+                    <div class="card">
+                      <div class="circle">
+                        <h2>{{calculateDiffDate(item?.from,item?.to)}}</h2>
+                        <h6>days in {{item?.selTrain?.destination}}</h6>
+                      </div>
+                      <div class="content">
+                        <div class="dis">
+                         <p style="text-align: center; font-size: 20px; font-weight: 600; color: rgb(138, 20, 30);"><span>Trip Name</span></p>
+                         <p><span class="title">Start At: </span><span>{{item?.from}}</span></p>
+                         <p><span class="title"><span>Hotel Name: </span>{{item.selHotel.hotelName}}</span></p>
+                        </div>
+                        <a [routerLink]="['/programDetails/{{item?.id}}']" >More Details</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </nav>
-              <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                  <div class="row">
-                    <div class="col-md-4" *ngFor="let item of Myprograms ;let count=index" (click)="GoToDetials(item?.id)">
-                    <div class="wrimagecard card-header" >
+              </div>
+            </div>
+            <!-- *ngIf="ActiveTrip; else ActiveTripClosed" -->
+            <!-- *ngIf="DoneTrip; else DoneTripClosed" -->
+
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <div class="row">
+                <div class="col-md-4" *ngFor="let item of DoneProgram ; let count=index">
+                  <!-- <div class="wrimagecard card-header" >
                             <a>
                               <div class="card-header_header" style="background-color:  #3369e81a">
                               <div style="padding-right: 5px;  color:#3369e8;" class="fa fa-table">
@@ -60,24 +89,64 @@
                               <h5 class="date">{{item?.from}}  -  {{item?.to}}</h5>
                             </div>
                           </a>
+                        </div> -->
+                  <div class="trip">
+                    <div class="card">
+                      <div class="circle">
+                        <h2>{{calculateDiffDate(item?.from,item?.to)}}</h2>
+                        <h6>days in {{item?.selTrain?.destination}}</h6>
+                      </div>
+                      <div class="content">
+                        <div class="dis">
+                         <p style="text-align: center; font-size: 20px; font-weight: 600; color: rgb(138, 20, 30);"><span>Trip Name</span></p>
+                         <p><span style="font-size: 15px; font-weight: 700;">Start At: </span><span style="font-size: 20px; font-weight: 600; color: rgb(51, 17, 20);">{{item?.from}}</span></p>
+                         <p><span style="font-size: 15px; font-weight: 700;">Hotel Name: </span><span style="font-size: 20px; font-weight: 600; color: rgb(59, 19, 22);">{{item.selHotel.hotelName}}</span></p>
                         </div>
-                        </div>
-                        </div>
+                        <a [routerLink]="['/programDetails/{{item?.id}}']" >More Details</a>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                  Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
-                </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+              </div>
+
+            </div>
+            <!-- <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                   Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
                 </div>
                 <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
                   Et et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
-                </div>
-              </div>
-            
-            </div>
+                </div> -->
           </div>
-        </div>
-      </section>
-</div>
 
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<ng-template #MyTripClosed>
+  <div class="row">
+    <div class="col-md-8 col-sm-12 offset-xl-1">
+      <p class="top-picks__desc">
+        You haven't purchased any tickets.</p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #ActiveTripClosed>
+  <div class="row">
+    <div class="col-md-8 col-sm-12 offset-xl-1">
+      <p class="top-picks__desc mt-4">
+        You haven't any Trip Active now</p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #DoneTripClosed>
+  <div class="row">
+    <div class="col-md-8 col-sm-12 offset-xl-1">
+      <p class="top-picks__desc mt-4">
+        You haven't any Trip Done untill now</p>
+    </div>
+  </div>
+</ng-template>

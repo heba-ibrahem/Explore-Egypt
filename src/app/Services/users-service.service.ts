@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { IUsers } from '../viewmodels/iusers';
-import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +18,8 @@ export class UsersServiceService {
   }
 
   public getUserID():number {
-    // return this.userSubject.value;
-    return (JSON.parse(localStorage.getItem('user') || ''));
+   var decode = atob(JSON.parse(localStorage.getItem('user') || ''));
+    return (parseInt(decode));
 }
 
  login(email:string, password:string) {
@@ -33,7 +33,8 @@ export class UsersServiceService {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
           // [{}]
           if(res[0]){
-            localStorage.setItem('user', JSON.stringify(res[0].id));
+            var encode = btoa(res[0].id.toString());
+            localStorage.setItem('user', JSON.stringify(encode));
             console.log(res.join())
             // this.userSubject.next(res[0].id);
             return res[0];
@@ -67,7 +68,9 @@ update(id:number, user:IUsers) {
   return this.httpclient.put(`${environment.API_URL}/Users/${id}`, newuser)
       .subscribe((res => {
               // update local storage
-              localStorage.setItem('user', JSON.stringify(res));
+                var encode = btoa(id.toString());
+               localStorage.setItem('user', JSON.stringify(encode));
+              // localStorage.setItem('user', JSON.stringify(res));
               // publish updated user to subscribers
               // this.userSubject.next(res);
           return res;

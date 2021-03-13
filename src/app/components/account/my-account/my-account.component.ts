@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterEvent } from '@angular/router';
+import { abort } from 'process';
 import { Subscription } from 'rxjs';
 import { CityService } from 'src/app/Services/city.service';
 import { HomeService } from 'src/app/Services/home.service';
@@ -18,14 +19,18 @@ export class MyAccountComponent implements OnInit {
   user_id :number =0;
   wishlist:any[]=[];
   Myprograms:IProgram[]=[];
+  DoneProgram:IProgram[]=[];
   daysoftrip:number=0
+  ShowMyTrip:boolean=false;
+  ActiveTrip:boolean=false;
+  DoneTrip:boolean=false;
   currentUserSubscription: Subscription|null = null;
   constructor(private userService: UsersServiceService,
-     private homeservice:HomeService,
-     private programsService:CityService
+     private homeservice:HomeService
      ,private router:Router
      ,private wishlistservice:WishListService) {
     if(localStorage.getItem('user')){
+      
       this.user_id = this.userService.getUserID();
        this.MyAccount()
       console.log("first")
@@ -48,8 +53,22 @@ export class MyAccountComponent implements OnInit {
       .subscribe(
         (response)=>{
           this.Myprograms = response;
-          console.log(response);
-      });
+          if(response.length > 0){
+            this.ShowMyTrip = true;
+          }
+          this.Myprograms = response.filter((item:any) => this.Diff(item.to) >= 0);
+          if(this.Myprograms.length > 0){
+            this.ActiveTrip = true;
+          }
+          console.log(this.Myprograms);
+          this.DoneProgram = response.filter((item:any) => this.Diff(item.to) < 0);
+          if(this.DoneProgram.length > 0){
+            this.DoneTrip = true;
+          }
+          console.log(this.DoneProgram);
+        
+          })
+
    }
 
   ngOnInit(): void {
@@ -75,5 +94,10 @@ async MyAccount(){
   GoToDetials(id:any){
     this.router.navigate(['/programDetails',id]);
   }
-  
+  Diff(date:Date){
+   const nowdate = new Date();
+   const todate = new Date(date);
+   const diff = Math.floor((Date.UTC(todate.getFullYear(), todate.getMonth(), todate.getDate()) - Date.UTC(nowdate.getFullYear(), nowdate.getMonth(), nowdate.getDate())) / (1000 * 60 * 60 * 24));
+    return diff;
+  }
 }

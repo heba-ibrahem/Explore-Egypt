@@ -154,34 +154,107 @@ a.wrimagecard:hover, .card-header:hover {
 
 /* Tabs*/
 section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 section .section-title {
   text-align: center;
-  margin-bottom: 50px;
-  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  // text-transform: uppercase;
 }
 #tabs{
   color: #eee;
 }
 #tabs h6.section-title{
-  color: #eee;
+  color: #000;
 }
 
 #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   color: #f3f3f3;
   background-color: transparent;
   border-color: transparent transparent #f3f3f3;
-  border-bottom: 4px solid !important;
+  border-bottom: 3px solid !important;
   font-size: 20px;
   font-weight: bold;
 }
 #tabs .nav-tabs .nav-link {
   border: 1px solid transparent;
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
-  color: #eee;
+  border-top-left-radius: .2rem;
+  border-top-right-radius: .2rem;
+  color: #000;
   font-size: 20px;
 }
+.top-picks__desc {
+  margin-top: 10px;
+  margin-bottom: 78px;
+  font-size: 23px;
+  color: #525c65;
+}
+
+
+.trip .card{
+  width:100%;
+  background-color: white;
+  margin: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transition: .5s;
+}
+.trip .card .circle{
+  position: relative;
+  width:100%;
+  height: 150px;
+  background: rgb(14, 132, 243);
+  text-align: center;
+  border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+.trip .card .circle h2{
+  color: #eee;
+  font-size: 4em;
+  padding: 10px 0 0 0;
+}
+
+.trip .card .circle h6{
+  color: #eee;
+  font-size: 1.2em;
+  padding: 0px 0 10px 0;
+}
+.trip .card  .content{
+  bottom: 10px;
+  page-break-after: 20px;
+  padding: 20px 15px 15px 15px;
+ 
+}
+
+.trip .card  .content .des p{
+  opacity: 0;
+  display: block;
+  max-height: 0;
+   text-align: center;
+   color: #000;
+  
+}
+.trip .card  .content.title{
+  font-size: 20px;
+  font-weight: 200;
+  color: #505050;
+ 
+}
+.trip .card  .content a{
+ 
+  display: inline-block;
+  padding: 10px 20px;
+background: rgb(10, 132, 246);
+color: #fff;
+border-radius: 40px;
+text-decoration: none;
+margin-top: 20px ;
+margin-left: 20%;
+}
+
+
 

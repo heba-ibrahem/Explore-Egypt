@@ -24,6 +24,12 @@
     margin-bottom: 20px;
     background-color: #0067b9;
   }
+  @media (max-width: 768px) {
+  .section-7 .card {
+     margin-top: 20px;
+    margin-bottom: 30px;
+ 
+  }}
   .section-7 .card .card-header {
     overflow: hidden;
     width: 100%;
@@ -91,13 +97,8 @@
   .section-7 .see-more-article .meet-link-a {
     font-weight: 600;
     border: none;
-<<<<<<< HEAD
     text-align: left;
     font-size: 1.2rem;
-=======
-    text-align: start;
-    font-size: 1.1rem;
->>>>>>> 7ab1602b82a7d972699d6a45d633f48b32283fc4
     line-height: 1.25rem;
     letter-spacing: normal;
     border-radius: 4px;
