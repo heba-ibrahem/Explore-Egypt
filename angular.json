@@ -30,13 +30,21 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "extractCss": true,
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.min.css"
-             
-
-              
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              {
+                "input": "src/assets/css/bootstrap-rtl.min.css",
+                "bundleName": "bootstrapAr",
+                "inject": false
+             },
+             {
+               "input": "src/assets/css/rtl-fixes.css",
+               "bundleName": "StyleAr",
+               "inject": false
+             }
             ],
 
             "scripts": [
