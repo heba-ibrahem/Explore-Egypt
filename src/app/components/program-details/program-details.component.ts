@@ -57,17 +57,20 @@ export class ProgramDetailsComponent implements OnInit {
 
   deleteProgram(id:any) {
     console.log("delet")
-    if(confirm("Are you want to delete")){
+    console.log(id);
+    
+    // if(confirm("Are you want to delete")){
       this.city.deleteProgram(id).subscribe(
         (res) => {
-              console.log(res);
-              this.route.navigate(['/home']);
-              
-            },
-            (err) => { console.log(err) }
+          console.log(res);
+          this.route.navigate(['/home']).then(() => {
+            window.location.reload();
+          });       
+        },
+        (err) => { console.log(err) }
           
       )
-    }
+    // }
   }
   // edit(ID:number){
   //   this.route.navigate(['/editProgram', ID]);
@@ -81,3 +84,29 @@ export class ProgramDetailsComponent implements OnInit {
     }
 
 }
+
+
+/*
+{
+    "programName": "test user 1d",
+    "from": "2021-03-29",
+    "to": "2021-03-25",
+    "city": "1",
+    "fromCity": "2",
+    "toCity": "1",
+    "selHotel": {
+      "hotelName": "Concorde El Salam",
+      "roomPrice": "1169",
+      "adress": "65 Abdel Hamid Badawy Street, Heliopolis, Cairo, Egypt",
+      "contactInfo": "02 21800500"
+    },
+    "selTrain": {
+      "trainNumber": "905",
+      "destination": "Alexandria",
+      "ticketPrice": "130",
+      "departureTime": "21:00",
+      "arrivalTime": "09:40"
+    },
+    "id": 16
+  }
+*/

@@ -5,13 +5,22 @@ export interface IProgram {
     from: string;
     to: string;
     city?:string;
+    img?:string;
+    toCity?:string;
+    fromCity?:string;
+    
     selHotel:{
         hotelName: string,
-        roomPrice:string
+        roomPrice:string,
+        adress:string,
+        contactInfo:string,
     }
     selTrain: {
         trainNumber: number,
         destination: string,
-        ticketPrice:string
+        ticketPrice:string,
+        details:string,
+        arrivalTime:string,
+        departureTime:string,
       }
 }

@@ -16,9 +16,14 @@ import { IUsers } from 'src/app/viewmodels/iusers';
 })
 export class DesginProgramComponent implements OnInit {
 
+  // flitering
+  Trains: ITrain[]=[];
+  trainByCityFilter!: string;
+
   PorgramForm: FormGroup;
   CityList: any[] = [];
   DestenationList: any[]=[];
+  selectedhotelCity: number = 1;
   selectedCity: number = 1;
   selectedDestenation:number=1;
   hotelByCityID: IHotel[] = [];
@@ -39,31 +44,36 @@ export class DesginProgramComponent implements OnInit {
       this.CurrentUser = {};
     }
     this.PorgramForm = this.fb.group({
+      userID: [this.user_id,[Validators.required]],
       programName: ['', [Validators.required]],
       from: ['', [Validators.required]],
       to: ['', [Validators.required]],
-      city:['', [Validators.required]],
-      selHotel: [{ hotelName: "", roomPrice: "" }, [Validators.required]],
-      selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" }, [Validators.required]],
-
+      city:['',[Validators.required]],
+      // img:[''],
+      selHotel: [{ hotelName: "", roomPrice: "",adress:'' ,contactInfo:""}, [Validators.required]],
+      selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" ,details:"",departureTime:'',arrivalTime:''}, [Validators.required]],
     })
-    // this.CurrentUser = this.UserSevives.userValue;
-    // console.log(this.CurrentUser)
+
     this.program = {
       // "id": this.PorgramForm.value.id,
       userID: this.CurrentUser.id,
-      programName: this.PorgramForm.value.programName,
-      from: this.PorgramForm.value.from,
-      to: this.PorgramForm.value.to,
-      city:this.PorgramForm.value.city,
+      programName: '',
+      from: '',
+      to: '',
+      city:'',
+      // img:this.PorgramForm.value.img,
       selHotel: {
-        hotelName: this.PorgramForm.value.selHotel.hotelName,
-        roomPrice: this.PorgramForm.value.selHotel.roomPrice,
+        hotelName: '',
+        roomPrice: '',
+        adress:'' ,
+        contactInfo:""
       },
       selTrain: {
-        trainNumber: this.PorgramForm.value.selTrain.trainNumber,
-        destination: this.PorgramForm.value.selTrain.destination,
-        ticketPrice: this.PorgramForm.value.selTrain.ticketPrice,
+        trainNumber:  0,
+        destination: '',
+        ticketPrice: '',
+        details:"",
+        departureTime:'',arrivalTime:''
       }
 
     }
@@ -92,7 +102,6 @@ export class DesginProgramComponent implements OnInit {
     // console.log('Train')
     this.city.getTrainsByCityID(train.target.value).subscribe(
       (response) => {
-        // console.log('Train',this.trainByCityID)
         this.trainByCityID = response;
       },
       (err) => { console.log(err) }
@@ -102,7 +111,7 @@ export class DesginProgramComponent implements OnInit {
         this.trainToDest = response;
       },
       (err) => { console.log(err) }
-    )
+     )
 
   }
 
@@ -118,11 +127,11 @@ export class DesginProgramComponent implements OnInit {
   }
   save() {
     console.log("this.PorgramForm.value",this.PorgramForm.value)
-    this.city.saveProgram(this.program).subscribe(
+    this.city.saveProgram(this.PorgramForm.value).subscribe(
       (res) => {
-        // console.log(res);
-        // alert("saved")
-        this.route.navigate(['/programDetails',this.id]);
+         console.log(res);
+         alert("saved")
+        this.route.navigate(['/account/dashboard']);
       },
       (err) => { console.log(err) }
     );

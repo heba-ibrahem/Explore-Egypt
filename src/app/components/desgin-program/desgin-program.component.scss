@@ -28,3 +28,51 @@
 .overlap {
     margin-left: -9%;
 }
+
+.hr{
+    height: 5px;
+    background-color: #17a2b8;
+}
+
+.img{
+    height: 500px;
+    background-size: cover;
+    background-image: url(../../../assets/desginBg.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // color: white;
+}
+.imgtxt{
+    // margin-top: 50%;
+    text-align: center;
+    color: white;
+  
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.radioBtn{
+    display: none;
+}
+.radioBtnLabel{
+    border: 2px solid mediumseagreen;
+    color: mediumseagreen;
+    text-align: center;
+    // background-color: mediumseagreen;
+    border-radius: 5px;
+    padding: 10px 20px;
+    // position: relative;
+    // display: flex;
+    // align-items: center;
+    cursor: pointer;
+}
+.radioBtn:checked +.radioBtnLabel{
+    background-color: mediumseagreen;
+    color: white;
+}
+
