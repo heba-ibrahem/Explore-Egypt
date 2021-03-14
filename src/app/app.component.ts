@@ -18,22 +18,16 @@ export class AppComponent {
   
   loadStyles() {
     document.documentElement.setAttribute('lang', this.currentLang);
-    console.log(this.currentLang);
+    // console.log(this.currentLang);
     
     if (this.currentLang == 'ar') {
       document.body.classList.add('rtl');
       this.loadArStyles();
-      // require("style-loader!../assets/css/bootstrap-rtl.min.css");
-      // require("style-loader!../assets/css/rtl-fixes.css");
-    } else {
-      // require("style-loader!../assets/css/bootstrap.min.css")
     }
   }
 
-
   loadArStyles() {
     let headTag = this.document.getElementsByTagName("head")[0] as HTMLHeadElement;
-    // let existingLink = this.document.getElementById("arCss") as HTMLLinkElement;
     let rtlFixesBundleName = "StyleAr.css";
     let bootstrapRtlBundleName = "bootstrapAr.css";
 

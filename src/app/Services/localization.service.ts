@@ -26,6 +26,6 @@ export class LocalizationService {
     if (this.getCurrentLang() === 'ar') {
       return 'http://localhost:4000';
     }
-    return 'http://localhost:3000';
+    return 'https://explore-egypt-db.herokuapp.com';
   }
 }

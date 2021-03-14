@@ -7,11 +7,11 @@ const getCurrentLang = () :string => {
     !localStorage.getItem('current_lang') ||
     (localStorage.getItem('current_lang') === 'en')
   )
-    return 'http://localhost:3000';
+    return 'https://explore-egypt-db.herokuapp.com';
   else if ((localStorage.getItem('current_lang') === 'ar'))
     return 'http://localhost:4000';
   else 
-    return 'http://localhost:3000';
+    return 'https://explore-egypt-db.herokuapp.com';
 }
   
 

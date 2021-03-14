@@ -134,7 +134,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   logout() {
     this.userService.logout()
-    console.log("logged out")
+    console.log("logged out");
   }
   ngOnDestroy() {
     // unsubscribe to ensure no memory leaks
