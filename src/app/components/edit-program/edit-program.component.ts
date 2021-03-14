@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CityService } from '../Services/city.service';
-import { UsersServiceService } from '../Services/users-service.service';
-import { IHotel } from '../viewmodels/ihotel';
-import { IProgram } from '../viewmodels/iprogram';
-import { ITrain } from '../viewmodels/itrain';
-import { IUsers } from '../viewmodels/iusers';
+import { CityService } from '../../Services/city.service';
+import { UsersServiceService } from '../../Services/users-service.service';
+import { IHotel } from '../../viewmodels/ihotel';
+import { IProgram } from '../../viewmodels/iprogram';
+import { ITrain } from '../../viewmodels/itrain';
+import { IUsers } from '../../viewmodels/iusers';
 
 @Component({
   selector: 'app-edit-program',
@@ -44,8 +44,8 @@ export class EditProgramComponent implements OnInit {
       from: ['', [Validators.required ]],
       to: ['', [Validators.required]],
       city:['', [Validators.required]],
-      selHotel:[{hotelName:"", roomPrice:""}, [Validators.required]],
-      selTrain:[{trainNumber:0, destination:"", ticketPrice:""}, [Validators.required]],
+      selHotel: [{ hotelName: "", roomPrice: "",adress:'' ,contactInfo:""}, [Validators.required]],
+      selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" ,details:"",departureTime:'',arrivalTime:''}, [Validators.required]],
 
     })
     
@@ -61,11 +61,16 @@ export class EditProgramComponent implements OnInit {
       selHotel: {
         hotelName: this.PorgramForm.value.selHotel.hotelName,
         roomPrice: this.PorgramForm.value.selHotel.roomPrice,
+        adress: this.PorgramForm.value.selHotel.adress,
+        contactInfo: this.PorgramForm.value.selHotel.contactInfo,
       },
       selTrain: {
         trainNumber: this.PorgramForm.value.selTrain.trainNumber,
         destination: this.PorgramForm.value.selTrain.destination,
         ticketPrice: this.PorgramForm.value.selTrain.ticketPrice,
+        details: this.PorgramForm.value.selTrain.details,
+        departureTime: this.PorgramForm.value.selTrain.departureTime,
+        arrivalTime: this.PorgramForm.value.selTrain.arrivalTime,
       }}
   
   }

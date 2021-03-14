@@ -1,44 +1,11 @@
-<div class="container-fluid ">
-
+<div class="container-fluid bg-light">
   <br>
-  <!-- <div class="container">
-    <div class="row">
-      <div class="col-6">
-        <h3>Your program is saved <span><i class="fa fa-check-circle text-success mt-4"></i></span></h3>
-        <h4>Thank you for using our services to plan your trip</h4>
-        <div class="my-custom-card" style="background-image: url(../../../assets/images/train.jpg);">
-          <div class="overlay-content">
-            <div class="head">
-              <h4>Train number: {{prog?.selTrain?.trainNumber}}</h4>
-              <h4><span class="price">{{prog?.selTrain?.ticketPrice}}</span></h4>
-            </div>
-            <div class="content">
-              <h4>Date: {{prog?.from}}</h4>
-              <h4>Destination: {{prog?.selTrain?.destination}}</h4>
-            </div>
-            <div class="foot">
-              <h4>{{prog?.selHotel?.hotelName}} Hotel</h4>
-              <h4><span class="price">{{prog?.selHotel?.roomPrice}}</span> </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
-
-
-
   <div class="container  mt-4">
     <div class="mt-5 card center">
       <h1><i class="fa fa-check-circle text-success mt-4"></i></h1>
-      <!-- <h3 class="m-2 ">You're program is saved</h3> -->
       <h2 class="center text-capitalize">Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}},</h2>
       <h6 class="center">Thanks for using our service to plan your trip </h6>
-
       <hr class="hr col-3">
-
       <h2>This is your <span class="font-weight-bold ">{{prog?.programName}}</span> trip</h2>
       <h3>You will travel to </h3>
       <h2>{{prog?.selTrain?.destination}}</h2>
@@ -47,55 +14,65 @@
 
     <div class="mt-2 card">
       <div class="m-4">
-        <h2 class="text-light bg-info center">Your Transportion details</h2>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <td class="font-weight-bold">Train Nmber</td>
-              <td class="font-weight-bold">Ticket Price</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{prog?.selTrain?.trainNumber}}</td>
-              <td>{{prog?.selTrain?.ticketPrice}}</td>
-            </tr>
-          </tbody>
-        </table>
+
 
         <h2 class="text-light bg-info center">Your Hotel details</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <td class="font-weight-bold">Hotel</td>
-              <td class="font-weight-bold">Room price</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{prog?.selHotel?.hotelName}}</td>
-              <td>{{prog?.selHotel?.roomPrice}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="assets/hotel.jpg" class="card-img" width="50" height="200">
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <h2 class="col-md-12 tex">{{prog?.selHotel?.hotelName}}</h2>
+              <h5 class="col-md-12">{{prog?.selHotel?.roomPrice}}</h5>
+              <h6 class="col-md-12">{{prog?.selHotel?.roomPrice}}</h6>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <h2 class="text-light bg-info center">Your Transportion details</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <i class="fa fa-train icon"></i>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <h2 class="col-md-12 tex">Train No : {{prog?.selTrain?.trainNumber}}</h2>
+              <h5 class="col-md-12">Ticket price : {{prog?.selTrain?.ticketPrice}}</h5>
+              <h6 class="col-md-12">{{prog?.selTrain?.ticketPrice}}</h6>
+            </div>
+          </div>
+        </div>
+        
       </div>
 
     </div>
     <div class="mt-2 center ">
       <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{{prog?.id}}"> Edit</button>
 
-      <button class="btn-lg btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">Delete</button>
-      <!-- <div id="my-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" *ngIf="deleteProgram">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <p>Are you sure you want to delete program ?</p>
-                <button class="btn btn-danger col-3 m-1" (click)="deleteProgram(prog.id)">YES</button>
-                <button class="btn btn-primary col-3 m-1" (click)="deleteProgram=false">NO</button>
-              </div>
-            </div>
+      <button class="btn-lg btn-danger col-3 m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+
+    </div>
+    <div class="modal " id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete trip program</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-      </div> -->
+          <div class="modal-body">
+            <p>Are you sure you want to delete program ?</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">YES</button>
+            <button class="btn btn-primary col-3 m-1" data-dismiss="modal">NO</button>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>

@@ -7,7 +7,7 @@ import { CultureComponent } from './components/culture/culture.component';
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { EditProfileComponent } from './components/account/edit-profile/edit-profile.component';
 import { ExploreComponent } from './components/explore/explore.component';
-import { HomeComponent } from './components/home/home/home.component';
+
 import { LoginComponent } from './components/login/login.component';
 import { NeighbourhoodsComponent } from './components/neighbourhoods/neighbourhoods.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -17,10 +17,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
 import { AuthGuard } from './gurds/auth.guard';
 import { HotelsComponent } from './components/hotels/hotels.component';
-import { EditProgramComponent } from './edit-program/edit-program.component';
+import { EditProgramComponent } from './components/edit-program/edit-program.component';
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
 import { IsSignedInGuardGuard } from './gurds/is-signed-in-guard.guard';
 import { WishListComponent } from './components/account/wish-list/wish-list.component';
+import { HomeComponent } from './components/Home/home/home.component';
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},

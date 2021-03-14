@@ -57,17 +57,18 @@ export class ProgramDetailsComponent implements OnInit {
 
   deleteProgram(id:any) {
     console.log("delet")
-    if(confirm("Are you want to delete")){
+    // if(confirm("Are you want to delete")){
       this.city.deleteProgram(id).subscribe(
         (res) => {
               console.log(res);
+              // window.location.reload();
               this.route.navigate(['/home']);
               
             },
             (err) => { console.log(err) }
           
       )
-    }
+    // }
   }
   // edit(ID:number){
   //   this.route.navigate(['/editProgram', ID]);

@@ -60,11 +60,11 @@
                       </div>
                       <div class="content">
                         <div class="dis">
-                         <p style="text-align: center; font-size: 20px; font-weight: 600; color: rgb(138, 20, 30);"><span>Trip Name</span></p>
+                         <p style="text-align: center; font-size: 20px; font-weight: 600; color: rgb(138, 20, 30);"><span>{{item.programName}}</span></p>
                          <p><span class="title">Start At: </span><span>{{item?.from}}</span></p>
                          <p><span class="title"><span>Hotel Name: </span>{{item.selHotel.hotelName}}</span></p>
                         </div>
-                        <a [routerLink]="['/programDetails/{{item?.id}}']" >More Details</a>
+                        <a routerLink='/programDetails/{{item?.id}}' >More Details</a>
                       </div>
                     </div>
                   </div>
@@ -102,7 +102,7 @@
                          <p><span style="font-size: 15px; font-weight: 700;">Start At: </span><span style="font-size: 20px; font-weight: 600; color: rgb(51, 17, 20);">{{item?.from}}</span></p>
                          <p><span style="font-size: 15px; font-weight: 700;">Hotel Name: </span><span style="font-size: 20px; font-weight: 600; color: rgb(59, 19, 22);">{{item.selHotel.hotelName}}</span></p>
                         </div>
-                        <a [routerLink]="['/programDetails/{{item?.id}}']" >More Details</a>
+                        <a routerLink='/programDetails/{{item?.id}}' >More Details</a>
                       </div>
                     </div>
 

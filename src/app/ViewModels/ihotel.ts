@@ -6,4 +6,6 @@ export interface IHotel {
     roomPrice:string;
     contactInfo: string;
     name:string;
+    img:string;
+    adress:string;
 }
