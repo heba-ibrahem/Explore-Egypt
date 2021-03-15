@@ -4,6 +4,7 @@ import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { IUsers } from 'src/app/viewmodels/iusers';
 import { TranslateService } from '@ngx-translate/core';
 import { LocalizationService } from 'src/app/Services/localization.service';
+import { Router } from '@angular/router';
 // declare var $:JQueryStatic
 
 @Component({
@@ -27,6 +28,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   constructor(public translate: TranslateService,
     private localizationService: LocalizationService,
     private userService: UsersServiceService,
+    private router: Router
     ) {
     this.currentLang = this.localizationService.getCurrentLang();
     this.translate.use(this.currentLang);
@@ -133,7 +135,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
 
   logout() {
-    this.userService.logout()
+    this.userService.logout();
+    this.router.navigateByUrl('/home').then(()=>{
+      window.location.reload();
+    })
     console.log("logged out");
   }
   ngOnDestroy() {

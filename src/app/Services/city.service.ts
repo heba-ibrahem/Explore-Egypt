@@ -29,8 +29,8 @@ export class CityService {
    getAllHotels(): Observable<IHotel[]> {
     return this.httpclient.get<IHotel[]>(`${environment.API_URL}/hotels`);
   }
-  getTrainsBydest(destinationId:number): Observable<ITrain[]> {
-    return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?destinationId=${destinationId}`);
+  getTrainsBydest(cityID: number,destinationId:number): Observable<ITrain[]> {
+    return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?cityID=${cityID}&destinationId=${destinationId}`);
   }
 
   getProgramByID(pID:number): Observable<IProgram> {

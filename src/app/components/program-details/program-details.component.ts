@@ -14,7 +14,6 @@ import { IUsers } from 'src/app/viewmodels/iusers';
 export class ProgramDetailsComponent implements OnInit {
 
   prog: IProgram| null = null;
-  // program: any;
   programID: number = 0;
   user_id :number =0;
   CurrentUser: IUsers={};
@@ -41,7 +40,9 @@ export class ProgramDetailsComponent implements OnInit {
       
       this.getProgramByID(prgramID);
     },
-      (err) => console.log(err)
+      (err) => {console.log(err)
+      
+    }
     );
 
   }
@@ -51,7 +52,9 @@ export class ProgramDetailsComponent implements OnInit {
       (res)=>{
         this.prog=res;
       },
-      (err) =>{console.log(err)} 
+      (err) =>{console.log(err)
+        // alert("no program found")
+        this.route.navigateByUrl('/home')} 
     )
   }
 
@@ -72,9 +75,7 @@ export class ProgramDetailsComponent implements OnInit {
       )
     // }
   }
-  // edit(ID:number){
-  //   this.route.navigate(['/editProgram', ID]);
-  // }
+
   async loadAccount(){
      (await this.UserSevives.getUserById(this.user_id))
       .subscribe(user=>{
@@ -86,27 +87,4 @@ export class ProgramDetailsComponent implements OnInit {
 }
 
 
-/*
-{
-    "programName": "test user 1d",
-    "from": "2021-03-29",
-    "to": "2021-03-25",
-    "city": "1",
-    "fromCity": "2",
-    "toCity": "1",
-    "selHotel": {
-      "hotelName": "Concorde El Salam",
-      "roomPrice": "1169",
-      "adress": "65 Abdel Hamid Badawy Street, Heliopolis, Cairo, Egypt",
-      "contactInfo": "02 21800500"
-    },
-    "selTrain": {
-      "trainNumber": "905",
-      "destination": "Alexandria",
-      "ticketPrice": "130",
-      "departureTime": "21:00",
-      "arrivalTime": "09:40"
-    },
-    "id": 16
-  }
-*/
+

@@ -20,6 +20,7 @@ export class EditProgramComponent implements OnInit {
   PorgramForm!: FormGroup;
   CityList: any[] = [];
   selectedCity: number = 1;
+  //fliter train
   DestenationList: any[]=[];
   selectedDestenation:number=1;
   trainToDest: ITrain[]=[];
@@ -41,9 +42,11 @@ export class EditProgramComponent implements OnInit {
     }
     this.PorgramForm = this.fb.group({
       programName: ['', [Validators.required]],
-      from: ['', [Validators.required ]],
-      to: ['', [Validators.required]],
-      city:['', [Validators.required]],
+      fromDate: ['', [Validators.required ]],
+      toDate: ['', [Validators.required]],
+      cityID:[0, [Validators.required]],
+      fromCityID:['',[Validators.required]],
+      toCityID:['',[Validators.required]],
       selHotel: [{ hotelName: "", roomPrice: "",adress:'' ,contactInfo:""}, [Validators.required]],
       selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" ,details:"",departureTime:'',arrivalTime:''}, [Validators.required]],
 
@@ -55,9 +58,11 @@ export class EditProgramComponent implements OnInit {
       // "id": this.PorgramForm.value.id,
       userID: this.CurrentUser.id,
       programName: this.PorgramForm.value.programName,
-      from: this.PorgramForm.value.from,
-      to: this.PorgramForm.value.to,
-      city:this.PorgramForm.value.city,
+      fromDate: this.PorgramForm.value.from,
+      toDate: this.PorgramForm.value.to,
+      cityID:this.PorgramForm.value.city,
+      fromCityID:this.PorgramForm.value.fromCity,
+      toCityID:this.PorgramForm.value.fromCity,
       selHotel: {
         hotelName: this.PorgramForm.value.selHotel.hotelName,
         roomPrice: this.PorgramForm.value.selHotel.roomPrice,
@@ -81,10 +86,10 @@ export class EditProgramComponent implements OnInit {
     this.selectedHotel= train.target.value
   }
 
-  chooseCity(a:any) {
-    console.log(a.target.value);
+  chooseCity(hotel:any) {
+    console.log(hotel.target.value);
     // console.log('hotel')
-    this.city.getHotelsByCityID(a.target.value).subscribe(
+    this.city.getHotelsByCityID(hotel.target.value).subscribe(
       (response) => {
         // console.log('hotel',this.hotelByCityID)
         this.hotelByCityID = response;
@@ -94,18 +99,17 @@ export class EditProgramComponent implements OnInit {
   }
 
   chooseTrain(train:any) {
-    console.log(train.target.value);
-    // console.log('Train')
     this.city.getTrainsByCityID(train.target.value).subscribe(
       (response) => {
-        // console.log("Train", this.trainByCityID)
         this.trainByCityID = response;
       },
       (err) => { console.log(err) }
     )
-    this.city.getTrainsBydest(train.target.value).subscribe(
+  }
+  chooseTrainDes(traincity:any,trainDest:any){
+    this.city.getTrainsBydest(traincity.target.value,trainDest.target.value).subscribe(
       (response) => {
-        this.trainToDest = response;
+        this.trainByCityID = response;
       },
       (err) => { console.log(err) }
     )
@@ -130,6 +134,7 @@ export class EditProgramComponent implements OnInit {
         console.log(response)
       }
     )
+    
   }
 
   edit() {

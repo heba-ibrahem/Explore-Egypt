@@ -46,21 +46,25 @@ export class DesginProgramComponent implements OnInit {
     this.PorgramForm = this.fb.group({
       userID: [this.user_id,[Validators.required]],
       programName: ['', [Validators.required]],
-      from: ['', [Validators.required]],
-      to: ['', [Validators.required]],
-      city:['',[Validators.required]],
+      fromDate: ['', [Validators.required]],
+      toDate: ['', [Validators.required]],
+      cityID:[0,[Validators.required]],
+      fromCityID:['',[Validators.required]],
+      toCityID:['',[Validators.required]],
       // img:[''],
       selHotel: [{ hotelName: "", roomPrice: "",adress:'' ,contactInfo:""}, [Validators.required]],
-      selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" ,details:"",departureTime:'',arrivalTime:''}, [Validators.required]],
+      selTrain: [{ trainNumber: 0, destination: "", ticketPrice: "" ,details:"",departureTime:'',arrivalTime:''},[Validators.required] ],
     })
 
     this.program = {
       // "id": this.PorgramForm.value.id,
       userID: this.CurrentUser.id,
       programName: '',
-      from: '',
-      to: '',
-      city:'',
+      fromDate: '',
+      toDate: '',
+      cityID:0,
+      fromCityID:'',
+      toCityID:'',
       // img:this.PorgramForm.value.img,
       selHotel: {
         hotelName: '',
@@ -80,18 +84,24 @@ export class DesginProgramComponent implements OnInit {
   }
   selectHotel(hotel: any) {
     this.selectedHotel = hotel.target.value
+    console.log(hotel.target.value)
+
   }
   selectTrain(train: any) {
     this.selectedTrain = train.target.value
+    console.log(train.target.value)
   }
  
 
   chooseCity(a: any) {
-    // console.log('hotel')
+    console.log('hotel')
+    // console.log(a.target.value)
     this.city.getHotelsByCityID(a.target.value).subscribe(
       (response) => {
         // console.log('hotel',this.hotelByCityID)
         this.hotelByCityID = response;
+        // console.log(response)
+
       },
       (err) => { console.log(err) }
     )
@@ -99,20 +109,23 @@ export class DesginProgramComponent implements OnInit {
   }
 
   chooseTrain(train: any) {
-    // console.log('Train')
+    //  console.log(train.target.value)
+    console.log('Train')
     this.city.getTrainsByCityID(train.target.value).subscribe(
       (response) => {
         this.trainByCityID = response;
       },
       (err) => { console.log(err) }
     )
-    this.city.getTrainsBydest(train.target.value).subscribe(
-      (response) => { 
+      
+  }
+  chooseTrainDes(traincity:any,trainDest:any){
+    this.city.getTrainsBydest(traincity.target.value,trainDest.target.value).subscribe(
+      (response) => {
         this.trainToDest = response;
       },
       (err) => { console.log(err) }
-     )
-
+    )
   }
 
   ngOnInit(): void {
@@ -124,6 +137,7 @@ export class DesginProgramComponent implements OnInit {
       },
       (err) => { console.log(err) }
     )
+
   }
   save() {
     console.log("this.PorgramForm.value",this.PorgramForm.value)

@@ -1,4 +1,4 @@
-<div class=" ">
+<div >
   <!-- opening titel with img background -->
 <div class="img ">
   <h4>DISVOVER EGYPT CULTURE</h4>
@@ -23,15 +23,15 @@
         <div class="row center">
           <div class="form-group col-md-6">
             <div class="row ">
-              <label class="control-label col-md-3" for="from">From:</label>
-              <input type="date" class="form-control col-md-9" formControlName="from" placeholder="MM/DD/YYY" />
+              <label class="control-label col-md-3" for="fromDate">From:</label>
+              <input type="date" class="form-control col-md-9" formControlName="fromDate" placeholder="MM/DD/YYY" />
             </div>
           </div>
 
           <div class="form-group col-md-6">
             <div class="row ">
-              <label class="control-label col-md-3" for="to">To:</label>
-              <input type="date" class="form-control col-md-9" formControlName="to" placeholder="MM/DD/YYY" />
+              <label class="control-label col-md-3" for="toDate">To:</label>
+              <input type="date" class="form-control col-md-9" formControlName="toDate" placeholder="MM/DD/YYY" />
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
         <h3 class="mt-4 center">Select city to show recmoneded hotels </h3>
         <div class="form-group center">
           <label class=" form-label ">city</label>
-          <select class="form-control" (change)="chooseCity($event)">
+          <select class="form-control" (change)="chooseCity($event)" formControlName="cityID">
             <option>choose City</option>
             <option *ngFor="let selectedhotelCity of CityList" [value]='selectedhotelCity.id'>{{selectedhotelCity.name}}
             </option>
@@ -65,29 +65,19 @@
                 <h5 class="mr-2">City: {{hotel.adress}}</h5>
                 <h5 class="mr-2">Contact Info: {{hotel.contactInfo}}</h5>
               </div>
-
-              <!-- <div class="card-text col-md-4"> -->
-
                 <div class="col-md-4">
                  
                   <h4 class="  font-weight-bold text-info">Room Price: {{hotel.roomPrice}}</h4>
 
                 </div>
-
-                <input type="radio"  name="selTrain" 
-                  formControlName="selHotel"
-                  [value]="{hotelName:hotel.hotelName,roomPrice:hotel.roomPrice,adress:hotel.adress,contactInfo:hotel.contactInfo}" name="selHotel"
-                  (change)="selectHotel($event)" />
-                <!-- <div class="col-md-2">
-                  
-                  <input type="radio" name="selHotel" id="selectBtn" class="radioBtn" formControlName="selHotel"
+                  <div class="col-md-2">
+                  <input type="radio" name="selHotel" [id]="'selectBtn'+hotel.id" class="radioBtn" formControlName="selHotel"
                     [value]="{hotelName:hotel.hotelName,roomPrice:hotel.roomPrice,adress:hotel.adress,contactInfo:hotel.contactInfo}"
                     name="selHotel" (change)="selectHotel($event)" />
-                  <label for="selectBtn" class="radioBtnLabel ">Select</label>
-                </div> -->
+                  <label [for]="'selectBtn'+hotel.id" class="radioBtnLabel ">Select</label>
+                </div> 
+             
 
-
-              <!-- </div> -->
             </div>
           </div>
         </div>
@@ -100,7 +90,7 @@
           <div class="form-group col-md-6">
             <div class="row">
               <label class="form-label col-md-3">from</label>
-              <select class="form-control col-md-9" (change)="chooseTrain($event)">
+              <select class="form-control col-md-9" (change)="chooseTrain($event)" formControlName="fromCityID">
                 <option>choose City</option>
                 <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}</option>
               </select>
@@ -110,7 +100,7 @@
           <div class="form-group col-md-6 ">
             <div class="row">
               <label class="form-label col-md-3">to</label>
-              <select class="form-control col-md-9" (change)="chooseTrain($event)">
+              <select class="form-control col-md-9" (change)="chooseTrainDes($event,selectedCity)" formControlName="toCityID">
                 <option>choose City</option>
                 <option *ngFor="let selectedDestenation of CityList" [value]='selectedDestenation.id'>
                   {{selectedDestenation.name}}</option>
@@ -122,7 +112,7 @@
 
         <!-- Train card -->
         <div class="card bg-light text-dark my-3"
-          *ngFor="let train of  trainByCityID; let destination of  trainToDest; let SN=index">
+          *ngFor="let train of  trainByCityID; let SN=index">
           <div class="card-body  row ">
             <!-- trin number -->
             <h5 class="card-title col-md-4 ">
@@ -161,23 +151,24 @@
 
                 <div class="col-md-2">
                   <input type="radio" name="selTrain" [id]="'selectBtn'+train.id" class="radioBtn" formControlName="selTrain"
-                    [value]="{trainNumber:train.trainNumber,destination:train.destination,ticketPrice:train.ticketPrice,departureTime:train.departureTime,arrivalTime:train.arrivalTime}"
+                    [value]="{trainNumber:train.trainNumber,destination:train.destination,ticketPrice:train.ticketPrice,departureTime:train.departureTime,arrivalTime:train.arrivalTime,details:train.details}"
                     (change)="selectTrain($event)">
                   <label [for]="'selectBtn'+train.id" class="radioBtnLabel ">Select</label>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
 
 
-        <div>
-          <button type="submit" [disabled]="PorgramForm.invalid" class="btn btn-success col-md-5"> Save your program
-          </button>
-        </div>
+       
         <br> <br>
       </div>
+
+    </div>
+    <div>
+      <button type="submit" [disabled]="PorgramForm.invalid" class="btn btn-success col-md-5"> Save your program
+      </button>
     </div>
   </form>
 
