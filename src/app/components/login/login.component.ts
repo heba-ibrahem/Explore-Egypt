@@ -46,8 +46,11 @@ export class LoginComponent implements OnInit {
     if (localStorage.getItem('user')) {
       this.islogged = false;
       this.user_id = this.userService.getUserID();
-      this.router.navigateByUrl('/home');
-      this.LoadAccounte(this.user_id);
+      this.router.navigateByUrl('/home').then(()=>{
+        this.LoadAccounte(this.user_id);
+        window.location.reload();
+      });
+    
     } else if (!(localStorage.getItem('user'))){
       this.user_id = 0;
       this.islogged = true;
