@@ -1,0 +1,165 @@
+
+@import '/src/scss/variables';
+@import '/src/scss/mixins';
+select,option
+{
+height: 7vh;
+}
+.city p{display: inline;
+margin-right: 20vw;
+margin-bottom: 0;
+padding: 0;
+font-size: 1.4em;}
+.city{display: flex;
+justify-content: space-evenly;
+align-items: center;
+border: 1px gainsboro solid;}
+#cityFiltter{
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 3vh;
+}
+hr{width: 75%;
+margin: 0 auto;
+margin-bottom:2vw ;}
+
+.art{
+margin: 0 auto;
+}
+.t{
+   display: flex;
+  flex-direction: row;margin-bottom: 5vw;
+}
+.artDet{
+margin: 0;
+align-self: center;
+display: flex;
+height: max-content;
+flex-direction: column;
+}
+.img{
+height: 20vw;
+width: 30vw;
+margin-right: 2vh;
+border-radius:  30px 15px 5px 15px;
+align-self: center;
+}
+.title1{
+margin-bottom: 2vw;
+font-size: 3vw;
+ @media (min-width: 576px) {font-size: 2vw;
+
+   }
+
+// @media(max-width: 768px) {
+//   font-size: 1.2vw;
+// }
+// @media (min-width: 900px) { font-size: 1.4vw;
+
+
+// }
+
+ }
+
+.vertical {
+  transform: rotate(270deg);
+  transform-origin: left top 0;
+  margin-left: 0px;
+font-size: 1.1vw;
+padding: 0;
+height: 0;
+align-self: flex-end;
+text-align: center;
+margin-bottom: 4vw;
+letter-spacing: 8px;
+}
+.vertical2 {
+  transform: rotate(270deg);
+  transform-origin: left top 0;
+  margin-left: 0px;
+font-size: 1.2vw;
+padding: 0;
+height: 0;
+align-self: center;
+text-align: center;
+margin-top: 5vw;
+letter-spacing: 10px;
+}
+
+.likeController {
+  right: 30px;
+  position: absolute;
+  top: 90px;
+align-self: end;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid $white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 50;
+  font-size: 10px;
+  color: $main-blue;
+  transition: all 0.3s;
+  @media (min-width: 576px) {right: 60px;    top: 80px;
+    width: 25px;
+      height: 25px;
+      font-size: 12px;
+ }
+
+  @media(min-width: 760px) {
+right: 60px;
+top:120px;
+width: 45px;
+  height: 45px;
+  font-size: 16px;
+
+
+  }
+  @media (min-width: 1000px) {top: 170px;
+    width: 45px;
+margin-top: 4.2vw;
+    height: 45px;
+    font-size: 16px;
+
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $main-blue;
+    transition: all 0.3s;
+
+  }
+  &:hover {
+    color: white;
+  }
+  &:hover::after {
+    top: 0;
+  }
+  span {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    @include flexCenter();
+  }
+  span.hide {
+    display: none;
+  }
+}
+.cityAgain{
+margin-top: 2vw;
+font-size: 1.4vw;
+font-weight: 600;
+}
+

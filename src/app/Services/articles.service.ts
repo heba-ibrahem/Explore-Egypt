@@ -15,11 +15,11 @@ export class ArticlesService {
   // Get all articles
   getAll(): Observable <Article[]>
   {
-    return this.http.get<Article[]>(`${environment.API_URL}/articles`);
+    return this.http.get<Article[]>(`${environment.API_URL}/activitiesArticles`);
   }
   getArticleByID(aID: number): Observable <Article>{
 
-    return this.http.get<Article>(`${environment.API_URL}/articles/${aID}`);
+    return this.http.get<Article>(`${environment.API_URL}/activitiesArticles/${aID}`);
   }
   // Get articles by page
   getArticlesByPage(page: string) :Observable<IArticle[]> {

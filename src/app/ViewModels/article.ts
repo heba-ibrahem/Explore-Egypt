@@ -4,7 +4,7 @@ export interface Article {
   description: string;
   img: string;
   section: string;
-  content?: string;
+  content?: string[];
   Images?: string[];
 dep?:number[];
 city?:string;

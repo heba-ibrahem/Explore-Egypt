@@ -14,13 +14,13 @@ export class PageBannerComponent implements OnInit {
   @ViewChild('play_btn') play_btn: ElementRef|undefined;
   @ViewChild('pause_btn') pause_btn: ElementRef|undefined;
   @Input() pageDetails: IPage = {id:0, name:'', title:'', bannerImg:'', bannerVideo:'', description:''}
-  
+
   constructor() { }
 
   ngOnInit(): void {
-  
+
   }
-  
+
 
   playVideo() {
     if (this.banner_video_container) {

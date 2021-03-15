@@ -9,10 +9,13 @@ import { IPage } from '../viewmodels/IPage';
 })
 export class PageDetailsService {
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
   }
 
   getPageDetails(pageName: string) :Observable<IPage[]> {
     return this.http.get<IPage[]>(`${environment.API_URL}/Pages?name=${pageName}`);
+  }
+  getPageDetailsById(id: number) :Observable<IPage> {
+    return this.http.get<IPage>(`${environment.API_URL}/Pages/${id}`);
   }
 }

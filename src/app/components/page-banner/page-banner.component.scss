@@ -43,6 +43,15 @@
     }
   }
 
+  .page-title2 {
+    padding: 25px 0 0 0;
+    h2 {
+      padding: 0 35px;
+      font-size: 56px;
+      color: #000;
+      @media(max-width: 992px) {
+        font-size: 36px;
+      }}}
   .page-title {
     padding: 25px 0;
     border-bottom: 1px solid #e1e1e1;
@@ -91,6 +100,14 @@
       color: $text-muted;
     }
   }
+  .caption2 {
+    padding: 5px 0 0 0;
+    p {
+      padding-left: 25px;
+      font-size: 18px;
+      color: $text-muted;
+    }
+  }
   .video-controls {
     position: absolute;
     top: 80px;
@@ -120,7 +137,7 @@
       height: 100%;
       background-color: $main-blue;
       transition: all 0.3s;
-    
+
     }
     &:hover {
       color: $white
@@ -139,4 +156,7 @@
       display: none;
     }
   }
+}
+.desc{
+margin-left: 20;
 }

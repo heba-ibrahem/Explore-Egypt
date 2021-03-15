@@ -19,6 +19,7 @@ export class ActivitiesComponent implements OnInit {
   departments: IactivitiesDep[]=[];
   curatorsList:Curators[]=[]
   ArticleList:Article[]=[]
+  threeArt:Article[]=[]
   constructor(private pageDetailsService: PageDetailsService,private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
     this.pageDetails = {
       id: 0,
@@ -58,7 +59,12 @@ export class ActivitiesComponent implements OnInit {
     let sup3= this.Article.getAll().subscribe(
       (response) => {
         this.ArticleList = response;
-        console.log(this.ArticleList);
+do{
+  const random = Math.floor(Math.random() * this.ArticleList.length);
+if(!this.threeArt.includes(this.ArticleList[random]))
+ this.threeArt.push(this.ArticleList[random])}
+while(this.threeArt.length<3)
+
       },
       (err) => { console.log(err) }
     );

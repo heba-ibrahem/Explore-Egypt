@@ -1,94 +1,90 @@
 <br>
 <div class="page-title border-bottom-0">
   <div class="container">
-      <h3>
-{{this.anArticle[0].title}}
-      </h3>
+    <h3>
+      {{this.anArticle[0]?.title}}
+    </h3>
   </div>
 </div>
 <div class="container-fluid" id="content">
   <div class="container border-top">
     <br>
-      <div class="h__desc m-3">
-          <p class="body-medium uppercase d-inline">Mon, 28 December 2020</p>
+    <div class="h__desc m-3">
+      <p class="body-medium uppercase d-inline">Mon, 28 December 2020</p>
 
-          <br>
+      <br>
+    </div>
+    <div class="container">
+      <p class="text-left  startp d-inline">
+        {{this.anArticle[0]?.description}}</p>
+    </div>
+    <br>
+    <button class="like btn">
+      <div class="likeController"><span #like_btn class="like"><i class="fa fa-heart"></i></span></div>
+    </button>
+    <br> <!-- Slider main container -->
+    <div class="swiper-container swiper_1" [swiper]="swiper_config_1">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="row ml-0 swiper-slide" *ngFor="let im of anArticle[0]?.Images">
+          <div class="col-md-12 ">
+            <div class="img-container">
+              <img class="img-fluid imm mx-auto d-block" [src]="'assets/' + im" alt="">
+            </div>
+          </div>
+
+        </div>
+
       </div>
-<div class="container"><p class="text-left  startp d-inline">
-  {{this.anArticle[0].description}}</p></div>
-<br>
-          <button class="btn float-right" id="lovebtn">
-              <i class="fa fa-heart"></i>
-     </button>
-<br> <!-- Slider main container -->
-<div class="swiper-container swiper_1" [swiper]="swiper_config_1">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="row ml-0 swiper-slide" *ngFor="let im of anArticle[0].Images">
-      <div class="col-md-12 ">
-        <div class="img-container">
-          <img class="img-fluid imm mx-auto d-block" [src]="'assets/' + im" alt="">
+      <!-- If we need pagination -->
+      <div class="swiper-pagination swiper-pagination_1"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev">
+        <span><i class="fa fa-angle-left"></i></span>
+      </div>
+      <div class="swiper-button-next">
+        <span><i class="fa fa-angle-right"></i></span>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div *ngFor="let sec of anArticle[0]?.content" class="container">
+    <p class="malldes text-left mt-3 ">{{sec}}</p>
+  </div>
+  <hr>
+
+  <br>
+  <br>
+  <div class="container">
+
+    <h3>Do you like it? Share it</h3>
+    <div class="effect jaques">
+      <!-- <div class="buttons">
+        <div class="elfsight-app-fcc204ea-65c5-41d1-8697-1b8ea55060b1"></div>
+      </div> -->
+      <div class="addthis_inline_share_toolbox icons"></div>      <br>
+      <h2>Recommended reads</h2>
+
+      <br>
+      <br>
+      <div class="row myrow afterart">
+
+        <div class="col-lg-4 col-8 m-auto  a2" *ngFor='let A of threeArt'  >
+          <a  >
+            <div (click)="refreshPage(A.id)" class="card threeArt" style=" border: none;
+      box-shadow: none;"><img  class="card-img-top" id="imgcard" src="assets/{{A.img}}">
+              <div class="card-body">
+                <h4 class="card-title">{{A?.title}}
+                </h4>
+                <p class="card-text d-lg-block d-md-none d-none">{{A.description}}</p>
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
-
     </div>
-
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination swiper-pagination_1"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev">
-    <span><i class="fa fa-angle-left"></i></span>
-  </div>
-  <div class="swiper-button-next">
-    <span><i class="fa fa-angle-right"></i></span>
-  </div>
-</div>
-</div>
-<br>
-  <p class="malldes text-center mt-3 ">{{this.anArticle[0].content}}</p>
-
-   <hr>
-
-<br>
-<br>
-<div class="container">
-
-<h3>Do you like it? Share it</h3>
-<div class="effect jaques">
-<div class="buttons">
-  <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook"></i></a>
-  <a href="#" class="tw" title="Join us on Twitter"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="g-plus" title="Join us on Google+"><i class="fa fa-google-plus"></i></a>
-<a href="#" class="pinterest" title="Join us on Pinterest"><i class="fa fa-pinterest-p"></i></a>
-  <a href="#" class="insta" title="Join us on Instagram"><i class="fa fa-instagram"></i></a>
-</div>
-</div>
-<br>
-<h2>Recommended reads</h2>
-<br>
-<br>
-<div class="row myrow afterart">
-  <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
-    <div  *ngIf="A.section==='Keep up with the new'">
-      <a [routerLink]="'/article/'+(A.id)">
-    <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
-      <div class="card-body">
-        <h4 class="card-title">{{A.title}}
-        </h4>
-        <p class="card-text d-none d-md-block">{{A.description}}
-        </p>
-      </div>
-    </div>
-  </a>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
 </div>

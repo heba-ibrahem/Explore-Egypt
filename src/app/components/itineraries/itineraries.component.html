@@ -1,0 +1,52 @@
+<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+<hr>
+<div class="form-group col-lg-6 col-8" id="cityFiltter">
+  <!-- <select class="form-control col-5 m-auto" >
+    <option value="" disabled selected>Select your option</option>
+
+<option></option>
+  </select> -->
+  <div class="input-group">
+    <button class="btn  col-lg-12 dropdown-toggle city" type="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="true">
+      <p>City</p>
+    </button>
+    <div class="dropdown-menu col-lg-12 col-12">
+      <a class="dropdown-item" *ngFor=""></a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="col-10 art" *ngFor='let a of mixed;let i =index'>
+    <div  class="t">
+    <img *ngIf="a.title"class="img" [src]="'assets/' + a.img">
+    <img *ngIf="a.hotelName"class="img" [src]="a.img">
+      <h6 *ngIf="a.city?.toLocaleLowerCase()=='alexandria'" class="vertical d-md-none d-none  d-lg-block" style="width: 45px;">
+        {{a.city?.toUpperCase()}}</h6>
+      <h6 *ngIf="a.city?.toLocaleLowerCase()!='alexandria'" class="vertical2 d-md-none d-none  d-lg-block" style="width: 45px;">
+        {{a.city?.toUpperCase()}}</h6>
+      <div class="artDet">
+<p class="cityAgain d-lg-none d-block">{{a.city}}</p>
+        <h4 *ngIf="a.title" class="title1">{{a.title}}
+        </h4>
+         <h4 *ngIf="a.hotelName" class="title1">{{a.hotelName}}
+        </h4>
+        <p *ngIf="a.description" class="d-md-none d-none  d-lg-block">
+          {{a.description}}
+        </p>
+        <p *ngIf="a.adress" class="d-md-none d-none  d-lg-block">
+          {{a.adress}}
+        </p>
+        <button class="like btn">
+          <div class="likeController"><span #like_btn class="like"><i class="fa fa-heart"></i></span></div>
+        </button>
+        <div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

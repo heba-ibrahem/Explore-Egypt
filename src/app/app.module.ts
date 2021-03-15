@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -21,13 +21,11 @@ import { ArticleComponent } from './components/article/article.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 // Swiper.js
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { ExplorDepComponent } from './components/explor-dep/explor-dep.component';
-
 import { StartPlanningYourTripComponent } from './components/start-planning-your-trip/start-planning-your-trip.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -53,7 +51,8 @@ import { NewEventsHomeComponent } from './components/Home/week-events-home/week-
 import { ExplorEgyptHomeComponent } from './components/Home/explor-egypt-home/explor-egypt-home.component';
 import { ActivitiesHomeComponent } from './components/Home/activities-home/activities-home.component';
 import { PlanTripHomeComponent } from './components/Home/plan-trip-home/plan-trip-home.component';
-
+import{ItinerariesComponent} from './components/itineraries/itineraries.component'
+import { from } from 'rxjs';
 // Swiper.js default config
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -89,7 +88,9 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     StartPlanningYourTripComponent,
     EditProgramComponent,
     MyAccountComponent,
-    WishListComponent
+    WishListComponent,
+    ItinerariesComponent
+
   ],
   imports: [
     BrowserModule,

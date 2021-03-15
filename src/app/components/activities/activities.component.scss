@@ -97,11 +97,14 @@ a:active {
 }
 
 .social_icon span {
-    font-size: 3vw;
+    font-size: 8vw;
     margin-left: 10px;
     color: #b9b7ae;
+    @media (min-width: 576px) {   font-size: 6vw;
+    }
+    @media (min-width: 768px) {   font-size: 4vw;
+    }
+    @media (min-width: 992px) {   font-size: 3vw }
+
 }
-#imgcard
-{
-height: 40vh;
-}
+

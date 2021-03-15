@@ -34,12 +34,12 @@ export class HomeComponent implements OnInit {
         this.wishlist = response.map((item: { ArID: any; }) =>{
          return  item.ArID;
       })
-    
+
     });
     this.wishlistservice.getAllWishList().subscribe(
       (response)=>{
         this.wishlistOfUserId = response.filter((item:any) => item.uID === this.user_id);
-  
+
     console.log(this.wishlistOfUserId)
     });
     this.pageDetails = {
@@ -50,15 +50,15 @@ export class HomeComponent implements OnInit {
       bannerVideo: "https://mdbootstrap.com/img/video/Sail-Away",
       description: ""
     }
-    
+
     if(localStorage.getItem('user')){
       this.user_id = this.userservice.getUserID();
       console.log(this.user_id)
       this.LoadAccount();
     }
-   } 
+   }
    async LoadAccount(){
-  
+
     this.currentUserSubscription =  (await (await (this.userservice.getUserById(this.user_id)))
      .subscribe(user=>{
        this.CurrentUser = user;
@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
        console.log(this.WeekEvent)
       },
       (err)=>{console.log(err)}
-    ); 
+    );
     this.homeservice.getAllArticles().subscribe(
       (response)=>{
         this.ActivityList = response;
@@ -111,7 +111,7 @@ export class HomeComponent implements OnInit {
     this.pause_btn?.nativeElement.classList.add('hide');
     this.play_btn?.nativeElement.classList.remove('hide');
   }
-  
+
   iaFav(id:number){
   return this.wishlistOfUserId?.find((item:any) => item.ArID === id && item.uID === this.user_id)
   }

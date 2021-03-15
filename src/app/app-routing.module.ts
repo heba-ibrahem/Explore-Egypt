@@ -7,7 +7,6 @@ import { CultureComponent } from './components/culture/culture.component';
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { EditProfileComponent } from './components/account/edit-profile/edit-profile.component';
 import { ExploreComponent } from './components/explore/explore.component';
-
 import { LoginComponent } from './components/login/login.component';
 import { NeighbourhoodsComponent } from './components/neighbourhoods/neighbourhoods.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -22,6 +21,7 @@ import { MyAccountComponent } from './components/account/my-account/my-account.c
 import { IsSignedInGuardGuard } from './gurds/is-signed-in-guard.guard';
 import { WishListComponent } from './components/account/wish-list/wish-list.component';
 import { HomeComponent } from './components/Home/home/home.component';
+import { ItinerariesComponent } from './components/itineraries/itineraries.component';
 
 
 const routes: Routes = [
@@ -33,6 +33,7 @@ const routes: Routes = [
   {path: 'culture', component: CultureComponent},
   {path: 'neighbourhoods', component: NeighbourhoodsComponent},
   {path: 'activities', component: ActivitiesComponent},
+  {path: 'itineraries', component: ItinerariesComponent},
   {path: 'article/:ID', component: ArticleComponent},
   {path: 'explorDep/:ID', component: ExplorDepComponent},
   {path: 'planProgram', component: PlanProgramComponent},

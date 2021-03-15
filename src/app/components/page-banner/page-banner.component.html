@@ -1,5 +1,3 @@
-
-
 <!-- Page Header -->
 <div class="page-header">
   <div class="history">
@@ -13,12 +11,17 @@
       </ul>
     </div>
   </div>
-  
+
   <div class="safety-post">
-    <p>{{"SAFETY" | translate}} <a href="#">{{"ADVISORY" | translate}}</a></p>
+    <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
   </div>
-  
-  <div class="page-title">
+
+  <div *ngIf="pageDetails.bannerImg" class="page-title">
+    <div class="container">
+      <h2>{{pageDetails?.title}}</h2>
+    </div>
+  </div>
+  <div *ngIf="!pageDetails.bannerImg" class="page-title2">
     <div class="container">
       <h2>{{pageDetails?.title}}</h2>
     </div>
@@ -27,11 +30,11 @@
 
 <!-- Banner -->
 <section class="banner">
-  <div class="video-controls">
+  <div *ngIf="pageDetails.bannerImg" class="video-controls">
     <span (click)="playVideo()" #play_btn class="play"><i class="fa fa-play"></i></span>
     <span (click)="pauseVideo()" #pause_btn class="pause hide"><i class="fa fa-pause"></i></span>
   </div>
-  <div #banner_image_container class="img-container curved-img">
+  <div *ngIf="pageDetails.bannerImg" #banner_image_container class="img-container curved-img">
     <!--  -->
     <img [src]="'assets/images/' + pageDetails?.bannerImg" alt="">
     <div #banner_video_container class="video-container d-none">
@@ -42,11 +45,20 @@
       </video>
     </div>
   </div>
-  
-  <div class="caption">
+
+  <div *ngIf="pageDetails.bannerImg" class="caption">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 offset-lg-1">
+        <div  class="col-md-6 offset-lg-1">
+          <p>{{pageDetails?.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!pageDetails.bannerImg" class="caption2">
+    <div class="container">
+      <div class="row">
+        <div  class="col-md-8">
           <p>{{pageDetails?.description}}</p>
         </div>
       </div>

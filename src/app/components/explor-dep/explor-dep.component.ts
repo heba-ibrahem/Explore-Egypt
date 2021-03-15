@@ -5,7 +5,7 @@ import { IactivitiesDep } from 'src/app/viewmodels/iactivities-dep';
 import { Curators } from 'src/app/viewmodels/curators';
 import { IPage} from 'src/app/viewmodels/IPage';
 import { Article } from 'src/app/viewmodels/article';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ArticlesService } from 'src/app/Services/articles.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';
 @Component({
@@ -19,7 +19,9 @@ export class ExplorDepComponent implements OnInit {
   departments: IactivitiesDep[]=[];
   curatorsList:Curators[]=[]
   ArticleList:Article[]=[]
-  constructor(private pageDetailsService: PageDetailsService,private router: Router,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
+currentDep:IactivitiesDep[]=[]
+depId:string|null=''
+  constructor(private pageDetailsService: PageDetailsService,private router: Router,public route:ActivatedRoute,public ActivitiesDepService: ActivitiesDepService,public curators:CuratorsService,public Article:ArticlesService) {
     this.pageDetails = {
       id: 0,
       name: '',
@@ -32,11 +34,14 @@ export class ExplorDepComponent implements OnInit {
   }
 
 
-  getPageDetails() {
-    this.pageDetailsService.getPageDetails("New").subscribe(
+  getPageDetails(id:number) {
+    this.pageDetailsService.getPageDetailsById(id+7).subscribe(
       (res)=> {
-        this.pageDetails = res[0];
-        this.pageDetails.name = `${this.pageDetails.name} `;
+console.log(this.pageDetails)
+        this.pageDetails = res;
+         this.pageDetails.name = `${this.pageDetails.name} `;
+        console.log(res)
+
       },
       (err)=> {console.log(err)}
     )
@@ -63,8 +68,26 @@ export class ExplorDepComponent implements OnInit {
       },
       (err) => { console.log(err) }
     );
-    this.getPageDetails()
+this.depId = this.route.snapshot.paramMap.get("ID");
 
+    let sup4= this.ActivitiesDepService.getDepByID(Number(this.depId)).subscribe(
+      (response) => {
+        this.currentDep[0] = response;
+        this.pageDetailsService.getPageDetails(this.currentDep[0].name).subscribe(
+          (res)=> {
+            this.pageDetails = res[0];
+            this.pageDetails.name = `${this.pageDetails.name} `;
+          },
+          (err)=> {console.log(err)}
+        )
+
+        console.log(this.currentDep[0].title);
+      },
+      (err) => { console.log(err) }
+    );
+
+    this.getPageDetails(Number(this.depId));
   }
+
 
 }

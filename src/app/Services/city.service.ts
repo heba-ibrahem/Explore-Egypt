@@ -26,7 +26,9 @@ export class CityService {
   getTrainsByCityID(cityID: number): Observable<ITrain[]> {
     return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?cityID=${cityID}`);
   }
-
+   getAllHotels(): Observable<IHotel[]> {
+    return this.httpclient.get<IHotel[]>(`${environment.API_URL}/hotels`);
+  }
   getTrainsBydest(destinationId:number): Observable<ITrain[]> {
     return this.httpclient.get<ITrain[]>(`${environment.API_URL}/trains?destinationId=${destinationId}`);
   }
@@ -56,7 +58,7 @@ export class CityService {
       //,'Accept':' */*'
       //,'Authorization': 'my-auth-token'
         })};
-      
+
     return this.httpclient.get<any>(`${environment.API_URL}/programs/${programID}`);
 
   }
@@ -69,7 +71,7 @@ export class CityService {
       //,'Accept':' */*'
       //,'Authorization': 'my-auth-token'
         })};
-      
+
     return this.httpclient.put<any>(`${environment.API_URL}/programs/${id}` ,program, httpOptions);
   }
 
@@ -79,7 +81,7 @@ export class CityService {
       //,'Accept':' */*'
       //,'Authorization': 'my-auth-token'
         })};
-      
+
     return this.httpclient.delete<any>(`${environment.API_URL}/programs/${id}`, httpOptions);
   }
 }

@@ -1,5 +1,5 @@
 <app-page-banner [pageDetails]="pageDetails"></app-page-banner>
-<div class="page-title">
+ <div class="page-title">
   <div class="container">
   </div>
   <div class="container-fluid" id="rows">
@@ -7,27 +7,40 @@
     <h3 id="h">Start exploring
     </h3>
     <br>
-  <div class="row">
+<div class="container-fluid">
+     <div class="row">
 
-    <div class="col-lg-3 col-6" *ngFor='let dep of departments;let i =index'>
-      <a [routerLink]="'/explorDep/'+dep.id">
+      <div class="row">
+        <div class="col-lg-3 col-6" *ngFor='let dep of departments;let i =index '>
 
-              <div class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
-                <div class="card-body">
-                  <h4 class="card-title">{{dep.title}}
-                  </h4>
-                  <p class="card-text d-none d-md-block">{{dep.description}}
-                  </p>
+          <a *ngIf="dep.id!=8" [routerLink]="'/explorDep/'+dep.id">
+                  <div class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
+                    <div class="card-body">
+                      <h4 class="card-title">{{dep.title}}
+                      </h4>
+                      <p class="card-text d-none d-md-block">{{dep.description}}
+                      </p>
+                    </div>
+                  </div></a>
+                  <a *ngIf="dep.id===8" [routerLink]="'/itineraries'">
+
+                    <div class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
+                      <div class="card-body">
+                        <h4 class="card-title">{{dep.title}}
+                        </h4>
+                        <p class="card-text d-none d-md-block">{{dep.description}}
+                        </p>
+                      </div>
+                    </div></a>
                 </div>
-              </div></a>
-            </div>
-  </div>
+      </div>
+    </div></div>
 <br>
+
     <h2 class="inback">Explore top attractions</h2>
     <br>
     <div class="row myrow afterart" >
-      <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
-<div  *ngIf="A.section==='Explore top attractions'">
+      <div class="col-lg-4 col-8 a2" *ngFor='let A of threeArt'>
         <a [routerLink]="'/article/'+(A.id)">
           <div class="card"><img class="card-img-top" id="imgcard" src="assets/{{A.img}}">
             <div class="card-body">
@@ -39,7 +52,7 @@
         </a>
       </div>
     </div>
-    </div>
+
     <h2>Meet our curators
     </h2>
     <br>

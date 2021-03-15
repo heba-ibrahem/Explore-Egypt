@@ -13,4 +13,8 @@ export class ActivitiesDepService {
   {
     return this.http.get<IactivitiesDep[]>(`${environment.API_URL}/explorDep`);
   }
+  getDepByID(ID: number): Observable <IactivitiesDep>{
+
+    return this.http.get<IactivitiesDep>(`${environment.API_URL}/explorDep/${ID}`);
+  }
 }
