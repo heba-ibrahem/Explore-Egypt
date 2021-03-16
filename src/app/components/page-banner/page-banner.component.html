@@ -16,49 +16,36 @@
     <p>{{"banner.safty" | translate}} <a href="#">{{"banner.safty2" | translate}}</a></p>
   </div>
 
-  <div *ngIf="pageDetails.bannerImg" class="page-title">
+  <div class="page-title">
     <div class="container">
       <h2>{{pageDetails?.title}}</h2>
     </div>
   </div>
-  <div *ngIf="!pageDetails.bannerImg" class="page-title2">
-    <div class="container">
-      <h2>{{pageDetails?.title}}</h2>
-    </div>
-  </div>
+
 </div>
 
 <!-- Banner -->
 <section class="banner">
-  <div *ngIf="pageDetails.bannerImg" class="video-controls">
+  <div  class="video-controls">
     <span (click)="playVideo()" #play_btn class="play"><i class="fa fa-play"></i></span>
     <span (click)="pauseVideo()" #pause_btn class="pause hide"><i class="fa fa-pause"></i></span>
   </div>
-  <div *ngIf="pageDetails.bannerImg" #banner_image_container class="img-container curved-img">
+  <div  #banner_image_container class="img-container curved-img">
     <!--  -->
     <img [src]="'assets/images/' + pageDetails?.bannerImg" alt="">
     <div #banner_video_container class="video-container d-none">
       <video *ngIf="pageDetails.bannerVideo" #banner_video class="banner_video" [muted]="'muted'" loop>
         <!--  -->
-        <source [src]="pageDetails?.bannerVideo + '.mp4'" type="video/mp4">
-        <source [src]="pageDetails?.bannerVideo + '.ogg'" type="video/ogg">
+        <source [src]="pageDetails.bannerVideo + '.mp4'" type="video/mp4">
+        <source [src]="pageDetails.bannerVideo + '.ogg'" type="video/ogg">
       </video>
     </div>
   </div>
 
-  <div *ngIf="pageDetails.bannerImg" class="caption">
+  <div  class="caption">
     <div class="container">
       <div class="row">
         <div  class="col-md-6 offset-lg-1">
-          <p>{{pageDetails?.description}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="!pageDetails.bannerImg" class="caption2">
-    <div class="container">
-      <div class="row">
-        <div  class="col-md-8">
           <p>{{pageDetails?.description}}</p>
         </div>
       </div>
