@@ -9,25 +9,25 @@
     </div>
   </div>
 </div>
-<div class="container col-md-8 mt-3">
-  <div class="row m-auto">
+<div class="container col-md-8 mt-3" >
+  <!-- <div class="row m-auto">
     <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">Connect via Facebook <i
         class="fa fa-facebook-f"></i></button><br>
     <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Google <i
         class="fa fa-google"></i></button><br>
     <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Twitter <i
         class="fa fa-twitter"></i></button><br>
-  </div>
+  </div> -->
   <!-- <div class="alert alert-danger" *ngIf="islogged">
     Your password is incorrect. Please try again.
   </div> -->
-  <div class="seperate row" style="margin: 30px 0;">
+  <!-- <div class="seperate row" style="margin: 30px 0;">
     <hr class="col-4">
     <span style="padding: 0 12px;">OR</span>
     <hr class="col-4">
-  </div>
+  </div> -->
   <form [formGroup]="LoginForm" (ngSubmit)="login()">
-    <div class="form-row">
+    <div class="form-row" style="margin-top: 50px;">
       <div class="form-group col-md-5 ">
         <label class="control-label required" for="email">Email</label>
         <input type="email" class="form-control form-control-lg" name="email" required formControlName="email"
