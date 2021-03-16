@@ -4,14 +4,14 @@
     <div class="card  row">
       <!-- <h1><i class="fa fa-check-circle text-success mt-4"></i></h1> -->
       <h2 class="center text-capitalize mt-4">Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}},</h2>
-      <h6 class="center">Have a NICE trip </h6>
+      <h6 class="center">{{"program.msg" | translate}} </h6>
       <hr class="hr col-3">
-      <h2 class="text-center"> <span class="font-weight-bold  ">{{prog?.programName}}</span> trip</h2>
+      <h2 class="text-center"> <span class="font-weight-bold  ">{{prog?.programName}}</span> {{"program.trip" | translate}} </h2>
 
       <div class="row text-center">
         <div class="col-md-4">
-          <h3 class="">From {{prog?.cityID}}</h3>
-          <h2 class=" ">to {{prog?.toDate}}</h2>
+          <h3 class="">{{"program.From" | translate}} {{prog?.cityID}}</h3>
+          <h2 class=" ">{{"program.to" | translate}}  {{prog?.toDate}}</h2>
           
         </div>
         <div class="col-md-4">
@@ -21,8 +21,8 @@
         </div>
   
         <div class="col-md-4">
-          <h2 class="">to{{prog?.selTrain?.destination}}</h2>
-          <h3 class="">From{{prog?.fromDate}}</h3>
+          <h2 class="">{{"program.to" | translate}} {{prog?.selTrain?.destination}}</h2>
+          <h3 class="">{{"program.From" | translate}} {{prog?.fromDate}}</h3>
   
         </div>
       </div>
@@ -42,7 +42,7 @@
                 <h5 class=""><i class="fa fa-phone"></i> {{prog?.selHotel?.contactInfo}}</h5>
               </div>
               <div class="col-md-4">
-                <h4>Starting from</h4>
+                <h4>{{"program.Starting_from" | translate}}</h4>
                 <h4 class="">{{prog?.selHotel?.roomPrice}}</h4>
               </div>
             </div>
@@ -60,7 +60,7 @@
             <br>
             <div class="row">
               <div class="col-md-8">
-                <h2 class="col-md-12 tex">Train No : {{prog?.selTrain?.trainNumber}}</h2>
+                <h2 class="col-md-12 tex">{{"program.trainNo" | translate}} {{prog?.selTrain?.trainNumber}}</h2>
 
                 <div class="row">
                   <h5 class="col-md-4"><i class="fa fa-hourglass-start"></i> {{prog?.selTrain?.departureTime}}</h5>
@@ -82,26 +82,26 @@
 
 
     <div class="mt-2 center ">
-      <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{{prog?.id}}"> Edit</button>
+      <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{{prog?.id}}"> {{"program.Edit" | translate}}</button>
 
-      <button class="btn-lg btn-danger col-3 m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+      <button class="btn-lg btn-danger col-3 m-1" data-toggle="modal" data-target="#deleteModal">{{"program.Delete" | translate}}</button>
 
     </div>
     <div class="modal " id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Delete trip program</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{"program.delMsg" | translate}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Are you sure you want to delete program ?</p>
+            <p>{{"program.delMsg2" | translate}}</p>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">YES</button>
-            <button class="btn btn-primary col-3 m-1" data-dismiss="modal">NO</button>
+            <button class="btn btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">{{"program.YES" | translate}}</button>
+            <button class="btn btn-primary col-3 m-1" data-dismiss="modal">{{"program.NO" | translate}}</button>
           </div>
         </div>
       </div>

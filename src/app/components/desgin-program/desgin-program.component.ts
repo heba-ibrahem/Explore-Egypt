@@ -48,7 +48,7 @@ export class DesginProgramComponent implements OnInit {
       programName: ['', [Validators.required]],
       fromDate: ['', [Validators.required]],
       toDate: ['', [Validators.required]],
-      cityID:[0,[Validators.required]],
+      cityID:['',[Validators.required]],
       fromCityID:['',[Validators.required]],
       toCityID:['',[Validators.required]],
       // img:[''],

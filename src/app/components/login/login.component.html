@@ -1,21 +1,21 @@
 <div class="container col-md-10">
   <div class="page-title ">
     <div class="container ">
-      <h2 class=" md">Log in to your account</h2>
+      <h2 class=" md">{{"form.logTitle" | translate}}</h2>
     </div>
     <div id="buton" class="d-flex justify-content-center">
-      <a routerLink='/register' routerLinkActive="router-link-active">Register</a>
-      <a routerLink='/login' routerLinkActive="router-link-active" class="active">login</a>
+      <a routerLink='/register' routerLinkActive="router-link-active">{{"form.rBtn" | translate}}</a>
+      <a routerLink='/login' routerLinkActive="router-link-active" class="active">{{"form.lBtn" | translate}}</a>
     </div>
   </div>
 </div>
 <div class="container col-md-8 mt-3">
   <div class="row m-auto">
-    <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">Connect via Facebook <i
+    <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">{{"form.fBtn" | translate}} <i
         class="fa fa-facebook-f"></i></button><br>
-    <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Google <i
+    <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">{{"form.gBtn" | translate}} <i
         class="fa fa-google"></i></button><br>
-    <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">Connect via Twitter <i
+    <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">{{"form.tBtn" | translate}} <i
         class="fa fa-twitter"></i></button><br>
   </div>
   <!-- <div class="alert alert-danger" *ngIf="islogged">
@@ -29,25 +29,25 @@
   <form [formGroup]="LoginForm" (ngSubmit)="login()">
     <div class="form-row">
       <div class="form-group col-md-5 ">
-        <label class="control-label required" for="email">Email</label>
+        <label class="control-label required" for="email">{{"form.email" | translate}}</label>
         <input type="email" class="form-control form-control-lg" name="email" required formControlName="email"
           [class.is-invalid]="LoginForm.controls['email'].invalid && LoginForm.controls['email'].touched"
           [class.is-valid]="LoginForm.controls['email'].valid" id="email" placeholder="Email">
         <p class="text-danger" *ngIf="LoginForm.controls['email'].invalid  && LoginForm.controls['email'].touched">
-          Please enter your email</p>
+          {{"form.emailMsg" | translate}}</p>
       </div>
       <div class="form-group col-md-5 ">
-        <label class="control-label required" for="password">Password</label>
+        <label class="control-label required" for="password">{{"form.pass" | translate}}</label>
         <input type="password" class="form-control form-control-lg" name="password" required formControlName="password"
           [class.is-invalid]="LoginForm.controls['password'].invalid && LoginForm.controls['password'].touched"
           [class.is-valid]="LoginForm.controls['password'].valid">
         <p class="text-danger"
           *ngIf="LoginForm.controls['password'].invalid  && LoginForm.controls['password'].touched">
-          Please enter your password</p>
+          {{"form.passMsg" | translate}}</p>
       </div>
     </div>
     <div class="row mb-5">
-      <button type="submit" [disabled]="LoginForm.invalid" class="btn  btn-primary p-3 col-md-4">Log in</button>
+      <button type="submit" [disabled]="LoginForm.invalid" class="btn  btn-primary p-3 col-md-4">{{"form.lBtn" | translate}}</button>
     </div>
   </form>
 </div>

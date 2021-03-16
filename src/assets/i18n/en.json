@@ -30,7 +30,6 @@
   },
 
 
-
   "VISIT": "Visit Egypt",
   "LOGIN": "Login",
   "SAFETY": "Your safety is our priority.",
@@ -64,5 +63,123 @@
   "FEATURED_N_HOODS": "Featured Neighbourhoods",
   "JOURNEY_TITLE": "Your journey starts here.",
   "JOURNEY_DESC": "See how Egypt evolved into the modern destination it is today.",
-  "BUY_NOW": "Buy Now"
+  "BUY_NOW": "Buy Now",
+  
+
+  "planTrip":{
+    "title":"Start planning",
+    "sub_title":"Find a range of essential information – from basic customs to hotels,restaurants, public transport and discounts.",
+    "dicount":"Save up to 60% with Cairo Pass",
+    "discontTxt":"Experience all that's possible with the Cairo Pass. Create yourown tailor-made itinerary, choosing from 48 must-visit attractions and activities."
+  },
+  "form":{
+    "title":"Create an account",
+    "rBtn":"Register",
+    "lBtn":"login",
+    "fBtn":"Connect via Facebook",
+    "gBtn":"Connect via Google",
+    "tBtn":"Connect via Twitter",
+    "or":"OR",
+    "sucssMsg":"You have been registerd successfuly",
+    "fName":"First Name",
+    "fNameMsg":"Name is required.",
+    "lName":"Last Name",
+    "lNameMsg":"Last Name is required.",
+    "email":"Email",
+    "emailMsg":"Email is required.",
+    "city":"City",
+    "cityMsg":"City is required.",
+    "pass":"Password",
+    "passMsg":"Password must be more than 4 Character & Number",
+    "conpass":"Conifrm Password",
+    "conpassMsg":"You Must confirm Password is required.",
+    "check":"I would like to recive offers, updates and markiting information from Egypt Torisum.",
+    "checkTxt":"All information provided will be handeld in accordance with our",
+    "checkTxt2":"Perivcy Notes",
+    "logTitle":"Log in to your account",
+    "Profile":"Profile",
+    "Profiletitle":"Edit Your Profile",
+    "update":"Update"
+    
+
+  },
+  "program":{
+    "msg":"Have a NICE trip ",
+    "trip":"trip",
+    "From":"From",
+    "to":"To",
+    "Starting_from":"Starting from",
+    "trainNo":"Train No :",
+    "Edit":"Edit",
+    "Delete":"Delete",
+    "delMsg":"Delete trip program",
+    "delMsg2":"Are you sure you want to delete program ?",
+    "YES":"YES",
+    "NO":"NO"
+  },
+  "banner":{
+    "title":"Visit Egypt",
+    "safty":"Your safety is our priority.",
+    "safty2":"Read our travel advisory on coronavirus (COVID-19)."
+  },
+  "account":{
+    "account":"My account",
+    "Hey":"Hey",
+    "msg":"Welcome to your account. You can edit your information and view your trip programs here.",
+    "trip":"Your Trips",
+    "Active":"Active",
+    "Done":"Done",
+    "days_in":"days in",
+    "Start_At":"Start At:",
+    "Hotel_Name":"Hotel Name: ",
+    "More_Details":"More Details",
+    "msg2":"You don't have any program.",
+    "msg3":"You haven't any Trip Active now",
+    "msg4":" You haven't any Trip Done untill now"
+  },
+    "wishTitile":"Your Top Picks",
+    "addProg":{
+      "imgtxt":"DISVOVER EGYPT CULTURE",
+      "imgtxt2":"HAVE NEW ADVENTURE NOW",
+      "title":"Let's make the program ",
+      "name":"Program Name:",
+      "sel1":"Select city to show recmoneded hotels",
+      "info":"Contact Info:",
+      "rprice":"Room Price: ",
+      "Select":"Select",
+      "sel2":"Select city to show Train time",
+      "choose_City":"choose City",
+      "Coach_Class":"Coach Class:",
+      "TicketPrice":"Ticket Price:",
+      "save":"Save your program",
+      "edit":"Edit your program",
+      "title2":"Let's edit the program "
+    },
+    "dicover":"Discover Egypt",
+    "read":"Read more",
+    "learn":"LEARN MORE",
+    "home":{
+      "find":"Find things to do",
+      "All":"Adventure",
+      "Arts":"Arts & Culture",
+      "Food":"Food & Drink",
+      "Spas":"Spas & Wellness",
+      "Sights":"Sights & Attractions",
+      "see":"See more things to do"
+    },
+    "event":"What's happening now",
+    "activity":{
+      "start":"Start exploring",
+      "expolre":"Explore top attractions",
+      "meet":"Meet our curators"
+      
+    },
+    "icon":{
+      "top":"Top picks",
+      "accont":"My Account",
+      "edit":"Edit Profile",
+      "Logout":" Logout"
+    }
+  
+  
 }

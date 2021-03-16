@@ -4,7 +4,7 @@
     <div class="container">
       <ul class="m-0 list-unstyled">
         <li>
-          <a class="main-link" href="#">Visit Egypt</a>
+          <a class="main-link" href="#">{{"banner.title" | translate}}</a>
         </li>
         <li class="point"><i class="fa fa-angle-right"></i></li>
         <li>{{pageDetails?.name}}</li>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="safety-post">
-    <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
+    <p>{{"banner.safty" | translate}} <a href="#">{{"banner.safty2" | translate}}</a></p>
   </div>
 
   <div *ngIf="pageDetails.bannerImg" class="page-title">

@@ -1,186 +1,179 @@
-<div>
+<div >
   <!-- opening titel with img background -->
-  <div class="img ">
-    <h4>DISVOVER EGYPT CULTURE</h4>
-    <h1>HAVE NEW ADVENTURE NOW</h1>
-  </div>
-  <div class="container mt-3 border border-info rounded shadow p-3 mb-5">
+<div class="img ">
+  <h4>{{"addProg.imgtxt" | translate}}</h4>
+  <h1>{{"addProg.imgtxt2" | translate}}</h1>
+</div>
+<div class="container mt-3 border border-info rounded shadow p-3 mb-5">
 
-    <h3 class="text-center mt-4">Let's make the program </h3>
+  <h3 class="text-center mt-4">{{"addProg.title2" | translate}} </h3>
 
 
-    <form [formGroup]="PorgramForm" (ngSubmit)="edit()" class="text-center mt-4">
-      <div>
-        <!-- program name input -->
-        <div class="form-group  ">
-          <label class="control-label text-center  ">Program Name:</label>
-          <input type="text" class="form-control col-md-5 center" formControlName="programName"
-            placeholder="Program Name">
-        </div>
-        <br>
-        <!-- Date input -->
-        <div class="form-group  ">
-          <div class="row center">
-            <div class="form-group col-md-6">
-              <div class="row ">
-                <label class="control-label col-md-3" for="from">From:</label>
-                <input type="date" class="form-control col-md-9" formControlName="fromDate" placeholder="MM/DD/YYY" />
-              </div>
+  <form [formGroup]="PorgramForm" (ngSubmit)="edit()" class="text-center mt-4">
+    <div>
+      <!-- program name input -->
+      <div class="form-group  ">
+        <label class="control-label text-center  ">{{"addProg.name" | translate}}</label>
+        <input type="text" class="form-control col-md-5 center" formControlName="programName"
+          placeholder="Program Name">
+      </div>
+      <br>
+      <!-- Date input -->
+      <div class="form-group  ">
+        <div class="row center">
+          <div class="form-group col-md-6">
+            <div class="row ">
+              <label class="control-label col-md-3" for="fromDate">{{"program.From" | translate}}</label>
+              <input type="date" class="form-control col-md-9" formControlName="fromDate" placeholder="MM/DD/YYY" />
             </div>
+          </div>
 
-            <div class="form-group col-md-6">
-              <div class="row ">
-                <label class="control-label col-md-3" for="to">To:</label>
-                <input type="date" class="form-control col-md-9" formControlName="toDate" placeholder="MM/DD/YYY" />
-              </div>
+          <div class="form-group col-md-6">
+            <div class="row ">
+              <label class="control-label col-md-3" for="toDate">{{"program.to" | translate}}</label>
+              <input type="date" class="form-control col-md-9" formControlName="toDate" placeholder="MM/DD/YYY" />
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Select Hotel -->
+      <!-- Select Hotel -->
 
-        <div class="hotel ">
-          <h3 class="mt-4 center">Select city to show recmoneded hotels </h3>
-          <div class="form-group center">
-            <label class=" form-label ">city</label>
-            <select class="form-control" (change)="chooseCity($event)" formControlName="cityID">
-              <option>choose City</option>
-              <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}
-              </option>
-            </select>
-            <br><br>
-          </div>
-          <!-- Hotel Card -->
-          <div class="card bg-light text-dark my-3" *ngFor="let hotel of  hotelByCityID; let SN=index">
-            <div class="row">
-              <!-- img col -->
-              <div class="col-md-3 no-gutters">
-                <div class="col-md-9"><img src="{{hotel.img}}" class="card-img hotelImg"></div>
+      <div class="hotel ">
+        <h3 class="mt-4 center">{{"addProg.sel1" | translate}} </h3>
+        <div class="form-group center">
+          <label class=" form-label ">city</label>
+          <select class="form-control" (change)="chooseCity($event)" formControlName="cityID">
+            <option>{{"addProg.choose_City" | translate}}</option>
+            <option *ngFor="let selectedhotelCity of CityList" [value]='selectedhotelCity.id'>{{selectedhotelCity.name}}
+            </option>
+          </select>
+          <br><br>
+        </div>
+        <!-- Hotel Card -->
+        <div class="card bg-light text-dark my-3" *ngFor="let hotel of  hotelByCityID; let SN=index">
+          <div class="row">
+            <!-- img col -->
+            <div class="col-md-3 no-gutters">
+              <div class="col-md-9"><img src="{{hotel.img}}" class="card-img hotelImg"></div>
+            </div>
+            <!-- hotel details -->
+            <div class=" card-body col-md-9 row">
+              <!-- hotel name and adress -->
+              <div class="col-md-6 ">
+                <h2 class="mr-2 font-weight-bold"> {{hotel.hotelName}}</h2>
+                <h5 class="mr-2">{{"form.city" | translate}} {{hotel.adress}}</h5>
+                <h5 class="mr-2">{{"addProg.info" | translate}} {{hotel.contactInfo}}</h5>
               </div>
-              <!-- hotel details -->
-              <div class=" card-body col-md-9 row">
-                <!-- hotel name and adress -->
-                <div class="col-md-6 ">
-                  <h2 class="mr-2 font-weight-bold"> {{hotel.hotelName}}</h2>
-                  <h5 class="mr-2">City: {{hotel.adress}}</h5>
-                  <h5 class="mr-2">Contact Info: {{hotel.contactInfo}}</h5>
-                </div>
-
                 <div class="col-md-4">
-
-                  <h4 class="  font-weight-bold text-info">Room Price: {{hotel.roomPrice}}</h4>
+                 
+                  <h4 class="  font-weight-bold text-info">{{"addProg.rprice" | translate}} {{hotel.roomPrice}}</h4>
 
                 </div>
-
-
-                <div class="col-md-2">
-                  <input type="radio" name="selHotel" [id]="'selectBtn'+hotel.id" class="radioBtn"
-                    formControlName="selHotel"
+                  <div class="col-md-2">
+                  <input type="radio" name="selHotel" [id]="'selectBtn'+hotel.id" class="radioBtn" formControlName="selHotel"
                     [value]="{hotelName:hotel.hotelName,roomPrice:hotel.roomPrice,adress:hotel.adress,contactInfo:hotel.contactInfo}"
                     name="selHotel" (change)="selectHotel($event)" />
-                  <label [for]="'selectBtn'+hotel.id" class="radioBtnLabel ">Select</label>
-                </div>
+                  <label [for]="'selectBtn'+hotel.id" class="radioBtnLabel ">{{"addProg.Select" | translate}}</label>
+                </div> 
+             
 
-
-              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Filter Trains -->
-        <div class="train">
-          <h3 class="mt-4 center">Select city to show Train time </h3>
-          <div class="row center">
-            <div class="form-group col-md-6">
-              <div class="row">
-                <label class="form-label col-md-3">from</label>
-                <select class="form-control col-md-9" (change)="chooseTrain($event)" formControlName="fromCityID">
-                  <option>choose City</option>
-                  <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}</option>
-                </select>
-              </div>
-            </div>
-            <br>
-            <div class="form-group col-md-6 ">
-              <div class="row">
-                <label class="form-label col-md-3">to</label>
-                <select class="form-control col-md-9" (change)="chooseTrainDes($event,selectedCity)" formControlName="toCityID">
-                  <option>choose City</option>
-                  <option *ngFor="let selectedDestenation of CityList" [value]='selectedDestenation.id'>
-                    {{selectedDestenation.name}}</option>
-                </select>
-              </div>
+      <!-- Filter Trains -->
+      <div class="train">
+        <h3 class="mt-4 center">{{"addProg.sel2" | translate}} </h3>
+        <div class="row center">
+          <div class="form-group col-md-6">
+            <div class="row">
+              <label class="form-label col-md-3">{{"program.From" | translate}}</label>
+              <select class="form-control col-md-9" (change)="chooseTrain($event)" formControlName="fromCityID">
+                <option>{{"addProg.choose_City" | translate}}</option>
+                <option *ngFor="let selectedCity of CityList" [value]='selectedCity.id'>{{selectedCity.name}}</option>
+              </select>
             </div>
           </div>
-          <br> <br>
+          <br>
+          <div class="form-group col-md-6 ">
+            <div class="row">
+              <label class="form-label col-md-3">{{"program.to" | translate}}</label>
+              <select class="form-control col-md-9" (change)="chooseTrainDes($event,selectedCity)" formControlName="toCityID">
+                <option>{{"addProg.choose_City" | translate}}</option>
+                <option *ngFor="let selectedDestenation of CityList" [value]='selectedDestenation.id'>
+                  {{selectedDestenation.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br> <br>
 
-          <!-- Train card -->
-          <div class="card bg-light text-dark my-3"
-            *ngFor="let train of  trainByCityID;  let SN=index">
-            <div class="card-body  row ">
-              <!-- trin number -->
-              <h5 class="card-title col-md-4 ">
-                <h1>
-                  <i class="fa fa-train"></i>
-                </h1>
-                <h2 class="mx-2">Train Number: {{train.trainNumber}}</h2>
-              </h5>
-              <!-- train deatalis -->
-              <div class="card-text col-md-8 ">
-                <!-- <br> -->
-                <div class="row">
-                  <div class="col-md-6">
-                    <!--  depature and arrival -->
-                    <div class="row">
-                      <div class="col-md-5">
-                        <p class=" font-weight-bold"> {{train.departureTime}}</p>
-                        <p class="">{{train.city}}</p>
-                      </div>
-                      <div class="col-md-2 mt-md-3">
-                        <!-- <hr class="hr "> -->
-                        <h1><i class="fa fa-arrow-right"></i></h1>
-                      </div>
-                      <div class="col-md-5">
-                        <p class=" font-weight-bold"> {{train.arrivalTime}}</p>
-                        <p class=""> {{train.destination}}</p>
-                      </div>
+        <!-- Train card -->
+        <div class="card bg-light text-dark my-3"
+          *ngFor="let train of  trainByCityID; let SN=index">
+          <div class="card-body  row ">
+            <!-- trin number -->
+            <h5 class="card-title col-md-4 ">
+              <h1>
+                <i class="fa fa-train"></i>
+              </h1>
+              <h2 class="mx-2">{{"program.trainNo" | translate}} {{train.trainNumber}}</h2>
+            </h5>
+            <!-- train deatalis -->
+            <div class="card-text col-md-8 ">
+              <!-- <br> -->
+              <div class="row">
+                <div class="col-md-6">
+                  <!--  depature and arrival -->
+                  <div class="row">
+                    <div class="col-md-5">
+                      <p class=" font-weight-bold"> {{train.departureTime}}</p>
+                      <p class="">{{train.city}}</p>
+                    </div>
+                    <div class="col-md-2 mt-md-3">
+                      <!-- <hr class="hr "> -->
+                      <h1><i class="fa fa-arrow-right"></i></h1>
+                    </div>
+                    <div class="col-md-5">
+                      <p class=" font-weight-bold"> {{train.arrivalTime}}</p>
+                      <p class=""> {{train.destination}}</p>
                     </div>
                   </div>
-                  <!-- price and select -->
+                </div>
+                <!-- price and select -->
 
-                  <div class="col-md-4">
-                    <p class="">Coach Class: {{train.details}}</p>
-                    <h4 class=" text-success">Ticket Price: {{train.ticketPrice}}</h4>
-                  </div>
+                <div class="col-md-4">
+                  <p class="">{{"addProg.Coach_Class" | translate}} {{train.details}}</p>
+                  <h4 class=" text-success">{{"addProg.TicketPrice" | translate}} {{train.ticketPrice}}</h4>
+                </div>
 
-                  <div class="col-md-2">
-                    <input type="radio" name="selTrain" [id]="'selectBtn'+train.id" class="radioBtn"
-                      formControlName="selTrain"
-                      [value]="{trainNumber:train.trainNumber,destination:train.destination,ticketPrice:train.ticketPrice,departureTime:train.departureTime,arrivalTime:train.arrivalTime,details:train.details}"
-                      (change)="selectTrain($event)">
-                    <label [for]="'selectBtn'+train.id" class="radioBtnLabel ">Select</label>
-                  </div>
-                 
-
+                <div class="col-md-2">
+                  <input type="radio" name="selTrain" [id]="'selectBtn'+train.id" class="radioBtn" formControlName="selTrain"
+                    [value]="{trainNumber:train.trainNumber,destination:train.destination,ticketPrice:train.ticketPrice,departureTime:train.departureTime,arrivalTime:train.arrivalTime,details:train.details}"
+                    (change)="selectTrain($event)">
+                  <label [for]="'selectBtn'+train.id" class="radioBtnLabel ">{{"addProg.Select" | translate}}</label>
                 </div>
               </div>
             </div>
           </div>
-
-
-
-          <br> <br>
         </div>
 
+
+       
+        <br> <br>
       </div>
-      <div>
-        <button type="submit" [disabled]="PorgramForm.invalid" class="btn btn-success col-md-5"> Save your program
-        </button>
-      </div>
-    </form>
+
+    </div>
+    <div>
+      <button type="submit" [disabled]="PorgramForm.invalid" class="btn btn-success col-md-5"> {{"addProg.edit" | translate}}
+      </button>
+    </div>
+  </form>
 
 
-  </div>
+</div>
 
 
 </div>
