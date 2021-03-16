@@ -1,75 +1,107 @@
 <div class="container-fluid bg-light">
   <br>
   <div class="container  mt-4">
-    <div class="mt-5 card center">
-      <h1><i class="fa fa-check-circle text-success mt-4"></i></h1>
-      <h2 class="center text-capitalize">Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}},</h2>
-      <h6 class="center">Thanks for using our service to plan your trip </h6>
+    <div class="card  row">
+      <!-- <h1><i class="fa fa-check-circle text-success mt-4"></i></h1> -->
+      <h2 class="center text-capitalize mt-4">Hi {{CurrentUser.firstName}} {{CurrentUser.lastName}},</h2>
+      <h6 class="center">{{"program.msg" | translate}} </h6>
       <hr class="hr col-3">
-      <h2>This is your <span class="font-weight-bold ">{{prog?.programName}}</span> trip</h2>
-      <h3>You will travel to </h3>
-      <h2>{{prog?.selTrain?.destination}}</h2>
-      <h3>on {{prog?.from}}</h3>
-    </div>
+      <h2 class="text-center"> <span class="font-weight-bold  ">{{prog?.programName}}</span> {{"program.trip" | translate}} </h2>
 
-    <div class="mt-2 card">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h3 class="">{{"program.From" | translate}} {{prog?.cityID}}</h3>
+          <h2 class=" ">{{"program.to" | translate}}  {{prog?.toDate}}</h2>
+          
+        </div>
+        <div class="col-md-4">
+          <h3 class=""><i class="fa fa-arrow-right"></i></h3>
+          <h3 class=""><i class="fa fa-arrow-right"></i></h3>
+  
+        </div>
+  
+        <div class="col-md-4">
+          <h2 class="">{{"program.to" | translate}} {{prog?.selTrain?.destination}}</h2>
+          <h3 class="">{{"program.From" | translate}} {{prog?.fromDate}}</h3>
+  
+        </div>
+      </div>
+      <hr>
       <div class="m-4">
-
-
-        <h2 class="text-light bg-info center">Your Hotel details</h2>
+        <!-- <h2 class="text-light bg-info center">Your Hotel details</h2> -->
         <div class="row">
           <div class="col-md-4">
             <img src="assets/hotel.jpg" class="card-img" width="50" height="200">
           </div>
           <div class="col-md-8">
+            <h2 class="col-md-12 tex">{{prog?.selHotel?.hotelName}}</h2>
             <div class="row">
-              <h2 class="col-md-12 tex">{{prog?.selHotel?.hotelName}}</h2>
-              <h5 class="col-md-12">{{prog?.selHotel?.roomPrice}}</h5>
-              <h6 class="col-md-12">{{prog?.selHotel?.roomPrice}}</h6>
+              <div class="col-md-8">
+                <i class="fas fa-map-marker-alt"></i>
+                <h5 class=""><i class="fa fa-map-pin"></i> {{prog?.selHotel?.adress}}</h5>
+                <h5 class=""><i class="fa fa-phone"></i> {{prog?.selHotel?.contactInfo}}</h5>
+              </div>
+              <div class="col-md-4">
+                <h4>{{"program.Starting_from" | translate}}</h4>
+                <h4 class="">{{prog?.selHotel?.roomPrice}}</h4>
+              </div>
             </div>
           </div>
         </div>
 
         <br>
-
-        <h2 class="text-light bg-info center">Your Transportion details</h2>
+        <hr>
+        <!-- <h2 class="text-light bg-info center">Your Transportion details</h2> -->
         <div class="row">
           <div class="col-md-4">
             <i class="fa fa-train icon"></i>
           </div>
           <div class="col-md-8">
+            <br>
             <div class="row">
-              <h2 class="col-md-12 tex">Train No : {{prog?.selTrain?.trainNumber}}</h2>
-              <h5 class="col-md-12">Ticket price : {{prog?.selTrain?.ticketPrice}}</h5>
-              <h6 class="col-md-12">{{prog?.selTrain?.ticketPrice}}</h6>
+              <div class="col-md-8">
+                <h2 class="col-md-12 tex">{{"program.trainNo" | translate}} {{prog?.selTrain?.trainNumber}}</h2>
+
+                <div class="row">
+                  <h5 class="col-md-4"><i class="fa fa-hourglass-start"></i> {{prog?.selTrain?.departureTime}}</h5>
+                  <h3 class="col-md-2"> <i class="fa fa-arrow-right"> </i></h3>
+                  <h5 class="col-md-4"><i class="fa fa-hourglass-start"></i> {{prog?.selTrain?.arrivalTime}}</h5>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h4>{{prog?.selTrain?.details}}</h4>
+                <h4 class="">{{prog?.selTrain?.ticketPrice}}</h4>
+              </div>
             </div>
           </div>
         </div>
-        
+
       </div>
 
     </div>
-    <div class="mt-2 center ">
-      <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{{prog?.id}}"> Edit</button>
 
-      <button class="btn-lg btn-danger col-3 m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+
+    <div class="mt-2 center ">
+      <button class="btn-lg btn-info col-3 m-1" routerLink="/editProgram/{{prog?.id}}"> {{"program.Edit" | translate}}</button>
+
+      <button class="btn-lg btn-danger col-3 m-1" data-toggle="modal" data-target="#deleteModal">{{"program.Delete" | translate}}</button>
 
     </div>
     <div class="modal " id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Delete trip program</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{"program.delMsg" | translate}}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Are you sure you want to delete program ?</p>
+            <p>{{"program.delMsg2" | translate}}</p>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">YES</button>
-            <button class="btn btn-primary col-3 m-1" data-dismiss="modal">NO</button>
+            <button class="btn btn-danger col-3 m-1" (click)="deleteProgram(prog?.id)">{{"program.YES" | translate}}</button>
+            <button class="btn btn-primary col-3 m-1" data-dismiss="modal">{{"program.NO" | translate}}</button>
           </div>
         </div>
       </div>

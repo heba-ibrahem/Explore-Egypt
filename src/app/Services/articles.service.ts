@@ -21,6 +21,9 @@ export class ArticlesService {
 
     return this.http.get<Article>(`${environment.API_URL}/activitiesArticles/${aID}`);
   }
+  getArticlesByDep(dep: string|null) :Observable<Article[]> {
+    return this.http.get<Article[]>(`${environment.API_URL}/activitiesArticles?dep=${dep}`);
+  }
   // Get articles by page
   getArticlesByPage(page: string) :Observable<IArticle[]> {
     return this.http.get<IArticle[]>(`${environment.API_URL}/Articles?page=${page}`);

@@ -2,12 +2,12 @@ export interface IProgram {
   id?: number;
   userID?: number;
   programName:string;
-  from: string;
-  to: string;
-  city?:string;
+  fromDate: string;
+  toDate: string;
+  cityID?:number;
   img?:string;
-  toCity?:string;
-  fromCity?:string;
+  toCityID?:string;
+  fromCityID?:string;
 
   selHotel:{
       hotelName: string,

@@ -13,6 +13,8 @@ export class UsersServiceService {
   public localstorage:string|null=null;
   constructor(private httpclient: HttpClient) { 
 
+    // this.userSubject = new BehaviorSubject<number>(JSON.parse(localStorage.getItem('user')||''));
+    // this.user = JSON.parse(this.userSubject.asObservable);
   }
 
   public getUserID():number {
@@ -92,6 +94,7 @@ isLogged(): boolean{
         //,'Authorization': 'my-auth-token'
       })
     };
+
     return this.httpclient.post<any>(`${environment.API_URL}/Users`, user, httpOptions);
   } 
 }

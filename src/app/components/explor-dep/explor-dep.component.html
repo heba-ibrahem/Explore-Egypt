@@ -10,8 +10,7 @@
         <h2 class="inback">Keep up with the new</h2>
 
       <div class="row myrow afterart">
-          <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
-            <div  *ngIf="A.section==='Keep up with the new'">
+          <div class="col-lg-4 col-8 a2" *ngFor='let A of articleInDep'>
               <a [routerLink]="'/article/'+(A.id)">
             <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
               <div class="card-body">
@@ -27,30 +26,30 @@
       </div>
       <br>
       <br>
-      <h2>Lastest Opening</h2>
+      <h2>Explore top attractions</h2>
 
       <br>
-      <div class="row myrow afterart">
-        <div class="col-lg-4 col-6 a2" *ngFor='let A of ArticleList'>
-          <div  *ngIf="A.section==='Explore top attractions'">
-                  <a  [routerLink]="'/article/'+(A.id)">
-                    <div class="card"><img class="card-img-top" src="assets/{{A.img}}">
-                      <div class="card-body">
-                        <h4 class="card-title">{{A.title}}
-                        </h4>
-                        <p class="card-text d-none d-md-block">{{A.description}}</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+      <div class="row myrow afterart" >
+        <div class="col-lg-4 col-8 a2" *ngFor='let A of threeArt'>
+          <a [routerLink]="'/article/'+(A.id)">
+            <div class="card"><img class="card-img-top" id="imgcard" src="assets/{{A.img}}">
+              <div class="card-body">
+                <h4 class="card-title">{{A.title}}
+                </h4>
+                <p class="card-text d-none d-md-block">{{A.description}}</p>
               </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
       </div>
       <h2>Meet our curators
       </h2>
       <br>
       <div class="row  afterart">
         <div class="col-lg-3  col-6 a3" *ngFor="let c of curatorsList">
-          <a href="#">
+          <a>
             <div class="card"><img class="card-img-top" src="assets/{{c.img}}">
               <div class="card-body">
                 <h4 class="card-title">{{c.name}}
@@ -59,14 +58,15 @@
                 <br>
                 <hr>
                 <div class="d-flex justify-content-end social_icon">
-                  <span><i class="fa fa-facebook-square"></i></span>
-                  <span><i class="fa fa-google-plus-square"></i></span>
-                  <span><i class="fa fa-twitter-square"></i></span>
+                  <span><a href="https://www.facebook.com/"><i class="fa fa-facebook-square"></i></a></span>
+                  <span><a href="https://plus.google.com/"><i class="fa fa-google-plus-square"></i></a></span>
+                  <span><a href="https://twitter.com/"><i class="fa fa-twitter-square"></i></a></span>
                 </div>
               </div>
             </div>
           </a>
         </div>
+
       </div>
         <br>
         <h2 >Keep exploring
@@ -74,9 +74,8 @@
         <br>
         <div class="row">
           <div class="col-lg-3 col-6" *ngFor='let dep of departments;let i =index '>
-            <div [hidden]="dep.id===1">
-            <a [routerLink]="'/explorDep/1'">
-                    <div class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
+            <a>
+                    <div (click)="refreshPage(dep.id)" class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
                       <div class="card-body">
                         <h4 class="card-title">{{dep.title}}
                         </h4>
@@ -86,5 +85,3 @@
                     </div></a>
                   </div>
                   </div>
-        </div>
-      </div>

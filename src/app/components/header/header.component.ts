@@ -1,9 +1,11 @@
-import { AfterViewInit, Component, ElementRef,  OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef,  Inject,  OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { IUsers } from 'src/app/viewmodels/iusers';
 import { TranslateService } from '@ngx-translate/core';
 import { LocalizationService } from 'src/app/Services/localization.service';
+import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 // declare var $:JQueryStatic
 
 @Component({
@@ -26,7 +28,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   constructor(public translate: TranslateService,
     private localizationService: LocalizationService,
-    private userService: UsersServiceService,
+    private userService: UsersServiceService,@Inject(DOCUMENT) private _document: Document,private router: Router,
     ) {
     this.currentLang = this.localizationService.getCurrentLang();
     this.translate.use(this.currentLang);
@@ -47,7 +49,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.translate.use(lang);
     localStorage.setItem('current_lang', lang )
     window.location.reload();
-    
+
   }
 
   // loadStyles() {
@@ -60,7 +62,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   //     require("style-loader!../../src/assets/css/bootstrap.min.css")
   //   }
   // }
-
+  refreshPage(id:number){
+    if(id!=8){
+    this.router.navigateByUrl('/explorDep/'+ id).then(() => {
+      this._document.defaultView?.location.reload();})}
+    else{this.router.navigateByUrl('/itineraries')}}
   ngOnInit(): void {
   }
 
@@ -133,7 +139,10 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
 
   logout() {
-    this.userService.logout()
+    this.userService.logout();
+    this.router.navigateByUrl('/home').then(()=>{
+      window.location.reload();
+    })
     console.log("logged out");
   }
   ngOnDestroy() {
