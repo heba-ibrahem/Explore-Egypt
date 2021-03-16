@@ -66,7 +66,7 @@ export class ProgramDetailsComponent implements OnInit {
       this.city.deleteProgram(id).subscribe(
         (res) => {
           console.log(res);
-          this.route.navigate(['/home']).then(() => {
+          this.route.navigate(['/account/dashboard']).then(() => {
             window.location.reload();
           });       
         },

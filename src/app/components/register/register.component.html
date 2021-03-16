@@ -13,12 +13,12 @@
 <div class="container col-md-8 mt-3">
 
   <div class="row">
-    <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">{{"form.fBtn" | translate}} <i
+    <!-- <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">{{"form.fBtn" | translate}} <i
         class="fa fa-facebook-f"></i></button><br>
     <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">{{"form.gBtn" | translate}} <i
         class="fa fa-google"></i></button><br>
     <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">{{"form.tBtn" | translate}} <i
-        class="fa fa-twitter"></i></button><br>
+        class="fa fa-twitter"></i></button><br> -->
   </div>
 
   <div class="container">
@@ -93,18 +93,18 @@
       <div class="form-group col-md-5 ">
         <label class=" control-label required" for="confirmPassword">{{"form.conpass" | translate}}</label>
         <input type="Password" class="form-control" name="confirmPassword" required formControlName="confirmPassword">
-        <div
+        <!-- <div
           *ngIf="RegisterForm.controls['confirmPassword'].invalid && (RegisterForm.controls['confirmPassword'].dirty || RegisterForm.controls['confirmPassword'].touched)"
           class="alert alert-danger">
           <div *ngIf="RegisterForm.controls['confirmPassword']">{{"form.conpassMsg" | translate}}
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
-    <div class="custom-control custom-checkbox ">
+    <!-- <div class="custom-control custom-checkbox ">
       <input type="checkbox" class="custom-control-input checked" id="customCheck1" required>
       <p class="custom-control-label" for="customCheck1">{{"form.check" | translate}}.</p>
-    </div><br>
+    </div><br> -->
     <div>{{"form.checkTxt" | translate}} <a href="#">{{"form.checkTxt2" | translate}}</a>
     </div><br>
 

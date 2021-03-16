@@ -53,15 +53,16 @@ export class MyAccountComponent implements OnInit {
       .subscribe(
         (response)=>{
           this.Myprograms = response;
+          console.log(this.Myprograms);
           if(response.length > 0){
             this.ShowMyTrip = true;
           }
-          this.Myprograms = response.filter((item:any) => this.Diff(item.to) >= 0);
-          if(this.Myprograms.length > 0){
-            this.ActiveTrip = true;
-          }
+          // this.Myprograms = response.filter((item:any) => this.Diff(item.to) < 0);
+          // if(this.Myprograms.length > 0){
+          //   this.ActiveTrip = true;
+          // }
           console.log(this.Myprograms);
-          this.DoneProgram = response.filter((item:any) => this.Diff(item.to) < 0);
+          this.DoneProgram = response.filter((item:any) => this.Diff(item.to) >= 0);
           if(this.DoneProgram.length > 0){
             this.DoneTrip = true;
           }
