@@ -1,6 +1,4 @@
 
-
-
 #toHide {
   display: none;
 }
@@ -58,9 +56,7 @@ font-size: 1em;
 
 }
 
-.atitle {
-  /* margin-top: -6em; */
-}
+
 
 
 
@@ -123,7 +119,18 @@ a:active {
 }
 
 .social_icon span {
-  font-size: 3vw;
+  font-size: 8vw;
   margin-left: 10px;
   color: #b9b7ae;
+  @media (min-width: 576px) {   font-size: 6vw;
+  }
+  @media (min-width: 768px) {   font-size: 4vw;
+  }
+  @media (min-width: 992px) {   font-size: 3vw }
+
 }
+.social_icon span a:active{color: #b9b7ae;}
+.social_icon span a:link{color: #b9b7ae;}
+.social_icon span a:visited{color: #b9b7ae;}
+.social_icon span a:hover{color: #b9b7ae;}
+

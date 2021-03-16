@@ -1,4 +1,40 @@
-<app-page-banner [pageDetails]="pageDetails"></app-page-banner>
+<div class="page-header">
+  <div class="history">
+    <div class="container">
+      <ul class="m-0 list-unstyled">
+        <li>
+          <a class="main-link" href="#">Visit Egypt</a>
+        </li>
+        <li class="point"><i class="fa fa-angle-right"></i></li>
+        <li>{{pageDetails.name}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="safety-post">
+    <p>Your safety is our priority. <a href="#">Read our travel advisory on coronavirus (COVID-19).</a></p>
+  </div>
+
+  <div  class="page-title2">
+    <div class="container">
+      <h2>{{pageDetails?.title}}</h2>
+    </div>
+  </div>
+</div>
+
+<!-- Banner -->
+<section class="banner">
+
+  <div  class="caption2">
+    <div class="container">
+      <div class="row">
+        <div  class="col-md-8">
+          <p>{{pageDetails?.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <hr>
 <div class="form-group col-lg-6 col-8" id="cityFiltter">
   <!-- <select class="form-control col-5 m-auto" >
@@ -7,29 +43,32 @@
 <option></option>
   </select> -->
   <div class="input-group">
-    <button class="btn  col-lg-12 dropdown-toggle city" type="button" data-toggle="dropdown" aria-haspopup="true"
-      aria-expanded="true">
-      <p>City</p>
-    </button>
-    <div class="dropdown-menu col-lg-12 col-12">
-      <a class="dropdown-item" *ngFor=""></a>
+    <select class="form-control col-12" id="cityFilter" (change)="filter($event)">
+      <option><p>ALL CITIES</p></option>
+      <option *ngFor="let selectedCity of cities" [value]='selectedCity.name'><p>{{selectedCity.name.toLocaleUpperCase()}}</p></option>
+    </select>
     </div>
   </div>
-</div>
+
 <div class="container">
-  <div class="col-10 art" *ngFor='let a of mixed;let i =index'>
-    <div  class="t">
-    <img *ngIf="a.title"class="img" [src]="'assets/' + a.img">
-    <img *ngIf="a.hotelName"class="img" [src]="a.img">
-      <h6 *ngIf="a.city?.toLocaleLowerCase()=='alexandria'" class="vertical d-md-none d-none  d-lg-block" style="width: 45px;">
+  <div class="col-10 art" *ngFor='let a of mixedByCity;let i =index'>
+
+      <div *ngIf="mixedByCity; else noItineraries" class="t">
+
+
+      <img *ngIf="a.title" class="img" [src]="'assets/' + a.img">
+      <img *ngIf="a.hotelName" class="img" [src]="a.img">
+      <h6 *ngIf="a.city?.toLocaleLowerCase()=='alexandria'" class="vertical d-md-none d-none  d-lg-block"
+        style="width: 45px;">
         {{a.city?.toUpperCase()}}</h6>
-      <h6 *ngIf="a.city?.toLocaleLowerCase()!='alexandria'" class="vertical2 d-md-none d-none  d-lg-block" style="width: 45px;">
+      <h6 *ngIf="a.city?.toLocaleLowerCase()!='alexandria'" class="vertical2 d-md-none d-none  d-lg-block"
+        style="width: 45px;">
         {{a.city?.toUpperCase()}}</h6>
       <div class="artDet">
-<p class="cityAgain d-lg-none d-block">{{a.city}}</p>
+        <p class="cityAgain d-lg-none d-block">{{a.city}}</p>
         <h4 *ngIf="a.title" class="title1">{{a.title}}
         </h4>
-         <h4 *ngIf="a.hotelName" class="title1">{{a.hotelName}}
+        <h4 *ngIf="a.hotelName" class="title1">{{a.hotelName}}
         </h4>
         <p *ngIf="a.description" class="d-md-none d-none  d-lg-block">
           {{a.description}}
@@ -41,12 +80,37 @@
           <div class="likeController"><span #like_btn class="like"><i class="fa fa-heart"></i></span></div>
         </button>
         <div>
-
         </div>
       </div>
     </div>
+    <ng-template #noItineraries>
+      <div class="row">
+        <div class="col-md-8 col-sm-12 offset-xl-1">
+      <p class="top-picks__desc">
+        Add items to your Top Picks by clicking content with the
+        <img class="icon" alt="icon" title="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCiAgICA8cGF0aCBmaWxsPSIjMDA5MEQ3IiBmaWxsLXJ1bGU9Im5vbnplcm8iIGQ9Ik0xNi4wOTIgOS4yMDZMMTAgMTUuMTk2bC02LjA5MS01Ljk5YTIuOTk3IDIuOTk3IDAgMCAxLS4wMDEtNC4yOTlBMy4xNjggMy4xNjggMCAwIDEgNi4xNDMgNGMuODQ2IDAgMS42NC4zMjIgMi4yMzMuOTA1bC4yMi4yMTdMMTAgNi41MDdsMS40MDUtMS4zODUuMjE3LS4yMTVBMy4xNjYgMy4xNjYgMCAwIDEgMTMuODU3IDRjLjg0NiAwIDEuNjQuMzIyIDIuMjM1LjkwNmEzLjAwMiAzLjAwMiAwIDAgMSAwIDQuM20xLjQwMi01LjcyNkE1LjE3OCA1LjE3OCAwIDAgMCAxMy44NTcgMmE1LjE4IDUuMTggMCAwIDAtMy42MzcgMS40OGwtLjIyLjIxOC0uMjItLjIxOEE1LjE3OCA1LjE3OCAwIDAgMCA2LjE0MyAyYTUuMTc1IDUuMTc1IDAgMCAwLTMuNjM2IDEuNDggNC45OTcgNC45OTcgMCAwIDAgMCA3LjE1MkwxMCAxOGw3LjQ5NC03LjM2OGE0Ljk5OSA0Ljk5OSAwIDAgMCAwLTcuMTUyIi8+DQo8L3N2Zz4NCg==">
+          as you navigate through the website</p>
+          </div>
+          </div>
 
-
-
+    </ng-template>
   </div>
 </div>
+<br>
+<h2 >Keep exploring
+</h2>
+<br>
+<div class="row">
+  <div class="col-lg-3 col-6" *ngFor='let dep of departments;let i =index '>
+    <a>
+            <div (click)="refreshPage(dep.id)" class=" card"><img class="card-img-top" src="assets/{{dep.img}}">
+              <div class="card-body">
+                <h4 class="card-title">{{dep.title}}
+                </h4>
+                <p class="card-text d-none d-md-block">{{dep.description}}
+                </p>
+              </div>
+            </div></a>
+          </div>
+          </div>
+<br>
