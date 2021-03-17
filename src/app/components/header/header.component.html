@@ -8,7 +8,7 @@
 <!-- Large screen Navbar -->
 <nav class="lg-nav">
   <div class="top-bar">
-    <div class="container">
+    <!-- <div class="container">
       <ul class="top-bar-nav m-0 list-unstyled">
         <li>
           <a class="active main-link" href="#">{{"VISIT" | translate}}</a>
@@ -24,6 +24,76 @@
         </li>
         <li>
           <a class="main-link" href="#">{{"TOPBAR.FESTIVAL" | translate}}</a>
+        </li>
+      </ul> -->
+
+      <!-- <ul class="top-bar-right m-0 list-unstyled">
+        <li *ngIf="!islogged">
+          <a class="main-link" routerLink="/login" >
+            <span><i class="fa fa-user"></i></span>
+            {{"LOGIN" | translate}}
+          </a>
+        </li>
+        <li *ngIf="islogged">
+          <a class="dropdown dropdown-toggle main-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i>
+            {{CurrentUser.firstName}} {{CurrentUser.lastName}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+              <a class="dropdown-item item" routerLink="/account/wishlist" style="margin-left: 3opx">
+                <span><i style="color: #007bff;" class="fa fa-heart"></i></span>
+                {{"icon.top" | translate}}
+              </a>
+              <a class="dropdown-item item" routerLink="/account/dashboard">
+                <span><i class="fa fa-user"></i></span>
+                {{"icon.accont" | translate}}
+              </a>
+              <a class="dropdown-item item" [routerLink]="['/account/editProfile']">
+                <span><i class="fa fa-user"></i></span>
+                {{"icon.edit" | translate}}
+              </a>
+              <a class="dropdown-item item" (click)="logout()">
+                {{"icon.Logout" | translate}}
+              </a>
+            </div>
+        </li>
+        <li>
+          <a style="cursor: pointer;" *ngIf=" currentLang != 'ar' " (click)="changeCurrentLang('ar')" class="main-link">
+            <span><i class="fa fa-globe"></i></span>
+            العربية
+          </a>
+          <a style="cursor: pointer;" *ngIf=" currentLang != 'en' " (click)="changeCurrentLang('en')" class="main-link">
+            <span><i class="fa fa-globe"></i></span>
+            English
+          </a>
+        </li>
+      </ul> -->
+    <!-- </div> -->
+  </div>
+
+  <div #largeNavbar class="nav-bar">
+    <div class="container">
+      <ul class="m-0 list-unstyled">
+        <a routerLink="/home" class="logo d-block">
+          <img src="assets/images/EXEG.png" alt="">
+        </a>
+        <li class="nav-bar-item has-drop-down" id="dropDown_1">
+          <a class="main-link" routerLink="/explore">
+            {{ "NAVBAR.EXPLORE" | translate}}
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+        <li class="nav-bar-item has-drop-down" id="dropDown_2">
+          <a class="main-link" routerLink="/activities">
+            {{"NAVBAR.ACTIVITIES" | translate}}
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
+        </li>
+        <li class="nav-bar-item has-drop-down" id="dropDown_3">
+          <a class="main-link" routerLink="/planProgram">
+            {{"NAVBAR.PLAN" | translate}}
+            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
+          </a>
         </li>
       </ul>
 
@@ -66,49 +136,6 @@
             <span><i class="fa fa-globe"></i></span>
             English
           </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div #largeNavbar class="nav-bar">
-    <div class="container">
-      <ul class="m-0 list-unstyled">
-        <a routerLink="/home" class="logo d-block">
-          <img src="assets/images/EXEG.png" alt="">
-        </a>
-        <li class="nav-bar-item has-drop-down" id="dropDown_1">
-          <a class="main-link" routerLink="/explore">
-            {{ "NAVBAR.EXPLORE" | translate}}
-            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
-          </a>
-        </li>
-        <li class="nav-bar-item has-drop-down" id="dropDown_2">
-          <a class="main-link" routerLink="/activities">
-            {{"NAVBAR.ACTIVITIES" | translate}}
-            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
-          </a>
-        </li>
-        <li class="nav-bar-item has-drop-down" id="dropDown_3">
-          <a class="main-link" routerLink="/planProgram">
-            {{"NAVBAR.PLAN" | translate}}
-            <span class="down-icon"><i class="fa fa-angle-down"></i></span>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="nav-bar-icons m-0 list-unstyled">
-        <li class="search-field">
-          <input #searchInp type="text" name="search" class="form-control" placeholder="Search...">
-        </li>
-        <li>
-          <span (click)="searchInp.classList.toggle('show')" class="search"><i class="fa fa-search"></i></span>
-        </li>
-        <li>
-          <a href="#"><span><i class="fa fa-calendar"></i></span></a>
-        </li>
-        <li>
-          <a [routerLink]="['//account/wishlist']" ><span><i class="fa fa-heart"></i></span></a>
         </li>
       </ul>
     </div>
@@ -244,12 +271,12 @@
               </div>
             </div>
             <div class="col-lg-3">
-              <div class="sub-link">
+              <!-- <div class="sub-link">
                 <a class="main-link" routerLink="/programDetails">{{"NAVBAR.PROGRAM.TITLE" | translate}}
                   <span><i class="fa fa-angle-right"></i></span>
                 </a>
                 <p class="text-muted">{{"NAVBAR.PROGRAM.DESC" | translate}}</p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -272,10 +299,13 @@
 
     <ul class="right m-0 list-unstyled">
       <li>
-        <a href="#"><span><i class="fa fa-calendar"></i></span></a>
+        <a routerLink="/account/dashboard">
+          <span><span><i class="fa fa-user"></i></span></span>
+          <!-- {{"icon.accont" | translate}} -->
+        </a>
       </li>
       <li>
-        <a href="#"><span><i class="fa fa-heart"></i></span></a>
+        <a routerLink="/account/wishlist"><span><i class="fa fa-heart"></i></span></a>
       </li>
     </ul>
   </div>
@@ -296,27 +326,27 @@
           {{"LOGIN" | translate}}
         </a>
       </li>
-      <li class="sm-nav-item" *ngIf="islogged">
+      <!-- <li class="sm-nav-item" *ngIf="islogged">
         <a routerLink="/account/wishlist">
           <span><span><i class="fa fa-heart"></i></span></span>
-          Top picks
+          {{"icon.top" | translate}}
         </a>
       </li>
       <li class="sm-nav-item" *ngIf="islogged">
         <a routerLink="/account/dashboard">
           <span><span><i class="fa fa-user"></i></span></span>
-          My Account
+          {{"icon.accont" | translate}}
         </a>
       </li>
       <li class="sm-nav-item" *ngIf="islogged">
         <a [routerLink]="['/account/editProfile']">
           <span><span><i class="fa fa-user"></i></span></span>
-          Edit Profile
+          {{"icon.edit" | translate}}
         </a>
-      </li>
+      </li> -->
       <li class="sm-nav-item" *ngIf="islogged">
         <a (click)="logout()">
-          Logout
+          {{"icon.Logout" | translate}}
         </a>
       </li>
       <li *ngIf=" currentLang != 'ar' " class="sm-nav-item">

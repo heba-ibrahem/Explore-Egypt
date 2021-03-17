@@ -138,6 +138,8 @@
     "msg4":" You haven't any Trip Done untill now"
   },
     "wishTitile":"Your Top Picks",
+    "wishP":" Add items to your Top Picks by clicking content with the  ",
+    "wishP2":"as you navigate through the website",
     "addProg":{
       "imgtxt":"DISVOVER EGYPT CULTURE",
       "imgtxt2":"HAVE NEW ADVENTURE NOW",
@@ -179,6 +181,10 @@
       "accont":"My Account",
       "edit":"Edit Profile",
       "Logout":" Logout"
+    },
+    "expolred":{
+      "exploTop":"Explore top attractions",
+      "Keep_up":"Keep up with the new"
     }
   
   

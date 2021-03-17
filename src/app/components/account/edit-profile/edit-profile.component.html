@@ -91,7 +91,7 @@
                     [class.is-valid]="profileFrm.controls['email'].valid" id="email" placeholder="Email" readonly>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="city">City</label>
+                  <label for="city">{{"form.city" | translate}}</label>
                   <select class=" form-control-lg" class="form-control pl-2" formControlName="city">
                     <option *ngFor="let city of CityList" [value]='city.name'>{{city.name}}</option>
                   </select>
