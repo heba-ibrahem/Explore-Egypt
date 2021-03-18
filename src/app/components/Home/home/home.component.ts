@@ -92,7 +92,7 @@ export class HomeComponent implements OnInit {
     let currentDate = new Date();
     item.date = new Date(item.date);
     const diff = Math.floor((Date.UTC(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate()) - Date.UTC(item.date.getFullYear(),item.date.getMonth(), item.date.getDate()) ) /(1000 * 60 * 60 * 24));
-    return diff <= 7 ;
+    return diff <= 1000 ;
    }
   playVideo() {
     if (this.banner_video_container) {
