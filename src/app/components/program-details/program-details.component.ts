@@ -5,6 +5,7 @@ import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { IProgram } from 'src/app/viewmodels/iprogram';
 import { Location } from '@angular/common';
 import { IUsers } from 'src/app/viewmodels/iusers';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-program-details',
@@ -17,7 +18,9 @@ export class ProgramDetailsComponent implements OnInit {
   programID: number = 0;
   user_id :number =0;
   CurrentUser: IUsers={};
-  constructor( private activatedRout: ActivatedRoute,private UserSevives: UsersServiceService, private city: CityService, private route: Router,  private location: Location) {
+  constructor( private activatedRout: ActivatedRoute,private UserSevives: UsersServiceService, private city: CityService, private route: Router,
+    // private toastr: ToastrService
+    ) {
     if(localStorage.getItem('user')){
       this.user_id = this.UserSevives.getUserID();
       this.loadAccount();
@@ -66,11 +69,14 @@ export class ProgramDetailsComponent implements OnInit {
       this.city.deleteProgram(id).subscribe(
         (res) => {
           console.log(res);
-          this.route.navigate(['/home']).then(() => {
+          this.route.navigate(['/account/dashboard']).then(() => {
             window.location.reload();
+            // this.toastr.success(' The program has been deleted successfuly')
           });       
         },
-        (err) => { console.log(err) }
+        (err) =>  console.log(err),
+          // this.toastr.error(' There is an error') 
+        
           
       )
     // }

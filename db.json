@@ -226,27 +226,7 @@
       "contactInfo": " 02 25777444",
       "adress": "1115 Corniche El Nile, Downtown, Cairo, Egypt",
       "cityID": "1",
-      "img": "https://picsum.photos/id/1076/200"
-    },
-    {
-      "id": 3,
-      "hotelName": "Azure",
-      "city": "Alexandria",
-      "roomPrice": "1234",
-      "contactInfo": "123243",
-      "adress": "asdfcd",
-      "cityID": "2",
-      "img": "https://picsum.photos/id/1076/200"
-    },
-    {
-      "id": 4,
-      "hotelName": "dxbgbh",
-      "city": "Aswan",
-      "roomPrice": "xthb",
-      "contactInfo": "xdtfgbgt",
-      "adress": "xtgb",
-      "cityID": "3",
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Ramses Hilton.jpg"
     },
     {
       "hotelName": "Concorde El Salam",
@@ -256,7 +236,7 @@
       "adress": "65 Abdel Hamid Badawy Street, Heliopolis, Cairo, Egypt",
       "cityID": "1",
       "id": 5,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Concorde El Salam.jpg"
     },
     {
       "hotelName": "Royal Maxim Palace Kempinski",
@@ -266,7 +246,7 @@
       "adress": "​First Settlement, P.O. Box 41, New Cairo, New Cairo, Cairo, Egypt,",
       "cityID": "1",
       "id": 6,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Royal Maxim Palace Kempinski.jpg"
     },
     {
       "hotelName": "Great Pyramid Inn",
@@ -276,7 +256,7 @@
       "adress": "14 Abou al hool al seaihi street - Nazlet elsaman - Haram - Giza, Haram, Giza, Egypt",
       "cityID": "1",
       "id": 7,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Great Pyramid Inn.jpg"
     },
     {
       "hotelName": "Pyramids Park Resort",
@@ -286,7 +266,7 @@
       "adress": "Pyramids Park Resort",
       "cityID": "1",
       "id": 8,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Pyramids Park Resort.jpg"
     },
     {
       "hotelName": "Mercure Alexandria Romance ",
@@ -296,7 +276,7 @@
       "adress": "303 Tareek El Gueish Saba Pasha, Alexandria, Alexandria, Egypt",
       "cityID": "2",
       "id": 9,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Mercure Alexandria Romance .jpg"
     },
     {
       "hotelName": "Paradise Inn Windsor Palace ",
@@ -306,7 +286,7 @@
       "adress": "17 El-Shohada Street, Raml Station, Alexandria, Alexandria, Egypt",
       "cityID": "2",
       "id": 10,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Paradise Inn Windsor Palace.jpg"
     },
     {
       "hotelName": "Green Plaza Inn",
@@ -316,7 +296,7 @@
       "adress": "Smouha , Alexandria, Alexandria, Alexandria, Egypt",
       "cityID": "2",
       "id": 11,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Green Plaza Inn.jpg"
     },
     {
       "hotelName": "Tolip Family Club Borg El Arab",
@@ -326,7 +306,7 @@
       "adress": "Army Stadium, Gate 8, Borg El Arab, Ekeingy Maryout, Alexandria, Egypt",
       "cityID": "2",
       "id": 12,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Tolip Family Club Borg El Arab.jpg"
     },
     {
       "hotelName": "Jewel San Stefano Hotel",
@@ -336,7 +316,7 @@
       "adress": "El-Gaish Road, Alexandria, Alexandria, Egypt",
       "cityID": "2",
       "id": 13,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Jewel San Stefano Hotel.jpg"
     },
     {
       "hotelName": "Kato Dool Nubian House",
@@ -346,7 +326,7 @@
       "adress": "Gharb Siheil, Nagaa Suhayl Gharb, Aswan, Egypt",
       "cityID": "3",
       "id": 14,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Kato Dool Nubian House.jpg"
     },
     {
       "hotelName": "Sofitel Legend Old Cataract Aswan",
@@ -356,7 +336,7 @@
       "adress": "Abtal El Tahrir Street, Aswan, Aswan, Egypt",
       "cityID": "3",
       "id": 15,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Sofitel Legend Old Cataract Aswan.jpg"
     },
     {
       "hotelName": "Tolip Aswan Hotel",
@@ -366,7 +346,7 @@
       "adress": "Nile Corniche, Aswan, Aswan, Egypt",
       "cityID": "3",
       "id": 16,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Tolip Aswan Hotel.jpg"
     },
     {
       "id": 17,
@@ -376,7 +356,7 @@
       "contactInfo": "0100 386 8345",
       "adress": "Saad Zaghloul, Aswan, Aswan, Egypt",
       "cityID": "3",
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Cleopatra Hotel.jpg"
     },
     {
       "hotelName": "Hapi Hotel",
@@ -386,7 +366,7 @@
       "adress": "10 Abtal El Tahrir, Aswan, Aswan, Egypt",
       "cityID": "3",
       "id": 18,
-      "img": "https://picsum.photos/id/1076/200"
+      "img": "assets/hotels/Hapi Hotel.jpg"
     }
   ],
   "city": [

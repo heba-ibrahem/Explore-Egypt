@@ -144,7 +144,8 @@ export class DesginProgramComponent implements OnInit {
     this.city.saveProgram(this.PorgramForm.value).subscribe(
       (res) => {
          console.log(res);
-         alert("saved")
+        //  alert("saved")
+       
         this.route.navigate(['/account/dashboard']);
       },
       (err) => { console.log(err) }
