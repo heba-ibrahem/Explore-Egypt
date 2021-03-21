@@ -52,6 +52,7 @@ export class EditProfileComponent implements OnInit, OnChanges {
     this.userService.update(this.CurrentUser.id || 0, this.profileFrm.value)
     console.log("update")
     console.log(this.CurrentUser)
+   window.location.reload();
   }
   loadPage(){
     this.profileFrm = this.fb.group({

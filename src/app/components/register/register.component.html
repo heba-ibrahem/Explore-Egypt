@@ -13,12 +13,12 @@
 <div class="container col-md-8 mt-3">
 
   <div class="row">
-    <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">{{"form.fBtn" | translate}} <i
+    <!-- <button id="fb" type="button" class="btn  text-white col-md-3 p-3  m-2  ">{{"form.fBtn" | translate}} <i
         class="fa fa-facebook-f"></i></button><br>
     <button id="gp" type="button" class="btn  text-white col-md-3 p-3  m-2">{{"form.gBtn" | translate}} <i
         class="fa fa-google"></i></button><br>
     <button id="t" type="button" class="btn  text-white col-md-3 p-3  m-2">{{"form.tBtn" | translate}} <i
-        class="fa fa-twitter"></i></button><br>
+        class="fa fa-twitter"></i></button><br> -->
   </div>
 
   <div class="container">
@@ -38,73 +38,55 @@
       <div class="form-group col-md-5 ">
         <label class="control-label required" for="firstName">{{"form.fName" | translate}}</label>
         <input type="text" class="form-control" name="firstName" required formControlName="firstName">
-        <div
-          *ngIf="RegisterForm.controls['firstName'].invalid && (RegisterForm.controls['firstName'].dirty || RegisterForm.controls['firstName'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['firstName']">{{"form.fNameMsg" | translate}}</div>
-        </div>
-
+       
+   <p class="text-danger" *ngIf="RegisterForm.controls['firstName'].invalid  && RegisterForm.controls['firstName'].touched">
+          {{"form.fNameMsg" | translate}}</p>
 
       </div>
       <div class="form-group col-md-5 ">
         <label class="control-label required" for="lastName">{{"form.lName" | translate}}</label>
         <input type="text" class="form-control" name="lastName" required formControlName="lastName">
-        <div
-          *ngIf="RegisterForm.controls['lastName'].invalid && (RegisterForm.controls['lastName'].dirty || RegisterForm.controls['lastName'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['lastName']">{{"form.lNameMsg" | translate}}</div>
-        </div>
-
+   <p class="text-danger" *ngIf="RegisterForm.controls['lastName'].invalid  && RegisterForm.controls['lastName'].touched">
+          {{"form.lNameMsg" | translate}}</p>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-5 ">
         <label class="control-label required" for="email">{{"form.email" | translate}}</label>
         <input type="email" class="form-control" name="email" required formControlName="email">
-        <div
-          *ngIf="RegisterForm.controls['email'].invalid && (RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['email']">{{"form.emailMsg" | translate}}</div>
-        </div>
+           <p class="text-danger" *ngIf="RegisterForm.controls['email'].invalid  && RegisterForm.controls['email'].touched">
+          {{"form.emailMsg" | translate}}</p>
       </div>
       <div class="form-group col-md-5 ">
         <label class="control-label required" for="city">{{"form.city" | translate}}</label>
-        <!-- <input type="dropdown" class="form-control " name="city" required formControlName="city"> -->
         <select  class="form-control"  formControlName="city">
           <option *ngFor="let ciity of CityList" [value]='ciity.name'>{{ciity.name}}</option>
         </select>
-        <div
-          *ngIf="RegisterForm.controls['city'].invalid && (RegisterForm.controls['city'].dirty || RegisterForm.controls['city'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['city']">{{"form.cityMsg" | translate}}</div>
-        </div>
+         <p class="text-danger" *ngIf="RegisterForm.controls['city'].invalid  && RegisterForm.controls['city'].touched">
+          {{"form.cityMsg" | translate}}</p>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-5 ">
         <label class="control-label required" for="password">{{"form.pass" | translate}}</label>
         <input type="password" class="form-control" name="password" required formControlName="password">
-        <div
-          *ngIf="RegisterForm.controls['password'].invalid && (RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['password']">{{"form.passMsg" | translate}}</div>
-        </div>
+          <p class="text-danger" *ngIf="RegisterForm.controls['password'].invalid  && RegisterForm.controls['password'].touched">
+          {{"form.passMsg" | translate}}</p>
       </div>
       <div class="form-group col-md-5 ">
         <label class=" control-label required" for="confirmPassword">{{"form.conpass" | translate}}</label>
-        <input type="Password" class="form-control" name="confirmPassword" required formControlName="confirmPassword">
-        <div
-          *ngIf="RegisterForm.controls['confirmPassword'].invalid && (RegisterForm.controls['confirmPassword'].dirty || RegisterForm.controls['confirmPassword'].touched)"
-          class="alert alert-danger">
-          <div *ngIf="RegisterForm.controls['confirmPassword']">{{"form.conpassMsg" | translate}}
-          </div>
-        </div>
+        <input type="Password" class="form-control" name="confirmPassword" required formControlName="confirmPassword" >
+        <p class="text-danger" *ngIf="RegisterForm.controls['confirmPassword'].invalid  && RegisterForm.controls['confirmPassword'].touched">
+         {{"form.conpassMsg" | translate}}</p>
+      <!-- <p class="text-danger" *ngIf="RegisterForm.hasError('notSame') && RegisterForm.controls['confirmPassword'].invalid  && RegisterForm.controls['confirmPassword'].touched">
+      Passwords do not match
+    </p>   -->
       </div>
     </div>
-    <div class="custom-control custom-checkbox ">
+    <!-- <div class="custom-control custom-checkbox ">
       <input type="checkbox" class="custom-control-input checked" id="customCheck1" required>
       <p class="custom-control-label" for="customCheck1">{{"form.check" | translate}}.</p>
-    </div><br>
+    </div><br> -->
     <div>{{"form.checkTxt" | translate}} <a href="#">{{"form.checkTxt2" | translate}}</a>
     </div><br>
 

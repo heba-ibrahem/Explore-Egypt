@@ -20,8 +20,9 @@ import { EditProgramComponent } from './components/edit-program/edit-program.com
 import { MyAccountComponent } from './components/account/my-account/my-account.component';
 import { IsSignedInGuardGuard } from './gurds/is-signed-in-guard.guard';
 import { WishListComponent } from './components/account/wish-list/wish-list.component';
-import { HomeComponent } from './components/Home/home/home.component';
+
 import { ItinerariesComponent } from './components/itineraries/itineraries.component';
+import { HomeComponent } from './components/home/home/home.component';
 
 
 const routes: Routes = [
