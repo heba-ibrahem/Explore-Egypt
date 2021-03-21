@@ -14,7 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PlanProgramComponent } from './components/plan-program/plan-program.component';
 import { DesginProgramComponent } from './components/desgin-program/desgin-program.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
-import { HomeComponent } from './components/Home/home/home.component';
+import { HomeComponent } from './components/home/home/home.component';
 import { EditProfileComponent } from './components/account/edit-profile/edit-profile.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ArticleComponent } from './components/article/article.component';
@@ -43,11 +43,11 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { EditProgramComponent } from './components/edit-program/edit-program.component';
-import { MoreNewEventHomeComponent } from './components/Home/more-new-event-home/more-new-event-home.component';
-import { NewEventsHomeComponent } from './components/Home/week-events-home/week-events-home.component';
-import { ExplorEgyptHomeComponent } from './components/Home/explor-egypt-home/explor-egypt-home.component';
-import { ActivitiesHomeComponent } from './components/Home/activities-home/activities-home.component';
-import { PlanTripHomeComponent } from './components/Home/plan-trip-home/plan-trip-home.component';
+import { MoreNewEventHomeComponent } from './components/home/more-new-event-home/more-new-event-home.component';
+import { NewEventsHomeComponent } from './components/home/week-events-home/week-events-home.component';
+import { ExplorEgyptHomeComponent } from './components/home/explor-egypt-home/explor-egypt-home.component';
+import { ActivitiesHomeComponent } from './components/home/activities-home/activities-home.component';
+import { PlanTripHomeComponent } from './components/home/plan-trip-home/plan-trip-home.component';
 import{ItinerariesComponent} from './components/itineraries/itineraries.component'
 import { from } from 'rxjs';
 // Swiper.js default config

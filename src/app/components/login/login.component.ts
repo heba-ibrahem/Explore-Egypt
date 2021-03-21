@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
     } else if (!(localStorage.getItem('user'))){
       this.user_id = 0;
       this.islogged = true;
-      this.router.navigateByUrl('/login');
+      // this.router.navigateByUrl('/login');
     }
     console.log(this.user_id)
 

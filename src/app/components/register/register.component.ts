@@ -16,11 +16,11 @@ import { IUsers } from 'src/app/viewmodels/iusers';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
   RegisterForm: FormGroup;
   user: IUsers;
   CityList: Icity[]=[];
-  registerd:boolean=false
+  registerd:boolean=false;
+
   constructor(private router: Router,private fb: FormBuilder, private UserSevives: UsersServiceService, private city: CityService) {
     this.RegisterForm = this.fb.group({
       firstName: ['', [Validators.required]],
@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(6)]]
-    })
+    }, { validators: this.checkPasswords })
     this.user = {
       firstName: "",
       lastName: "",
@@ -69,4 +69,12 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-}
+  checkPasswords(group: FormGroup) { // here we have the 'passwords' group
+  const password = group.get('password');
+  const confirmPassword = group.get('confirmPassword');
+  return password === confirmPassword ? null : { notSame: true }     
+}}
+
+
+
+
