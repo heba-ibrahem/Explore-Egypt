@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HomeService } from 'src/app/Services/home.service';
-import { INewEventsHome } from 'src/app/viewmodels/iweek-events-home';
+import { INewEventsHome } from 'src/app/ViewModels/iweek-events-home';
 
 @Component({
   selector: 'app-more-new-event-home',

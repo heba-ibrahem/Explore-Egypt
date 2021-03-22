@@ -3,10 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CityService } from 'src/app/Services/city.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { IHotel } from 'src/app/viewmodels/ihotel';
-import { IProgram } from 'src/app/viewmodels/iprogram';
-import { ITrain } from 'src/app/viewmodels/itrain';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { IHotel } from 'src/app/ViewModels/ihotel';
+import { IProgram } from 'src/app/ViewModels/iprogram';
+import { ITrain } from 'src/app/ViewModels/itrain';
+import { IUsers } from 'src/app/ViewModels/iusers';
 
 
 @Component({

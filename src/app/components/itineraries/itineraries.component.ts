@@ -5,12 +5,12 @@ import { ArticlesService } from 'src/app/Services/articles.service';
 import { CityService } from 'src/app/Services/city.service';
 import { ItinerariesCitiesService } from 'src/app/Services/itineraries-cities.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';
-import { Article } from 'src/app/viewmodels/article';
-import { IHotel } from 'src/app/viewmodels/ihotel';
-import { IPage } from 'src/app/viewmodels/IPage';
-import { itinerariesCity } from 'src/app/viewmodels/itinerariesCitiy';
+import { Article } from 'src/app/ViewModels/article';
+import { IHotel } from 'src/app/ViewModels/ihotel';
+import { IPage } from 'src/app/ViewModels/IPage';
+import { itinerariesCity } from 'src/app/ViewModels/itinerariesCitiy';
 import { ActivitiesDepService } from 'src/app/Services/activities-dep.service';
-import { IactivitiesDep } from 'src/app/viewmodels/iactivities-dep';
+import { IactivitiesDep } from 'src/app/ViewModels/iactivities-dep';
 
 @Component({
   selector: 'app-itineraries',

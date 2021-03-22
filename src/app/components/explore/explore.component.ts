@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalizationService } from 'src/app/Services/localization.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';
-import { IPage } from 'src/app/viewmodels/IPage';
+import { IPage } from 'src/app/ViewModels/IPage';
 
 @Component({
   selector: 'app-explore',

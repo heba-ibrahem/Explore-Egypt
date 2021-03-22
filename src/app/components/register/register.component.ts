@@ -4,8 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CityService } from 'src/app/Services/city.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { Icity } from 'src/app/viewmodels/icity';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { Icity } from 'src/app/ViewModels/icity';
+import { IUsers } from 'src/app/ViewModels/iusers';
 
 
 

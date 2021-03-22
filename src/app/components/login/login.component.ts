@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Guid } from 'guid-typescript';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { IUsers } from 'src/app/ViewModels/iusers';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 

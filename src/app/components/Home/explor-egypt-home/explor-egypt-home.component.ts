@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HomeService } from 'src/app/Services/home.service';
-import { IExpiorEgyptHome } from 'src/app/viewmodels/iexpior-egypt-home';
+import { IExpiorEgyptHome } from 'src/app/ViewModels/iexpior-egypt-home';
 
 
 @Component({

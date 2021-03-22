@@ -3,7 +3,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { param } from 'jquery';
 import { ArticlesService } from 'src/app/Services/articles.service';
-import { Article } from 'src/app/viewmodels/article';
+import { Article } from 'src/app/ViewModels/article';
 
 @Component({
   selector: 'app-article',

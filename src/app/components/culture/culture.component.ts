@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from 'src/app/Services/articles.service';
 import { LocalizationService } from 'src/app/Services/localization.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';
-import { IArticle } from 'src/app/viewmodels/iarticle';
-import { IPage } from 'src/app/viewmodels/IPage';
+import { IArticle } from 'src/app/ViewModels/iarticle';
+import { IPage } from 'src/app/ViewModels/IPage';
 
 @Component({
   selector: 'app-culture',

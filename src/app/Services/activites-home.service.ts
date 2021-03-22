@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IActivitesHome } from '../viewmodels/iactivites-home';
+import { IActivitesHome } from '../ViewModels/iactivites-home';
 
 @Injectable({
   providedIn: 'root'

@@ -3,10 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CityService } from '../../Services/city.service';
 import { UsersServiceService } from '../../Services/users-service.service';
-import { IHotel } from '../../viewmodels/ihotel';
-import { IProgram } from '../../viewmodels/iprogram';
-import { ITrain } from '../../viewmodels/itrain';
-import { IUsers } from '../../viewmodels/iusers';
+import { IHotel } from '../../ViewModels/ihotel';
+import { IProgram } from '../../ViewModels/iprogram';
+import { ITrain } from '../../ViewModels/itrain';
+import { IUsers } from '../../ViewModels/iusers';
 
 @Component({
   selector: 'app-edit-program',

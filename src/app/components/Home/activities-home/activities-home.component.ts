@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { HomeService } from 'src/app/Services/home.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { WishListService } from 'src/app/Services/wish-list.service';
-import { IactivitiesDep } from 'src/app/viewmodels/iactivities-dep';
+import { IactivitiesDep } from 'src/app/ViewModels/iactivities-dep';
 
 @Component({
   selector: 'app-activities-home',

@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { CityService } from 'src/app/Services/city.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { Icity } from 'src/app/viewmodels/icity';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { Icity } from 'src/app/ViewModels/icity';
+import { IUsers } from 'src/app/ViewModels/iusers';
 
 @Component({
   selector: 'app-edit-profile',

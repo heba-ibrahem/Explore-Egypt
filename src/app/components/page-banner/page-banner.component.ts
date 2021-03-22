@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { IPage } from 'src/app/viewmodels/IPage';
+import { IPage } from 'src/app/ViewModels/IPage';
 
 
 @Component({

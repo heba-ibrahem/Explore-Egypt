@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { HomeService } from 'src/app/Services/home.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { WishListService } from 'src/app/Services/wish-list.service';
-import { INewEventsHome } from 'src/app/viewmodels/iweek-events-home';
+import { INewEventsHome } from 'src/app/ViewModels/iweek-events-home';
 
 @Component({
   selector: 'app-week-events-home',

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { PlanTripHome } from '../viewmodels/Iplan-trip-home';
+import { PlanTripHome } from '../ViewModels/Iplan-trip-home';
 
 @Injectable({
   providedIn: 'root'

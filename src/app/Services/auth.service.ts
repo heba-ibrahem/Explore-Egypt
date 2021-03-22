@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { IUsers } from '../viewmodels/iusers';
+import { IUsers } from '../ViewModels/iusers';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Guid } from 'guid-typescript';

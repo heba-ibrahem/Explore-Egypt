@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CityService } from 'src/app/Services/city.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { IProgram } from 'src/app/viewmodels/iprogram';
+import { IProgram } from 'src/app/ViewModels/iprogram';
 import { Location } from '@angular/common';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { IUsers } from 'src/app/ViewModels/iusers';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

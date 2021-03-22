@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivitiesDepService } from 'src/app/Services/activities-dep.service';
 import { CuratorsService } from 'src/app/Services/curators.service';
-import { IactivitiesDep } from 'src/app/viewmodels/iactivities-dep';
-import { Curators } from 'src/app/viewmodels/curators';
-import { IPage} from 'src/app/viewmodels/IPage';
-import { Article } from 'src/app/viewmodels/article';
+import { IactivitiesDep } from 'src/app/ViewModels/iactivities-dep';
+import { Curators } from 'src/app/ViewModels/curators';
+import { IPage} from 'src/app/ViewModels/IPage';
+import { Article } from 'src/app/ViewModels/article';
 import { Router } from '@angular/router';
 import { ArticlesService } from 'src/app/Services/articles.service';
 import { PageDetailsService } from 'src/app/Services/page-details.service';

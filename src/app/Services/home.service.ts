@@ -2,11 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { INewEventsHome } from '../viewmodels/iweek-events-home';
-import { IPage } from '../viewmodels/IPage';
-import { Article } from '../viewmodels/article';
-import { IactivitiesDep } from '../viewmodels/iactivities-dep';
-import { IUsers } from '../viewmodels/iusers';
+import { INewEventsHome } from '../ViewModels/iweek-events-home';
+import { IPage } from '../ViewModels/IPage';
+import { Article } from '../ViewModels/article';
+import { IactivitiesDep } from '../ViewModels/iactivities-dep';
+import { IUsers } from '../ViewModels/iusers';
 
 @Injectable({
   providedIn: 'root'

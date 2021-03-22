@@ -6,8 +6,8 @@ import { CityService } from 'src/app/Services/city.service';
 import { HomeService } from 'src/app/Services/home.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { WishListService } from 'src/app/Services/wish-list.service';
-import { IProgram } from 'src/app/viewmodels/iprogram';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { IProgram } from 'src/app/ViewModels/iprogram';
+import { IUsers } from 'src/app/ViewModels/iusers';
 
 @Component({
   selector: 'app-my-account',

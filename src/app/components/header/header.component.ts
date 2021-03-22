@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef,  Inject,  OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
-import { IUsers } from 'src/app/viewmodels/iusers';
+import { IUsers } from 'src/app/ViewModels/iusers';
 import { TranslateService } from '@ngx-translate/core';
 import { LocalizationService } from 'src/app/Services/localization.service';
 import { Router } from '@angular/router';

@@ -3,10 +3,10 @@ import { Subscription } from 'rxjs';
 import { HomeService } from 'src/app/Services/home.service';
 import { UsersServiceService } from 'src/app/Services/users-service.service';
 import { WishListService } from 'src/app/Services/wish-list.service';
-import { IactivitiesDep } from 'src/app/viewmodels/iactivities-dep';
-import { IPage} from 'src/app/viewmodels/IPage';
-import { IUsers } from 'src/app/viewmodels/iusers';
-import { INewEventsHome } from 'src/app/viewmodels/iweek-events-home';
+import { IactivitiesDep } from 'src/app/ViewModels/iactivities-dep';
+import { IPage} from 'src/app/ViewModels/IPage';
+import { IUsers } from 'src/app/ViewModels/iusers';
+import { INewEventsHome } from 'src/app/ViewModels/iweek-events-home';
 
 @Component({
   selector: 'app-home',

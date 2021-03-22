@@ -2,10 +2,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Icity } from '../viewmodels/icity';
-import { IHotel } from '../viewmodels/ihotel';
-import { IProgram } from '../viewmodels/iprogram';
-import { ITrain } from '../viewmodels/itrain';
+import { Icity } from '../ViewModels/icity';
+import { IHotel } from '../ViewModels/ihotel';
+import { IProgram } from '../ViewModels/iprogram';
+import { ITrain } from '../ViewModels/itrain';
 
 @Injectable({
   providedIn: 'root'
