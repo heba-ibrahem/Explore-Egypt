@@ -22,7 +22,8 @@ import { IsSignedInGuardGuard } from './gurds/is-signed-in-guard.guard';
 import { WishListComponent } from './components/account/wish-list/wish-list.component';
 
 import { ItinerariesComponent } from './components/itineraries/itineraries.component';
-import { HomeComponent } from './components/home/home/home.component';
+import { HomeComponent } from './components/Home/home2/home.component';
+
 
 
 const routes: Routes = [
